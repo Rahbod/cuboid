@@ -217,6 +217,25 @@ class ResourceTableSeeder extends Seeder
             'display_name' => 'مطالب'
         ]);
 
+
+        /***********Gallery resources************/
+        $resource_group = ResourceGroup::create([
+            'department_id'=>$admin_department->id,
+            'name' => 'galleries',
+            'display_name' => 'گالری تصاویر',
+        ]);
+        $gallery_resource=Resource::create([
+            'resource_group_id' => $resource_group->id,
+            'name' => 'Gallery',
+            'display_name' => 'گالری تصاویر'
+        ]);
+        Resource::create([
+            'resource_group_id' => $resource_group->id,
+            'parent_id'=>$gallery_resource->id,
+            'name' => 'GalleryItem',
+            'display_name' => 'تصاویر گالری'
+        ]);
+
         /***********Page resources************/
         $resource_group = ResourceGroup::create([
             'department_id'=>$admin_department->id,

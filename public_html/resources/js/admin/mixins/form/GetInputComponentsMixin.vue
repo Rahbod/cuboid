@@ -35,6 +35,11 @@
             resolve(require('../../view_components/forms/basic_form/inputs/ImageInput.vue'))
         })
     };
+    const dropzone_images_input = resolve => {
+        require.ensure(['../../view_components/forms/basic_form/inputs/DropzoneImanges.vue'], () => {
+            resolve(require('../../view_components/forms/basic_form/inputs/DropzoneImanges.vue'))
+        })
+    };
     export default {
         components: {
             basic_input,
@@ -50,6 +55,7 @@
             icon_picker_input,
             file_selector_input,
             file_picker_input,
+            dropzone_images_input,
         },
         methods:{
             getComponent(name) {
@@ -99,6 +105,9 @@
                         break;
                     case 'file':
                         component_name = 'file_picker_input';
+                        break;
+                    case 'dropzone_images':
+                        component_name = 'dropzone_images_input';
                         break;
                 }
                 return component_name;

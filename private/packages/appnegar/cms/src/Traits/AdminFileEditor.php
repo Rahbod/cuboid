@@ -46,6 +46,58 @@ trait AdminFileEditor{
         return (['status' => true, 'data' => $name]);
     }
 
+    protected function saveImageWithLogo($file,$image_config,$logo_config,$quality=100): array
+    {
+        $error_massages = [];
+        $name = null;
+        if ($file) {
+            if (!$file->isValid()) {
+                $error_massages[] = $file->getError();
+            } else {
+                if ($file->getClientSize() > $image_config['size'] * 1024) {
+                    $error_massages[] = "اندازه عکس بیشتر از " . $image_config['size'] . ' کیلو بایت نمی تواند باشد.';
+                }
+                $photo_extension = explode(',', $image_config['extension']);
+                foreach ($photo_extension as $key => $value) {
+                    $photo_extension[$key] = trim($value);
+                }
+                if (!in_array($file->getClientOriginalExtension(), $photo_extension)) {
+                    $error_massages[] = "فرمت عکس غیر مجاز است";
+                }
+            }
+
+            if (count($error_massages) == 0) {
+                $name = uniqid('img_', true) . '.' . $file->getClientOriginalExtension();
+
+                $img = \Intervention\Image\Facades\Image::make($file->getPathname())
+                    ->resize($image_config['width'], null, function ($constraint) {
+                        $constraint->aspectRatio();
+                        $constraint->upsize();
+                    })
+                    ->fit($image_config['width'], $image_config['height']);
+                $status = Storage::put($image_config['destination'] . $name, $img->encode($file->getClientOriginalExtension(), $quality), 'public');
+
+                $img = \Intervention\Image\Facades\Image::make($file->getPathname())
+                    ->resize($logo_config['width'], null, function ($constraint) {
+                        $constraint->aspectRatio();
+                        $constraint->upsize();
+                    })
+                    ->fit($logo_config['width'], $logo_config['height']);
+                $status = Storage::put($logo_config['destination'] . $name, $img->encode($file->getClientOriginalExtension(), $quality), 'public');
+
+                if ($status) {
+                    return (['status' => $status, 'data' => $name]);
+                } else {
+                    return (['status' => $status, 'data' => ['خطایی در دخیره ی عکس بوجود امده است.']]);
+                }
+
+            } else {
+                return (['status' => false, 'data' => $error_massages]);
+            }
+        }
+        return (['status' => true, 'data' => $name]);
+    }
+
     protected function saveFile($file, $config, $prefix = 'file_')
     {
         $error_massages = [];

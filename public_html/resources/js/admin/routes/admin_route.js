@@ -488,6 +488,105 @@ export default new VueRouter({
         },
 
         {
+            component: NestedRouterViewApp,
+            path: '/galleries',
+            meta: { base_resource: 'galleries' },
+            children:[
+                {
+                    component: ResourceView,
+                    path: '/',
+                    name: 'base_galleries-resource-view',
+                },
+                {
+                    component: RouterViewApp,
+                    path: 'galleries',
+                    meta: { resource: 'galleries' },
+                    children:[
+                        {
+                            component: ResourceView,
+                            path: '/',
+                            name: 'galleries-resource-view',
+                        },
+                        {
+                            component: ListView,
+                            path: 'list-view',
+                            name: 'galleries-list-view',
+                            meta: { action: 'listView'},
+                        },
+                        {
+                            component: FormView,
+                            path: 'create',
+                            name: 'galleries-create',
+                            meta: { action: 'create' },
+                        },
+                        {
+                            component: FormView,
+                            path: ':id/edit',
+                            name: 'galleries-edit',
+                            meta: { action: 'edit' },
+                        },
+                        {
+                            component: ShowView,
+                            path: ':id',
+                            name: 'galleries-show',
+                            meta: { action: 'show' },
+                        },
+                        {
+                            component: UpdateSettingFormView,
+                            path: 'settings/form',
+                            name: 'galleries-settings-form',
+                            meta: {action: 'updateSettings'},
+                        },
+
+                    ]
+                },
+                {
+                    component: RouterViewApp,
+                    path: 'gallery_items',
+                    meta: { resource: 'gallery_items' },
+                    children:[
+                        {
+                            component: ResourceView,
+                            path: '/',
+                            name: 'gallery_items-resource-view',
+                        },
+                        {
+                            component: ListView,
+                            path: 'list-view',
+                            name: 'gallery_items-list-view',
+                            meta: { action: 'listView' },
+                        },
+                        {
+                            component: FormView,
+                            path: 'create',
+                            name: 'sliders-create',
+                            meta: { action: 'create' },
+                        },
+                        {
+                            component: FormView,
+                            path: ':id/edit',
+                            name: 'gallery_items-edit',
+                            meta: { action: 'edit' },
+                        },
+                        {
+                            component: ShowView,
+                            path: ':id',
+                            name: 'gallery_items-show',
+                            meta: { action: 'show' },
+                        },
+                        {
+                            component: UpdateSettingFormView,
+                            path: 'settings/form',
+                            name: 'sliders-settings-form',
+                            meta: {action: 'updateSettings'},
+                        },
+                    ]
+                },
+            ]
+        },
+
+
+        {
             component: RouterViewApp,
             path: '/attachments',
             meta: {resource: 'attachments'},

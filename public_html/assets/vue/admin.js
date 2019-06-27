@@ -29,7 +29,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		18: 0
+/******/ 		19: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -40799,6 +40799,83 @@ var RoleFormView = function RoleFormView(resolve) {
             component: ShowView,
             path: ':id',
             name: 'static_menus-show'
+        }]
+    }, {
+        component: __WEBPACK_IMPORTED_MODULE_2__view_components_NestedRouterViewApp_vue___default.a,
+        path: '/galleries',
+        meta: { base_resource: 'galleries' },
+        children: [{
+            component: ResourceView,
+            path: '/',
+            name: 'base_galleries-resource-view'
+        }, {
+            component: __WEBPACK_IMPORTED_MODULE_1__view_components_RouterViewApp_vue___default.a,
+            path: 'galleries',
+            meta: { resource: 'galleries' },
+            children: [{
+                component: ResourceView,
+                path: '/',
+                name: 'galleries-resource-view'
+            }, {
+                component: ListView,
+                path: 'list-view',
+                name: 'galleries-list-view',
+                meta: { action: 'listView' }
+            }, {
+                component: FormView,
+                path: 'create',
+                name: 'galleries-create',
+                meta: { action: 'create' }
+            }, {
+                component: FormView,
+                path: ':id/edit',
+                name: 'galleries-edit',
+                meta: { action: 'edit' }
+            }, {
+                component: ShowView,
+                path: ':id',
+                name: 'galleries-show',
+                meta: { action: 'show' }
+            }, {
+                component: UpdateSettingFormView,
+                path: 'settings/form',
+                name: 'galleries-settings-form',
+                meta: { action: 'updateSettings' }
+            }]
+        }, {
+            component: __WEBPACK_IMPORTED_MODULE_1__view_components_RouterViewApp_vue___default.a,
+            path: 'gallery_items',
+            meta: { resource: 'gallery_items' },
+            children: [{
+                component: ResourceView,
+                path: '/',
+                name: 'gallery_items-resource-view'
+            }, {
+                component: ListView,
+                path: 'list-view',
+                name: 'gallery_items-list-view',
+                meta: { action: 'listView' }
+            }, {
+                component: FormView,
+                path: 'create',
+                name: 'sliders-create',
+                meta: { action: 'create' }
+            }, {
+                component: FormView,
+                path: ':id/edit',
+                name: 'gallery_items-edit',
+                meta: { action: 'edit' }
+            }, {
+                component: ShowView,
+                path: ':id',
+                name: 'gallery_items-show',
+                meta: { action: 'show' }
+            }, {
+                component: UpdateSettingFormView,
+                path: 'settings/form',
+                name: 'sliders-settings-form',
+                meta: { action: 'updateSettings' }
+            }]
         }]
     }, {
         component: __WEBPACK_IMPORTED_MODULE_1__view_components_RouterViewApp_vue___default.a,

@@ -34,6 +34,8 @@ class ActionTableSeeder extends Seeder
 
             'Category',
             'Content',
+            'Gallery',
+            'GalleryItem',
             'Page',
             'StaticMenu',
             'SliderGroup',
@@ -46,7 +48,8 @@ class ActionTableSeeder extends Seeder
 
         $commentable_resources = ['Content', 'Page'];
         $have_file_manager_resource = ['Content', 'Page', 'Slider', 'Attachment'];
-        $have_settings = ['Content', 'Page', 'Slider', 'Attachment'];
+        $have_settings = ['Content', 'Page', 'Slider', 'Attachment', 'Gallery', 'GalleryItem'];
+        $have_images=['Gallery'];
         $profile_actions = [
             [
                 'name' => 'getActions',
@@ -307,6 +310,7 @@ class ActionTableSeeder extends Seeder
         ];
         $departments = \App\Department::with('resources')->get();
 
+
         foreach ($departments as $department) {
             $order = 1;
             foreach ($department->resources as $resource) {
@@ -329,6 +333,10 @@ class ActionTableSeeder extends Seeder
                 }
                 if (in_array($resource->name, $have_settings)) {
                     $actions = $this->getSettingActions($resource);
+                    $this->createActions($actions, $order, $department);
+                }
+                if (in_array($resource->name, $have_images)) {
+                    $actions = $this->getGalleryImageActions($resource);
                     $this->createActions($actions, $order, $department);
                 }
                 if (isset($special_resource[$department->name])) {
@@ -654,6 +662,32 @@ class ActionTableSeeder extends Seeder
                         'slug' => $resource_name . '/file_manager/{view}/{input_id?}',
                         'method' => 'get',
                     ]
+                ],
+            ],
+
+        ];
+
+        return $actions;
+    }
+
+    private function getGalleryImageActions($resource){
+        $resource_name = str_plural(ltrim(strtolower(preg_replace('/[A-Z]([A-Z](?![a-z]))*/', '_$0', $resource->name)), '_'));
+
+        $actions = [
+            [
+                'resource_id' => $resource->id,
+                'resource_name' => $resource->name,
+                'name' => 'storeImage',
+                'display_name' => 'ذخیره تصویر ',
+                'need_allow' => 0,
+                'status' => 1,
+                'paths' => [
+                    [
+                        'name' => $resource->name . '.storeImage',
+                        'display_name' => 'ذخیره تصویر ',
+                        'slug' => $resource_name . '/store_image',
+                        'method' => 'post',
+                    ],
                 ],
             ],
 

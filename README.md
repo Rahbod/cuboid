@@ -1,4 +1,4 @@
-# academy
+# cuboid
 
 ### Installation
 
