@@ -1,0 +1,15 @@
+/public_html/node_modules
+/public_html/fonts
+/public_html/hot
+/public_html/storage
+/public_html/storage/*.key
+/private/vendor
+/.idea
+/.vscode
+/.vagrant
+/private/.env
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/private/.phpunit.result.cache
