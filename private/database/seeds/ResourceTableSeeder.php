@@ -218,6 +218,19 @@ class ResourceTableSeeder extends Seeder
         ]);
 
 
+        /***********content resources************/
+        $resource_group = ResourceGroup::create([
+            'department_id'=>$admin_department->id,
+            'name' => 'products',
+            'display_name' => 'محصولات',
+        ]);
+        Resource::create([
+            'resource_group_id' => $resource_group->id,
+            'name' => 'Product',
+            'display_name' => 'محصولات'
+        ]);
+
+
         /***********Gallery resources************/
         $resource_group = ResourceGroup::create([
             'department_id'=>$admin_department->id,
