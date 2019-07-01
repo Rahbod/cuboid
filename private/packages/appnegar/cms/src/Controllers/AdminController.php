@@ -220,9 +220,6 @@ class AdminController extends Controller
 
         $query = $model_name::whereNotIn('id', $not_in_ids);
         if ($types !== null) {
-            if($types[0] !== 'Course'){
-                $query->where('lang', session('lang')) ;
-            }
             $query->where(function ($query) use ($types) {
                 foreach ($types as $index => $type) {
                     if ($index == 0) {

@@ -183,14 +183,16 @@ trait ModelTrait
                     if ($prefix == null) {
                         $fields_name[$item['name']] = [
                             'is_related_field'=>$is_related_field,
-                            'type'=>$item['input_type']
+                            'type'=>$item['input_type'],
+                            'has_logo'=>$item['has_logo']??null,
                         ];
                         continue;
                     }
                     $fields_name[$prefix]['is_relation'] = true;
                     $fields_name[$prefix][$item['name']] =[
                         'is_related_field'=>$is_related_field,
-                        'type'=>$item['input_type']
+                        'type'=>$item['input_type'],
+                        'has_logo'=>$item['has_logo']??null,
                     ];;
                 }
             }

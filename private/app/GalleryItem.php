@@ -163,13 +163,15 @@ class GalleryItem extends Model
 
     }
 
-    public function getLogAttribute(): string
+    public function getLogoAttribute(): string
     {
         $resource_name = str_singular($this->getTable());
         $photo=$this->image;
+        $photo_url_arr=explode('/',$this->image);
+        $photo_name=$photo_url_arr[count($photo_url_arr)-1];
         if ($photo) {
             if(strpos($photo,'http') === false){
-                $path = '/storage/' . config('system.' . $resource_name . '.logo_destination') . $photo;
+                $path = '/storage/' . config('system.' . $resource_name . '.logo_destination') . $photo_name;
                 return $path;
             }
             else {
@@ -178,6 +180,6 @@ class GalleryItem extends Model
 
         }
         return '/storage/' . config('system.' . $resource_name . '.logo_destination') . 'default.jpg';
-
+//        return $this->image;
     }
 }

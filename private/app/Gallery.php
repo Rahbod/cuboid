@@ -74,15 +74,6 @@ class Gallery extends Model
                     'show_in_form' => true
                 ],
                 [
-                    'name' => 'show_count',
-                    'type' => 'numeric',
-                    'input_type' => 'number',
-                    'orderable' => true,
-                    'searchable' => true,
-                    'show_in_table' => true,
-                    'show_in_form' => true
-                ],
-                [
                     'name' => 'order',
                     'type' => 'numeric',
                     'input_type' => 'number',
@@ -146,7 +137,7 @@ class Gallery extends Model
                 'name' => 'gallery_items',
                 'table' => GalleryItem::getTableName(),
                 'items' => GalleryItem::getSubFields(),
-                'show_in_form' => true,
+                'show_in_form' => false,
                 'show_in_table' => false,
             ]
         ];

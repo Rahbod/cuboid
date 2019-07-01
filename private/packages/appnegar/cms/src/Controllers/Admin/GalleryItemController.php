@@ -1,5 +1,5 @@
 <?php
-namespace Appnegar\Cms\Controllers\ContentManagement;
+namespace Appnegar\Cms\Controllers\Admin;
 
 use App\Gallery;
 use Appnegar\Cms\Controllers\AdminController;
@@ -30,12 +30,8 @@ class GalleryItemController extends AdminController{
         ];
     }
 
-    protected function getTableConditions(){
-        return ['lang'=>session('lang')];
-    }
-
     protected function getOrderScopes(){
-        return ['lang','gallery_id'];
+        return ['gallery_id'];
     }
 
     protected function validationRules($request, $id = null)
@@ -62,7 +58,7 @@ class GalleryItemController extends AdminController{
         return[
             'model'=>$data,
             'options'=>[
-                'gallery_id' => Gallery::where('lang',session('lang'))->select(['id','name as text'])->get()
+                'gallery_id' => Gallery::select(['id','name as text'])->get()
             ]
         ];
     }

@@ -3,6 +3,7 @@
 namespace Appnegar\Cms\Traits;
 
 use App\Category;
+use App\GalleryItem;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
@@ -77,7 +78,7 @@ trait AdminCrudActions
     }
 
 
-    public function create(Request $request)
+    public function create(Request $request): \Illuminate\Http\JsonResponse
     {
         if ($request->isMethod('get')) {
             $data = $this->getInputData();
@@ -171,8 +172,14 @@ trait AdminCrudActions
 
         foreach ($fields as $field) {
             if ($field['name'] === $model_table || !isset($field['show_in_form']) || $field['show_in_form'] != true) {
-                if ($field['name'] === $model_table && $id == null) {
-                    $data = array_merge($data, $this->setDefaultValues($field['items']));
+                if ($field['name'] === $model_table ) {
+                    if($id == null){
+                        $data = array_merge($data, $this->setDefaultValues($field['items']));
+                    }
+                    else if ($this->resource === 'Gallery'){
+                        $data['images']=GalleryItem::where('gallery_id',$id)->get();
+                    }
+
                 }
                 continue;
             }
@@ -195,6 +202,7 @@ trait AdminCrudActions
                 if ($relation_info['relation_type'] == 'MorphOne') {
                     $data[$relation_info['name']] = $this->setDefaultValues($field['items']);
                 }
+
             }
 
         }
@@ -229,6 +237,10 @@ trait AdminCrudActions
                 case 'lang':
                     $data[$item['name']] = session('lang');
                     break;
+                case 'images':
+                    $data[$item['name']] = GalleryItem::where('gallery_id',null)->get();
+                    break;
+
 
             }
         }
@@ -248,7 +260,11 @@ trait AdminCrudActions
         try {
             $status = \DB::transaction(function () use ($request, $model, $action) {
                 $order_conditions = $this->getOrderConditions($request);
-                return $this->saveModel($model, $request, $action, $order_conditions);
+                $status= $this->saveModel($model, $request, $action, $order_conditions);
+                if($status['status']){
+                    $this->afterSaveModel($status['data'],$request);
+                }
+                return $status;
             });
             $message = null;
             if (isset($status['message']) and $status['message'] !== "") {
@@ -284,7 +300,7 @@ trait AdminCrudActions
                 unset($value['is_relation']);
                 $relations[$key] = $value;
 
-            } else if ($key !== 'id' && $key !== 'password_confirmation') {
+            } else if ($key !== 'id' && $key !== 'password_confirmation' && $key !== 'images') {
                 if (isset($value['is_related_field']) && $value['is_related_field'] === true) {
                     $model_key = str_plural(str_replace_last('_id', '', $key));
                     if ($model_key === 'tags') {
@@ -316,7 +332,12 @@ trait AdminCrudActions
                             $config = $this->config[$config_name][$key];
 
                             if ($value['type'] === 'image') {
-                                $file_status = $this->saveImage($request[$key], $config);
+
+                                if(isset($value['has_logo']) && $value['has_logo'] === true){
+                                    $file_status = $this->saveImageWithLogo($request[$key], $this->config[$config_name]['image'], $this->config[$config_name]['logo']);
+                                }else{
+                                    $file_status = $this->saveImage($request[$key], $config);
+                                }
                             } else {
                                 $file_status = $this->saveFile($request[$key], $config);
                             }
@@ -333,6 +354,9 @@ trait AdminCrudActions
                     }
                     if ($delete_file_status) {
                         $this->deleteFile($model->$key);
+                        if(isset($value['has_logo']) && $value['has_logo'] === true){
+                            $this->deleteFile($model->logo);
+                        }
                         $model->$key = $file_name;
                     }
                 }
@@ -432,7 +456,7 @@ trait AdminCrudActions
 
         }
 
-        return ['status' => $status, 'message' => $message];
+        return ['status' => $status, 'message' => $message,'data'=>$model];
     }
 
     private function saveSubModel($model, $sub_request, $relation_name, $fields, $action, &$delete_items = null)
@@ -474,6 +498,10 @@ trait AdminCrudActions
 
     }
 
+    protected function afterSaveModel($model,$request): void
+    {
+
+    }
     public function deleteModels($resource, $relations = [], $ids, $json_response = false, $delete_available = false, $order_scopes = null)
     {
         try {
@@ -487,6 +515,9 @@ trait AdminCrudActions
                 foreach ($main_fields['items'] as $item) {
                     if (in_array($item['input_type'], ['image', 'file'])) {
                         $files[] = $item['name'];
+                        if($item['input_type'] === 'image' && isset($item['has_logo']) && $item['has_logo'] === true){
+                            $files[]='logo';
+                        }
                     }
                 }
 

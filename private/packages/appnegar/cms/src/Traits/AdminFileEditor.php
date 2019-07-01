@@ -48,6 +48,7 @@ trait AdminFileEditor{
 
     protected function saveImageWithLogo($file,$image_config,$logo_config,$quality=100): array
     {
+//        dd($image_config,$logo_config);
         $error_massages = [];
         $name = null;
         if ($file) {

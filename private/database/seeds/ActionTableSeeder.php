@@ -679,13 +679,29 @@ class ActionTableSeeder extends Seeder
                 'resource_name' => $resource->name,
                 'name' => 'storeImage',
                 'display_name' => 'ذخیره تصویر ',
-                'need_allow' => 0,
+                'need_allow' => 1,
                 'status' => 1,
                 'paths' => [
                     [
                         'name' => $resource->name . '.storeImage',
                         'display_name' => 'ذخیره تصویر ',
                         'slug' => $resource_name . '/store_image',
+                        'method' => 'post',
+                    ],
+                ],
+            ],
+            [
+                'resource_id' => $resource->id,
+                'resource_name' => $resource->name,
+                'name' => 'removeImage',
+                'display_name' => 'حذف تصویر ',
+                'need_allow' => 1,
+                'status' => 1,
+                'paths' => [
+                    [
+                        'name' => $resource->name . '.removeImage',
+                        'display_name' => 'حذف تصویر ',
+                        'slug' => $resource_name . '/remove_image',
                         'method' => 'post',
                     ],
                 ],

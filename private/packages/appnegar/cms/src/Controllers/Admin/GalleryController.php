@@ -1,4 +1,5 @@
 <?php
+
 namespace Appnegar\Cms\Controllers\Admin;
 
 use App\GalleryItem;
@@ -9,18 +10,20 @@ use Appnegar\Cms\Traits\AdminComment;
 use Appnegar\Cms\Traits\AdminSettingTrait;
 use Illuminate\Http\Request;
 
-class GalleryController extends AdminController{
+class GalleryController extends AdminController
+{
     use AdminComment;
 //    use AdminFileManager;
     use AdminSettingTrait;
 
-    public function __construct(){
-        $this->resource='Gallery';
+    public function __construct()
+    {
+        $this->resource = 'Gallery';
 
-        $gallery_config=config('system.gallery');
-        $gallery_item_config=config('system.gallery_item');
-        $this->config=[
-            'gallery'=>[
+        $gallery_config = config('system.gallery');
+        $gallery_item_config = config('system.gallery_item');
+        $this->config = [
+            'gallery' => [
                 'image' => [
                     'size' => $gallery_config['image_size'],
                     'width' => $gallery_config['image_width'],
@@ -29,7 +32,7 @@ class GalleryController extends AdminController{
                     'destination' => $gallery_config['image_destination'],
                 ],
             ],
-            'gallery_item'=>[
+            'gallery_item' => [
                 'logo' => [
                     'size' => $gallery_item_config['logo_size'],
                     'width' => $gallery_item_config['logo_width'],
@@ -51,15 +54,13 @@ class GalleryController extends AdminController{
 
     protected function validationRules($request, $id = null)
     {
-        $rules=[
-            'category_id'=>'required|exists:gallery_categories,id',
-            'name'=>'required|unique:galleries,name',
-            'description'=>'nullable',
-            'image'=>'nullable|image|max:'.$this->config['gallery']['image']['size'] . '|mimes:' . trimArrayString($this->config['gallery']['image']['extension']),
-            'show_count'=>'nullable|numeric|min:0',
-            'order'=>'nullable|numeric|min:1',
-            'status'=>'nullable|numeric|min:0|max:1',
-            'published_at'=>'nullable',
+        $rules = [
+            'name' => 'required|unique:galleries,name',
+            'description' => 'nullable',
+            'image' => 'nullable|image|max:' . $this->config['gallery']['image']['size'] . '|mimes:' . trimArrayString($this->config['gallery']['image']['extension']),
+            'order' => 'nullable|numeric|min:1',
+            'status' => 'nullable|numeric|min:0|max:1',
+            'published_at' => 'nullable',
 //            'gallery_items.*.name'=>'required',
 //            'gallery_items.*.description'=>'nullable',
 //            'gallery_items.*.logo'=>'required|image|max:'.$this->config['gallery_item']['logo']['size'] . '|mimes:' . trimArrayString($this->config['gallery_item']['logo']['extension']),
@@ -77,8 +78,8 @@ class GalleryController extends AdminController{
 //                }
 //            }
 //        }
-        if($id){
-            $rules['name'].=",".$id;
+        if ($id) {
+            $rules['name'] .= "," . $id;
 //            if(isset($request->gallery_items)){
 //                foreach ($request->gallery_items as $index=>$gallery_item){
 //                    if($gallery_item['image_src'] !== null){
@@ -95,43 +96,100 @@ class GalleryController extends AdminController{
 
     protected function setModel($model)
     {
-        $model->tag_id=$model->tags()->pluck('id');
-        if($model->author_id !== null){
-            $model->author_id=$model->author->name;
+        $model->tag_id = $model->tags()->pluck('id');
+        if ($model->author_id !== null) {
+            $model->author_id = $model->author->name;
         }
         return $model;
     }
 
     protected function getFormData($data)
     {
-        return[
-            'model'=>$data,
-            'options'=>[
-                'tag_id'=>Tag::select('id','name as text')->get()
+        return [
+            'model' => $data,
+            'options' => [
+                'tag_id' => Tag::select('id', 'name as text')->get()
             ]
         ];
     }
 
-    public function storeImage(Request $request){
-        $gallery_id=null;
-        if($request->id !== 0){
-            $gallery_id=$request->id;
+    public function storeImage(Request $request)
+    {
+        $session_key = 'user_info';
+        if (session('department') !== 'profile') {
+            $session_key = 'user_info_' . session('department');
         }
-       foreach ($request->files as $file){
+        $user=session($session_key);
+        $this->validate($request,[
+            'gallery_id'=>'required',
+            'file'=>'required|image|max:'.$this->config['gallery_item']['image']['size'] . '|mimes:' . trimArrayString($this->config['gallery_item']['image']['extension']),
+        ]);
+        $gallery_id = null;
+        if ($request->gallery_id != 0) {
+            $gallery_id = $request->gallery_id;
+        }
+        foreach ($request->files as $file) {
 
-               $file_status = $this->saveImageWithLogo($file, $this->config['gallery']['gallery_item']['image'],$this->config['gallery']['gallery_item']['logo']);
-           if ($file_status['status'] === false) {
-               $errors = implode(', ', $file_status['data']);
-               throw new \Exception($errors);
-           }
-           $file_name = $file_status['data'];
+            $file_status = $this->saveImageWithLogo($file, $this->config['gallery_item']['image'], $this->config['gallery_item']['logo']);
+            if ($file_status['status'] === false) {
+                $errors = implode(', ', $file_status['data']);
+                throw new \Exception($errors);
+            }
 
-//           GalleryItem::create([
-//               'gallery_id'=>$gallery_id,
-//               'name'=>$file_name,
-//               'image'=>$file_name,
-//               'order'=>
-//           ]);
-       }
+            $image_name=basename($file->getClientOriginalName(), '.'.$file->getClientOriginalExtension());
+            $file_name = $file_status['data'];
+
+            $order=1;
+            if ($gallery_id !== null){
+                $order=GalleryItem::where('gallery_id',$gallery_id)->max('order')+1;
+            }
+            $gallery_item=GalleryItem::create([
+                'author_id'=>$user['id'],
+                'gallery_id' => $gallery_id,
+                'name' => $image_name,
+                'image' => $file_name,
+                'order' =>$order,
+                'status'=>1
+           ]);
+
+            $logo=$gallery_item->logo;
+            $gallery_item=$gallery_item->toArray();
+            $gallery_item['logo']=$logo;
+//            dd($logo);
+        }
+
+        return response()->json(['message'=>'تصویر با موفقیت ثبت شد','model'=>$gallery_item]);
+
+//        return $this->getResponseMessage(true, 'GalleryItem', 'create');
+    }
+
+    /**
+     * @param $model
+     * @param $request
+     */
+    protected function afterSaveModel($model, $request): void
+    {
+        if($request['id'] == 0){
+            $gallery_id=$model['id'];
+            $order=1;
+            if ($gallery_id !== null){
+                $order=GalleryItem::where('gallery_id',$gallery_id)->max('order')+1;
+            }
+
+            $gallery_items=GalleryItem::where('gallery_id',null)->get();
+            foreach ($gallery_items as $gallery_item){
+                $gallery_item->gallery_id=$gallery_id;
+                $gallery_item->order=$order++;
+                $gallery_item->save();
+            }
+        }
+    }
+
+    public function removeImage(Request $request)
+    {
+        $this->validate($request,[
+            'id'=>'required'
+        ]);
+        return $this->deleteModels('GalleryItem',[],[$request->id],true,['gallery_id']);
     }
 }
