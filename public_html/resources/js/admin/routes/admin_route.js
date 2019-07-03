@@ -670,5 +670,54 @@ export default new VueRouter({
 
             ]
         },
+
+        {
+            component: RouterViewApp,
+            path: '/products',
+            meta: {resource: 'products'},
+            children: [
+                {
+                    component: ResourceView,
+                    path: '/',
+                    name: 'products-resource-view',
+                },
+                {
+                    component: ListView,
+                    path: 'list-view',
+                    name: 'products-list-view',
+                    meta: {action: 'listView'},
+                },
+                {
+                    component: FormView,
+                    path: 'create',
+                    name: 'products-create',
+                    meta: {action: 'create'},
+                },
+                {
+                    component: FormView,
+                    path: ':id/edit',
+                    name: 'products-edit',
+                    meta: {action: 'edit'},
+                },
+                {
+                    component: ShowView,
+                    path: ':id',
+                    name: 'products-show',
+                },
+                {
+                    component: FileManagerView,
+                    path: 'file_manager/index',
+                    name: 'products-file-manager-show',
+                    meta: {action: 'showFileManager'},
+                },
+                {
+                    component: UpdateSettingFormView,
+                    path: 'settings/form',
+                    name: 'products-settings-form',
+                    meta: {action: 'updateSettings'},
+                },
+
+            ]
+        },
     ]
 });

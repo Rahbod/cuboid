@@ -40943,6 +40943,44 @@ var RoleFormView = function RoleFormView(resolve) {
             path: ':id',
             name: 'feedback-show'
         }]
+    }, {
+        component: __WEBPACK_IMPORTED_MODULE_1__view_components_RouterViewApp_vue___default.a,
+        path: '/products',
+        meta: { resource: 'products' },
+        children: [{
+            component: ResourceView,
+            path: '/',
+            name: 'products-resource-view'
+        }, {
+            component: ListView,
+            path: 'list-view',
+            name: 'products-list-view',
+            meta: { action: 'listView' }
+        }, {
+            component: FormView,
+            path: 'create',
+            name: 'products-create',
+            meta: { action: 'create' }
+        }, {
+            component: FormView,
+            path: ':id/edit',
+            name: 'products-edit',
+            meta: { action: 'edit' }
+        }, {
+            component: ShowView,
+            path: ':id',
+            name: 'products-show'
+        }, {
+            component: FileManagerView,
+            path: 'file_manager/index',
+            name: 'products-file-manager-show',
+            meta: { action: 'showFileManager' }
+        }, {
+            component: UpdateSettingFormView,
+            path: 'settings/form',
+            name: 'products-settings-form',
+            meta: { action: 'updateSettings' }
+        }]
     }]
 }));
 
