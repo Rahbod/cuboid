@@ -36943,10 +36943,6 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_i18next__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue__);
-var _mutations;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -36985,7 +36981,7 @@ var form = {
             return state.options;
         }
     },
-    mutations: (_mutations = {
+    mutations: {
         setEl: function setEl(state, el) {
             state.el = el;
         },
@@ -37039,9 +37035,6 @@ var form = {
         },
         setErrors: function setErrors(state, errors) {
             state.errors = errors;
-        },
-        setInfo: function setInfo(state, info) {
-            state.info = info;
         },
         setInfoValue: function setInfoValue(state, payload) {
             __WEBPACK_IMPORTED_MODULE_1_vue___default.a.set(state.info[payload.index], payload.key, payload.value);
@@ -37098,22 +37091,29 @@ var form = {
         },
         setModel: function setModel(state, model) {
             state.model = model;
+        },
+        setInfo: function setInfo(state, info) {
+            state.info = info;
+        },
+        removeError: function removeError(state, key) {
+            delete state.errors[key];
+        },
+        updateOptions: function updateOptions(state, payload) {
+            __WEBPACK_IMPORTED_MODULE_1_vue___default.a.set(state.options, payload.key, payload.value);
+        },
+        deleteOption: function deleteOption(state, key) {
+            delete state.options[key];
         }
-    }, _defineProperty(_mutations, 'setInfo', function setInfo(state, info) {
-        state.info = info;
-    }), _defineProperty(_mutations, 'removeError', function removeError(state, key) {
-        delete state.errors[key];
-    }), _defineProperty(_mutations, 'updateOptions', function updateOptions(state, payload) {
-        __WEBPACK_IMPORTED_MODULE_1_vue___default.a.set(state.options, payload.key, payload.value);
-    }), _defineProperty(_mutations, 'deleteOption', function deleteOption(state, key) {
-        delete state.options[key];
-    }), _mutations),
+    },
     actions: {
         setInfo: function setInfo(context, fields) {
             context.commit('setInfo', []);
             var resource = context.rootGetters.resource;
             if (resource === 'profile') {
                 resource = 'users';
+            }
+            if (resource === 'projects') {
+                resource = 'products';
             }
             var info = {};
             info.items = [];
@@ -39446,10 +39446,14 @@ var filterable_table = {
             return state.fields;
         },
         table_fields: function table_fields(state, rootState) {
+            var resource = rootState.resource;
+            if (resource === 'projects') {
+                resource = 'products';
+            }
             var fields = [];
             if (state.fields !== undefined && Array.isArray(state.fields)) {
                 state.fields.forEach(function (field) {
-                    var is_main = field.name === rootState.resource;
+                    var is_main = field.name === resource;
                     if (field.items !== undefined && (is_main || field.show_in_table === true)) {
                         field.items.forEach(function (item) {
                             if (item.show_in_table === true) {
@@ -39610,6 +39614,9 @@ var filterable_table = {
             context.commit('setFields', []);
 
             var resource = context.rootGetters.resource;
+            if (resource === 'projects') {
+                resource = 'products';
+            }
             var temp_fields = [];
             if (fields !== undefined && Array.isArray(fields)) {
                 fields.forEach(function (field) {
@@ -39904,9 +39911,8 @@ var show = {
         setInfo: function setInfo(context, fields) {
             context.commit('setInfo', []);
             var resource = context.rootGetters.resource;
-            var department = context.rootGetters.department;
-            if (resource === 'courses' && department === 'profile') {
-                resource = 'user_classes';
+            if (resource === 'projects') {
+                resource = 'products';
             }
             var info = {};
             info.items = [];

@@ -1,9 +1,9 @@
 <?php
 return [
-    'title'=>'محصولات',
-    'table_title' => 'لیست تمام محصولات سیستم',
-    'create_form_title' => 'فرم ایجاد محصولات',
-    'edit_form_title' => 'فرم ویرایش محصولات',
+    'title'=>'پروژه ها',
+    'table_title' => 'لیست تمام پروژه ها سیستم',
+    'create_form_title' => 'فرم ایجاد پروژه ',
+    'edit_form_title' => 'فرم ویرایش پروژه ',
     'items' => [
         'author_id' => 'نویسنده',
         'category_id' => 'دسته بندی',
@@ -31,6 +31,6 @@ return [
     ],
     'values' => [
         'select_items' => 'گزینه ها ی مورد نظر خود را انتخاب کنید',
-        'create_new_record' => 'ایجاد محصول جدید'
+        'create_new_record' => 'ایجاد پروژه جدید'
     ],
 ];

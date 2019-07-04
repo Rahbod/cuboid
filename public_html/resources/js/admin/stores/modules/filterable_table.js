@@ -91,10 +91,14 @@ export const filterable_table = {
             return state.fields;
         },
         table_fields(state, rootState) {
+            let resource = rootState.resource;
+            if(resource === 'projects' ){
+                resource = 'products'
+            }
             let fields = [];
             if (state.fields !== undefined && Array.isArray(state.fields)) {
                 state.fields.forEach((field) => {
-                    let is_main = (field.name === rootState.resource);
+                    let is_main = (field.name === resource);
                     if (field.items !== undefined && (is_main || field.show_in_table === true)) {
                         field.items.forEach(item => {
                             if (item.show_in_table === true) {
@@ -258,6 +262,9 @@ export const filterable_table = {
             context.commit('setFields', []);
 
             let resource = context.rootGetters.resource;
+            if(resource === 'projects' ){
+                resource = 'products'
+            }
             let temp_fields = [];
             if (fields !== undefined && Array.isArray(fields)) {
                 fields.forEach((field) => {

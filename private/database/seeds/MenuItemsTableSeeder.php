@@ -270,6 +270,12 @@ class MenuItemsTableSeeder extends Seeder
                 case 'feedback';
                     $menu_item->icon = 'icon-feed';
                     break;
+                case 'products';
+                    $menu_item->icon = 'icon-bag';
+                    break;
+                case 'projects';
+                    $menu_item->icon = 'icon-hammer-wrench';
+                    break;
                 default:
                     $this->setMenuIcon($menu_item);
                     break;

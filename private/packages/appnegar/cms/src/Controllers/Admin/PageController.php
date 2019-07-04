@@ -1,7 +1,6 @@
 <?php
 namespace Appnegar\Cms\Controllers\Admin;
 
-use App\Gallery;
 use App\Tag;
 use Appnegar\Cms\Controllers\AdminController;
 use Appnegar\Cms\Traits\AdminComment;

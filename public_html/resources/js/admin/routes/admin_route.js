@@ -719,5 +719,53 @@ export default new VueRouter({
 
             ]
         },
+        {
+            component: RouterViewApp,
+            path: '/projects',
+            meta: {resource: 'projects'},
+            children: [
+                {
+                    component: ResourceView,
+                    path: '/',
+                    name: 'projects-resource-view',
+                },
+                {
+                    component: ListView,
+                    path: 'list-view',
+                    name: 'projects-list-view',
+                    meta: {action: 'listView'},
+                },
+                {
+                    component: FormView,
+                    path: 'create',
+                    name: 'projects-create',
+                    meta: {action: 'create'},
+                },
+                {
+                    component: FormView,
+                    path: ':id/edit',
+                    name: 'projects-edit',
+                    meta: {action: 'edit'},
+                },
+                {
+                    component: ShowView,
+                    path: ':id',
+                    name: 'projects-show',
+                },
+                {
+                    component: FileManagerView,
+                    path: 'file_manager/index',
+                    name: 'projects-file-manager-show',
+                    meta: {action: 'showFileManager'},
+                },
+                {
+                    component: UpdateSettingFormView,
+                    path: 'settings/form',
+                    name: 'projects-settings-form',
+                    meta: {action: 'updateSettings'},
+                },
+
+            ]
+        },
     ]
 });

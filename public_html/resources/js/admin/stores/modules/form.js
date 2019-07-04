@@ -93,9 +93,6 @@ export const form = {
         setErrors(state, errors) {
             state.errors = errors;
         },
-        setInfo(state, info) {
-            state.info = info;
-        },
         setInfoValue(state, payload) {
             Vue.set(state.info[payload.index], payload.key, payload.value);
             // console.log(payload, state.info[payload.index]);
@@ -176,6 +173,9 @@ export const form = {
             let resource = context.rootGetters.resource;
             if (resource === 'profile') {
                 resource = 'users';
+            }
+            if(resource === 'projects' ){
+                resource = 'products'
             }
             let info = {};
             info.items = [];

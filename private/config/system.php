@@ -54,6 +54,20 @@ return [
             'image_extension' =>  'jpg, jpeg, png',
             'image_destination' =>  'slider/image/',
         ],
+    'product' => [
+            'image_size' =>  '2048',
+            'image_width' =>  '2000',
+            'image_height' =>  '767',
+            'image_extension' =>  'jpg, jpeg, png',
+            'image_destination' =>  'product/image/',
+        ],
+    'project' => [
+            'image_size' =>  '2048',
+            'image_width' =>  '2000',
+            'image_height' =>  '767',
+            'image_extension' =>  'jpg, jpeg, png',
+            'image_destination' =>  'project/image/',
+        ],
     'gallery' => [
             'image_size' =>  '500',
             'image_width' =>  '700',

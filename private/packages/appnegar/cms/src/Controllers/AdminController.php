@@ -36,7 +36,9 @@ class AdminController extends Controller
         if ($resource === null) {
             $resource = $this->resource;
         }
+
         $resource_name = $this->getResourceName($resource);
+//        dd($resource_name);
         $lang_resource = trans($resource_name);
         if ($lang_resource === $resource_name) {
             $lang_resource = [];
@@ -46,10 +48,11 @@ class AdminController extends Controller
                 $model_name = '\\App\\' . $resource;
                 $fields = $model_name::getFields();
             }
-
-
+            if($resource_name === 'projects'){
+                $resource_name='products';
+            }
             foreach ($fields as $field) {
-                if ($field['name'] !== $resource_name && $field['table']) {
+                if ($field['name'] !== $resource_name && isset($field['table'])) {
                     $sub_lang_resource = trans($field['table']);
                     if ($sub_lang_resource !== $field['table']) {
                         $sub_items = [];

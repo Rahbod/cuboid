@@ -2,15 +2,15 @@
 
 namespace Appnegar\Cms\Controllers\Admin;
 
-class ProductController extends AdminProductController
+class ProjectController extends AdminProductController
 {
 
     public function __construct()
     {
-        $this->resource = 'Product';
-        $config = config('system.product');
+        $this->resource = 'Project';
+        $config = config('system.project');
         $this->config = [
-            'product' => [
+            'project' => [
                 'image' => [
                     'size' => $config['image_size'],
                     'width' => $config['image_width'],

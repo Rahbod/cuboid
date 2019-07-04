@@ -73,6 +73,8 @@ return [
         'desc'=>'نزولی',
         'article'=>'مقاله',
         'news'=>'اخبار',
+        'product'=>'محصول',
+        'project'=>'پروژه',
         'page'=>'صفحه',
         'action'=>'عملیات',
         'link'=>'لینک',

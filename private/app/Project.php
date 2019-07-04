@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Product extends BaseProduct
+class Project extends BaseProduct
 {
     protected $table = 'products';
 }

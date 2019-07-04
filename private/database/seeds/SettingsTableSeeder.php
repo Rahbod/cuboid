@@ -454,6 +454,118 @@ class SettingsTableSeeder extends Seeder
         ]);
 
         $setting_group = SettingGroup::create([
+            'name' => 'product',
+            'display_name' => 'تنظیمات محصولات',
+        ]);
+        $order = 1;
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'image_size',
+            'display_name' => 'حجم تصویر',
+            'value' => '2048',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'image_width',
+            'display_name' => 'طول تصویر',
+            'value' => '2000',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'image_height',
+            'display_name' => 'عرض تصویر',
+            'value' => '767',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'image_extension',
+            'display_name' => 'پسوند های مجاز تصویر',
+            'value' => "jpg, jpeg, png",
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'image_destination',
+            'display_name' => 'مسیر ذخیره تصویر',
+            'value' => "product/image/",
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'ltr',
+            'order' => $order++
+        ]);
+
+        $setting_group = SettingGroup::create([
+            'name' => 'project',
+            'display_name' => 'تنظیمات پروژه ها',
+        ]);
+        $order = 1;
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'image_size',
+            'display_name' => 'حجم تصویر',
+            'value' => '2048',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'image_width',
+            'display_name' => 'طول تصویر',
+            'value' => '2000',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'image_height',
+            'display_name' => 'عرض تصویر',
+            'value' => '767',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'image_extension',
+            'display_name' => 'پسوند های مجاز تصویر',
+            'value' => "jpg, jpeg, png",
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'image_destination',
+            'display_name' => 'مسیر ذخیره تصویر',
+            'value' => "project/image/",
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'ltr',
+            'order' => $order++
+        ]);
+
+        $setting_group = SettingGroup::create([
             'name' => 'gallery',
             'display_name' => 'تنظیمات گالری',
         ]);

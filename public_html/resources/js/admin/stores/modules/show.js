@@ -49,9 +49,8 @@ export const show = {
         setInfo(context, fields) {
             context.commit('setInfo', []);
             let resource = context.rootGetters.resource;
-            let department=context.rootGetters.department;
-            if(resource === 'courses' && department === 'profile'){
-                resource = 'user_classes'
+            if(resource === 'projects' ){
+                resource = 'products'
             }
             let info = {};
             info.items = [];

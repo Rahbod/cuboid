@@ -2,24 +2,25 @@
 
 namespace App;
 
+use Appnegar\Cms\Traits\GetImageAttributesTrait;
 use Appnegar\Cms\Traits\ModelTrait;
 use Appnegar\Cms\Traits\SetAndGetDateAttributesTrait;
 use Illuminate\Database\Eloquent\Model;
-use Kalnoy\Nestedset\NodeTrait;
 
-class Category extends Model
+class BaseProduct extends Model
 {
-    use NodeTrait;
     use ModelTrait;
+    use GetImageAttributesTrait;
     use SetAndGetDateAttributesTrait;
 
-    protected $fillable = ['author_id', 'parent_id', 'name', 'special_name', 'description', 'order', 'status', '_lft', '_rgt', 'published_at'];
+    protected $fillable = ['author_id', 'category_id','gallery_id','type', 'title', 'image', 'description', 'attributes',
+        'attributes','order','status',];
 
 
-    public static function mainFields()
-    {
+
+    public static function mainFields(){
         return [
-            'name' => static::getTableName(),
+            'name' => static ::getTableName(),
             'items' => [
                 [
                     'name' => 'id',
@@ -34,14 +35,23 @@ class Category extends Model
                 [
                     'name' => 'author_id',
                     'type' => 'numeric',
-                    'input_type' => 'hidden',
+                    'input_type' => 'disable',
                     'orderable' => true,
                     'searchable' => true,
                     'show_in_table' => false,
                     'show_in_form' => true,
                 ],
                 [
-                    'name' => 'parent_id',
+                    'name' => 'category_id',
+                    'type' => 'select',
+                    'input_type' => 'select',
+                    'orderable' => true,
+                    'searchable' => true,
+                    'show_in_table' => false,
+                    'show_in_form' => true,
+                ],
+                [
+                    'name' => 'gallery_id',
                     'type' => 'select',
                     'input_type' => 'select',
                     'orderable' => true,
@@ -52,21 +62,25 @@ class Category extends Model
                 [
                     'name' => 'type',
                     'type' => 'select',
-                    'input_type' => 'select',
-                    'options' => [
-                        ['id' => 'article', 'text' => 'article'],
-                        ['id' => 'news', 'text' => 'news'],
-                        ['id' => 'product', 'text' => 'product'],
-                        ['id' => 'project', 'text' => 'project'],
-                    ],
-                    'orderable' => true,
-                    'searchable' => true,
-                    'show_in_table' => true,
-                    'show_in_sub_table' => false,
+                    'input_type' => 'hidden',
+                    'options' => [['id' => 'product', 'text' => 'product'], ['id' => 'project', 'text' => 'project']],
+                    'orderable' => false,
+                    'searchable' => false,
+                    'show_in_table' => false,
                     'show_in_form' => true,
                 ],
                 [
-                    'name' => 'name',
+                    'name' => 'tag_id',
+                    'type' => 'select',
+                    'input_type' => 'tags',
+                    'is_related_field'=>true,
+                    'orderable' => true,
+                    'searchable' => true,
+                    'show_in_table' => false,
+                    'show_in_form' => true,
+                ],
+                [
+                    'name' => 'title',
                     'type' => 'string',
                     'input_type' => 'text',
                     'orderable' => true,
@@ -75,23 +89,30 @@ class Category extends Model
                     'show_in_form' => true
                 ],
                 [
-                    'name' => 'special_name',
+                    'name' => 'image',
                     'type' => 'string',
-                    'input_type' => 'text',
-                    'orderable' => true,
-                    'searchable' => true,
-                    'show_in_table' => true,
-                    'show_in_sub_table' => false,
+                    'input_type' => 'image',
+                    'orderable' => false,
+                    'searchable' => false,
+                    'show_in_table' => false,
                     'show_in_form' => true
                 ],
                 [
                     'name' => 'description',
                     'type' => 'string',
-                    'input_type' => 'textarea',
+                    'input_type' => 'editor',
                     'orderable' => true,
                     'searchable' => true,
                     'show_in_table' => false,
-                    'show_in_sub_table' => false,
+                    'show_in_form' => true
+                ],
+                [
+                    'name' => 'attributes',
+                    'type' => 'string',
+                    'input_type' => 'hidden',
+                    'orderable' => true,
+                    'searchable' => false,
+                    'show_in_table' => false,
                     'show_in_form' => true
                 ],
                 [
@@ -101,7 +122,6 @@ class Category extends Model
                     'orderable' => true,
                     'searchable' => true,
                     'show_in_table' => true,
-                    'show_in_sub_table' => false,
                     'show_in_form' => true
                 ],
                 [
@@ -110,8 +130,7 @@ class Category extends Model
                     'input_type' => 'radio',
                     'orderable' => true,
                     'searchable' => true,
-                    'show_in_table' => true,
-                    'show_in_sub_table' => false,
+                    'show_in_table' => false,
                     'show_in_form' => true,
                     'options' => [['id' => 0, 'text' => 'inactive'], ['id' => 1, 'text' => 'active']]
                 ],
@@ -141,14 +160,27 @@ class Category extends Model
                     'searchable' => true,
                     'show_in_table' => false,
                     'show_in_form' => false,
-                ]
+                ],
             ]
         ];
     }
 
-    public static function relatedFields()
-    {
+    public static function  relatedFields(){
         return [
+            [
+                'name' => 'category',
+                'table' => Category::getTableName(),
+                'show_in_form' => false,
+                'show_in_table' => false,
+                'items' => Category::getSubFields()
+            ],
+            [
+                'name' => 'gallery',
+                'table' => Gallery::getTableName(),
+                'show_in_form' => false,
+                'show_in_table' => false,
+                'items' => Gallery::getSubFields()
+            ],
             [
                 'name' => 'author',
                 'table' => User::getTableName(),
@@ -157,12 +189,12 @@ class Category extends Model
                 'items' => User::getSubFields()
             ],
             [
-                'name' => 'contents',
-                'table' => Content::getTableName(),
-                'show_in_form' => false,
+                'name' => 'attachments',
+                'table' => Attachment::getTableName(),
+                'show_in_form' => true,
                 'show_in_table' => false,
-                'items' => Content::getSubFields()
-            ]
+                'items' => Attachment::getSubFields()
+            ],
         ];
     }
 
@@ -170,15 +202,28 @@ class Category extends Model
     {
         return $this->belongsTo('App\User', 'author_id', 'id');
     }
-
-    public function contents()
+    public function category()
     {
-        return $this->hasMany('App\Content');
+        return $this->belongsTo('App\Category', 'category_id');
+    }
+    public function gallery()
+    {
+        return $this->belongsTo('App\Gallery', 'gallery_id');
     }
 
-    public function courses()
+    public function comments()
     {
-        return $this->hasMany('App\Course');
+        return $this->morphMany('App\Comment', 'commentable');
     }
 
+
+    public function attachments()
+    {
+        return $this->morphMany('App\Attachment', 'attachmentable');
+    }
+
+    public function tags()
+    {
+        return $this->morphToMany('App\Tag', 'taggable');
+    }
 }
