@@ -3,12 +3,8 @@
 namespace App\Providers;
 
 use App\Action;
-use App\Book;
-use App\BookConcordance;
 use App\Department;
 use App\Observers\ActionObserver;
-use App\Observers\BookConcordanceObserver;
-use App\Observers\BookObserver;
 use App\Observers\DepartmentObserver;
 use App\Observers\PathObserver;
 use App\Observers\ResourceGroupObserver;
@@ -41,8 +37,6 @@ class AppServiceProvider extends ServiceProvider
         SettingGroup::observe(SettingGroupObserver::class);
         Setting::observe(SettingObserver::class);
         Path::observe(PathObserver::class);
-//        Book::observe(BookObserver::class);
-//        BookConcordance::observe(BookConcordanceObserver::class);
     }
 
     /**

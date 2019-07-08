@@ -103,15 +103,15 @@ class AdminController extends Controller
         $data = json_decode($data);
         if(isset($data->avatar)){
             $avatar=url($data->avatar);
-            $data->avatar="<img src='$avatar'/>";
+            $data->avatar="<img style='width: 100%' src='$avatar'/>";
         }
         if(isset($data->image)){
             $image=url($data->image);
-            $data->image="<img src='$image'/>";
+            $data->image="<img style='width: 100%' src='$image'/>";
         }
         if(isset($data->logo)){
             $logo=url($data->logo);
-            $data->logo="<img src='$logo'/>";
+            $data->logo="<img style='width: 100%' src='$logo'/>";
         }
         if(isset($data->user_id) && $model->user){
             $data->user_id=$model->user->username;

@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 //    return redirect()->to('en');
 });
+Route::get('/home_test', function () {
+    return view('home-test');
+//    return redirect()->to('en');
+});
 
 
 Route::get('/clear', function () {

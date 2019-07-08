@@ -6,7 +6,7 @@ trait GetImageAttributesTrait
 {
     public function getPhotoAttribute($photo)
     {
-        $resource_name = str_singular($this->getTable());
+        $resource_name = getResourceName(class_basename($this),true);
         if ($photo) {
             $path = '/storage/' . config('system.' . $resource_name . '.photo_destination') . $photo;
             return $path;
@@ -17,7 +17,7 @@ trait GetImageAttributesTrait
 
     public function getLogoAttribute($photo)
     {
-        $resource_name = str_singular($this->getTable());
+        $resource_name = getResourceName(class_basename($this),true);
         if ($photo) {
             $path = '/storage/' . config('system.' . $resource_name . '.logo_destination') . $photo;
             return $path;
@@ -28,7 +28,7 @@ trait GetImageAttributesTrait
 
     public function getImageAttribute($photo)
     {
-        $resource_name = str_singular($this->getTable());
+        $resource_name = getResourceName(class_basename($this),true);
         if ($photo) {
             if(strpos($photo,'http') === false){
                 $path = '/storage/' . config('system.' . $resource_name . '.image_destination') . $photo;
@@ -46,7 +46,7 @@ trait GetImageAttributesTrait
 
     public function getAvatarAttribute($photo)
     {
-        $resource_name = str_singular($this->getTable());
+        $resource_name = getResourceName(class_basename($this),true);
         if ($photo) {
             if (strpos($photo,'http') === false) {
                 $path = '/storage/' . config('system.' . $resource_name . '.avatar_destination') . $photo;

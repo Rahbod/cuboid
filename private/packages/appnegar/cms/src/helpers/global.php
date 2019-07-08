@@ -380,3 +380,12 @@ function numberConvertor($string, $lang = 'en2fa')
 
     return $string_convert;
 }
+
+function getResourceName($resource, $singular = false)
+{
+    $resource_name = ltrim(strtolower(preg_replace('/[A-Z]([A-Z](?![a-z]))*/', '_$0', $resource)), '_');
+    if ($singular == false) {
+        $resource_name = str_plural($resource_name);
+    }
+    return $resource_name;
+}
