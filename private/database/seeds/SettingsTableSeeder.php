@@ -89,51 +89,6 @@ class SettingsTableSeeder extends Seeder
         ]);
         Setting::create([
             'setting_group_id' => $setting_group->id,
-            'name' => 'telegram',
-            'display_name' => 'telegram',
-            'value' => 'https://telegram.me/cuboid.ir',
-            'type' => 'text',
-            'direction' => 'ltr',
-            'order' => $order++
-        ]);
-        Setting::create([
-            'setting_group_id' => $setting_group->id,
-            'name' => 'instagram',
-            'display_name' => 'instagram',
-            'value' => 'https://www.instagram.com/cuboid.ir',
-            'type' => 'text',
-            'direction' => 'ltr',
-            'order' => $order++
-        ]);
-        Setting::create([
-            'setting_group_id' => $setting_group->id,
-            'name' => 'facebook',
-            'display_name' => 'facebook',
-            'value' => 'https://www.facebook.com/cuboid.ir',
-            'type' => 'text',
-            'direction' => 'ltr',
-            'order' => $order++
-        ]);
-        Setting::create([
-            'setting_group_id' => $setting_group->id,
-            'name' => 'google_plus',
-            'display_name' => 'google plus',
-            'value' => 'https://plus.google.com/+cuboid.ir',
-            'type' => 'text',
-            'direction' => 'ltr',
-            'order' => $order++
-        ]);
-        Setting::create([
-            'setting_group_id' => $setting_group->id,
-            'name' => 'twitter',
-            'display_name' => 'twitter',
-            'value' => 'https://twitter.com/cuboid.ir',
-            'type' => 'text',
-            'direction' => 'ltr',
-            'order' => $order++
-        ]);
-        Setting::create([
-            'setting_group_id' => $setting_group->id,
             'name' => 'phone',
             'display_name' => 'تلفن',
             'value' => '۳۲۹۴۱۱۱۵-۰۲۵',
@@ -175,6 +130,76 @@ class SettingsTableSeeder extends Seeder
             'value' => '000',
             'type' => 'text',
             'direction' => 'inherit',
+            'order' => $order++
+        ]);
+
+        $setting_group = SettingGroup::create([
+            'name' => 'social_networks',
+            'display_name' => 'تنظیمات شبکه های اجتماعی',
+        ]);
+        $order = 1;
+
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'telegram',
+            'display_name' => 'telegram',
+            'value' => 'https://telegram.me/cuboid.ir',
+            'type' => 'text',
+            'direction' => 'ltr',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'instagram',
+            'display_name' => 'instagram',
+            'value' => 'https://www.instagram.com/cuboid.ir',
+            'type' => 'text',
+            'direction' => 'ltr',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'facebook',
+            'display_name' => 'facebook',
+            'value' => 'https://www.facebook.com/cuboid.ir',
+            'type' => 'text',
+            'direction' => 'ltr',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'google-plus',
+            'display_name' => 'google plus',
+            'value' => 'https://plus.google.com/+cuboid.ir',
+            'type' => 'text',
+            'direction' => 'ltr',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'twitter',
+            'display_name' => 'twitter',
+            'value' => 'https://twitter.com/cuboid.ir',
+            'type' => 'text',
+            'direction' => 'ltr',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'whatsapp',
+            'display_name' => 'twitter',
+            'value' => 'https://whatsapp.com/cuboid.ir',
+            'type' => 'text',
+            'direction' => 'ltr',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'youtube',
+            'display_name' => 'youtube',
+            'value' => 'https://youtube.com/cuboid.ir',
+            'type' => 'text',
+            'direction' => 'ltr',
             'order' => $order++
         ]);
 

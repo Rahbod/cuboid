@@ -11,12 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-//    return redirect()->to('en');
-});
+Route::get('/', 'HomeController@index');
 Route::get('/home_test', function () {
-    return view('home-test');
+    return view('main_site.pages.home');
 //    return redirect()->to('en');
 });
 

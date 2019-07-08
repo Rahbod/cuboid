@@ -176,9 +176,14 @@ class Category extends Model
         return $this->hasMany('App\Content');
     }
 
-    public function courses()
+    public function projects()
     {
-        return $this->hasMany('App\Course');
+        return $this->hasMany('App\Project')->where(['type'=>'project']);
+    }
+
+    public function products()
+    {
+        return $this->hasMany('App\Product')->where(['type'=>'product']);
     }
 
 }
