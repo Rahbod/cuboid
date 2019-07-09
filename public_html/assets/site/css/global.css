@@ -35,6 +35,10 @@
     font-size: 18px;
 }
 
+#html5-watermark {
+    display: none !important;
+}
+
 p {
     line-height: 21px;
     margin-bottom: 24px;
@@ -48,12 +52,12 @@ h1, h2, h3, h4, h5, h6 {
 body {
     direction: rtl;
     text-align: right;
-    font-size: 14px;
-    font-family: alfarooq, sans-serif !important;
+    /*font-size: 14px;*/
+    font-family: Myriad, sans-serif !important;
     overflow-x: hidden;
     position: relative;
     background-color: #fff;
-    font-weight: 400;
+    /*font-weight: 400;*/
     color: #6f6f6f;
     padding: 0;
     margin: 0;
@@ -94,6 +98,30 @@ ul {
 
 /*#endregion*/
 /*#region header*/
+
+.leftMenu {
+    position: relative;
+}
+
+.leftMenu::before {
+    content: '';
+    clear: both;
+    position: absolute;
+    top: -15px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: #f68b1f;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+
+.rounded {
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+}
 
 .bg-dark {
     background: rgba(0, 0, 0, 0.6) !important;
@@ -675,7 +703,7 @@ ul li, ol li {
 .footer {
     overflow: hidden;
     background-color: #242424;
-    background-image: url('../media/images/footer/footer-bg.png');
+    background-image: url('../media/images/footer/footer-bg-2.png');
     height: 620px;
     -webkit-background-size: 100%;
     background-size: 100%;
@@ -755,6 +783,177 @@ ul li, ol li {
 
 .footer .form-group {
     margin-bottom: 40px;
+}
+
+/*#endregion*/
+/*#region completed projects page*/
+.completedProjectsPage {
+    background-image: url(../media/images/completed-projects/completed-projects-bg.png);
+    -webkit-background-size: auto;
+    background-size: auto;
+    background-repeat: no-repeat;
+    padding-top: 130px;
+    padding-bottom: 140px;
+}
+
+.completedProjectsPage .tab-pane .text-center {
+    margin-top: 80px;
+}
+
+.completedProjectsPage .btn-outline-secondary {
+    color: #cecece;
+    background-color: transparent;
+    background-image: none;
+    border-color: #cecece;
+}
+
+.completedProjectsPage .card {
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+}
+
+.completedProjectsPage .btn-outline-secondary:hover, .completedProjectsPage .btn-outline-secondary:focus {
+    color: #fff;
+    background-color: #cecece;
+    /*border-color: #cecece;*/
+}
+
+/*#endregion*/
+/*#region small header*/
+
+.smallHeader {
+    padding: 33px 0;
+    background: #1f1f1f;
+}
+
+.smallHeader .smallHeader__title {
+    padding-right: 35px;
+}
+
+.smallHeader .smallHeader__logo {
+    padding-left: 6px;
+}
+
+.smallHeader .upTitle, .smallHeader .subTitle {
+    color: #fff;
+    margin: 0;
+}
+
+.smallHeader .subTitle {
+    font-size: 20px;
+}
+
+.smallHeader .title {
+    margin-top: -10px;
+    font-size: 56px;
+    color: #f68b1f;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.navbarSubPageColor {
+    background: #000 !important;
+}
+
+/*#endregion*/
+/*#region completed projects show page*/
+.completedProjectsShowPage {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.completedProjectsShowPage .bg-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    z-index: -1;
+}
+
+.completedProjectsShowPage .galleryItem img {
+    -webkit-border-radius: 1rem !important;
+    -moz-border-radius: 1rem !important;
+    border-radius: 1rem !important;
+}
+
+.completedProjectsShowPage .owl-carousel .owl-nav button.owl-prev {
+    top: auto;
+    right: 0;
+    bottom: 0;
+}
+
+.completedProjectsShowPage .owl-carousel .owl-nav button.owl-next {
+    top: auto;
+    left: 0;
+    bottom: 0;
+}
+
+.completedProjectsShowPage .owl-carousel .owl-nav button.owl-next, .completedProjectsShowPage .owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    top: auto;
+    font-size: 3rem !important;
+    color: #d3d3d3 !important;
+    border-radius: 1rem !important;
+    width: 30% !important;
+    font-weight: normal !important;
+}
+
+.completedProjectsShowPage .galleryItem {
+    position: relative;
+    display: block;
+}
+
+.completedProjectsShowPage .galleryItem__indicator {
+    text-align: center;
+    padding: 18px 0;
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+    color: #fff;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.completedProjectsShowPage ul li {
+    line-height: 0.6;
+}
+
+.completedProjectsShowPage ul li::before {
+    content: '.';
+    font-size: 3.3rem;
+    color: #f68b1f;
+    margin-left: 5px;
+}
+
+/*#endregion*/
+
+/*#region text*/
+.text {
+    background-image: url(../media/images/text/text-bg.jpg);
+    -webkit-background-size: auto;
+    background-size: auto;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    padding-bottom: 220px;
+    background-position: left center;
+}
+
+.text ul li {
+    line-height: 0.6;
+}
+
+.text ul li::before {
+    content: '.';
+    font-size: 3.3rem;
+    color: #f68b1f;
+    margin-left: 5px;
 }
 
 /*#endregion*/

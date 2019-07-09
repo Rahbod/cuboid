@@ -7,36 +7,24 @@
 
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/bootstrap.min.css')}}">
     <!--<link rel="icon" href="/assets/site/media/images/public/fav_icon.png">-->
-    <!--<link type="text/css" rel="stylesheet" href="/assets/site/js/vendors/owl-carousel/owl.carousel.min.css">-->
-    <!--<link type="text/css" rel="stylesheet" href="/assets/site/js/vendors/owl-carousel/owl.theme.default.min.css">-->
-    <!--<link type="text/css" rel="stylesheet" href="/assets/site/css/bootstrap-rtl.css">-->
+
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/fonts/fontawesome-5-pro/css/all.min.css')}}">
-    <!--<link type="text/css" rel="stylesheet" href="/assets/site/js/vendors/icomoon/style.css">-->
-    <!--<link type="text/css" rel="stylesheet" href="/assets/site/css/iran-sans.css">-->
-    <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/alfarooq.css')}}">
-    <!--<link type="text/css" rel="stylesheet" href="/assets/site/css/iran-sans-fa-num.css">-->
+    <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/Myriad.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/global.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/sidebar.css')}}">
+    <link type="text/css" rel="stylesheet"
+          href="{{asset('/assets/site/js/vendors/owl-carousel/owl.carousel.min.css')}}">
+    <link type="text/css" rel="stylesheet"
+          href="{{asset('/assets/site/js/vendors/owl-carousel/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" type="text/css" media="screen"
+          href="{{asset('/assets/site/js/vendors/plyr-master/dist/plyr.css')}}">
+    <script type="text/javascript" src="{{asset('/assets/js/vendors/html5lightbox/html5lightbox.js')}}"></script>
 
-    <!--<link type="text/css" rel="stylesheet" href="/assets/site/css/responsive.css">-->
-    <!--<link type="text/css" rel="stylesheet" href="/assets/site/js/vendors/slick/slick.css">-->
-    <!--<link type="text/css" rel="stylesheet" href="/assets/site/js/vendors/slick/slick-theme.css">-->
+    @stack('styles')
 
-    <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/js/vendors/owl-carousel/owl.carousel.min.css')}}">
-    <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/js/vendors/owl-carousel/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{asset('/assets/site/js/vendors/plyr-master/dist/plyr.css')}}">
 </head>
 <body>
-
-<header class="header landing">
-    <div class="sticky-header navbar-expand-lg bg-dark">
-        <div class="main-bar clearfix onepage">
-            <div class="container">
-               @include('main_site.frames.main_nav')
-            </div>
-        </div>
-    </div>
-</header>
+@yield('header')
 <main>
     @yield('main')
 </main>
@@ -48,8 +36,6 @@
 <div class="overlay"></div>
 <script type="text/javascript" src="{{asset('/assets/site/js/jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/bootstrap.min.js')}}"></script>
-<!--<script type="text/javascript" src="{{asset('/assets/site/js/vendors/slick/slick.js')}}"></script>-->
-<!--<script type="text/javascript" src="{{asset('/assets/site/js/vendors/html5lightbox/html5lightbox.js')}}"></script>-->
 <script type="text/javascript" src="{{asset('/assets/site/js/global.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/vendors/owl-carousel/owl.carousel.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/js/vendors/plyr-master/dist/plyr.min.js')}}"></script>
@@ -94,13 +80,8 @@
 //            }
         });
 
-    });
-</script>
+        var player;
 
-<script type="text/javascript">
-    var player;
-
-    $(document).ready(function () {
         var controls =
             [
                 'play-large', // The large play button in the center
@@ -123,11 +104,8 @@
 
         player = new Plyr('#player', {controls});
     });
-
-    //    function playPlyr() {
-    //        player.togglePlay();
-    //    }
-
 </script>
+
+@stack('scripts')
 </body>
 </html>
