@@ -13,7 +13,7 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('/home_test', function () {
-    return view('main_site.pages.home-test');
+    return view('home-test');
 //    return redirect()->to('en');
 });
 
