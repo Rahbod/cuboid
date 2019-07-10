@@ -189,7 +189,7 @@
                     $('.form-check-input-styled-info').uniform({
                         wrapperClass: 'border-info-600 text-info-800'
                     });
-                }, 100);
+                }, 50);
             }
         },
         mounted() {
