@@ -276,6 +276,9 @@ class MenuItemsTableSeeder extends Seeder
                 case 'projects';
                     $menu_item->icon = 'icon-hammer-wrench';
                     break;
+                case 'faqs';
+                    $menu_item->icon = 'icon-question4';
+                    break;
                 default:
                     $this->setMenuIcon($menu_item);
                     break;

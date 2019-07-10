@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Content;
-use App\Course;
 use Carbon\Carbon;
 
 class HomeController extends Controller

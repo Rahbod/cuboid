@@ -46,10 +46,11 @@ class ActionTableSeeder extends Seeder
             'Feedback',
             'Product',
             'Project',
+            'Faq',
         ];
 
         $commentable_resources = ['Content', 'Page'];
-        $have_file_manager_resource = ['Content', 'Page', 'Slider', 'Attachment', 'Product', 'Project'];
+        $have_file_manager_resource = ['Content', 'Page', 'Slider', 'Attachment', 'Product', 'Project', 'Faq'];
         $have_settings = ['Content', 'Page', 'Slider', 'Attachment', 'Gallery', 'GalleryItem', 'Product', 'Project'];
         $have_images=['Gallery'];
         $profile_actions = [

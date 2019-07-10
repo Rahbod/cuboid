@@ -767,5 +767,46 @@ export default new VueRouter({
 
             ]
         },
+        {
+            component: RouterViewApp,
+            path: '/faqs',
+            meta: {resource: 'faqs'},
+            children: [
+                {
+                    component: ResourceView,
+                    path: '/',
+                    name: 'faqs-resource-view',
+                },
+                {
+                    component: ListView,
+                    path: 'list-view',
+                    name: 'faqs-list-view',
+                    meta: {action: 'listView'},
+                },
+                {
+                    component: FormView,
+                    path: 'create',
+                    name: 'faqs-create',
+                    meta: {action: 'create'},
+                },
+                {
+                    component: FormView,
+                    path: ':id/edit',
+                    name: 'faqs-edit',
+                    meta: {action: 'edit'},
+                },
+                {
+                    component: ShowView,
+                    path: ':id',
+                    name: 'faqs-show',
+                },
+                {
+                    component: FileManagerView,
+                    path: 'file_manager/index',
+                    name: 'faqs-file-manager-show',
+                    meta: {action: 'showFileManager'},
+                },
+            ]
+        },
     ]
 });

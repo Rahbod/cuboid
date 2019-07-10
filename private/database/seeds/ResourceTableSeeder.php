@@ -354,6 +354,19 @@ class ResourceTableSeeder extends Seeder
             'display_name' => 'بازخورد'
         ]);
 
+        /***********Feedback resources************/
+        $resource_group = ResourceGroup::create([
+            'department_id'=>$admin_department->id,
+            'name' => 'faqs',
+            'display_name' => 'سوالات متدوال',
+        ]);
+        Resource::create([
+            'parent_id' => $setting_group_resource->id,
+            'resource_group_id' => $resource_group->id,
+            'name' => 'Faq',
+            'display_name' => 'سوالات متداول'
+        ]);
+
 
     }
 }
