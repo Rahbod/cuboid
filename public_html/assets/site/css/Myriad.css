@@ -1,0 +1,15 @@
+﻿@font-face {
+    font-family: Myriad-Bold;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/myriad-font/web/MyriadArabic-Bold.woff');
+    src: url('../fonts/myriad-font/web/MyriadArabic-Bold.woff?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../fonts/myriad-font/web/MyriadArabic-Bold.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+    font-family: Myriad;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/myriad-font/web/MyriadArabic-Regular.woff');
+    src: url('../fonts/myriad-font/web/MyriadArabic-Regular.woff?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../fonts/myriad-font/web/MyriadArabic-Regular.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
