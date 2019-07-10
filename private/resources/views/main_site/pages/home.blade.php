@@ -1,5 +1,9 @@
 @extends('main_site.layouts.master')
 
+@section('header')
+    @include('main_site.frames.header')
+@endsection
+
 @section('main')
     <section class="aboutUs">
         <img class="aboutUs--bgLogo" src="{{asset('/assets/site/media/images/about-us/about-us-logo.png')}}" alt="">
