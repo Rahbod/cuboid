@@ -1324,11 +1324,9 @@
 <div class="overlay"></div>
 <script type="text/javascript" src="{{asset('/assets/site/js/jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/bootstrap.min.js')}}"></script>
-<!--<script type="text/javascript" src="{{asset('/assets/site/js/vendors/slick/slick.js')}}"></script>-->
-<!--<script type="text/javascript" src="{{asset('/assets/site/js/vendors/html5lightbox/html5lightbox.js')}}"></script>-->
 <script type="text/javascript" src="{{asset('/assets/site/js/global.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/vendors/owl-carousel/owl.carousel.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('/assets/js/vendors/plyr-master/dist/plyr.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('/assets/site/js/vendors/plyr-master/dist/plyr.min.js')}}"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {

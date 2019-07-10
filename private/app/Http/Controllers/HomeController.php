@@ -10,6 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
+//        dd('hi');
         $about_us=config('system.about_us.introduction');
         $projects=Category::where('status',1)->where('type','project')->with(['projects'=>function($query){
             $query->where('status',1);
