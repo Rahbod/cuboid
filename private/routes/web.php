@@ -17,6 +17,9 @@ Route::get('/home_test', function () {
 //    return redirect()->to('en');
 });
 
+Route::view('projects','main_site.pages.projects.projects');
+Route::view('projects-show','main_site.pages.projects.projects_show');
+
 
 Route::get('/clear', function () {
     Cache::flush();
