@@ -254,9 +254,5 @@ class User extends Authenticatable
         return $this->hasOne('App\Profile', 'user_id', 'id');
     }
 
-    public function users()
-    {
-        return $this->belongsToMany(ClassRoom::class,'user_classes','user_id','class_room_id');
-    }
 
 }

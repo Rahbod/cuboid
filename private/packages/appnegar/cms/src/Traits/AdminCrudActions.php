@@ -322,11 +322,12 @@ trait AdminCrudActions
                     }
                 }
                 elseif (in_array($value['type'], ['image', 'file'])) {
-
                     $delete_file_status = ($request[$key . '_src'] === null);
                     $file_name = null;
 
+
                     if (isset($request[$key])) {
+
                         $config_name = $this->getResourceName(class_basename($model), true);
                         if (isset($this->config[$config_name][$key])) {
                             $config = $this->config[$config_name][$key];
@@ -358,6 +359,7 @@ trait AdminCrudActions
                             $this->deleteFile($model->logo);
                         }
                         $model->$key = $file_name;
+//
                     }
                 }
                 else {
@@ -379,7 +381,6 @@ trait AdminCrudActions
                         case 'user_id':
                         case 'author_id':
                         if ($request['id'] == 0) {
-//                            dd($request['author_id']);
                             $session_key = 'user_info';
                             if (session('department') !== 'profile') {
                                 $session_key = 'user_info_' . session('department');
@@ -415,7 +416,6 @@ trait AdminCrudActions
 
             }
         }
-//        dd($request->all(),$fields,$model->toArray());
         $status = $model->save();
 
 
@@ -493,7 +493,6 @@ trait AdminCrudActions
             list($table,$morph_type)=explode('.',$relation_info['morph_type']);
             $sub_model->$morph_type=get_class($model);
         }
-
         $this->saveModel($sub_model, $sub_request, $action, $order_conditions, $fields);
 
     }

@@ -382,11 +382,6 @@
     
     });
     Route::group(['namespace'=>'Controllers\Profile','prefix'=>'{lang}'],function(){
-            
-        Route::group(['prefix'=>'profile','middleware'=>['auth:web','set_department:profile' ,'user_info','lang','remove_additional_params']],function(){
-
-                });
-
     
     });
 

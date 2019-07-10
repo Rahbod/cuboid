@@ -547,7 +547,7 @@ export const form = {
         },
         //resources actions
         changeActionDepartmentId(context, payload) {
-            let url = context.rootGetters.main_url + '/' + context.rootGetters.resource + '/change_department';
+            let url = context.rootGetters.main_url + '/change_department';
             let data = {};
             data[payload.key] = payload.value;
             context.dispatch('sendRequest', {url: url, data: data}, {root: true})
@@ -560,7 +560,7 @@ export const form = {
                 })
         },
         changeResourceDepartmentId(context, payload) {
-            let url = context.rootGetters.main_url + '/' + context.rootGetters.resource + '/change_department';
+            let url = context.rootGetters.main_url  + '/change_department';
             let data = {};
             data[payload.key] = payload.value;
             data['resource_id'] = context.getters.model.id;
@@ -574,7 +574,7 @@ export const form = {
                 })
         },
         changeResourceResourceGroupId(context, payload) {
-            let url = context.rootGetters.main_url + '/' + context.rootGetters.resource + '/change_resource_group';
+            let url = context.rootGetters.main_url + '/change_resource_group';
             let data = {};
             data[payload.key] = payload.value;
             data['resource_id'] = context.getters.model.id;
@@ -587,7 +587,7 @@ export const form = {
                 })
         },
         changePathDepartmentId(context, payload) {
-            let url = context.rootGetters.main_url + '/' + context.rootGetters.resource + '/change_department';
+            let url = context.rootGetters.main_url +  '/change_department';
             let data = {};
             data[payload.key] = payload.value;
             data['resource_id'] = context.getters.model.id;
@@ -669,7 +669,7 @@ export const form = {
             }
         },
         changeAttachmentableType(context,payload){
-            let url = context.rootGetters.main_url + '/' + context.rootGetters.resource + '/change_attachmentable_type';
+            let url = context.rootGetters.main_url +  '/change_attachmentable_type';
             let data = {};
             data[payload.key] = payload.value;
             context.dispatch('sendRequest', {url: url, data: data}, {root: true})
