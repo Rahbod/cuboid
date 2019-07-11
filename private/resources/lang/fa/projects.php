@@ -13,6 +13,8 @@ return [
         'id' => 'شناسه',
         'image' => 'تصویر',
         'title' => 'عنوان',
+        'sub_title' => 'زیر عنوان',
+        'summary' => 'چکیده',
         'description' => 'توضیحات',
         'attributesَ' => 'ویژگی ها',
         'status' => 'وضعیت نمایش',
@@ -20,6 +22,12 @@ return [
         'published_at' => 'تاریخ انتشار',
         'created_at' => 'تاریخ ایجاد',
         'updated_at' => 'تاریخ بروزرسانی',
+
+        'address'=>'عنوان',
+        'skeleton'=>'الهیکل العظمی',
+        'opening'=>'اطول حفره',
+        'ceiling_thickness'=>' قاعدة سقف الكيوبيد',
+        'operating_time'=>'وقت التشغیل ',
     ],
     'relations'=>[
         'author'=>'نویسنده',

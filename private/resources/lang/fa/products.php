@@ -13,6 +13,8 @@ return [
         'id' => 'شناسه',
         'image' => 'تصویر',
         'title' => 'عنوان',
+        'sub_title' => 'زیر عنوان',
+        'summary' => 'چکیده',
         'description' => 'توضیحات',
         'attributesَ' => 'ویژگی ها',
         'status' => 'وضعیت نمایش',

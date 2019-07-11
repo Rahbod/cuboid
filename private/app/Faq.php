@@ -46,7 +46,7 @@ class Faq extends Model
                 [
                     'name' => 'answer',
                     'type' => 'string',
-                    'input_type' => 'editor',
+                    'input_type' => 'textarea',
                     'orderable' => true,
                     'searchable' => true,
                     'show_in_table' => false,
