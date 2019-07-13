@@ -24,11 +24,6 @@ class HomeController extends Controller
         })->take(10)->orderBy('order','desc')->get();
 
         $faqs=Faq::where('status',1)->orderBy('order','asc')->take(10)->get();
-//        $menus=Menu::where('parent_id',null)->whrere('status',1)->with(['children'=>function($query){
-//            $query->where('status',1);
-//            $query->orderBy('order','asc');
-//        }])->orderBy('order','asc')->get();
-//        dd($about_us,$categories,$news);
         return view('main_site.pages.home')->with(['about_us'=>$about_us,'categories'=>$categories,'news'=>$news,'faqs'=>$faqs]);
     }
 }
