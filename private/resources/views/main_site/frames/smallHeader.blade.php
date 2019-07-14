@@ -41,13 +41,15 @@
                     <div class="smallHeader__title">
                         <p class="upTitle">سقف الوفل</p>
                         <h1 class="title">غیوبوید</h1>
-                        <span class="subTitle mr-5">خیار طبیعی</span>
+                        <span class="subTitle mr-5">خيار طبيعی</span>
                     </div>
                 </div>
                 <div class="col-6 text-left">
-                    <a href="javascript:;" class="text-center smallHeader__logo">
-                        <img src="./assets/media/images/downloads/CUBOID-white.png" alt="">
-                    </a>
+                   <div class="d-flex align-items-center">
+                       <a href="javascript:;" class="text-center smallHeader__logo">
+                           <img src="./assets/media/images/downloads/CUBOID-white.png" alt="">
+                       </a>
+                   </div>
                 </div>
             </div>
         </div>

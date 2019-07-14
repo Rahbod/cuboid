@@ -4,7 +4,6 @@
     @include('main_site.frames.smallHeader')
 @endsection
 
-
 @section('main')
 
     <section class="text">
