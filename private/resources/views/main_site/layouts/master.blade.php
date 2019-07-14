@@ -9,8 +9,10 @@
     <!--<link rel="icon" href="/assets/site/media/images/public/fav_icon.png">-->
 
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/fonts/fontawesome-5-pro/css/all.min.css')}}">
-    <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/Myriad.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/hacen-maghreb.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/open-sans.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/global.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/responsive.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/sidebar.css')}}">
     <link type="text/css" rel="stylesheet"
           href="{{asset('/assets/site/js/vendors/owl-carousel/owl.carousel.min.css')}}">
@@ -35,6 +37,7 @@
 
 <div class="overlay"></div>
 <script type="text/javascript" src="{{asset('/assets/site/js/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('/assets/site/js/popper.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/global.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/vendors/owl-carousel/owl.carousel.min.js')}}"></script>
@@ -42,23 +45,30 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+
         $('#newsCarousel,#productsCarousel,#completedProjects--commercialCarousel,#completedProjects--hotelCarousel').owlCarousel({
             rtl: true,
             nav: true,
             items: 4,
-//            loop: true,
+            loop: true,
             margin: 26,
             dots: true,
-//            responsive: {
-//                // breakpoint from 0 up
-//                0: {
-//                    items: 1
-//                },
-//                // breakpoint from 768 up
-//                768: {
-//                    items: 2,
-//                }
-//            }
+            responsive: {
+                // breakpoint from 0 up
+                0: {
+                    items: 1
+                },
+                // breakpoint from 768 up
+
+                576: {
+                    items: 2
+                },
+                // breakpoint from 768 up
+                768: {
+                    items: 4,
+                },
+            }
         });
 
         $('#faqCarousel').owlCarousel({
@@ -78,6 +88,13 @@
 //                    items: 2,
 //                }
 //            }
+        });
+
+        $('#mainSlider').owlCarousel({
+            rtl: true,
+            nav: true,
+            items: 1,
+            loop: true,
         });
 
         var player;

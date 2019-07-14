@@ -1,12 +1,12 @@
 <footer class="footer">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-12 col-md-7">
                 <div class="formContainer">
-                    <form action="">
+                    <form action="" class="contactUsForm" method="post" enctype="multipart/form-data">
                         <div class="form-row">
                             <div class="col-12">
-                                <h2>
+                                <h2 class="sectionTitle">
                                     اتصل بنا
                                 </h2>
                             </div>
@@ -47,9 +47,9 @@
                             <div class="form-group col-md-6">
                                 <div class="d-flex" id="captcha_image">
                                     <div class="captchaImageContainer">
-                                        <img src="{{asset('/assets/site/media/images/footer/captcha.png')}}">
+                                        <img src="./assets/media/images/footer/captcha.png">
                                     </div>
-                                    <a href="javascript:;" class="renewCaptchaImage btn">
+                                    <a href="void:;" class="renewCaptchaImage btn">
                                         <i class="far fa-redo"></i>
                                     </a>
                                     <input style="color: #f68e24;" type="text"
@@ -67,17 +67,19 @@
                     </form>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-12 col-md-5">
                 <div class="addressContainer">
                     <ul style="width: 380px;">
                         <li class="mb-4">
-                            <img class="ml-2" src="{{asset('/assets/site/media/images/footer/location-icon.png')}}" alt="">
-                            <span class="address">
+                            <div class="d-flex">
+                                <img class="ml-2 h-100" src="./assets/media/images/footer/location-icon.png" alt="">
+                                <span class="address flex-fill">
                                                             طهران ، الجادة أفريكا ، سابا الجادة ، رقم 42 ، الوحدة 21 021-22
                             </span>
+                            </div>
                         </li>
-                        <li class="phoneNumbers" style="margin-bottom: 25px;">
-                            <h3 class="text-white">هواتف المكاتب المحلية</h3>
+                        <li class="phoneNumbers" style="margin-bottom: 25px;margin-right: 32px;">
+                            <h4 class="text-white sectionTitle">هواتف المكاتب المحلية</h4>
                             <ul>
                                 <li>
                                     <div class="d-flex justify-content-between">
@@ -135,26 +137,26 @@
                     <div class="social">
                         <div class="d-flex">
                             <div class="flex-fill">
-                                <a href="javascript:;" class="social__item">
-                                    <img src="{{asset('/assets/site/media/images/footer/linkedin.png')}}" alt="">
+                                <a href="void:;" class="social__item">
+                                    <img src="./assets/media/images/footer/linkedin.png" alt="">
                                 </a>
-                                <a href="javascript:;" class="social__item">
-                                    <img src="{{asset('/assets/site/media/images/footer/facebook.png')}}" alt="">
+                                <a href="void:;" class="social__item">
+                                    <img src="./assets/media/images/footer/facebook.png" alt="">
                                 </a>
-                                <a href="javascript:;" class="social__item">
-                                    <img src="{{asset('/assets/site/media/images/footer/google-plus.png')}}" alt="">
+                                <a href="void:;" class="social__item">
+                                    <img src="./assets/media/images/footer/google-plus.png" alt="">
                                 </a>
-                                <a href="javascript:;" class="social__item">
-                                    <img src="{{asset('/assets/site/media/images/footer/twitter.png')}}" alt="">
+                                <a href="void:;" class="social__item">
+                                    <img src="./assets/media/images/footer/twitter.png" alt="">
                                 </a>
 
-                                <a href="javascript:;" class="email">
-                                    <img src="{{asset('/assets/site/media/images/footer/email.png')}}" alt="">
+                                <a href="void:;" class="email">
+                                    <img src="./assets/media/images/footer/email.png" alt="">
                                     INFO@CUBOID.COM
                                 </a>
                             </div>
-                            <a href="javascript:;">
-                                <img src="{{asset('/assets/site/media/images/footer/CUBOID.png')}}" alt="">
+                            <a href="void:;">
+                                <img src="./assets/media/images/footer/CUBOID.png" alt="">
                             </a>
                         </div>
 
@@ -168,9 +170,9 @@
             <div class="col-md-7">
                 <div class="d-flex justify-content-between">
                     <div>
-                        © <span class="cuboid">كيوبيد 1396</span> | جميع الحقوق محفوظة لشركة كيوبید
+                        <span class="cuboid">© كيوبيد 1396</span> | جميع الحقوق محفوظة لشركة كيوبید
                     </div>
-                    <span class="designedBy">Design by  Tarsim.inc</span>
+                    <span class="designedBy"><span class="">Design by</span>  Tarsim.inc</span>
                 </div>
                 <div>
                     جميع الحقوق محفوظة لشركة كيوبید

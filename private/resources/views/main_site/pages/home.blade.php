@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="content">
-                        <h2 class="content--header">
+                        <h2 class="content--header sectionTitle">
                             حول غیوبوید
                         </h2>
 
@@ -36,20 +36,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>المشاريع المنجزة</h2>
+                    <h2 class="content--header sectionTitle">المشاريع المنجزة</h2>
 
-                    <p>المشاريع المنجزة منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العد
+                    <p class="content--text">المشاريع المنجزة منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العد
                         المشاريع المنجزة منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العد
                     </p>
                 </div>
                 <div class="col-md-6 my-md-auto">
                     <ul class="nav nav-pills" id="pills-tab" role="tablist" style="justify-content: flex-end;">
                         @foreach($categories as $category)
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="pills-{{$category->id}}-tab" data-toggle="pill" href="#pills-{{$category->id}}" role="tab"
-                               aria-controls="pills-{{$category->id}}" aria-selected="false">{{$category->name}}</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   id="pills-{{$category->id}}-tab" data-toggle="pill" href="#pills-{{$category->id}}"
+                                   role="tab"
+                                   aria-controls="pills-{{$category->id}}" aria-selected="false">{{$category->name}}</a>
+                            </li>
                         @endforeach
                         <li class="nav-item">
                             <a class="nav-link active"
@@ -61,36 +62,37 @@
             </div>
             <div class="tab-content" id="pills-tabContent">
                 @foreach($categories as $category)
-                <div class="tab-pane fade" id="pills-{{$category->id}}" role="tabpanel"
-                     aria-labelledby="pills-{{$category->id}}-tab">
-                    <div id="completedProjects--{{$category->id}}" class="owl-carousel">
-                        @foreach($category->projects as $project)
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset($project->image)}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">{{$project->title}}</h4>
-                                <h5 class="card-sub-title">{{$project->sub_title}}</h5>
-                                <p class="card-text">
-                                    {{$project->summary}}
-                                </p>
-                            </div>
-                            <div class="moreDetails">
-                                <h4 class="card-title text-white">{{$project->title}}</h4>
-                                <h5 class="card-sub-title text-white">{{$project->sub_title}}</h5>
-                                <p class="card-text">
-                                    {{$project->description}}
-                                </p>
-                                <div class="text-right moreBtn">
-                                    <a href="{{url('/projects/show/'.$project->id)}}" class="btn btn-outline-light">
-                                        اکثر من
-                                    </a>
+                    <div class="tab-pane fade" id="pills-{{$category->id}}" role="tabpanel"
+                         aria-labelledby="pills-{{$category->id}}-tab">
+                        <div id="completedProjects--{{$category->id}}" class="owl-carousel">
+                            @foreach($category->projects as $project)
+                                <div class="card">
+                                    <img class="card-img-top" src="{{asset($project->image)}}"
+                                         alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{$project->title}}</h4>
+                                        <h5 class="card-sub-title">{{$project->sub_title}}</h5>
+                                        <p class="card-text">
+                                            {{$project->summary}}
+                                        </p>
+                                    </div>
+                                    <div class="moreDetails">
+                                        <h4 class="card-title text-white">{{$project->title}}</h4>
+                                        <h5 class="card-sub-title text-white">{{$project->sub_title}}</h5>
+                                        <p class="card-text">
+                                            {{$project->description}}
+                                        </p>
+                                        <div class="text-right moreBtn">
+                                            <a href="{{url('/projects/show/'.$project->id)}}"
+                                               class="btn btn-outline-light">
+                                                اکثر من
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            @endforeach
                         </div>
-                         @endforeach
                     </div>
-                </div>
                 @endforeach
                 <div class="tab-pane fade show active" id="pills-all-projects" role="tabpanel"
                      aria-labelledby="pills-all-projects-tab">
@@ -132,9 +134,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>المنتجات</h2>
+                    <h2 class="content--header sectionTitle">المنتجات</h2>
 
-                    <p>
+                    <p class="content--text">
                         المنتجات بما يتوافق مع طول فترة ونوع نظام الصك ، ينطبق سقف الحش بما يتوافق مع طول فترة ونوع نظام
                         الصك ، ينطبق سقف الحش
                     </p>
@@ -157,281 +159,230 @@
             <div class="tab-content" id="pills-tabContent2">
                 <div class="tab-pane fade show active" id="pills-path" role="tabpanel"
                      aria-labelledby="pills-path-tab">
-                    <div class="d-flex">
-                        <div style="flex-basis: auto;" class="w-202 ml-3 d-none">
-                            <div class="card firstCard">
-                                <div class="orangeTitle bg-orange btrr bbrr">
-                                    <div style="white-space: nowrap;">
-                                        نوع القالب
-                                    </div>
-                                </div>
-                                <div class="card-title bg-grey-c greyTitle btrr bbrr d-flex justify-content-between">
-                                    سبان (m)
-                                </div>
-                                <div class="card-body">
-                                    <ul>
-                                        <li>سمك السقف (cm)</li>
-                                        <li></li>
-                                        <li>سمك يعادل الخرسانة (cm)</li>
-                                        <li></li>
-                                        <li>سمك السقف (cm)</li>
-                                        <li></li>
-                                        <li>سمك يعادل الخرسانة (cm)</li>
-                                    </ul>
-                                </div>
-                                <div class="moreDetails">
-                                    <h4 class="card-title text-white">فندق شوموس</h4>
-                                    <h5 class="card-sub-title text-white">مشهد / امام الرضا بلفد</h5>
-                                    <p class="card-text">
-                                        فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-                                    </p>
-                                    <div class="text-right moreBtn">
-                                        <a href="" class="btn btn-outline-light">
-                                            اکثر من
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3 mb-3">
+                                <div class="card btrr bbrr">
+                                    <div class="orangeTitle bg-orange btrr bbrr d-flex justify-content-between">
+                                        <!--<span>نوع القالب</span>-->
+                                        <a class="productsTooltip" data-toggle="tooltip"
+                                           data-placement="top" title="نوع القالب">
+                                            <span><i class="fas fa-info-circle"></i></span>
                                         </a>
+                                        <span>CU400</span>
                                     </div>
+                                    <div class="card-title bg-grey-c greyTitle btrr bbrr d-flex justify-content-between">
+                                        <!--<span> (m)سبان </span>-->
+                                        <a class="productsTooltip" data-toggle="tooltip"
+                                           data-placement="top" title="سبان(m)">
+                                            <span><i class="fas fa-info-circle"></i></span>
+                                        </a>
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+
+                                    <img class="card-img-top"
+                                         src="./assets/media/images/products/products-item-bg.png"
+                                         alt="Card image cap">
+
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <!--<span>سمك السقف (cm)</span>-->
+                                                    <a class="productsTooltip" data-toggle="tooltip"
+                                                       data-placement="top" title="سمک السقف(cm)">
+                                                        <span><i class="fas fa-info-circle"></i></span>
+                                                    </a>
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <!--<span>سمك يعادل الخرسانة (cm)</span>-->
+                                                    <a class="productsTooltip" data-toggle="tooltip"
+                                                       data-placement="top" title="سمک یعادل الخرسانه">
+                                                        <span><i class="fas fa-info-circle"></i></span>
+                                                    </a>
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <!--<span>سمك السقف (cm)</span>-->
+                                                    <a class="productsTooltip" data-toggle="tooltip"
+                                                       data-placement="top" title="سمک السقف(cm)">
+                                                        <span><i class="fas fa-info-circle"></i></span>
+                                                    </a>
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <!--<span>سمك يعادل الخرسانة (cm)</span>-->
+                                                    <a class="productsTooltip" data-toggle="tooltip"
+                                                       data-placement="top" title="سمک یعادل الخرسانه">
+                                                        <span><i class="fas fa-info-circle"></i></span>
+                                                    </a>
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
                                 </div>
                             </div>
-                        </div>
+                            <div class="col-sm-6 col-md-3 mb-3">
+                                <div class="card">
+                                    <div class="orangeTitle bg-orange">
+                                        CU400
+                                    </div>
+                                    <div class="card-title bg-grey-c greyTitle  d-flex justify-content-between">
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
 
-
-                        <div class="w-202 ml-3 flex-grow">
-                            <div class="card">
-                                <div class="orangeTitle bg-orange">
-                                    <span>CU400</span>
-                                </div>
-                                <div class="card-title bg-grey-c greyTitle  d-flex justify-content-between">
-                                    <span>12</span>
-                                    <span>16</span>
-                                </div>
-
-                                <img class="card-img-top"
-                                     src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
-                                     alt="Card image cap">
-
-                                <div class="card-body">
-                                    <ul>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="moreDetails">
-                                    <h4 class="card-title text-white">فندق شوموس</h4>
-                                    <h5 class="card-sub-title text-white">مشهد / امام الرضا بلفد</h5>
-                                    <p class="card-text">
-                                        فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-                                    </p>
-                                    <div class="text-right moreBtn">
-                                        <a href="" class="btn btn-outline-light">
-                                            اکثر من
-                                        </a>
+                                    <img class="card-img-top"
+                                         src="./assets/media/images/products/products-item-bg.png"
+                                         alt="Card image cap">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="w-202 ml-3 flex-grow">
-                            <div class="card">
-                                <div class="orangeTitle bg-orange">
-                                    CU400
-                                </div>
-                                <div class="card-title bg-grey-c greyTitle  d-flex justify-content-between">
-                                    <span>12</span>
-                                    <span>16</span>
-                                </div>
 
-                                <img class="card-img-top"
-                                     src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
-                                     alt="Card image cap">
-                                <div class="card-body">
-                                    <ul>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="moreDetails">
-                                    <h4 class="card-title text-white">فندق شوموس</h4>
-                                    <h5 class="card-sub-title text-white">مشهد / امام الرضا بلفد</h5>
-                                    <p class="card-text">
-                                        فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-                                    </p>
-                                    <div class="text-right moreBtn">
-                                        <a href="" class="btn btn-outline-light">
-                                            اکثر من
-                                        </a>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mb-3">
+                                <div class="card">
+                                    <div class="orangeTitle bg-orange">
+                                        CU400
+                                    </div>
+                                    <div class="card-title bg-grey-c greyTitle  d-flex justify-content-between">
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+
+                                    <img class="card-img-top"
+                                         src="./assets/media/images/products/products-item-bg.png"
+                                         alt="Card image cap">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
+
                             </div>
+                            <div class="col-sm-6 col-md-3 mb-3">
+                                <div class="card">
+                                    <div class=" lastItem orangeTitle bg-orange">
+                                        CU400
+                                    </div>
+                                    <div class="btlr bblr card-title bg-grey-c greyTitle  d-flex justify-content-between">
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
 
-                        </div>
-                        <div class="w-202 ml-3 flex-grow">
-                            <div class="card">
-                                <div class="orangeTitle bg-orange">
-                                    CU400
-                                </div>
-                                <div class="card-title bg-grey-c greyTitle  d-flex justify-content-between">
-                                    <span>12</span>
-                                    <span>16</span>
-                                </div>
-
-                                <img class="card-img-top"
-                                     src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
-                                     alt="Card image cap">
-                                <div class="card-body">
-                                    <ul>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="moreDetails">
-                                    <h4 class="card-title text-white">فندق شوموس</h4>
-                                    <h5 class="card-sub-title text-white">مشهد / امام الرضا بلفد</h5>
-                                    <p class="card-text">
-                                        فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-                                    </p>
-                                    <div class="text-right moreBtn">
-                                        <a href="" class="btn btn-outline-light">
-                                            اکثر من
-                                        </a>
+                                    <img class="card-img-top"
+                                         src="./assets/media/images/products/products-item-bg.png"
+                                         alt="Card image cap">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>12</span>
+                                                    <span>16</span>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
+
                             </div>
-
-                        </div>
-                        <div class="w-202 ml-3 flex-grow">
-                            <div class="card">
-                                <div class=" lastItem orangeTitle bg-orange">
-                                    CU400
-                                </div>
-                                <div class="btlr bblr card-title bg-grey-c greyTitle  d-flex justify-content-between">
-                                    <span>12</span>
-                                    <span>16</span>
-                                </div>
-
-                                <img class="card-img-top"
-                                     src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
-                                     alt="Card image cap">
-                                <div class="card-body">
-                                    <ul>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span>12</span>
-                                                <span>16</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="moreDetails">
-                                    <h4 class="card-title text-white">فندق شوموس</h4>
-                                    <h5 class="card-sub-title text-white">مشهد / امام الرضا بلفد</h5>
-                                    <p class="card-text">
-                                        فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-                                    </p>
-                                    <div class="text-right moreBtn">
-                                        <a href="" class="btn btn-outline-light">
-                                            اکثر من
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
+
                 </div>
                 <div class="tab-pane fade" id="pills-connections" role="tabpanel"
                      aria-labelledby="pills-commercial-tab">
@@ -458,10 +409,10 @@
             <div class="row">
                 <div class="col-12">
                     <h2>
-                        مزايا سقف الغیوبوید
+                        مزايا سقف الغيوبويد
                     </h2>
                 </div>
-                <div class="col-8">
+                <div class="col-sm-6 col-md-7 col-lg-8">
                     <div class="d-flex justify-content-between">
                         <ul class="benefits--lists d-inline-block">
                             <li>
@@ -529,7 +480,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-sm-6 col-md-5 col-lg-4"></div>
             </div>
         </div>
     </section>
@@ -547,7 +498,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <div class="">
                         <p class="lists__title">
                             يمكنك تنزيل الملفات التالية
@@ -558,21 +509,27 @@
                                     <div class="col-6">
                                         <a href="javascript:;"
                                            class="d-flex flex-column p-3 align-items-center downloads--lists__item">
-                                            <img class="" src="{{asset('/assets/site/media/images/downloads/icon-1.png')}}" alt="">
+                                            <img class=""
+                                                 src="{{asset('/assets/site/media/images/downloads/icon-1.png')}}"
+                                                 alt="">
                                             <span> تشغيل السرعة</span>
                                         </a>
                                     </div>
                                     <div class="col-6">
                                         <a href="javascript:;"
                                            class="d-flex flex-column align-items-center downloads--lists__item p-3">
-                                            <img class="" src="{{asset('/assets/site/media/images/downloads/icon-2.png')}}" alt="">
+                                            <img class=""
+                                                 src="{{asset('/assets/site/media/images/downloads/icon-2.png')}}"
+                                                 alt="">
                                             <span>التحكم في الاهتزاز</span>
                                         </a>
                                     </div>
                                     <div class="col-6">
                                         <a href="javascript:;"
                                            class="d-flex flex-column align-items-center downloads--lists__item p-3">
-                                            <img class="" src="{{asset('/assets/site/media/images/downloads/icon-2.png')}}" alt="">
+                                            <img class=""
+                                                 src="{{asset('/assets/site/media/images/downloads/icon-2.png')}}"
+                                                 alt="">
                                             <span>
                                     تشوه السيطرة
                                     </span>
@@ -581,7 +538,9 @@
                                     <div class="col-6">
                                         <a href="javascript:;"
                                            class="d-flex flex-column align-items-center downloads--lists__item p-3">
-                                            <img class="" src="{{asset('/assets/site/media/images/downloads/icon-4.png')}}" alt="">
+                                            <img class=""
+                                                 src="{{asset('/assets/site/media/images/downloads/icon-4.png')}}"
+                                                 alt="">
                                             <span>
                                     تشوه السيطرة
                                     </span>
@@ -593,10 +552,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-8">
+                <div class="col-12 col-md-8">
                     <video class="player" id="player" controls
                            poster="/assets/site/media/images/downloads/player-poster.jpg">
-                        <source src="{{asset('/assets/site/media/videos/downloads/intro-480p__47071.mp4')}}" type="video/mp4">
+                        <source src="{{asset('/assets/site/media/videos/downloads/intro-480p__47071.mp4')}}"
+                                type="video/mp4">
                     <!--<img onclick="playPlyr()" src="{{asset('/assets/site/media/images/downloads/play-icon.png')}}" alt=""-->
                         <!--class="playIcon">-->
                         <a href="/assets/site/media/videos/downloads/intro-480p__47071.mp4" download>Download</a>
@@ -610,25 +570,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>اخبار</h2>
+                    <h2 class="sectionTitle">اخبار</h2>
                     <p>المشاريع المنجزة منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العد</p>
                 </div>
 
                 <div class="col-12">
                     <div id="newsCarousel" class="owl-carousel">
                         @foreach($news as $n)
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset($n->logo)}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">{{$n->title}}</h4>
-                                <p class="card-text">{{$n->summary}}
-                                </p>
+                            <div class="cardOuter">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{asset($n->logo)}}"
+                                         alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{$n->title}}</h4>
+                                        <p class="card-text">{{$n->summary}}
+                                        </p>
+                                    </div>
+                                    <a href="" class="btn btn-outline-light">
+                                        اکثر من
+                                    </a>
+                                </div>
                             </div>
-                            <a href="" class="btn btn-outline-light">
-                                اکثر من
-                            </a>
-                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -643,10 +605,11 @@
                 <div class="col-md-6">
                     <div class="d-flex align-items-center">
                         <div class="questionMark ml-3">
-                            <img src="{{asset('/assets/site/media/images/faq/question-mark.png')}}" class="img-fluid" alt="">
+                            <img src="{{asset('/assets/site/media/images/faq/question-mark.png')}}" class="img-fluid"
+                                 alt="">
                         </div>
                         <div class="faq__descriptions flex-fill">
-                            <h2>
+                            <h2 class="sectionTitle">
                                 أسئلة مكررة
                             </h2>
                             <p class="m-0">
@@ -659,17 +622,17 @@
                 <div class="col-md-6">
                     <div class="owl-carousel" id="faqCarousel">
                         @foreach($faqs as $faq)
-                        <div class="faq--item">
-                            <h5>{{$faq->question}}</h5>
-                            <p class="quotation">{!! $faq->answer !!}</p>
+                            <div class="faq--item">
+                                <h5 class="sectionTitle">{{$faq->question}}</h5>
+                                <p class="quotation">{!! $faq->answer !!}</p>
 
-                            <div class="text-left">
-                                <a href="" class="btn btn-outline-light">
-                                    اکثر من
-                                </a>
+                                <div class="text-left">
+                                    <a href="" class="btn btn-outline-light">
+                                        اکثر من
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                         @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>

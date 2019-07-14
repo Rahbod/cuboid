@@ -1,75 +1,157 @@
 /*#region max-width*/
+@media screen and (max-width: 1199.98px) {
+    .orangeTitle {
+        margin-left: -16px;
+        margin-right: -16px;
+        padding: 7px 0 7px 40px;
+    }
+
+    .smallHeader .smallHeader__title {
+        padding-right: 0;
+    }
+
+    .completedProjects {
+        -webkit-background-size: auto;
+        background-size: auto;
+    }
+
+    .orangeTitle {
+        margin-left: -16px;
+        margin-right: -16px;
+        padding: 10px 46px;
+    }
+
+    .products .greyTitle {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    .products {
+        -webkit-background-size: auto;
+        background-size: auto;
+    }
+
+    .benefits--lists {
+        padding: 60px 0 60px 0;
+    }
+
+    .downloads .downloads--lists__item {
+        width: 124px;
+        height: 124px;
+        margin: 0 0 30px 0px;
+
+    }
+
+    .downloads {
+        padding: 60px 0;
+    }
+}
+
 @media screen and (max-width: 991.98px) {
-    .header .extra-nav {
-        padding: 19px 0;
+    .container {
+        max-width: none;
     }
 
-    .header .site-button-link i {
-        font-size: 16px;
-        color: #aaa;
+    .leftMenu, .leftBox {
+        display: none;
     }
 
-    .sticky-header {
-        position: fixed;
-        top: 0;
+    .smallHeader .smallHeader__title {
+        padding-right: 0;
+    }
+
+    .completedProjects .content--header {
+        color: #fff;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev {
         right: 0;
+        color: #2e2e2e !important;
+        /*color: #d3d3d3 !important;*/
+    }
+
+    .owl-carousel .owl-nav button.owl-next {
         left: 0;
-        z-index: 1030;
+        color: #2e2e2e !important;
     }
 
-    .topBar {
-        display: none;
+    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+        top: 0;
+        bottom: calc(0px + 37px);
+        /*background: rgba(0, 0, 0, 0.6) !important;*/
+        -webkit-border-radius: 0 !important;
+        -moz-border-radius: 0 !important;
+        border-radius: 0 !important;
+        font-size: 5rem !important;
+
     }
 
-    .header {
-        /*height: auto;*/
-        height: 62px;
+    .landing .owl-carousel .owl-nav button.owl-next, .landing .owl-carousel .owl-nav button.owl-prev {
+        background: transparent !important;
+        color: #2e2e2e !important;
     }
 
-    .extra-nav {
-        padding: 19px 9px 19px 0;
-        float: left;
+    .owl-carousel .owl-nav button.owl-next:hover,
+    .owl-carousel .owl-nav button.owl-next:focus,
+    .owl-carousel .owl-nav button.owl-prev:hover,
+    .owl-carousel .owl-nav button.owl-prev:focus {
+        font-size: 7.5rem !important;
+        color: #d3d3d3 !important;
     }
 
-    .navbar-toggler {
-        padding: 15px 10px !important;
+    .benefits {
+        -webkit-background-size: cover;
+        background-size: cover;
     }
 
-    .mainSlider--title {
-        display: none;
+    .downloads {
+        -webkit-background-size: cover;
+        background-size: cover;
     }
 
-    .top-courses .dlab-box {
-        padding: 0 0.25rem;
+    .news {
+        -webkit-background-size: cover;
+        background-size: cover;
     }
-
-    .top-courses .dlab-media {
-        overflow: visible;
-    }
-
-    .top-courses .tags .site-button {
-        margin-left: 0.5rem !important;
-    }
-
-    .main-bar {
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    }
-
-    .slick-prev, .slick-next {
-        width: 60px !important;
-        /*height: 60px !important;*/
-        height: 100% !important;
-    }
-
-    .footer-top .dlab-separator {
-        width: 100%;
-    }
-
 }
 
 @media screen and (max-width: 767.98px) {
-    .container {
-        max-width: none;
+
+    .completedProjects .content--text,
+    .products .content--text,
+    .products .content--header {
+        color: #fff;
+    }
+
+    .completedProjects .nav.nav-pills,
+    .products .nav.nav-pills {
+        margin-bottom: 2rem;
+    }
+
+    .products {
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    .downloads .downloads--lists__item {
+        width: auto;
+        height: auto;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer .formContainer {
+        margin-top: 50px;
+        margin-right: auto;
+    }
+
+    .footer .addressContainer > ul {
+        width: 100%;
+        margin-bottom: 4rem;
     }
 }
 
@@ -89,7 +171,6 @@
 }
 
 /*#endregion*/
-
 /*#region min-width*/
 @media screen and (min-width: 992px) {
     .top-courses .site-button:not(:first-child) {
