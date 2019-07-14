@@ -13,7 +13,7 @@ class BaseProduct extends Model
     use GetImageAttributesTrait;
     use SetAndGetDateAttributesTrait;
 
-    protected $fillable = ['author_id', 'category_id','gallery_id','type', 'title', 'image', 'description', 'attributes',
+    protected $fillable = ['author_id', 'category_id','gallery_id','type', 'title','sub_title','summary', 'image', 'description', 'attributes',
         'attributes','order','status',];
 
 
@@ -86,6 +86,24 @@ class BaseProduct extends Model
                     'orderable' => true,
                     'searchable' => true,
                     'show_in_table' => true,
+                    'show_in_form' => true
+                ],
+                [
+                    'name' => 'sub_title',
+                    'type' => 'string',
+                    'input_type' => 'text',
+                    'orderable' => true,
+                    'searchable' => true,
+                    'show_in_table' => true,
+                    'show_in_form' => true
+                ],
+                [
+                    'name' => 'summary',
+                    'type' => 'string',
+                    'input_type' => 'textarea',
+                    'orderable' => true,
+                    'searchable' => true,
+                    'show_in_table' => false,
                     'show_in_form' => true
                 ],
                 [

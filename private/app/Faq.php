@@ -3,21 +3,17 @@
 namespace App;
 
 use Appnegar\Cms\Traits\ModelTrait;
-use Appnegar\Cms\Traits\SetAndGetDateAttributesTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class Attachment extends Model
+class Faq extends Model
 {
     use ModelTrait;
-    use SetAndGetDateAttributesTrait;
+    protected $fillable = ['author_id', 'question', 'answer', 'order', 'status'];
 
-    protected $fillable = [
-        'user_id','title','source','attachmentable_id ','attachmentable_type ',
-    ];
-
-    public static function mainFields(){
+    public static function mainFields()
+    {
         return [
-            'name' => static ::getTableName(),
+            'name' => static::getTableName(),
             'items' => [
                 [
                     'name' => 'id',
@@ -30,7 +26,7 @@ class Attachment extends Model
                     'show_in_form' => true
                 ],
                 [
-                    'name' => 'user_id',
+                    'name' => 'author_id',
                     'type' => 'numeric',
                     'input_type' => 'hidden',
                     'orderable' => true,
@@ -39,48 +35,43 @@ class Attachment extends Model
                     'show_in_form' => true,
                 ],
                 [
-                    'name' => 'title',
+                    'name' => 'question',
                     'type' => 'string',
-                    'input_type' => 'text',
+                    'input_type' => 'textarea',
                     'orderable' => true,
                     'searchable' => true,
                     'show_in_table' => true,
                     'show_in_form' => true
                 ],
                 [
-                    'name' => 'source',
+                    'name' => 'answer',
                     'type' => 'string',
-                    'input_type' => 'file',
-                    'orderable' => true,
-                    'searchable' => true,
-                    'show_in_table' => true,
-                    'show_in_form' => true
-                ],
-                [
-                    'name' => 'attachmentable_type',
-                    'type' => 'string',
-                    'input_type' => 'select',
+                    'input_type' => 'textarea',
                     'orderable' => true,
                     'searchable' => true,
                     'show_in_table' => false,
-                    'show_in_form' => true,
-                    'show_in_sub_form' => false,
-                    'options'=>[
-                        [ 'id'=>'App\\Product', 'text'=>'Product',],
-                        [ 'id'=>'App\\Project', 'text'=>'Project',],
-                        [ 'id'=>'App\\Content', 'text'=>'Content',]
-
-                    ]
+                    'show_in_form' => true
                 ],
                 [
-                    'name' => 'attachmentable_id',
+                    'name' => 'order',
                     'type' => 'numeric',
-                    'input_type' => 'select',
+                    'input_type' => 'number',
                     'orderable' => true,
                     'searchable' => true,
-                    'show_in_table' => false,
+                    'show_in_table' => true,
+                    'show_in_sub_table' => false,
+                    'show_in_form' => true
+                ],
+                [
+                    'name' => 'status',
+                    'type' => 'select',
+                    'input_type' => 'radio',
+                    'orderable' => true,
+                    'searchable' => true,
+                    'show_in_table' => true,
+                    'show_in_sub_table' => false,
                     'show_in_form' => true,
-                    'show_in_sub_form' => false,
+                    'options' => [['id' => 0, 'text' => 'inactive'], ['id' => 1, 'text' => 'active']]
                 ],
                 [
                     'name' => 'created_at',
@@ -99,12 +90,13 @@ class Attachment extends Model
                     'searchable' => true,
                     'show_in_table' => false,
                     'show_in_form' => false,
-                ],
+                ]
             ]
         ];
     }
 
-    public static function  relatedFields(){
+    public static function relatedFields()
+    {
         return [
             [
                 'name' => 'author',
@@ -112,33 +104,12 @@ class Attachment extends Model
                 'show_in_form' => false,
                 'show_in_table' => false,
                 'items' => User::getSubFields()
-            ],
+            ]
         ];
     }
 
-
-    public function getSourceAttribute($photo)
-    {
-        $resource_name = str_singular($this->getTable());
-        if ($photo) {
-            $path = '/storage/' . config('system.' . $resource_name . '.attachment_destination') . $photo;
-            return $path;
-        }
-
-    }
-
-
     public function author()
     {
-        return $this->belongsTo('App\User', 'user_id', 'id');
-    }
-
-
-    /**
-     * Get all of the owning commentable models.
-     */
-    public function commentable()
-    {
-        return $this->morphTo();
+        return $this->belongsTo('App\User', 'author_id', 'id');
     }
 }

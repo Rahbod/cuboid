@@ -12,12 +12,16 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('/projects', 'ProjectController@projects');
+Route::get('/projects/category/{category_id}', 'ProjectController@projects');
+Route::get('/projects/show/{id}', 'ProjectController@show');
+
 Route::get('/home_test', function () {
     return view('main_site.pages.home');
 //    return redirect()->to('en');
 });
 
-Route::view('projects','main_site.pages.projects.projects');
+//Route::view('projects','main_site.pages.projects.projects');
 Route::view('projects-show','main_site.pages.projects.projects_show');
 
 

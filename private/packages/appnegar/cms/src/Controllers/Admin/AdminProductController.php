@@ -98,7 +98,7 @@ class AdminProductController extends AdminController
         $fields = $model_name::getFields();
         $temp_fields = [];
         foreach ($fields as $index => $field) {
-            if ($field['name'] === $this->getResourceName()) {
+            if ($field['name'] === $model_name::getTableName()) {
                 $fields[$index] = $this->getMainFields($fields[$index]);
             }
 

@@ -85,7 +85,7 @@
                 let url = this.main_url;
                 let method = null;
 
-                url += '/' + this.resource + '/update_' + this.name;
+                url +=  '/update_' + this.name;
                 method = 'PUT';
 
                 form_data.append('_method', method);

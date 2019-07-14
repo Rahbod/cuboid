@@ -23,6 +23,8 @@ class CreateProductsTable extends Migration
             $table->foreign('gallery_id')->references('id')->on('galleries')->onDelete('set null');
             $table->string('type');
             $table->string('title');
+            $table->string('sub_title')->nullable();
+            $table->string('summary')->nullable();
             $table->string('image')->nullable();
             $table->text('description')->nullable();
             $table->mediumText('attributes')->nullable();

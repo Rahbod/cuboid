@@ -16,13 +16,7 @@
                         </h2>
 
                         <p class="content--text">
-                            حول غیوبوید تم تأسيس شركة اسمنت تاواي ، وهي شبكة من النخب العلم
-                            حول غیوبوید تم تأسيس شركة اسمنت تاواي ، وهي شبكة من النخب العلم
-                            حول غیوبوید تم تأسيس شركة اسمنت تاواي ، وهي شبكة من النخب العلم
-                            حول غیوبوید تم تأسيس شركة اسمنت تاواي ، وهي شبكة من النخب العلم
-                            حول غیوبوید تم تأسيس شركة اسمنت تاواي ، وهي شبكة من النخب العلم
-                            حول غیوبوید تم تأسيس شركة اسمنت تاواي ، وهي شبكة من النخب العلم
-                            حول غیوبوید تم تأسيس شركة اسمنت تاواي ، وهي شبكة من النخب العلم
+                            {{$about_us}}
 
                         </p>
 
@@ -50,273 +44,84 @@
                 </div>
                 <div class="col-md-6 my-md-auto">
                     <ul class="nav nav-pills" id="pills-tab" role="tablist" style="justify-content: flex-end;">
+                        @foreach($categories as $category)
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               id="pills-{{$category->id}}-tab" data-toggle="pill" href="#pills-{{$category->id}}" role="tab"
+                               aria-controls="pills-{{$category->id}}" aria-selected="false">{{$category->name}}</a>
+                        </li>
+                        @endforeach
                         <li class="nav-item">
                             <a class="nav-link active"
-                               id="pills-hotel-tab" data-toggle="pill" href="#pills-hotel" role="tab"
-                               aria-controls="pills-hotel" aria-selected="true">الفندوق</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="pills-commercial-tab" data-toggle="pill" href="#pills-commercial" role="tab"
-                               aria-controls="pills-commercial" aria-selected="false">اداریه / تجاریه</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="pills-residential-tab" data-toggle="pill" href="#pills-residential" role="tab"
-                               aria-controls="pills-course" aria-selected="false">سکنی</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
                                id="pills-all-projects-tab" data-toggle="pill" href="#pills-all-projects" role="tab"
-                               aria-controls="pills-course" aria-selected="false">جمیع المشاریع</a>
+                               aria-controls="pills-all-projects" aria-selected="true">جمیع المشاریع</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-hotel" role="tabpanel"
-                     aria-labelledby="pills-hotel-tab">
-                    <div id="completedProjects--hotelCarousel" class="owl-carousel">
+                @foreach($categories as $category)
+                <div class="tab-pane fade" id="pills-{{$category->id}}" role="tabpanel"
+                     aria-labelledby="pills-{{$category->id}}-tab">
+                    <div id="completedProjects--{{$category->id}}" class="owl-carousel">
+                        @foreach($category->projects as $project)
                         <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/slider/slider-p1.jpg')}}"
+                            <img class="card-img-top" src="{{asset($project->image)}}"
                                  alt="Card image cap">
                             <div class="card-body">
-                                <h4 class="card-title">فندق شوموس</h4>
-                                <h5 class="card-sub-title">مشهد / امام الرضا بلفد</h5>
+                                <h4 class="card-title">{{$project->title}}</h4>
+                                <h5 class="card-sub-title">{{$project->sub_title}}</h5>
                                 <p class="card-text">
-                                    فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
+                                    {{$project->summary}}
                                 </p>
                             </div>
                             <div class="moreDetails">
-                                <h4 class="card-title text-white">فندق شوموس</h4>
-                                <h5 class="card-sub-title text-white">مشهد / امام الرضا بلفد</h5>
+                                <h4 class="card-title text-white">{{$project->title}}</h4>
+                                <h5 class="card-sub-title text-white">{{$project->sub_title}}</h5>
                                 <p class="card-text">
-                                    فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
+                                    {{$project->description}}
                                 </p>
                                 <div class="text-right moreBtn">
-                                    <a href="" class="btn btn-outline-light">
+                                    <a href="{{url('/projects/show/'.$project->id)}}" class="btn btn-outline-light">
                                         اکثر من
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/slider/slider-p2.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">مشروع التجاری الزمزم</h4>
-                                <h5 class="card-sub-title">
-                                    طهران / نیاوران بلفد
-                                </h5>
-                                <p class="card-text">
-                                    مشروع التجاری الزمزم طهران / نیاوران بلفد تصميم وتنفيذ أسطح الو
-                                </p>
-                            </div>
-                            <div class="moreDetails">
-                                <h4 class="card-title text-white">فندق شوموس</h4>
-                                <h5 class="card-sub-title text-white">مشهد / امام الرضا بلفد</h5>
-                                <p class="card-text">
-                                    فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-                                </p>
-                                <div class="text-right moreBtn">
-                                    <a href="" class="btn btn-outline-light">
-                                        اکثر من
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/slider/slider-p3.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    مشروع سیاحی البدیده المشهد
-                                </h4>
-                                <h5 class="card-sub-title">
-                                    مشهد / شاندیز
-                                </h5>
-                                <p class="card-text">
-                                    مشروع سیاحی البدیده المشهد مشهد / شاندیز تصميم وتنفيذ أسطح الوا
-                                </p>
-                            </div>
-                            <div class="moreDetails">
-                                <h4 class="card-title text-white">فندق شوموس</h4>
-                                <h5 class="card-sub-title text-white">مشهد / امام الرضا بلفد</h5>
-                                <p class="card-text">
-                                    فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-                                </p>
-                                <div class="text-right moreBtn">
-                                    <a href="" class="btn btn-outline-light">
-                                        اکثر من
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/slider/slider-p4.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    مشروع سكني
-                                </h4>
-                                <h5 class="card-sub-title">
-                                    طهران / مخابرات بلفد
-                                </h5>
-                                <p class="card-text">
-                                    فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-
-                                </p>
-                            </div>
-                            <div class="moreDetails">
-                                <h4 class="card-title text-white">فندق شوموس</h4>
-                                <h5 class="card-sub-title text-white">مشهد / امام الرضا بلفد</h5>
-                                <p class="card-text">
-                                    فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-                                </p>
-                                <div class="text-right moreBtn">
-                                    <a href="" class="btn btn-outline-light">
-                                        اکثر من
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/slider/slider-p1.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">فندق شوموس</h4>
-                                <h5 class="card-sub-title">مشهد / امام الرضا بلفد إنها حقيقة ثابتةمنذ فترة طوي</h5>
-                                <p class="card-text">
-                                    فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-                                </p>
-                            </div>
-                            <div class="moreDetails">
-                                <h4 class="card-title text-white">فندق شوموس</h4>
-                                <h5 class="card-sub-title text-white">مشهد / امام الرضا بلفد</h5>
-                                <p class="card-text">
-                                    فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-                                </p>
-                                <div class="text-right moreBtn">
-                                    <a href="" class="btn btn-outline-light">
-                                        اکثر من
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/slider/slider-p2.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">مشروع التجاری الزمزم</h4>
-                                <h5 class="card-sub-title">
-                                    طهران / نیاوران بلفد
-                                </h5>
-                                <p class="card-text">
-                                    مشروع التجاری الزمزم طهران / نیاوران بلفد تصميم وتنفيذ أسطح الو
-                                </p>
-                            </div>
-                            <div class="moreDetails">
-                                <h4 class="card-title text-white">فندق شوموس</h4>
-                                <h5 class="card-sub-title text-white">مشهد / امام الرضا بلفد</h5>
-                                <p class="card-text">
-                                    فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-                                </p>
-                                <div class="text-right moreBtn">
-                                    <a href="" class="btn btn-outline-light">
-                                        اکثر من
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
+                         @endforeach
                     </div>
                 </div>
-                <div class="tab-pane fade" id="pills-commercial" role="tabpanel"
-                     aria-labelledby="pills-commercial-tab">
-                    <div id="completedProjects--commercialCarousel" class="owl-carousel">
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/slider/slider-p1.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">فندق شوموس</h4>
-                                <h5 class="card-sub-title">مشهد / امام الرضا بلفد إنها حقيقة ثابتةمنذ فترة طوي</h5>
-                                <p class="card-text">
-                                    فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-                                </p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/slider/slider-p2.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">مشروع التجاری الزمزم</h4>
-                                <h5 class="card-sub-title">
-                                    طهران / نیاوران بلفد
-                                </h5>
-                                <p class="card-text">
-                                    مشروع التجاری الزمزم طهران / نیاوران بلفد تصميم وتنفيذ أسطح الو
-                                </p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/slider/slider-p3.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    مشروع سیاحی البدیده المشهد
-                                </h4>
-                                <h5 class="card-sub-title">
-                                    مشهد / شاندیز
-                                </h5>
-                                <p class="card-text">
-                                    مشروع سیاحی البدیده المشهد مشهد / شاندیز تصميم وتنفيذ أسطح الوا
-                                </p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/slider/slider-p4.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    مشروع سكني
-                                </h4>
-                                <h5 class="card-sub-title">
-                                    طهران / مخابرات بلفد
-                                </h5>
-                                <p class="card-text">
-                                    فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-
-                                </p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/slider/slider-p1.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">فندق شوموس</h4>
-                                <h5 class="card-sub-title">مشهد / امام الرضا بلفد إنها حقيقة ثابتةمنذ فترة طوي</h5>
-                                <p class="card-text">
-                                    فندق شوموس مشهد / امام الرضا بلفد إنها حقيقة ثابتة منذ فترة طوي
-                                </p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/slider/slider-p2.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">مشروع التجاری الزمزم</h4>
-                                <h5 class="card-sub-title">
-                                    طهران / نیاوران بلفد
-                                </h5>
-                                <p class="card-text">
-                                    مشروع التجاری الزمزم طهران / نیاوران بلفد تصميم وتنفيذ أسطح الو
-                                </p>
-                            </div>
-                        </div>
+                @endforeach
+                <div class="tab-pane fade show active" id="pills-all-projects" role="tabpanel"
+                     aria-labelledby="pills-all-projects-tab">
+                    <div id="completedProjects--all-projects" class="owl-carousel">
+                        @foreach($categories as $category)
+                            @foreach($category->projects as $project)
+                                <div class="card">
+                                    <img class="card-img-top" src="{{asset($project->image)}}"
+                                         alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{$project->title}}</h4>
+                                        <h5 class="card-sub-title">{{$project->sub_title}}</h5>
+                                        <p class="card-text">
+                                            {{$project->summary}}
+                                        </p>
+                                    </div>
+                                    <div class="moreDetails">
+                                        <h4 class="card-title text-white">{{$project->title}}</h4>
+                                        <h5 class="card-sub-title text-white">{{$project->sub_title}}</h5>
+                                        <p class="card-text">
+                                            {{$project->description}}
+                                        </p>
+                                        <div class="text-right moreBtn">
+                                            <a href="{{url('/projects/'.$project->id)}}" class="btn btn-outline-light">
+                                                اکثر من
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -811,94 +616,20 @@
 
                 <div class="col-12">
                     <div id="newsCarousel" class="owl-carousel">
+                        @foreach($news as $n)
                         <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/news/p1.jpg')}}"
+                            <img class="card-img-top" src="{{asset($n->logo)}}"
                                  alt="Card image cap">
                             <div class="card-body">
-                                <h4 class="card-title">حضور سايبورغ في المعرض الدولي السابع عشر لصناعة البناء</h4>
-                                <p class="card-text">
-                                    تفخر شركة تاهو للخرسانة باستضافة المبنى الدولي السابع عشر للمبن
-                                    تفخر شركة تاهو للخرسانة باستضافة المبنى الدولي السابع عشر للمبن
+                                <h4 class="card-title">{{$n->title}}</h4>
+                                <p class="card-text">{{$n->summary}}
                                 </p>
                             </div>
                             <a href="" class="btn btn-outline-light">
                                 اکثر من
                             </a>
                         </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/news/p2.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">حضور سايبورغ في المعرض الدولي السابع عشر لصناعة البناء</h4>
-
-                                <p class="card-text">
-                                    تفخر شركة تاهو للخرسانة باستضافة المبنى الدولي السابع عشر للمبن
-                                    تفخر شركة تاهو للخرسانة باستضافة المبنى الدولي السابع عشر للمبن
-                                </p>
-                            </div>
-                            <a href="" class="btn btn-outline-light">
-                                اکثر من
-                            </a>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/news/p3.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">حضور سايبورغ في المعرض الدولي السابع عشر لصناعة البناء</h4>
-
-                                <p class="card-text">
-                                    تفخر شركة تاهو للخرسانة باستضافة المبنى الدولي السابع عشر للمبن
-                                    تفخر شركة تاهو للخرسانة باستضافة المبنى الدولي السابع عشر للمبن
-                                </p>
-                            </div>
-                            <a href="" class="btn btn-outline-light">
-                                اکثر من
-                            </a>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/news/p4.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">حضور سايبورغ في المعرض الدولي السابع عشر لصناعة البناء</h4>
-
-                                <p class="card-text">
-                                    تفخر شركة تاهو للخرسانة باستضافة المبنى الدولي السابع عشر للمبن
-                                    تفخر شركة تاهو للخرسانة باستضافة المبنى الدولي السابع عشر للمبن
-                                </p>
-                            </div>
-                            <a href="" class="btn btn-outline-light">
-                                اکثر من
-                            </a>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/news/p1.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">حضور سايبورغ في المعرض الدولي السابع عشر لصناعة البناء</h4>
-                                <p class="card-text">
-                                    تفخر شركة تاهو للخرسانة باستضافة المبنى الدولي السابع عشر للمبن
-                                    تفخر شركة تاهو للخرسانة باستضافة المبنى الدولي السابع عشر للمبن
-                                </p>
-                            </div>
-                            <a href="" class="btn btn-outline-light">
-                                اکثر من
-                            </a>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="{{asset('/assets/site/media/images/news/p2.jpg')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">حضور سايبورغ في المعرض الدولي السابع عشر لصناعة البناء</h4>
-
-                                <p class="card-text">
-                                    تفخر شركة تاهو للخرسانة باستضافة المبنى الدولي السابع عشر للمبن
-                                    تفخر شركة تاهو للخرسانة باستضافة المبنى الدولي السابع عشر للمبن
-                                </p>
-                            </div>
-                            <a href="" class="btn btn-outline-light">
-                                اکثر من
-                            </a>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -927,21 +658,10 @@
 
                 <div class="col-md-6">
                     <div class="owl-carousel" id="faqCarousel">
+                        @foreach($faqs as $faq)
                         <div class="faq--item">
-                            <h5>
-                                هل غیوبوید أيضا تصميم هيكل السقف؟
-                            </h5>
-                            <p class="quotation">
-                                <!--<span>-->
-                                <!--&rdquo;-->
-                                <!--</span>-->
-                                نعم. مع فريق ماهر من المصممين ، توفر Cobweed جميع خدمات التصمي نعم. مع فريق ماهر من
-                                المصممين ، توفر Cobweed جميع خدمات التصمي
-
-                                <!--<span>-->
-                                <!--&ldquo;-->
-                                <!--</span>-->
-                            </p>
+                            <h5>{{$faq->question}}</h5>
+                            <p class="quotation">{!! $faq->answer !!}</p>
 
                             <div class="text-left">
                                 <a href="" class="btn btn-outline-light">
@@ -949,45 +669,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="faq--item">
-                            <h5>
-                                هل غیوبوید أيضا تصميم هيكل السقف؟
-                            </h5>
-                            <p>
-                                “نعم. مع فريق ماهر من المصممين ، توفر Cobweed جميع خدمات التصمي
-                            </p>
-                            <div class="text-left">
-                                <a href="" class="btn btn-outline-light">
-                                    اکثر من
-                                </a>
-                            </div>
-                        </div>
-                        <div class="faq--item">
-                            <h5>
-                                هل غیوبوید أيضا تصميم هيكل السقف؟
-                            </h5>
-                            <p>
-                                “نعم. مع فريق ماهر من المصممين ، توفر Cobweed جميع خدمات التصمي
-                            </p>
-                            <div class="text-left">
-                                <a href="" class="btn btn-outline-light">
-                                    اکثر من
-                                </a>
-                            </div>
-                        </div>
-                        <div class="faq--item">
-                            <h5>
-                                هل غیوبوید أيضا تصميم هيكل السقف؟
-                            </h5>
-                            <p>
-                                “نعم. مع فريق ماهر من المصممين ، توفر Cobweed جميع خدمات التصمي
-                            </p>
-                            <div class="text-left">
-                                <a href="" class="btn btn-outline-light">
-                                    اکثر من
-                                </a>
-                            </div>
-                        </div>
+                         @endforeach
                     </div>
                 </div>
             </div>

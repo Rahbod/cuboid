@@ -82,7 +82,6 @@ class UserController extends AdminController{
             'username' => 'required|unique:users',
             'email' => 'required|email|unique:users',
             'password' => 'required|confirmed|min:6',
-            'type'=>'required',
             'profile.gender'=>'required|numeric|between:0,1',
             'avatar' => 'image|max:'.$this->config['user']['avatar']['size'] . '|mimes:' . trimArrayString($this->config['user']['avatar']['extension']),
         ];

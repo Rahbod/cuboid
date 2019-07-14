@@ -1,4 +1,3 @@
-@extends('main_site.layouts.master')
 
 @section('header')
     <header class="header landing">

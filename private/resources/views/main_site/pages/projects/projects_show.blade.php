@@ -9,81 +9,37 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
+                    @if($project->gallery && $project->gallery->gallery_items)
                     <div id="completedProjectsShowPage" class="owl-carousel gallery">
+                        @foreach($project->gallery->gallery_items as $gallery_item)
                         <a title="" class="html5lightbox galleryItem" data-group="mygroup"
-                           data-thumbnail="./assets/media/images/completed-projects/gallery-item-1.jpg"
-                           href="./assets/media/images/completed-projects/gallery-item-1.jpg">
-                            <img class="img-fluid" src="./assets/media/images/completed-projects/gallery-item-1.jpg"
+                           data-thumbnail="{{asset($gallery_item->logo)}}"
+                           href="{{asset($gallery_item->image)}}">
+                            <img class="img-fluid" src="{{asset($gallery_item->image)}}"
                                  alt="">
                             <div class="galleryItem__indicator">
-                                الصوره 1 من 6
+                               {{$gallery_item->name}}
                             </div>
                         </a>
-                        <a title="" class="html5lightbox galleryItem" data-group="mygroup"
-                           data-thumbnail="./assets/media/images/completed-projects/gallery-item-1.jpg"
-                           href="./assets/media/images/completed-projects/gallery-item-1.jpg">
-                            <img class="img-fluid" src="./assets/media/images/completed-projects/gallery-item-1.jpg"
-                                 alt="">
-                            <div class="galleryItem__indicator">
-                                الصوره 2 من 6
-                            </div>
-                        </a>
-                        <a title="" class="html5lightbox galleryItem" data-group="mygroup"
-                           data-thumbnail="./assets/media/images/completed-projects/gallery-item-1.jpg"
-                           href="./assets/media/images/completed-projects/gallery-item-1.jpg">
-                            <img class="img-fluid" src="./assets/media/images/completed-projects/gallery-item-1.jpg"
-                                 alt="">
-                            <div class="galleryItem__indicator">
-                                الصوره 3 من 6
-                            </div>
-                        </a>
-                        <a title="" class="html5lightbox galleryItem" data-group="mygroup"
-                           data-thumbnail="./assets/media/images/completed-projects/gallery-item-1.jpg"
-                           href="./assets/media/images/completed-projects/gallery-item-1.jpg">
-                            <img class="img-fluid" src="./assets/media/images/completed-projects/gallery-item-1.jpg"
-                                 alt="">
-                            <div class="galleryItem__indicator">
-                                الصوره 4 من 6
-                            </div>
-                        </a>
-                        <a title="" class="html5lightbox galleryItem" data-group="mygroup"
-                           data-thumbnail="./assets/media/images/completed-projects/gallery-item-1.jpg"
-                           href="./assets/media/images/completed-projects/gallery-item-1.jpg">
-                            <img class="img-fluid" src="./assets/media/images/completed-projects/gallery-item-1.jpg"
-                                 alt="">
-                            <div class="galleryItem__indicator">
-                                الصوره 5 من 6
-                            </div>
-                        </a>
+                        @endforeach
                     </div>
+                    @endif
                 </div>
                 <div class="col-md-5">
                     <h2 style="font-family: Myriad-Bold;font-size: 60px;">المشاريع</h2>
-                    <h3>فندق آراز</h3>
+                    <h3>{{$project->name}}</h3>
 
-                    <p>
-                        فندق آراز منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العديد من ا
-                        المشاريع المنجزة منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العد
-                        فندق آراز منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العديد من ا
-                        المشاريع المنجزة منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العد
-                    </p>
-
-                    <p>
-                        فندق آراز منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العديد من ا
-                        فندق آراز منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العديد من ا
-                        المشاريع المنجزة منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العد
-                        فندق آراز منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العديد من ا
-                        المشاريع المنجزة منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العد
-                    </p>
+                   {!! $project->description !!}
 
                     <h4>المواصفات الفنیه</h4>
 
                     <ul>
-                        <li>العنوان : نوشهر</li>
-                        <li>الهیکل العظمی : الخرسانه</li>
-                        <li>اطول حفره : 14 مترا</li>
-                        <li>قاعده سقف الکیوبید : 90000 متر مربع</li>
-                        <li>وقت التشغیل : صیف 95</li>
+                        <li>العنوان : {{$project->sub_title}}</li>
+                        @if($project->attributes)
+                        @foreach($project->attributes as $key=>$value)
+                        <li>{{__('projects.items.'.$key)}} : {{$value}}</li>
+                        @endforeach
+                        @endif
                     </ul>
                 </div>
 
@@ -549,67 +505,22 @@
 
                 <div class="col-md-6">
                     <div class="owl-carousel" id="faqCarousel">
+                        @foreach($faqs as $faq)
                         <div class="faq--item">
                             <h5>
-                                هل غیوبوید أيضا تصميم هيكل السقف؟
+                                {{$faq->question}}
                             </h5>
                             <p class="quotation">
-                                <!--<span>-->
-                                <!--&rdquo;-->
-                                <!--</span>-->
-                                نعم. مع فريق ماهر من المصممين ، توفر Cobweed جميع خدمات التصمي نعم. مع فريق ماهر من
-                                المصممين ، توفر Cobweed جميع خدمات التصمي
-
-                                <!--<span>-->
-                                <!--&ldquo;-->
-                                <!--</span>-->
+                                {{$faq->answer}}
                             </p>
 
                             <div class="text-left">
-                                <a href="" class="btn btn-outline-light">
+                                <a href="{{url('/faqs')}}" class="btn btn-outline-light">
                                     اکثر من
                                 </a>
                             </div>
                         </div>
-                        <div class="faq--item">
-                            <h5>
-                                هل غیوبوید أيضا تصميم هيكل السقف؟
-                            </h5>
-                            <p>
-                                “نعم. مع فريق ماهر من المصممين ، توفر Cobweed جميع خدمات التصمي
-                            </p>
-                            <div class="text-left">
-                                <a href="" class="btn btn-outline-light">
-                                    اکثر من
-                                </a>
-                            </div>
-                        </div>
-                        <div class="faq--item">
-                            <h5>
-                                هل غیوبوید أيضا تصميم هيكل السقف؟
-                            </h5>
-                            <p>
-                                “نعم. مع فريق ماهر من المصممين ، توفر Cobweed جميع خدمات التصمي
-                            </p>
-                            <div class="text-left">
-                                <a href="" class="btn btn-outline-light">
-                                    اکثر من
-                                </a>
-                            </div>
-                        </div>
-                        <div class="faq--item">
-                            <h5>
-                                هل غیوبوید أيضا تصميم هيكل السقف؟
-                            </h5>
-                            <p>
-                                “نعم. مع فريق ماهر من المصممين ، توفر Cobweed جميع خدمات التصمي
-                            </p>
-                            <div class="text-left">
-                                <a href="" class="btn btn-outline-light">
-                                    اکثر من
-                                </a>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

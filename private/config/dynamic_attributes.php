@@ -21,11 +21,23 @@ return [
     ],
     'projects'=>[
         [
-            'name' => 'price',
-            'input_type' => 'number'
+            'name' => 'address',
+            'input_type' => 'text'
         ],
         [
-            'name' => 'duration',
+            'name' => 'skeleton',
+            'input_type' => 'text'
+        ],
+        [
+            'name' => 'opening',
+            'input_type' => 'text'
+        ],
+        [
+            'name' => 'ceiling_thickness',
+            'input_type' => 'text'
+        ],
+        [
+            'name' => 'operating_time',
             'input_type' => 'text'
         ],
     ]
