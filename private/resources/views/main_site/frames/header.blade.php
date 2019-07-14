@@ -23,7 +23,7 @@
                             <div class="col-6">
                                 <div class="d-flex align-items-center h-100 justify-content-end">
                                     <a href="javascript:;" class="text-center smallHeader__logo">
-                                        <img src="./assets/media/images/downloads/CUBOID-white.png" alt="">
+                                        <img src="{{asset('/assets/media/images/downloads/CUBOID-white.png')}}" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
 
-                <img src="./assets/media/images/landing/landing-2.jpg" alt="">
+                <img src="{{asset('/assets/media/images/landing/landing-2.jpg')}}" alt="">
                 <div class="leftBox">
                     <div class="d-flex">
                         <a href="void:;">
@@ -58,7 +58,7 @@
                             <div class="col-6">
                                 <div class="d-flex align-items-center h-100 justify-content-end">
                                     <a href="javascript:;" class="text-center smallHeader__logo">
-                                        <img src="./assets/media/images/downloads/CUBOID-white.png" alt="">
+                                        <img src="{{asset('/assets/media/images/downloads/CUBOID-white.png')}}" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
 
-                <img src="./assets/media/images/landing/landing-2.jpg" alt="">
+                <img src="{{asset('/assets/media/images/landing/landing-2.jpg')}}" alt="">
                 <div class="leftBox">
                     <div class="d-flex">
                         <a href="void:;">
@@ -93,7 +93,7 @@
                             <div class="col-6">
                                 <div class="d-flex align-items-center h-100 justify-content-end">
                                     <a href="javascript:;" class="text-center smallHeader__logo">
-                                        <img src="./assets/media/images/downloads/CUBOID-white.png" alt="">
+                                        <img src="{{asset('/assets/media/images/downloads/CUBOID-white.png')}}" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
                     </div>
                 </div>
 
-                <img src="./assets/media/images/landing/landing-2.jpg" alt="">
+                <img src="{{asset('/assets/media/images/landing/landing-2.jpg')}}" alt="">
                 <div class="leftBox">
                     <div class="d-flex">
                         <a href="void:;">
