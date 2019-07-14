@@ -182,7 +182,7 @@
                                     </div>
 
                                     <img class="card-img-top"
-                                         src="./assets/media/images/products/products-item-bg.png"
+                                         src="{{asset('/assets/media/images/products/products-item-bg.png')}}"
                                          alt="Card image cap">
 
                                     <div class="card-body">
@@ -250,7 +250,7 @@
                                     </div>
 
                                     <img class="card-img-top"
-                                         src="./assets/media/images/products/products-item-bg.png"
+                                         src="{{asset('/assets/media/images/products/products-item-bg.png')}}"
                                          alt="Card image cap">
                                     <div class="card-body">
                                         <ul>
@@ -297,7 +297,7 @@
                                     </div>
 
                                     <img class="card-img-top"
-                                         src="./assets/media/images/products/products-item-bg.png"
+                                         src="{{asset('/assets/media/images/products/products-item-bg.png')}}"
                                          alt="Card image cap">
                                     <div class="card-body">
                                         <ul>
@@ -344,7 +344,7 @@
                                     </div>
 
                                     <img class="card-img-top"
-                                         src="./assets/media/images/products/products-item-bg.png"
+                                         src="{{asset('/assets/media/images/products/products-item-bg.png')}}"
                                          alt="Card image cap">
                                     <div class="card-body">
                                         <ul>
@@ -554,12 +554,10 @@
                 </div>
                 <div class="col-12 col-md-8">
                     <video class="player" id="player" controls
-                           poster="/assets/site/media/images/downloads/player-poster.jpg">
+                           poster="{{asset('/assets/site/media/images/downloads/player-poster.jpg')}}">
                         <source src="{{asset('/assets/site/media/videos/downloads/intro-480p__47071.mp4')}}"
                                 type="video/mp4">
-                    <!--<img onclick="playPlyr()" src="{{asset('/assets/site/media/images/downloads/play-icon.png')}}" alt=""-->
-                        <!--class="playIcon">-->
-                        <a href="/assets/site/media/videos/downloads/intro-480p__47071.mp4" download>Download</a>
+                        <a href="{{asset('/assets/site/media/videos/downloads/intro-480p__47071.mp4')}}" download>Download</a>
                     </video>
                 </div>
             </div>

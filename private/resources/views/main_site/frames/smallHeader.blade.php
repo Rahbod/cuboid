@@ -19,7 +19,7 @@
                 <div class="col-6 text-left">
                    <div class="d-flex align-items-center">
                        <a href="javascript:;" class="text-center smallHeader__logo">
-                           <img src="./assets/media/images/downloads/CUBOID-white.png" alt="">
+                           <img src="{{asset('assets/media/images/downloads/CUBOID-white.png')}}" alt="">
                        </a>
                    </div>
                 </div>

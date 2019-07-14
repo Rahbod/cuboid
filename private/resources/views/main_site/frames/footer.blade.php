@@ -47,7 +47,7 @@
                             <div class="form-group col-md-6">
                                 <div class="d-flex" id="captcha_image">
                                     <div class="captchaImageContainer">
-                                        <img src="./assets/media/images/footer/captcha.png">
+                                        <img src="{{asset('assets/media/images/footer/captcha.png')}}">
                                     </div>
                                     <a href="void:;" class="renewCaptchaImage btn">
                                         <i class="far fa-redo"></i>
@@ -72,7 +72,7 @@
                     <ul style="width: 380px;">
                         <li class="mb-4">
                             <div class="d-flex">
-                                <img class="ml-2 h-100" src="./assets/media/images/footer/location-icon.png" alt="">
+                                <img class="ml-2 h-100" src="{{asset('assets/media/images/footer/location-icon.png')}}" alt="">
                                 <span class="address flex-fill">
                                                             طهران ، الجادة أفريكا ، سابا الجادة ، رقم 42 ، الوحدة 21 021-22
                             </span>
@@ -138,25 +138,25 @@
                         <div class="d-flex">
                             <div class="flex-fill">
                                 <a href="void:;" class="social__item">
-                                    <img src="./assets/media/images/footer/linkedin.png" alt="">
+                                    <img src="{{asset('assets/media/images/footer/linkedin.png')}}" alt="">
                                 </a>
                                 <a href="void:;" class="social__item">
-                                    <img src="./assets/media/images/footer/facebook.png" alt="">
+                                    <img src="{{asset('assets/media/images/footer/facebook.png')}}" alt="">
                                 </a>
                                 <a href="void:;" class="social__item">
-                                    <img src="./assets/media/images/footer/google-plus.png" alt="">
+                                    <img src="{{asset('assets/media/images/footer/google-plus.png')}}" alt="">
                                 </a>
                                 <a href="void:;" class="social__item">
-                                    <img src="./assets/media/images/footer/twitter.png" alt="">
+                                    <img src="{{asset('assets/media/images/footer/twitter.png')}}" alt="">
                                 </a>
 
                                 <a href="void:;" class="email">
-                                    <img src="./assets/media/images/footer/email.png" alt="">
+                                    <img src="{{asset('assets/media/images/footer/email.png')}}" alt="">
                                     INFO@CUBOID.COM
                                 </a>
                             </div>
                             <a href="void:;">
-                                <img src="./assets/media/images/footer/CUBOID.png" alt="">
+                                <img src="{{asset('assets/media/images/footer/CUBOID.png')}}" alt="">
                             </a>
                         </div>
 
