@@ -535,8 +535,8 @@ ul li, ol li {
 
 .products .greyTitle {
     z-index: 1;
-    margin-left: -9px;
-    margin-right: -9px;
+    margin-left: -16px;
+    margin-right: -16px;
     color: #fff;
     margin-top: 70px;
     margin-bottom: 0;

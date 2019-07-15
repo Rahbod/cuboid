@@ -44,6 +44,12 @@
                 </div>
                 <div class="col-md-6 my-md-auto">
                     <ul class="nav nav-pills" id="pills-tab" role="tablist" style="justify-content: flex-end;">
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                               id="pills-all-projects-tab" data-toggle="pill" href="#pills-all-projects" role="tab"
+                               aria-controls="pills-all-projects" aria-selected="true">جمیع المشاریع</a>
+                        </li>
+
                         @foreach($categories as $category)
                             <li class="nav-item">
                                 <a class="nav-link"
@@ -52,15 +58,45 @@
                                    aria-controls="pills-{{$category->id}}" aria-selected="false">{{$category->name}}</a>
                             </li>
                         @endforeach
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="pills-all-projects-tab" data-toggle="pill" href="#pills-all-projects" role="tab"
-                               aria-controls="pills-all-projects" aria-selected="true">جمیع المشاریع</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
             <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all-projects" role="tabpanel"
+                     aria-labelledby="pills-all-projects-tab">
+                    <div id="completedProjects--all-projects" class="owl-carousel">
+                        @foreach($categories as $category)
+                            @foreach($category->projects as $project)
+                                <div class="card">
+                                    <img class="card-img-top" src="{{asset($project->image)}}"
+                                         alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{$project->title}}</h4>
+                                        <h5 class="card-sub-title">{{$project->sub_title}}</h5>
+                                        <p class="card-text">
+                                            {{$project->summary}}
+                                        </p>
+                                    </div>
+                                    <div class="moreDetails">
+                                        <h4 class="card-title text-white">{{$project->title}}</h4>
+                                        <h5 class="card-sub-title text-white">{{$project->sub_title}}</h5>
+                                        <p class="card-text">
+                                            {{$project->description}}
+                                        </p>
+                                        <div class="text-right moreBtn">
+                                            <a href="{{url('/projects/'.$project->id)}}" class="btn btn-outline-light">
+                                                اکثر من
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endforeach
+                    </div>
+                </div>
+
+
                 @foreach($categories as $category)
                     <div class="tab-pane fade" id="pills-{{$category->id}}" role="tabpanel"
                          aria-labelledby="pills-{{$category->id}}-tab">
@@ -94,38 +130,6 @@
                         </div>
                     </div>
                 @endforeach
-                <div class="tab-pane fade show active" id="pills-all-projects" role="tabpanel"
-                     aria-labelledby="pills-all-projects-tab">
-                    <div id="completedProjects--all-projects" class="owl-carousel">
-                        @foreach($categories as $category)
-                            @foreach($category->projects as $project)
-                                <div class="card">
-                                    <img class="card-img-top" src="{{asset($project->image)}}"
-                                         alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 class="card-title">{{$project->title}}</h4>
-                                        <h5 class="card-sub-title">{{$project->sub_title}}</h5>
-                                        <p class="card-text">
-                                            {{$project->summary}}
-                                        </p>
-                                    </div>
-                                    <div class="moreDetails">
-                                        <h4 class="card-title text-white">{{$project->title}}</h4>
-                                        <h5 class="card-sub-title text-white">{{$project->sub_title}}</h5>
-                                        <p class="card-text">
-                                            {{$project->description}}
-                                        </p>
-                                        <div class="text-right moreBtn">
-                                            <a href="{{url('/projects/'.$project->id)}}" class="btn btn-outline-light">
-                                                اکثر من
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        @endforeach
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -637,3 +641,34 @@
         </div>
     </section>
 @endsection
+
+@push('scripts')
+    <script>
+        @foreach($categories as $category)
+        $('##completedProjects--{{$category->id}}').owlCarousel({
+            rtl: true,
+            nav: true,
+            items: 4,
+            loop: true,
+            margin: 26,
+            dots: true,
+            responsive: {
+                // breakpoint from 0 up
+                0: {
+                    items: 1
+                },
+                // breakpoint from 768 up
+
+                576: {
+                    items: 2
+                },
+                // breakpoint from 768 up
+                768: {
+                    items: 4,
+                },
+            }
+        });
+
+        @endforeach
+    </script>
+@endpush
