@@ -75,9 +75,9 @@
 
         $('#faqCarousel').owlCarousel({
             rtl: true,
-//            nav: true,
+            nav: true,
             items: 1,
-//            loop: true,
+            loop: true,
 //            margin: 26,
             dots: true,
 //            responsive: {
@@ -90,6 +90,34 @@
 //                    items: 2,
 //                }
 //            }
+        });
+
+        $('#completedProjects--all-projects').owlCarousel({
+            rtl: true,
+            nav: true,
+            items: 4,
+            loop: true,
+            margin: 26,
+            dots: true,
+            responsive: {
+                // breakpoint from 0 up
+                0: {
+                    items: 1
+                },
+                // breakpoint from 400 up
+                400: {
+                    items: 2
+                },
+                // breakpoint from 576 up
+
+                576: {
+                    items: 3
+                },
+                // breakpoint from 768 up
+                768: {
+                    items: 4,
+                },
+            }
         });
 
         $('#mainSlider').owlCarousel({

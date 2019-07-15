@@ -274,11 +274,11 @@ ul li, ol li {
     border-bottom-right-radius: 1rem;
 }
 
-.mainSlider .owl-carousel .owl-nav button.owl-prev {
+.mainSlider .owl-nav button.owl-prev {
     right: 0 !important;
 }
 
-.mainSlider .owl-carousel .owl-nav button.owl-next {
+.mainSlider .owl-nav button.owl-next {
     left: 0 !important;
 }
 

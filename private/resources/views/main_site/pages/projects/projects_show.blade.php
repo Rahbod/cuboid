@@ -4,7 +4,7 @@
     <section class="completedProjectsShowPage">
         <div class="container">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-5 order-2 order-lg-1">
                     @if($project->gallery && $project->gallery->gallery_items)
                         <div id="completedProjectsShowPage" class="owl-carousel gallery">
                             @foreach($project->gallery->gallery_items as $gallery_item)
@@ -20,17 +20,17 @@
                             @endforeach
                         </div>
                     @else
-                        <a title="" class="galleryItem" href="javascript:;">
-                            <img class="img-fluid"
+                        <a style="cursor: none;" title="" class="galleryItem" href="javascript:;">
+                            <img class="img-fluid p-5"
                                  src="{{asset('/assets/site/media/images/completed-projects/gallery.svg')}}"
                                  alt="">
                             <div class="galleryItem__indicator">
-                                این آیتم دارای گالری نمی باشد.
+                                هذا المشروع لا يحتوي على معرض.
                             </div>
                         </a>
                     @endif
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 order-1 order-lg-2">
                     <h2 class="sectionTitle">المشاريع</h2>
                     <h3>{{$project->name}}</h3>
 
