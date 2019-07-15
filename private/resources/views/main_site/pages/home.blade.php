@@ -182,7 +182,7 @@
                                     </div>
 
                                     <img class="card-img-top"
-                                         src="{{asset('/assets/media/images/products/products-item-bg.png')}}"
+                                         src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
                                          alt="Card image cap">
 
                                     <div class="card-body">
@@ -250,7 +250,7 @@
                                     </div>
 
                                     <img class="card-img-top"
-                                         src="{{asset('/assets/media/images/products/products-item-bg.png')}}"
+                                         src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
                                          alt="Card image cap">
                                     <div class="card-body">
                                         <ul>
@@ -297,7 +297,7 @@
                                     </div>
 
                                     <img class="card-img-top"
-                                         src="{{asset('/assets/media/images/products/products-item-bg.png')}}"
+                                         src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
                                          alt="Card image cap">
                                     <div class="card-body">
                                         <ul>
@@ -344,7 +344,7 @@
                                     </div>
 
                                     <img class="card-img-top"
-                                         src="{{asset('/assets/media/images/products/products-item-bg.png')}}"
+                                         src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
                                          alt="Card image cap">
                                     <div class="card-body">
                                         <ul>
