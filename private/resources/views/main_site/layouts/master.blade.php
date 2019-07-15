@@ -47,7 +47,7 @@
     $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
 
-        $('#newsCarousel,#productsCarousel,#completedProjects--commercialCarousel,#completedProjects--hotelCarousel').owlCarousel({
+        $('#newsCarousel,#productsCarousel,#completedProjects--commercialCarousel,#completedProjects--hotelCarousel,#completedProjects--all-projects').owlCarousel({
             rtl: true,
             nav: true,
             items: 4,
