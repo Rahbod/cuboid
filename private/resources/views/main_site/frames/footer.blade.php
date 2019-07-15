@@ -97,11 +97,11 @@
                                 </div>
                             </div>
 
-                        </div>
-                        <div class="form-group col-md-6">
-                            <button tabindex="6" type="submit" class="btn submitBtn form-control">إرسال إلى القسم ذي
-                                الصلة
-                            </button>
+                            <div class="form-group col-md-6">
+                                <button tabindex="6" type="submit" class="btn submitBtn form-control">إرسال إلى القسم ذي
+                                    الصلة
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>
