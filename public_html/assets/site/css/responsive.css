@@ -108,9 +108,26 @@
         -webkit-background-size: cover;
         background-size: cover;
     }
+
+    .footer {
+        padding-bottom: 1rem;
+    }
 }
 
 @media screen and (max-width: 767.98px) {
+    .header .subTitle {
+        font-size: 20px !important;
+        margin-right: 90px !important;
+    }
+    .smallHeader .title {
+        margin-top: -15px !important;
+        font-size: 57px !important;
+        color: #f68b1f !important;
+    }
+    .header .upTitle {
+        font-size: 17px !important;
+        font-weight: bolder !important;
+    }
 
     .completedProjects .content--text,
     .products .content--text,
@@ -145,8 +162,11 @@
     }
 
     .footer .addressContainer > ul {
-        width: 100%;
+        width: 100% !important;
         margin-bottom: 4rem;
+    }
+    .footer .designedBy {
+        text-align: left;
     }
 }
 
@@ -159,6 +179,14 @@
     .tr-btn-info a {
         width: 50%;
     }
+
+    .footer .formContainer {
+        padding: 15px;
+    }
+
+    .footer .phoneNumbers {
+        margin-right: 0 !important;
+    }
 }
 
 @media screen and (max-width: 399.98px) {
@@ -169,9 +197,9 @@
 /*#region min-width*/
 @media screen and (min-width: 1200px) {
     .orangeTitle {
-        margin-left: -16px!important;
-        margin-right: -16px!important;
-        padding: 10px 46px!important;
+        margin-left: -16px !important;
+        margin-right: -16px !important;
+        padding: 10px 46px !important;
     }
 }
 
