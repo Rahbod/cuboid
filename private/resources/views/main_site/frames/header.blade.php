@@ -1,4 +1,4 @@
-<header class="header landing">
+<header class="header {{isset($sub_page) ?  'sub_page' :'' }}">
     <div class="sticky-header navbar-expand-lg bg-dark">
         <div class="main-bar clearfix onepage">
             <div class="container">
