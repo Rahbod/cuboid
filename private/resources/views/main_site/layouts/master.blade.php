@@ -45,11 +45,13 @@
 <script type="text/javascript" src="{{asset('/assets/site/js/bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/global.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/vendors/owl-carousel/owl.carousel.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('/assets/site/js/vendors/toastr/toastr.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/vendors/plyr-master/dist/plyr.min.js')}}"></script>
 
 <script type="text/javascript">
+    $('[data-toggle="tooltip"]').tooltip();
+
     $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
 
         $('#newsCarousel,#productsCarousel,' +
             '#completedProjects--commercialCarousel,' +
