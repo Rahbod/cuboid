@@ -12,7 +12,7 @@
                 <div class="col-md-6">
                     <div class="content">
                         <h2 class="content--header sectionTitle">
-                            حول غیوبوید
+                            حول غيوبويد
                         </h2>
 
                         <p class="content--text">
@@ -495,7 +495,7 @@
                 <div class="col-12">
                     <div class="mb-4">
                         <h2 class="downloads__title">
-                            تحمیل
+                            تحميل
                         </h2>
                         <p class="downloads__descriptions">
                             كتالوج وكتيبات شركة غيوبويد مقدمة
