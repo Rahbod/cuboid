@@ -26,7 +26,7 @@ class ProjectController extends Controller
 
         $faqs = Faq::where('status', 1)->orderBy('order', 'asc')->take(10)->get();
 
-        return view('main_site.pages.projects.projects')->with(['categories' => $categories, 'projects' => $projects, 'faqs' => $faqs, 'subPage' => 'sub_page']);
+        return view('main_site.pages.projects.projects')->with(['categories' => $categories, 'projects' => $projects, 'faqs' => $faqs, 'sub_page' => 'subPage']);
     }
 
     public function show($id)
@@ -39,6 +39,6 @@ class ProjectController extends Controller
             $query->take(8);
         }])->orderBy('order', 'asc')->take(4)->get();
         $faqs = Faq::where('status', 1)->orderBy('order', 'asc')->take(10)->get();
-        return view('main_site.pages.projects.projects_show')->with(['categories' => $categories, 'project' => $project, 'faqs' => $faqs, 'subPage' => 'sub_page']);
+        return view('main_site.pages.projects.projects_show')->with(['categories' => $categories, 'project' => $project, 'faqs' => $faqs, 'sub_page' => 'subPage']);
     }
 }
