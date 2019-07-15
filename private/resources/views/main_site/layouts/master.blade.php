@@ -11,6 +11,8 @@
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/fonts/fontawesome-5-pro/css/all.min.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/hacen-maghreb.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/open-sans.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('/assets/site/js/vendors/toastr/toastr.min.css')}}">
+
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/global.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/responsive.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/sidebar.css')}}">

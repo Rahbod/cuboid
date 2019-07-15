@@ -43,6 +43,14 @@
 }
 
 @media screen and (max-width: 991.98px) {
+    .text {
+        -webkit-background-size: cover;
+        background-size: cover;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background-position: center;
+    }
+
     .container {
         max-width: none;
     }
@@ -119,11 +127,13 @@
         font-size: 20px !important;
         margin-right: 90px !important;
     }
+
     .smallHeader .title {
         margin-top: -15px !important;
         font-size: 57px !important;
         color: #f68b1f !important;
     }
+
     .header .upTitle {
         font-size: 17px !important;
         font-weight: bolder !important;
@@ -165,6 +175,7 @@
         width: 100% !important;
         margin-bottom: 4rem;
     }
+
     .footer .designedBy {
         text-align: left;
     }
