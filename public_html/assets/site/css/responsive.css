@@ -81,7 +81,7 @@
 
     }
 
-    .landing .owl-carousel .owl-nav button.owl-next, .landing .owl-carousel .owl-nav button.owl-prev {
+    .mainSlider .owl-carousel .owl-nav button.owl-next, .mainSlider .owl-carousel .owl-nav button.owl-prev {
         background: transparent !important;
         color: #2e2e2e !important;
     }

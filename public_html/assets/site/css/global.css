@@ -204,12 +204,12 @@ ul li, ol li {
     position: relative;
 }
 
-.landing .upTitle {
+.header .upTitle {
     font-size: 23px !important;
     font-weight: bolder !important;
 }
 
-.landing .subTitle {
+.header .subTitle {
     font-size: 29px !important;
     margin-right: 120px !important;
 }
@@ -220,7 +220,7 @@ ul li, ol li {
     color: #f68b1f !important;
 }
 
-.landing .smallHeader {
+.header .smallHeader {
     position: absolute;
     right: 0;
     left: 0;
@@ -229,7 +229,7 @@ ul li, ol li {
     background: transparent !important;
 }
 
-.landing .leftBox {
+.mainSlider .leftBox {
     position: absolute;
 
     left: 30px;
@@ -247,7 +247,7 @@ ul li, ol li {
     border-radius: 1rem;
 }
 
-.landing .leftBox p {
+.mainSlider .leftBox p {
     background: #000;
     z-index: 14;
     color: #fff;
@@ -261,7 +261,7 @@ ul li, ol li {
     border-bottom-left-radius: 1rem;
 }
 
-.landing .leftBox .orangeRibbon {
+.mainSlider .leftBox .orangeRibbon {
     background: #f68b1f;
     opacity: 0.8;
     width: 50px;
@@ -269,11 +269,11 @@ ul li, ol li {
     border-bottom-right-radius: 1rem;
 }
 
-.landing .owl-carousel .owl-nav button.owl-prev {
+.mainSlider .owl-carousel .owl-nav button.owl-prev {
     right: 0 !important;
 }
 
-.landing .owl-carousel .owl-nav button.owl-next {
+.mainSlider .owl-carousel .owl-nav button.owl-next {
     left: 0 !important;
 }
 
