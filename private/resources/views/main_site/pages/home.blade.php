@@ -5,6 +5,69 @@
 @endsection
 
 @section('main')
+    <section class="mainSlider owl-carousel" id="mainSlider">
+        <div class="mainSlider--item">
+
+            <img src="{{asset('/assets/site/media/images/landing/landing-2.jpg')}}" alt="">
+            <div class="leftBox">
+                <div class="d-flex">
+                    <a href="void:;">
+                        <span class="orangeRibbon"></span>
+                        <p>
+                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
+                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mainSlider--item">
+
+            <img src="{{asset('/assets/site/media/images/landing/landing-2.jpg')}}" alt="">
+            <div class="leftBox">
+                <div class="d-flex">
+                    <a href="void:;">
+                        <span class="orangeRibbon"></span>
+                        <p>
+                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
+                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mainSlider--item">
+
+            <img src="{{asset('/assets/site/media/images/landing/landing-2.jpg')}}" alt="">
+            <div class="leftBox">
+                <div class="d-flex">
+                    <a href="void:;">
+                        <span class="orangeRibbon"></span>
+                        <p>
+                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
+                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mainSlider--item">
+
+            <img src="{{asset('/assets/site/media/images/landing/landing-2.jpg')}}" alt="">
+            <div class="leftBox">
+                <div class="d-flex">
+                    <a href="void:;">
+                        <span class="orangeRibbon"></span>
+                        <p>
+                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
+                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="aboutUs">
         <img class="aboutUs--bgLogo" src="{{asset('/assets/site/media/images/about-us/about-us-logo.png')}}" alt="">
         <div class="container my-auto">

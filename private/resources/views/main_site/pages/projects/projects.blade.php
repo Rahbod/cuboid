@@ -1,10 +1,5 @@
 @extends('main_site.layouts.master')
 
-@section('header')
-    @include('main_site.frames.smallHeader')
-@endsection
-
-
 @section('main')
     <section class="completedProjects completedProjectsPage">
         <div class="container">

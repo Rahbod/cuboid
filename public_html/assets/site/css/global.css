@@ -224,7 +224,8 @@ ul li, ol li {
     position: absolute;
     right: 0;
     left: 0;
-    top: 0;
+    z-index: 2;
+    top: 53px;
     background: transparent !important;
 }
 

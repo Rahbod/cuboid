@@ -26,7 +26,9 @@
 
 </head>
 <body>
-@yield('header')
+@include('main_site.frames.header')
+
+{{--@yield('header')--}}
 <main>
     @yield('main')
 </main>
