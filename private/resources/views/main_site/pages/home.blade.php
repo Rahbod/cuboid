@@ -645,7 +645,7 @@
 @push('scripts')
     <script>
         @foreach($categories as $category)
-        $('##completedProjects--{{$category->id}}').owlCarousel({
+        $('#completedProjects--{{$category->id}}').owlCarousel({
             rtl: true,
             nav: true,
             items: 4,
