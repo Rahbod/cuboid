@@ -13,6 +13,10 @@
                 </div>
                 <div class="col-md-6 my-md-auto">
                     <ul class="nav nav-pills" id="pills-tab" role="tablist" style="justify-content: flex-end;">
+                        <li class="nav-item ">
+                            <a class="nav-link {{ !isset(request()->category_id)?'active':''}}" aria-selected="{{ !isset(request()->category_id)?'true':'false'}}"
+                               href="{{url('projects')}}" role="tab" >جمیع المشاریع</a>
+                        </li>
                         @foreach($categories as $category)
                             <li class="nav-item">
                                 <a class="nav-link {{$category->id == request()->category_id?'active':''}}"
@@ -20,10 +24,7 @@
                                    aria-controls="pills-{{$category->id}}" aria-selected="{{$category->id == request()->category_id?'true':'false'}}">{{$category->name}}</a>
                             </li>
                         @endforeach
-                        <li class="nav-item ">
-                            <a class="nav-link {{ !isset(request()->category_id)?'active':''}}" aria-selected="{{ !isset(request()->category_id)?'true':'false'}}"
-                               href="{{url('projects')}}" role="tab" >جمیع المشاریع</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
