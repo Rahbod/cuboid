@@ -11,6 +11,10 @@
 |
 */
 
+//Route::get('captcha-image', function () {
+//    return captcha_img('flat');
+//});
+
 Route::get('/', 'HomeController@index');
 Route::get('/projects', 'ProjectController@projects');
 Route::get('/projects/category/{category_id}', 'ProjectController@projects');
@@ -24,7 +28,7 @@ Route::get('/home_test', function () {
 });
 
 //Route::view('projects','main_site.pages.projects.projects');
-Route::view('projects-show','main_site.pages.projects.projects_show');
+Route::view('projects-show', 'main_site.pages.projects.projects_show');
 
 
 Route::get('/clear', function () {

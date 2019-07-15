@@ -45,153 +45,165 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="">رقم الهاتف المحمول</label>
-                                <input tabindex="4" name="phone" type="text" class="form-control" id="4" placeholder="09xxxxxxxxx">
+                                <input tabindex="4" name="phone" type="text" class="form-control" id="4"
+                                       placeholder="09xxxxxxxxx">
                             </div>
 
-                            <div class="form-group col-md-6">
-                                <label for="text">وصف</label>
-                                <textarea tabindex="5" name="text" class="form-control" id="text"
-                                          placeholder="وصف"
-                                          required cols="30" rows="10"></textarea>
-                                <div class="invalid-tooltip"></div>
-                            </div>
-
-
-                            <div class="form-group col-md-6" tabindex="6">
-                                <div class="d-flex justify-content-between" id="captcha_image">
-                                    <div class="captchaImageContainer">
-                                        @captcha
-                                    </div>
-                                    <a style="padding: 10px 16px;" data-lang="{{session('lang')}}"
-                                       href="javascript:;" class="renewCaptchaImage btn border">
-                                        <i class="far fa-redo"></i>
-                                    </a>
-                                </div>
-                                @if ($errors->has('g-recaptcha-response'))
-                                    <div class="invalid-feedback" style="display: block;">
-                                        {{ $errors->first('g-recaptcha-response') }}
-                                    </div>
-                                @endif
-                            </div>
-
-                            {{--<div class="form-group col-md-6">--}}
-                            {{--<div class="d-flex" id="captcha_image">--}}
-                            {{--<div class="captchaImageContainer">--}}
-                            {{--<img src="{{asset('assets/site/media/images/footer/captcha.png')}}">--}}
+                            {{--<div class="form-group col-md-12">--}}
+                            {{--<label for="text">وصف</label>--}}
+                            {{--<textarea tabindex="5" name="text" class="form-control" id="text"--}}
+                            {{--placeholder="وصف"--}}
+                            {{--required cols="30" rows="5"></textarea>--}}
+                            {{--<div class="invalid-tooltip"></div>--}}
                             {{--</div>--}}
-                            {{--<a href="void:;" class="renewCaptchaImage btn">--}}
+
+
+                            {{--<div class="form-group col-md-6" tabindex="5">--}}
+                            {{--<div class="d-flex justify-content-between" id="captcha_image">--}}
+                            {{--<div class="captchaImageContainer">--}}
+                            {{--{!! captcha_img('flat'); !!}--}}
+                            {{--</div>--}}
+                            {{--<a style="padding: 10px 16px;" data-lang="{{session('lang')}}"--}}
+                            {{--href="javascript:;"--}}
+                            {{--class="renewCaptchaImage btn border ml-2">--}}
                             {{--<i class="far fa-redo"></i>--}}
                             {{--</a>--}}
-                            {{--<input style="color: #f68e24;" type="text"--}}
-                            {{--class="form-control securityCode flex-fill" id="5"--}}
-                            {{--placeholder="تصویر امنیتی">--}}
                             {{--</div>--}}
+                            {{--<input type="text" class="form-control"--}}
+                            {{--autocomplete="captcha"--}}
+                            {{--spellcheck="false"--}}
+                            {{--tabindex="3"--}}
+                            {{--name="captcha" required--}}
+                            {{--id="captcha">--}}
+                            {{--@if ($errors->has('captcha'))--}}
+                            {{--<div class="invalid-feedback" style="display: block;">--}}
+                            {{--{{ $errors->first('captcha') }}--}}
+                            {{--</div>--}}
+                            {{--@endif--}}
+                            {{--</div>--}}
+
+
+                            <div class="form-group col-md-6">
+                                <div class="d-flex" id="captcha_image">
+                                    <div class="captchaImageContainer">
+                                        <img src="{{asset('assets/site/media/images/footer/captcha.png')}}">
+                                    </div>
+                                    <a href="void:;" class="renewCaptchaImage btn">
+                                        <i class="far fa-redo"></i>
+                                    </a>
+                                    <input style="color: #f68e24;" type="text"
+                                           class="form-control securityCode flex-fill" id="5"
+                                           placeholder="تصویر امنیتی">
+                                </div>
+                            </div>
 
                         </div>
                         <div class="form-group col-md-6">
-                            <button tabindex="6" type="submit" class="btn submitBtn form-control">إرسال إلى القسم ذي الصلة</button>
+                            <button tabindex="6" type="submit" class="btn submitBtn form-control">إرسال إلى القسم ذي
+                                الصلة
+                            </button>
                         </div>
                     </form>
+                </div>
             </div>
-        </div>
-        <div class="col-12 col-md-5">
-            <div class="addressContainer">
-                <ul style="width: 380px;">
-                    <li class="mb-4">
-                        <div class="d-flex">
-                            <img class="ml-2 h-100"
-                                 src="{{asset('assets/site/media/images/footer/location-icon.png')}}" alt="">
-                            <span class="address flex-fill">
+            <div class="col-12 col-md-5">
+                <div class="addressContainer">
+                    <ul style="width: 380px;">
+                        <li class="mb-4">
+                            <div class="d-flex">
+                                <img class="ml-2 h-100"
+                                     src="{{asset('assets/site/media/images/footer/location-icon.png')}}" alt="">
+                                <span class="address flex-fill">
                                                             طهران ، الجادة أفريكا ، سابا الجادة ، رقم 42 ، الوحدة 21 021-22
                             </span>
+                            </div>
+                        </li>
+                        <li class="phoneNumbers" style="margin-bottom: 25px;margin-right: 32px;">
+                            <h4 class="text-white sectionTitle">هواتف المكاتب المحلية</h4>
+                            <ul>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="phoneText">مكتب محافظة قم</span>
+                                        <span class="phoneNumber">32941115-025</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="phoneText">مكتب محافظة قم</span>
+                                        <span class="phoneNumber">32941115-025</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="phoneText">مكتب محافظة قم</span>
+                                        <span class="phoneNumber">32941115-025</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="phoneText">مكتب محافظة قم</span>
+                                        <span class="phoneNumber">32941115-025</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="phoneText">مكتب محافظة قم</span>
+                                        <span class="phoneNumber">32941115-025</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="phoneText">مكتب محافظة قم</span>
+                                        <span class="phoneNumber">32941115-025</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="phoneText">مكتب محافظة قم</span>
+                                        <span class="phoneNumber">32941115-025</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="phoneText">مكتب محافظة قم</span>
+                                        <span class="phoneNumber">32941115-025</span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="social">
+                        <div class="d-flex">
+                            <div class="flex-fill">
+                                <a href="void:;" class="social__item">
+                                    <img src="{{asset('assets/site/media/images/footer/linkedin.png')}}" alt="">
+                                </a>
+                                <a href="void:;" class="social__item">
+                                    <img src="{{asset('assets/site/media/images/footer/facebook.png')}}" alt="">
+                                </a>
+                                <a href="void:;" class="social__item">
+                                    <img src="{{asset('assets/site/media/images/footer/google-plus.png')}}" alt="">
+                                </a>
+                                <a href="void:;" class="social__item">
+                                    <img src="{{asset('assets/site/media/images/footer/twitter.png')}}" alt="">
+                                </a>
+
+                                <a href="void:;" class="email">
+                                    <img src="{{asset('assets/site/media/images/footer/email.png')}}" alt="">
+                                    INFO@CUBOID.COM
+                                </a>
+                            </div>
+                            <a href="void:;">
+                                <img src="{{asset('assets/site/media/images/footer/CUBOID.png')}}" alt="">
+                            </a>
                         </div>
-                    </li>
-                    <li class="phoneNumbers" style="margin-bottom: 25px;margin-right: 32px;">
-                        <h4 class="text-white sectionTitle">هواتف المكاتب المحلية</h4>
-                        <ul>
-                            <li>
-                                <div class="d-flex justify-content-between">
-                                    <span class="phoneText">مكتب محافظة قم</span>
-                                    <span class="phoneNumber">32941115-025</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex justify-content-between">
-                                    <span class="phoneText">مكتب محافظة قم</span>
-                                    <span class="phoneNumber">32941115-025</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex justify-content-between">
-                                    <span class="phoneText">مكتب محافظة قم</span>
-                                    <span class="phoneNumber">32941115-025</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex justify-content-between">
-                                    <span class="phoneText">مكتب محافظة قم</span>
-                                    <span class="phoneNumber">32941115-025</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex justify-content-between">
-                                    <span class="phoneText">مكتب محافظة قم</span>
-                                    <span class="phoneNumber">32941115-025</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex justify-content-between">
-                                    <span class="phoneText">مكتب محافظة قم</span>
-                                    <span class="phoneNumber">32941115-025</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex justify-content-between">
-                                    <span class="phoneText">مكتب محافظة قم</span>
-                                    <span class="phoneNumber">32941115-025</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex justify-content-between">
-                                    <span class="phoneText">مكتب محافظة قم</span>
-                                    <span class="phoneNumber">32941115-025</span>
-                                </div>
-                            </li>
 
-                        </ul>
-                    </li>
-                </ul>
-
-                <div class="social">
-                    <div class="d-flex">
-                        <div class="flex-fill">
-                            <a href="void:;" class="social__item">
-                                <img src="{{asset('assets/site/media/images/footer/linkedin.png')}}" alt="">
-                            </a>
-                            <a href="void:;" class="social__item">
-                                <img src="{{asset('assets/site/media/images/footer/facebook.png')}}" alt="">
-                            </a>
-                            <a href="void:;" class="social__item">
-                                <img src="{{asset('assets/site/media/images/footer/google-plus.png')}}" alt="">
-                            </a>
-                            <a href="void:;" class="social__item">
-                                <img src="{{asset('assets/site/media/images/footer/twitter.png')}}" alt="">
-                            </a>
-
-                            <a href="void:;" class="email">
-                                <img src="{{asset('assets/site/media/images/footer/email.png')}}" alt="">
-                                INFO@CUBOID.COM
-                            </a>
-                        </div>
-                        <a href="void:;">
-                            <img src="{{asset('assets/site/media/images/footer/CUBOID.png')}}" alt="">
-                        </a>
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="container copyRight">
         <div class="row">

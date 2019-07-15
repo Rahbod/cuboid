@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $('form.contact-us').on('submit', function (e) {
+    $('form.contactUsForm').on('submit', function (e) {
         e.preventDefault();
         var form = $(e.target);
         var formMethod = $(e.target).attr('method');
@@ -69,6 +69,18 @@ $(document).ready(function () {
         "hideMethod": "fadeOut"
     };
 
+    $('.renewCaptchaImage').on('click', function () {
+        var lang = $(this).attr('data-lang');
+        $.ajax({
+            type: 'get',
+            url: '/' + lang + '/captcha-image',
+            success: function (response) {
+                $('.captchaImageContainer').html(response);
+            },
+            fail: function (error) {
+            }
+        });
+    });
 });
 
 function toaster(type, title, message) {
