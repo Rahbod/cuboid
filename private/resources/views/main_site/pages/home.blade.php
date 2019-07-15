@@ -5,7 +5,7 @@
 @endsection
 
 @section('main')
-    <section class="mainSlider owl-carousel" id="mainSlider">
+    <section class="mainSlider owl-carousel position-relative" id="mainSlider">
         <div class="mainSlider--item">
 
             <img src="{{asset('/assets/site/media/images/landing/landing-2.jpg')}}" alt="">
