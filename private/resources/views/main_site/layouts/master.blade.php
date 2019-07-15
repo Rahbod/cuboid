@@ -20,7 +20,7 @@
           href="{{asset('/assets/site/js/vendors/owl-carousel/owl.theme.default.min.css')}}">
     <link rel="stylesheet" type="text/css" media="screen"
           href="{{asset('/assets/site/js/vendors/plyr-master/dist/plyr.css')}}">
-    <script type="text/javascript" src="{{asset('/assets/js/vendors/html5lightbox/html5lightbox.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/assets/site/js/vendors/html5lightbox/html5lightbox.js')}}"></script>
 
     @stack('styles')
 
