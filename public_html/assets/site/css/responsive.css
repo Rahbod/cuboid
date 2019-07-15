@@ -1,10 +1,10 @@
+.orangeTitle {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 10px 46px;
+}
 /*#region max-width*/
 @media screen and (max-width: 1199.98px) {
-    .orangeTitle {
-        margin-left: -16px;
-        margin-right: -16px;
-        padding: 7px 0 7px 40px;
-    }
 
     .smallHeader .smallHeader__title {
         padding-right: 0;
@@ -13,12 +13,6 @@
     .completedProjects {
         -webkit-background-size: auto;
         background-size: auto;
-    }
-
-    .orangeTitle {
-        margin-left: -16px;
-        margin-right: -16px;
-        padding: 10px 46px;
     }
 
     .products .greyTitle {
