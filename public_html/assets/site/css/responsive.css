@@ -1,13 +1,14 @@
-.orangeTitle {
-    margin-left: -16px;
-    margin-right: -16px;
-    padding: 10px 46px;
-}
 /*#region max-width*/
 @media screen and (max-width: 1199.98px) {
 
     .smallHeader .smallHeader__title {
         padding-right: 0;
+    }
+
+    .orangeTitle {
+        margin-left: -16px;
+        margin-right: -16px;
+        padding: 10px 46px;
     }
 
     .completedProjects {
@@ -166,6 +167,14 @@
 
 /*#endregion*/
 /*#region min-width*/
+@media screen and (min-width: 1200px) {
+    .orangeTitle {
+        margin-left: -16px!important;
+        margin-right: -16px!important;
+        padding: 10px 46px!important;
+    }
+}
+
 @media screen and (min-width: 992px) {
     .top-courses .site-button:not(:first-child) {
         margin-left: 0.5rem;
