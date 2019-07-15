@@ -12,7 +12,7 @@
                 <div class="col-6 text-right">
                     <div class="smallHeader__title">
                         <p class="upTitle">سقف الوفل</p>
-                        <h1 class="title">غیوبوید</h1>
+                        <h1 class="title">غيوبويد</h1>
                         <span class="subTitle mr-5">خيار طبيعی</span>
                     </div>
                 </div>
