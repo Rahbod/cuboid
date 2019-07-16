@@ -175,11 +175,21 @@ ul {
     cursor: pointer;
     /*font-weight: 600;*/
     display: inline-block;
+    border-bottom: 1px solid transparent;
+}
+
+.header-nav .rightMenu > li > a:hover, .header-nav .rightMenu > li > a:focus {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .header-nav .leftMenu > li > a {
     color: #f68b1f;
     padding: 15px 6px;
+}
+
+.header-nav .leftMenu > li > a:hover, .header-nav .leftMenu > li > a:focus {
+    filter: brightness(1.3);
+    font-size: 1.1em;
 }
 
 ul li, ol li {

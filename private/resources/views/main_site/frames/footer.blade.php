@@ -26,7 +26,7 @@
                                     <label for="">القسم المطلوب</label>
                                     <select tabindex="1" name="relevant_section" class="custom-select" id="">
                                         @if(config('system.relevant_section'))
-                                                <option selected>انتخب ...</option>
+                                            <option selected>انتخب ...</option>
                                             @foreach(config('system.relevant_section') as$key=> $option)
                                                 <option value="{{$key}}">{{$option}}</option>
                                             @endforeach
@@ -121,62 +121,23 @@
                                 <img class="ml-2 h-100"
                                      src="{{asset('assets/site/media/images/footer/location-icon.png')}}" alt="">
                                 <span class="address flex-fill">
-                                                            طهران ، الجادة أفريكا ، سابا الجادة ، رقم 42 ، الوحدة 21 021-22
+                                    {{config('system.about_us.address')}}
                             </span>
                             </div>
                         </li>
                         <li class="phoneNumbers" style="margin-bottom: 25px;margin-right: 32px;">
                             <h4 class="text-white sectionTitle">هواتف المكاتب المحلية</h4>
                             <ul>
-                                <li>
-                                    <div class="d-flex justify-content-between">
-                                        <span class="phoneText">مكتب محافظة قم</span>
-                                        <span class="phoneNumber">32941115-025</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between">
-                                        <span class="phoneText">مكتب محافظة قم</span>
-                                        <span class="phoneNumber">32941115-025</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between">
-                                        <span class="phoneText">مكتب محافظة قم</span>
-                                        <span class="phoneNumber">32941115-025</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between">
-                                        <span class="phoneText">مكتب محافظة قم</span>
-                                        <span class="phoneNumber">32941115-025</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between">
-                                        <span class="phoneText">مكتب محافظة قم</span>
-                                        <span class="phoneNumber">32941115-025</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between">
-                                        <span class="phoneText">مكتب محافظة قم</span>
-                                        <span class="phoneNumber">32941115-025</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between">
-                                        <span class="phoneText">مكتب محافظة قم</span>
-                                        <span class="phoneNumber">32941115-025</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between">
-                                        <span class="phoneText">مكتب محافظة قم</span>
-                                        <span class="phoneNumber">32941115-025</span>
-                                    </div>
-                                </li>
-
+                                @if(config('system.phone_numbers'))
+                                    @foreach(config('system.phone_numbers') as $name=>$number)
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <span class="phoneText">{{$name}}</span>
+                                                <span class="phoneNumber">{{$number}}</span>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                @endif
                             </ul>
                         </li>
                     </ul>
@@ -184,25 +145,25 @@
                     <div class="social">
                         <div class="d-flex">
                             <div class="flex-fill">
-                                <a href="void:;" class="social__item">
-                                    <img src="{{asset('assets/site/media/images/footer/linkedin.png')}}" alt="">
-                                </a>
-                                <a href="void:;" class="social__item">
+                                {{--<a href="void:;" class="social__item">--}}
+                                {{--<img src="{{asset('assets/site/media/images/footer/linkedin.png')}}" alt="">--}}
+                                {{--</a>--}}
+                                <a title="الفيسبوك" href="https://www.facebook.com/cuboid.ir" class="social__item">
                                     <img src="{{asset('assets/site/media/images/footer/facebook.png')}}" alt="">
                                 </a>
-                                <a href="void:;" class="social__item">
+                                <a title="جوجل بلز" href="https://plus.google.com/+cuboid.ir" class="social__item">
                                     <img src="{{asset('assets/site/media/images/footer/google-plus.png')}}" alt="">
                                 </a>
-                                <a href="void:;" class="social__item">
+                                <a title="تغريد" href="https://twitter.com/cuboid.ir" class="social__item">
                                     <img src="{{asset('assets/site/media/images/footer/twitter.png')}}" alt="">
                                 </a>
 
-                                <a href="void:;" class="email">
+                                <a title="البريد الإلكتروني" href="void:;" class="email">
                                     <img src="{{asset('assets/site/media/images/footer/email.png')}}" alt="">
                                     INFO@CUBOID.COM
                                 </a>
                             </div>
-                            <a href="void:;">
+                            <a href="{{url('/')}}" title="الصفحه الرئيسيه">
                                 <img src="{{asset('assets/site/media/images/footer/CUBOID.png')}}" alt="">
                             </a>
                         </div>

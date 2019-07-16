@@ -41,4 +41,16 @@ class ProjectController extends Controller
         $faqs = Faq::where('status', 1)->orderBy('order', 'asc')->take(10)->get();
         return view('main_site.pages.projects.projects_show')->with(['categories' => $categories, 'project' => $project, 'faqs' => $faqs, 'sub_page' => 'subPage']);
     }
+
+
+
+    public function news()
+    {
+
+    }
+
+    public function newsShow($id)
+    {
+
+    }
 }

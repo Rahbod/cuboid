@@ -26,7 +26,7 @@
                             <p class="quotation">{!! $faq->answer !!}</p>
 
                             <div class="text-left">
-                                <a href="" class="btn btn-outline-light">
+                                <a href="{{url('faq/show/'.$faq->id)}}" class="btn btn-outline-light">
                                     اکثر من
                                 </a>
                             </div>

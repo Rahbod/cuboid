@@ -84,7 +84,7 @@
                         </p>
 
                         <div class="text-left">
-                            <a title=" لماذا غیوبوید" href="javascript:;" class="btn btn-outline-light">
+                            <a title=" لماذا غیوبوید" href="{{url('about-us')}}" class="btn btn-outline-light">
                                 لماذا غیوبوید
                             </a>
                         </div>
@@ -472,7 +472,7 @@
                                         <p class="card-text">{{$n->summary}}
                                         </p>
                                     </div>
-                                    <a href="" class="btn btn-outline-light">
+                                    <a title="{{$n->title}}" href="{{url('news/show/'.$n->id)}}" class="btn btn-outline-light">
                                         اکثر من
                                     </a>
                                 </div>

@@ -51,7 +51,7 @@
                                         {{$project->description}}
                                     </p>
                                     <div class="text-right moreBtn">
-                                        <a href="{{url('/projects/'.$project->id)}}" class="btn btn-outline-light">
+                                        <a href="{{url('/projects/show/'.$project->id)}}" class="btn btn-outline-light">
                                             اکثر من
                                         </a>
                                     </div>

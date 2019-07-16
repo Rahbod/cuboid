@@ -1,5 +1,10 @@
 <?php
 return [
+    'phones' => [
+        'مكتب محافظة قم' =>  '32941115-025',
+        'products' =>  'المنتجات',
+        'projects' =>  'مشاريع',
+    ],
     'relevant_section' => [
         'management' =>  'مدير',
         'products' =>  'المنتجات',
@@ -16,7 +21,7 @@ return [
             'email' =>  'info@cuboid.ir',
             'phone' =>  '۳۲۹۴۱۱۱۵-۰۲۵',
             'fax' =>  '009823000000',
-            'address' =>  'Iran - Tehran',
+            'address' =>  'طهران ، الجادة أفريكا ، سابا الجادة ، رقم 42 ، الوحدة 21 021-22',
             'longitude' =>  '000',
             'latitude' =>  '000',
         ],

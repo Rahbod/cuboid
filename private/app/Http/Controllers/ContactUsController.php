@@ -37,14 +37,34 @@ class ContactUsController extends Controller
         ]);
 
 
-        $data = array_merge(['archive' => 0], $data);
-
-        $new_feedback = Feedback::create($data);
+        $new_feedback = Feedback::create($data = array_merge(['archive' => 0], $data));
 
         if ($new_feedback)
             return response()->json(['title' => 'نجاح', 'message' => 'تم تسجيل معلوماتك بنجاح']);
-        return response()->json(['title' => 'خطا', 'message' => 'خطایی رخ داده است.لطفا بعدا مجددا امتحان بفرمایید.']);
+        return response()->json(['title' => 'خطا', 'message' => 'حدث خطأ ، يرجى المحاولة مرة أخرى لاحقًا.']);
 
+    }
+
+    public function aboutUs()
+    {
+        $categories = Category::where('status', 1)->where('type', 'project')->with(['projects' => function ($query) {
+            $query->where('status', 1);
+            $query->orderBy('order', 'asc');
+            $query->take(8);
+        }])->orderBy('order', 'asc')->take(4)->get();
+        $faqs = Faq::where('status', 1)->orderBy('order', 'asc')->take(10)->get();
+        return view('main_site.pages.about_us')->with(['categories' => $categories, 'faqs' => $faqs, 'sub_page' => 'subPage']);
+    }
+
+    public function serviceSales()
+    {
+        $categories = Category::where('status', 1)->where('type', 'project')->with(['projects' => function ($query) {
+            $query->where('status', 1);
+            $query->orderBy('order', 'asc');
+            $query->take(8);
+        }])->orderBy('order', 'asc')->take(4)->get();
+        $faqs = Faq::where('status', 1)->orderBy('order', 'asc')->take(10)->get();
+        return view('main_site.pages.service_sales')->with(['categories' => $categories, 'faqs' => $faqs, 'sub_page' => 'subPage']);
 
     }
 }
