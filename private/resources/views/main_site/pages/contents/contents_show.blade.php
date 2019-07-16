@@ -1,58 +1,44 @@
 @extends('main_site.layouts.master')
 
 @section('main')
-    <section class="completedProjectsShowPage">
+    <section class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 order-2 order-lg-1">
-                    @if($project->gallery && $project->gallery->gallery_items)
-                        <div id="completedProjectsShowPage" class="owl-carousel gallery">
-                            @foreach($project->gallery->gallery_items as $gallery_item)
-                                <a title="" class="html5lightbox galleryItem" data-group="mygroup"
-                                   data-thumbnail="{{asset($gallery_item->logo)}}"
-                                   href="{{asset($gallery_item->image)}}">
-                                    <img class="img-fluid" src="{{asset($gallery_item->image)}}"
-                                         alt="">
-                                    <div class="galleryItem__indicator">
-                                        {{$gallery_item->name}}
-                                    </div>
-                                </a>
-                            @endforeach
-                        </div>
-                    @else
-                        <a style="cursor: none;" title="" class="galleryItem" href="javascript:;">
-                            <img class="img-fluid p-5"
-                                 src="{{asset('/assets/site/media/images/completed-projects/gallery.svg')}}"
-                                 alt="">
-                            <div class="galleryItem__indicator">
-                                هذا المشروع لا يحتوي على معرض.
-                            </div>
-                        </a>
-                    @endif
-                </div>
-                <div class="col-md-5 order-1 order-lg-2">
-                    <h2 class="sectionTitle">المشاريع</h2>
-                    <h3>{{$project->name}}</h3>
+                <div class="col-12">
+                    <h2 style="font-weight: bold; font-size: 45px;">
+                        الاخبار
+                    </h2>
+                    <p>
+                        شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع شروط بيع المنتجات منذ إدخال
+                        وتسجيل سقف كيوبيد ، استفادت منه الع شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه
+                        الع شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع شروط بيع المنتجات منذ إدخال
+                        وتسجيل سقف كيوبيد ، استفادت منه الع
+                        شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع
+                    </p>
 
-                    {!! $project->description !!}
-
-                    <h4>المواصفات الفنیه</h4>
-
-                    <ul>
-                        <li>العنوان : {{$project->sub_title}}</li>
-                        @if($project->attributes)
-                            @foreach($project->attributes as $key=>$value)
-                                <li>{{__('projects.items.'.$key)}} : {{$value}}</li>
-                            @endforeach
-                        @endif
+                    <ul class="pr-3" style="padding-top:35px;padding-bottom: 35px;">
+                        <li>
+                            شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع
+                        </li>
+                        <li>
+                            شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع
+                        </li>
+                        <li>
+                            شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع
+                        </li>
+                        <li>
+                            شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع
+                        </li>
+                        <li>
+                            شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع
+                        </li>
                     </ul>
-                </div>
 
+                </div>
             </div>
         </div>
 
-        <img class="bg-image"
-             src="{{asset('/assets/site/media/images/completed-projects/completed-projects-showpage-bg.jpg')}}" alt="">
+        <!--<img class="bg-image" src="./assets/media/images/completed-projects/completed-projects-showpage-bg.jpg" alt="">-->
     </section>
     @include('main_site.sections.completed_projects')
     @include('main_site.sections.benefits')
