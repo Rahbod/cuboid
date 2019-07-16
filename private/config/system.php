@@ -1,6 +1,10 @@
 <?php
 return [
-
+    'relevant_section' => [
+        'management' =>  'مدير',
+        'products' =>  'المنتجات',
+        'projects' =>  'مشاريع',
+    ],
     'main' => [
             'title' =>  'سقف وافل کیوبوید',
             'status' =>  '1',

@@ -10,7 +10,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Faq;
-use App\Project;
+use App\Feedback;
 use Illuminate\Http\Request;
 
 class ContactUsController extends Controller
@@ -29,7 +29,22 @@ class ContactUsController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+        $data = $this->validate($request, [
+            'name' => 'required',
+            'relevant_section' => 'required',
+            'email' => 'required',
+            'content' => 'required',
+        ]);
+
+
+        $data = array_merge(['archive' => 0], $data);
+
+        $new_feedback = Feedback::create($data);
+
+        if ($new_feedback)
+            return response()->json(['title' => 'نجاح', 'message' => 'تم تسجيل معلوماتك بنجاح']);
+        return response()->json(['title' => 'خطا', 'message' => 'خطایی رخ داده است.لطفا بعدا مجددا امتحان بفرمایید.']);
+
 
     }
 }

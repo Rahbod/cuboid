@@ -20,43 +20,50 @@
                                 </p>
                             </div>
                         </div>
-
                         <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="">القسم المطلوب</label>
-                                <select tabindex="1" name="department" class="custom-select" id="">
-                                    <option selected>انتخب ...</option>
-                                    <option value="1">مدیر</option>
-                                    <option value="2">المنتجات</option>
-                                    <option value="3">متنوع</option>
-                                </select>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">القسم المطلوب</label>
+                                    <select tabindex="1" name="relevant_section" class="custom-select" id="">
+                                        @if(config('system.relevant_section'))
+                                                <option selected>انتخب ...</option>
+                                            @foreach(config('system.relevant_section') as$key=> $option)
+                                                <option value="{{$key}}">{{$option}}</option>
+                                            @endforeach
+                                        @else
+                                            <option selected>انتخب ...</option>
+                                            <option value="1">مدیر</option>
+                                            <option value="2">المنتجات</option>
+                                            <option value="3">متنوع</option>
+                                        @endif
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">الاسم الأول واللقب</label>
+                                    <input tabindex="2" name="name" type="text" class="form-control" id="2"
+                                           placeholder="الاسم الأول واللقب">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">البريد الإلكتروني</label>
+                                    <input tabindex="3" name="email" type="email" class="form-control" id="3"
+                                           placeholder="example@email.com">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="text">وصف</label>
+                                    <textarea tabindex="5" name="content" class="form-control" id="content"
+                                              placeholder="وصف"
+                                              required cols="30" rows="8"></textarea>
+                                    <div class="invalid-tooltip"></div>
+                                </div>
                             </div>
 
-                            <div class="form-group col-md-6">
-                                <label for="">الاسم الأول واللقب</label>
-                                <input tabindex="2" name="fullname" type="text" class="form-control" id="2"
-                                       placeholder="الاسم الأول واللقب">
-                            </div>
-
-                            <div class="form-group col-md-6">
-                                <label for="">البريد الإلكتروني</label>
-                                <input tabindex="3" name="email" type="email" class="form-control" id="3"
-                                       placeholder="example@email.com">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="">رقم الهاتف المحمول</label>
-                                <input tabindex="4" name="phone" type="text" class="form-control" id="4"
-                                       placeholder="09xxxxxxxxx">
-                            </div>
-
-                            {{--<div class="form-group col-md-12">--}}
-                            {{--<label for="text">وصف</label>--}}
-                            {{--<textarea tabindex="5" name="text" class="form-control" id="text"--}}
-                            {{--placeholder="وصف"--}}
-                            {{--required cols="30" rows="5"></textarea>--}}
-                            {{--<div class="invalid-tooltip"></div>--}}
+                            {{--<div class="form-group col-md-6">--}}
+                            {{--<label for="">رقم الهاتف المحمول</label>--}}
+                            {{--<input tabindex="4" name="phone" type="text" class="form-control" id="4"--}}
+                            {{--placeholder="09xxxxxxxxx">--}}
                             {{--</div>--}}
-
 
                             {{--<div class="form-group col-md-6" tabindex="5">--}}
                             {{--<div class="d-flex justify-content-between" id="captcha_image">--}}
@@ -81,8 +88,8 @@
                             {{--</div>--}}
                             {{--@endif--}}
                             {{--</div>--}}
-
-
+                        </div>
+                        <div class="form-row">
                             <div class="form-group col-md-6">
                                 <div class="d-flex" id="captcha_image">
                                     <div class="captchaImageContainer">
