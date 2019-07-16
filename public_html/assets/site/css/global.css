@@ -11,9 +11,9 @@
     color: #f2f2f2;
 }
 
-.btn-outline-light {
-    padding: 0px 7px 5px 7px;
-}
+/*.btn-outline-light {*/
+/*padding: 0px 7px 5px 7px;*/
+/*}*/
 
 .btrr {
     border-top-right-radius: 1rem;
@@ -40,6 +40,7 @@
 }
 
 p {
+    color: #282828;
     line-height: 21px;
     margin-bottom: 24px;
     /*font-weight: 200;*/
@@ -47,17 +48,19 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     color: #232323;
+    /*font-family:hacen-bd;*/
 }
 
 body {
     direction: rtl;
     text-align: right;
-    font-size: 13px;
-    font-family: Myriad, sans-serif !important;
+    font-size: 14px;
+    /*font-family: open-sans-regular, sans-serif !important;*/
+    font-family: hacen, open-sans-regular !important;
     overflow-x: hidden;
     position: relative;
     background-color: #fff;
-    /*font-weight: 400;*/
+    font-weight: 400;
     color: #6f6f6f;
     padding: 0;
     margin: 0;
@@ -96,6 +99,16 @@ ul {
     color: #f2f2f2;
 }
 
+.-show2Lines {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 21px;
+    max-height: 42px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
 /*#endregion*/
 /*#region header*/
 
@@ -111,7 +124,7 @@ ul {
     right: 0;
     left: 0;
     width: 100%;
-    height: 10px;
+    height: 8px;
     background: #f68b1f;
     border-bottom-right-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
@@ -124,7 +137,7 @@ ul {
 }
 
 .bg-dark {
-    background: rgba(0, 0, 0, 0.6) !important;
+    background: rgba(0, 0, 0, 1) !important;
 }
 
 .navbar-toggler-lines:first-child {
@@ -160,13 +173,23 @@ ul {
     /*font-size: 15px;*/
     padding: 15px 12px;
     cursor: pointer;
-    font-weight: 600;
+    /*font-weight: 600;*/
     display: inline-block;
+    border-bottom: 1px solid transparent;
+}
+
+.header-nav .rightMenu > li > a:hover, .header-nav .rightMenu > li > a:focus {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .header-nav .leftMenu > li > a {
     color: #f68b1f;
     padding: 15px 6px;
+}
+
+.header-nav .leftMenu > li > a:hover, .header-nav .leftMenu > li > a:focus {
+    filter: brightness(1.3);
+    font-size: 1.1em;
 }
 
 ul li, ol li {
@@ -183,24 +206,105 @@ ul li, ol li {
 
 /*#endregion*/
 /*#region landing*/
-.landing {
-    background-image: url('../media/images/landing/landing-2.jpg');
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
+.mainSlider--item {
+    /*background-image: url('../media/images/landing/landing-2.jpg');*/
+    /*height: 100vh;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    position: relative;
+}
+
+.header .upTitle {
+    font-size: 23px !important;
+    font-weight: bolder !important;
+}
+
+.header .subTitle {
+    font-size: 29px !important;
+    margin-right: 120px !important;
+}
+
+.smallHeader .title {
+    margin-top: -15px !important;
+    font-size: 81px !important;
+    color: #f68b1f !important;
+}
+
+.header .smallHeader {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    top: 53px;
+    background: transparent !important;
+}
+
+.header.subPage .smallHeader {
+    position: static;
+    background: #1f1f1f !important;
+}
+
+.mainSlider .leftBox {
+    position: absolute;
+
+    left: 30px;
+    bottom: 100px;
+
+    width: 100%;
+    max-width: 480px;
+    background: #f68b1f;
+    opacity: 0.8;
+
+    color: #fff;
+    z-index: 0;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+}
+
+.mainSlider .leftBox p {
+    background: #000;
+    z-index: 14;
+    color: #fff;
+    margin-bottom: 0;
+    margin-right: 2rem;
+    /* opacity: 0.6; */
+    padding: 35px 25px 35px 80px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.mainSlider .leftBox .orangeRibbon {
+    background: #f68b1f;
+    opacity: 0.8;
+    width: 50px;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.mainSlider .owl-nav button.owl-prev {
+    right: 0 !important;
+}
+
+.mainSlider .owl-nav button.owl-next {
+    left: 0 !important;
 }
 
 /*#endregion*/
 /*#region about us*/
 .aboutUs {
-    display: flex;
-    margin-top: -70px;
-    background-image: url(../media/images/about-us/about-us-bg.png);
+    /*display: flex;*/
+    margin-top: -105px;
+    z-index: 1;
+    background-image: url(../media/images/about-us/about-us-bg-high.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
-    height: 420px;
+    background-size: cover;
+    /*height: 420px;*/
     position: relative;
+    padding: 60px 0;
 }
 
 .aboutUs--bgLogo {
@@ -212,8 +316,15 @@ ul li, ol li {
 
 }
 
+.sectionTitle {
+    font-family: hacen-bd;
+    font-weight: 700;
+}
+
 .aboutUs .content--text {
     margin-top: 1rem;
+    color: #363636;
+    font-weight: 600;
 }
 
 /*#endregion*/
@@ -324,7 +435,7 @@ ul li, ol li {
     position: absolute;
     top: calc(50% - 140px);
     font-size: 6rem !important;
-    color: #d3d3d3 !important;
+    color: #2e2e2e !important;
     border-radius: 1rem !important;
     width: 60px !important;
     font-weight: 600 !important;
@@ -346,7 +457,8 @@ ul li, ol li {
 
 .owl-carousel button.owl-dot {
     width: 25px;
-    background: #afafaf !important;
+    background: #737272 !important;
+    /*background: #afafaf !important;*/
     height: 5px;
     border-radius: 1rem;
     margin: 0 0.5rem;
@@ -359,6 +471,27 @@ ul li, ol li {
     box-shadow: none;
     outline: none;
     border: none;
+}
+
+.completedProjects .card-title,
+.completedProjects .card-sub-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 21px;
+    max-height: 21px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.completedProjects .card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 21px;
+    max-height: 42px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 /*#endregion*/
@@ -402,9 +535,9 @@ ul li, ol li {
 }
 
 .orangeTitle {
-    margin-left: -9px;
-    margin-right: -9px;
-    padding: 25px 156px 25px 50px;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 10px 46px;
     text-align: left;
     font-size: 21px;
     color: #fff;
@@ -418,12 +551,12 @@ ul li, ol li {
 
 .products .greyTitle {
     z-index: 1;
-    margin-left: -9px;
-    margin-right: -9px;
+    margin-left: -16px;
+    margin-right: -16px;
     color: #fff;
     margin-top: 70px;
     margin-bottom: 0;
-    padding: 10px 39px;
+    padding: 10px 46px;
 }
 
 .products .card-img-top {
@@ -465,6 +598,14 @@ ul li, ol li {
     background: transparent !important;
     box-shadow: none !important;
     border: 1px solid transparent !important;
+}
+
+.productsTooltip {
+    z-index: 10;
+    white-space: normal;
+    margin: 0;
+    padding: 0;
+    background: transparent;
 }
 
 /*#endregion*/
@@ -557,6 +698,7 @@ ul li, ol li {
 
 .downloads .downloads--lists__item span {
     opacity: 0.6;
+    text-align: center;
 }
 
 .downloads .downloads--lists__item img {
@@ -592,22 +734,44 @@ ul li, ol li {
 
 .news .card-title {
     font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 21px;
+    max-height: 42px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.news .card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 20px;
+    max-height: 80px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.news .cardOuter {
+    background: transparent;
+    border-radius: 1rem;
+    padding: 5px;
 }
 
 .news .card {
     border-radius: 1rem;
     overflow: hidden;
     position: relative;
+    border: none;
     /*border-width: 5px;*/
     /*border-style: solid;*/
     /*border-color: transparent;*/
-    border-bottom: 5px solid transparent;
+    /*border-bottom: 5px solid transparent;*/
 }
 
-.news .card:hover, .news .card:focus {
-    border-width: 5px;
-    border-style: solid;
-    border-color: #f68b1f;
+.news .cardOuter:hover, .news .cardOuter:focus {
+    background: #f68b1f;
 }
 
 .news .card a.btn {
@@ -686,10 +850,10 @@ ul li, ol li {
 }
 
 .faq .btn-outline-light {
-    color: #edeeec;
+    color: #afafaf;
     background-color: transparent;
     background-image: none;
-    border-color: #edeeec;
+    border-color: #afafaf;
 }
 
 .faq .btn-outline-light:hover, .faq .btn-outline-light:focus {
@@ -723,6 +887,10 @@ ul li, ol li {
     position: relative;
 }
 
+.footer .addressContainer .sectionTitle {
+    font-size: 19px;
+}
+
 .addressContainer .social {
     position: absolute;
     bottom: 0;
@@ -742,6 +910,12 @@ ul li, ol li {
 .footer .copyRight .cuboid {
     color: #f68e24;
     font-weight: 500;
+    font-size: 17px;
+}
+
+.footer .designedBy span {
+    color: #848484;
+    font-weight: 600;
 }
 
 .footer .securityCode, .footer .submitBtn {
@@ -751,6 +925,10 @@ ul li, ol li {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+}
+
+.footer .securityCode::placeholder {
+    color: #f68e24;
 }
 
 .footer .renewCaptchaImage {
@@ -768,13 +946,15 @@ ul li, ol li {
 
 .footer .social__item {
     margin-left: 15px;
+    filter: brightness(1.2);
 }
 
 .footer .email {
     margin-top: 10px;
     display: block;
-    font-size: 9px;
+    font-size: 12px;
     color: #c2c2c255;
+
 }
 
 .footer .copyRight {
@@ -782,7 +962,18 @@ ul li, ol li {
 }
 
 .footer .form-group {
-    margin-bottom: 40px;
+    /*margin-bottom: 40px;*/
+}
+
+.contactUsForm label {
+    font-family: hacen-bd;
+    font-weight: 700;
+    color: #282828;
+}
+
+.contactUsForm input::placeholder {
+    color: #b36e27;
+    opacity: 0.5;
 }
 
 /*#endregion*/
@@ -842,13 +1033,13 @@ ul li, ol li {
 
 .smallHeader .subTitle {
     font-size: 20px;
+    margin-right: 83px;
 }
 
 .smallHeader .title {
     margin-top: -10px;
     font-size: 56px;
     color: #f68b1f;
-    font-weight: 600;
     margin-bottom: 2px;
 }
 
@@ -933,7 +1124,6 @@ ul li, ol li {
 }
 
 /*#endregion*/
-
 /*#region text*/
 .text {
     background-image: url(../media/images/text/text-bg.jpg);
@@ -957,3 +1147,10 @@ ul li, ol li {
 }
 
 /*#endregion*/
+
+button:focus, a:focus {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}

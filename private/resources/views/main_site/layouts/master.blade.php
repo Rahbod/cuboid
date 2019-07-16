@@ -9,8 +9,12 @@
     <!--<link rel="icon" href="/assets/site/media/images/public/fav_icon.png">-->
 
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/fonts/fontawesome-5-pro/css/all.min.css')}}">
-    <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/Myriad.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/hacen-maghreb.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/open-sans.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('/assets/site/js/vendors/toastr/toastr.min.css')}}">
+
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/global.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/responsive.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/sidebar.css')}}">
     <link type="text/css" rel="stylesheet"
           href="{{asset('/assets/site/js/vendors/owl-carousel/owl.carousel.min.css')}}">
@@ -18,13 +22,15 @@
           href="{{asset('/assets/site/js/vendors/owl-carousel/owl.theme.default.min.css')}}">
     <link rel="stylesheet" type="text/css" media="screen"
           href="{{asset('/assets/site/js/vendors/plyr-master/dist/plyr.css')}}">
-    <script type="text/javascript" src="{{asset('/assets/js/vendors/html5lightbox/html5lightbox.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/assets/site/js/vendors/html5lightbox/html5lightbox.js')}}"></script>
 
     @stack('styles')
 
 </head>
 <body>
-@yield('header')
+@include('main_site.frames.header')
+
+{{--@yield('header')--}}
 <main>
     @yield('main')
 </main>
@@ -35,49 +41,63 @@
 
 <div class="overlay"></div>
 <script type="text/javascript" src="{{asset('/assets/site/js/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('/assets/site/js/popper.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/global.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/vendors/owl-carousel/owl.carousel.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('/assets/site/js/vendors/toastr/toastr.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/vendors/plyr-master/dist/plyr.min.js')}}"></script>
 
 <script type="text/javascript">
+    $('[data-toggle="tooltip"]').tooltip();
+
     $(document).ready(function () {
-        $('#newsCarousel,#productsCarousel,#completedProjects--commercialCarousel,#completedProjects--hotelCarousel').owlCarousel({
+
+        $('#newsCarousel,#productsCarousel,' +
+            '#completedProjects--commercialCarousel,' +
+            '#completedProjects--hotelCarousel,' +
+            '#completedProjects--all-projects').owlCarousel({
             rtl: true,
             nav: true,
             items: 4,
-//            loop: true,
+            loop: true,
             margin: 26,
             dots: true,
-//            responsive: {
-//                // breakpoint from 0 up
-//                0: {
-//                    items: 1
-//                },
-//                // breakpoint from 768 up
-//                768: {
-//                    items: 2,
-//                }
-//            }
+            responsive: {
+                // breakpoint from 0 up
+                0: {
+                    items: 1
+                },
+                // breakpoint from 400 up
+                400: {
+                    items: 2
+                },
+                // breakpoint from 576 up
+
+                576: {
+                    items: 3
+                },
+                // breakpoint from 768 up
+                768: {
+                    items: 4,
+                },
+            }
         });
 
         $('#faqCarousel').owlCarousel({
             rtl: true,
-//            nav: true,
+            nav: true,
             items: 1,
-//            loop: true,
+            loop: true,
 //            margin: 26,
             dots: true,
-//            responsive: {
-//                // breakpoint from 0 up
-//                0: {
-//                    items: 1
-//                },
-//                // breakpoint from 768 up
-//                768: {
-//                    items: 2,
-//                }
-//            }
+        });
+
+        $('#mainSlider').owlCarousel({
+            rtl: true,
+            nav: true,
+            items: 1,
+            loop: true,
         });
 
         var player;

@@ -11,10 +11,27 @@
 |
 */
 
+//Route::get('captcha-image', function () {
+//    return captcha_img('flat');
+//});
+
 Route::get('/', 'HomeController@index');
 Route::get('/projects', 'ProjectController@projects');
 Route::get('/projects/category/{category_id}', 'ProjectController@projects');
 Route::get('/projects/show/{id}', 'ProjectController@show');
+
+Route::get('/news', 'ProjectController@news');
+Route::get('/news/show/{id}', 'ProjectController@newsShow');
+
+Route::get('/about-us', 'ContactUsController@aboutUs');
+Route::get('/service-sales', 'ContactUsController@serviceSales');
+
+Route::get('/contact-us', 'ContactUsController@show');
+Route::post('/contact-us', 'ContactUsController@store');
+
+Route::get('/faqs}', 'FaqController@index');
+Route::get('/faq/show/{id}', 'FaqController@show');
+
 
 Route::get('/home_test', function () {
     return view('main_site.pages.home');
@@ -22,7 +39,7 @@ Route::get('/home_test', function () {
 });
 
 //Route::view('projects','main_site.pages.projects.projects');
-Route::view('projects-show','main_site.pages.projects.projects_show');
+Route::view('projects-show', 'main_site.pages.projects.projects_show');
 
 
 Route::get('/clear', function () {

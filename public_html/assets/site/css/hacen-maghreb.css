@@ -1,0 +1,19 @@
+﻿@font-face {
+    font-family: hacen-bd;
+    font-style: normal;
+    src: url('../fonts/hm/hm-11.ttf');
+    src: url('../fonts/hm/hm-11.ttf?#iefix') format('embedded-opentype'),
+    url('../fonts/hm/hm-11.ttf') format('woff2'),
+    url('../fonts/hm/hm-11.ttf') format('woff'),
+    url('../fonts/hm/hm-11.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: hacen;
+    font-style: normal;
+    src: url('../fonts/hm/hm-10.ttf');
+    src: url('../fonts/hm/hm-10.ttf?#iefix') format('embedded-opentype'),
+    url('../fonts/hm/hm-10.ttf') format('woff2'),
+    url('../fonts/hm/hm-10.ttf') format('woff'),
+    url('../fonts/hm/hm-10.ttf') format('truetype');
+}
