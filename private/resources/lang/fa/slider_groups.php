@@ -12,6 +12,7 @@ return [
         'special_name' => 'نام ویژه',
         'description' => 'توضیحات',
         'order' => 'ترتیب نمایش',
+        'status' => 'وضعیت نمایش',
         'updated_at' => 'تاریخ بروزرسانی',
         'created_at' => 'تاریخ ایجاد',
 
