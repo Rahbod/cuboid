@@ -128,8 +128,8 @@
                         <li class="phoneNumbers" style="margin-bottom: 25px;margin-right: 32px;">
                             <h4 class="text-white sectionTitle">هواتف المكاتب المحلية</h4>
                             <ul>
-                                @if(config('system.phone_numbers'))
-                                    @foreach(config('system.phone_numbers') as $name=>$number)
+                                @if(config('system.phone'))
+                                    @foreach(config('system.phone') as $name=>$number)
                                         <li>
                                             <div class="d-flex justify-content-between">
                                                 <span class="phoneText">{{$name}}</span>
