@@ -19,9 +19,15 @@ Route::get('/', 'HomeController@index');
 Route::get('/projects', 'ProjectController@projects');
 Route::get('/projects/category/{category_id}', 'ProjectController@projects');
 Route::get('/projects/show/{id}', 'ProjectController@show');
+Route::get('/news', 'ContentController@news');
+Route::get('/news/category/{category_id}', 'ContentController@news');
+Route::get('/news/show/{id}', 'ContentController@newsShow');
+Route::get('/articles', 'ContentController@articles');
+Route::get('/articles/category/{ContentController}', 'ContentController@articles');
+Route::get('/articles/show/{id}', 'ContentController@articlShow');
 
-Route::get('/news', 'ProjectController@news');
-Route::get('/news/show/{id}', 'ProjectController@newsShow');
+//Route::get('/news', 'ProjectController@news');
+//Route::get('/news/show/{id}', 'ProjectController@newsShow');
 
 Route::get('/about-us', 'ContactUsController@aboutUs');
 Route::get('/service-sales', 'ContactUsController@serviceSales');
