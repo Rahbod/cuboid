@@ -179,7 +179,6 @@ function setDepartment($request, $department = null)
 
         }
     }
-//    dd('setDepartment');
     session(['department' => $department]);
 }
 

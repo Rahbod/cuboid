@@ -1,23 +1,10 @@
 <?php
 return [
-    'phones' => [
-        'مكتب محافظة قم' =>  '32941115-025',
-        'مكتب محافظة قم' =>  '32941115-025',
-        'مكتب محافظة قم' =>  '32941115-025',
-        'مكتب محافظة قم' =>  '32941115-025',
-        'مكتب محافظة قم' =>  '32941115-025',
-        'مكتب محافظة قم' =>  '32941115-025',
-        'مكتب محافظة قم' =>  '32941115-025',
-    ],
-    'relevant_section' => [
-        'management' =>  'مدير',
-        'products' =>  'المنتجات',
-        'projects' =>  'مشاريع',
-    ],
+
     'main' => [
             'title' =>  'سقف وافل کیوبوید',
             'status' =>  '1',
-            'meta_keywords' =>  'کیوبوید، سقف ، وافل ',
+            'meta_keywords' =>  'کیوبوید، سقف ، وافل',
             'meta_description' =>  'سقف وافل کیوبوید',
         ],
     'about_us' => [
@@ -25,7 +12,7 @@ return [
             'email' =>  'info@cuboid.ir',
             'phone' =>  '۳۲۹۴۱۱۱۵-۰۲۵',
             'fax' =>  '009823000000',
-            'address' =>  'طهران ، الجادة أفريكا ، سابا الجادة ، رقم 42 ، الوحدة 21 021-22',
+            'address' =>  'Iran - Tehran',
             'longitude' =>  '000',
             'latitude' =>  '000',
         ],
@@ -66,9 +53,9 @@ return [
         ],
     'slider' => [
             'image_size' =>  '2048',
-            'image_width' =>  '2000',
-            'image_height' =>  '767',
-            'image_extension' =>  'jpg, jpeg, png',
+            'image_width' =>  '1600',
+            'image_height' =>  '755',
+            'image_extension' =>  'jpg,jpg, jpeg, png',
             'image_destination' =>  'slider/image/',
         ],
     'product' => [
