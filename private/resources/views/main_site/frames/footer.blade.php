@@ -31,7 +31,7 @@
                                         @endforeach
                                     @else
                                         <option selected>انتخب ...</option>
-                                        <option value="1">مدیر</option>
+                                        <option value="1">مدويغ</option>
                                         <option value="2">المنتجات</option>
                                         <option value="3">متنوع</option>
                                     @endif
@@ -56,16 +56,16 @@
                                 <label for="text">وصف</label>
                                 <textarea tabindex="5" name="content" class="form-control" id="content"
                                           placeholder="وصف"
-                                          required cols="30" rows="8"></textarea>
+                                          required cols="30" rows="5"></textarea>
                                 <div class="invalid-tooltip"></div>
                             </div>
 
                             <div class="form-group col-md-6" tabindex="5">
                                 <div class="d-flex justify-content-between" id="captcha_image">
-                                    <div class="captchaImageContainer">
+                                    <div style="height: 38px;" class="captchaImageContainer">
                                         {!! captcha_img('flat'); !!}
                                     </div>
-                                    <a style="padding: 10px;" data-lang="{{session('lang')}}"
+                                    <a data-lang="{{session('lang')}}"
                                        href="javascript:;"
                                        class="renewCaptchaImage btn border ml-2">
                                         <i class="far fa-redo"></i>
@@ -102,7 +102,7 @@
                         {{--</a>--}}
                         {{--<input style="color: #f68e24;" type="text"--}}
                         {{--class="form-control securityCode flex-fill" id="5"--}}
-                        {{--placeholder="تصویر امنیتی">--}}
+                        {{--placeholder=غتصوويرغامغويتوي">--}}
                         {{--</div>--}}
                         {{--</div>--}}
 
@@ -130,16 +130,16 @@
                         <li class="phoneNumbers" style="margin-bottom: 25px;margin-right: 32px;">
                             <h4 class="text-white sectionTitle">هواتف المكاتب المحلية</h4>
                             <ul>
-                                @if(config('system.phone'))
-                                    @foreach(config('system.phone') as $name=>$number)
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-                                                <span class="phoneText">{{$name}}</span>
-                                                <span class="phoneNumber">{{$number}}</span>
-                                            </div>
-                                        </li>
-                                    @endforeach
-                                @endif
+                                {{--@if(isset(config('system.about_us.phone')))--}}
+                                    {{--@foreach(config('system.about_us.phone') as $name=>$number)--}}
+                                        {{--<li>--}}
+                                            {{--<div class="d-flex justify-content-between">--}}
+                                                {{--<span class="phoneText">{{$name}}</span>--}}
+                                                {{--<span class="phoneNumber">{{$number}}</span>--}}
+                                            {{--</div>--}}
+                                        {{--</li>--}}
+                                    {{--@endforeach--}}
+                                {{--@endif--}}
                             </ul>
                         </li>
                     </ul>
@@ -148,7 +148,7 @@
                         <div class="d-flex">
                             <div class="flex-fill">
                                 <span class="social__item">
-                                    <i class="icon share-icon"></i>
+                                    <img src="{{asset("assets/site/media/images/footer/share-icon.png")}}" alt="">
                                 </span>
                                 @php
                                     $social_networks=config('system.social_networks')
@@ -185,15 +185,15 @@
     </div>
     <div class="container copyRight">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-7 pl-md-0">
                 <div class="d-flex justify-content-between">
                     <div>
-                        <span class="cuboid">© كيوبيد 1396</span> | جميع الحقوق محفوظة لشركة كيوبید
+                        <span class="cuboid">© غيوبويد 1396</span> | جميع الحقوق محفوظة لشركة غيوبويد
                     </div>
                     <span class="designedBy"><span class="">Design by</span>  Tarsim.inc</span>
                 </div>
                 <div>
-                    جميع الحقوق محفوظة لشركة كيوبید
+                    جميع الحقوق محفوظة لشركة غيوبويد
 
                 </div>
             </div>

@@ -9,13 +9,14 @@
         <div class="mainSlider--item">
 
             <img src="{{asset('/assets/site/media/images/landing/landing-2.jpg')}}" alt="">
-            <div class="leftBox">
+            <div class="container leftBox">
                 <div class="d-flex">
                     <a href="void:;">
                         <span class="orangeRibbon"></span>
                         <p>
-                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
-                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
+                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني
+                            تنفيذ 450،000 قدم مربع سقف السقف
+                            الكيوي ، تصميم وتنفيذ تجربة ناجحة
                         </p>
                     </a>
                 </div>
@@ -24,13 +25,14 @@
         <div class="mainSlider--item">
 
             <img src="{{asset('/assets/site/media/images/landing/landing-2.jpg')}}" alt="">
-            <div class="leftBox">
+            <div class="container leftBox">
                 <div class="d-flex">
                     <a href="void:;">
                         <span class="orangeRibbon"></span>
                         <p>
-                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
-                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
+                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني
+                            تنفيذ 450،000 قدم مربع سقف السقف
+                            الكيوي ، تصميم وتنفيذ تجربة ناجحة
                         </p>
                     </a>
                 </div>
@@ -39,13 +41,14 @@
         <div class="mainSlider--item">
 
             <img src="{{asset('/assets/site/media/images/landing/landing-2.jpg')}}" alt="">
-            <div class="leftBox">
+            <div class="container leftBox">
                 <div class="d-flex">
                     <a href="void:;">
                         <span class="orangeRibbon"></span>
                         <p>
-                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
-                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
+                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني
+                            تنفيذ 450،000 قدم مربع سقف السقف
+                            الكيوي ، تصميم وتنفيذ تجربة ناجحة
                         </p>
                     </a>
                 </div>
@@ -54,13 +57,14 @@
         <div class="mainSlider--item">
 
             <img src="{{asset('/assets/site/media/images/landing/landing-2.jpg')}}" alt="">
-            <div class="leftBox">
+            <div class="container leftBox">
                 <div class="d-flex">
                     <a href="void:;">
                         <span class="orangeRibbon"></span>
                         <p>
-                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
-                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني   تنفيذ 450،000 قدم م
+                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني
+                            تنفيذ 450،000 قدم مربع سقف السقف
+                            الكيوي ، تصميم وتنفيذ تجربة ناجحة
                         </p>
                     </a>
                 </div>
@@ -472,7 +476,8 @@
                                         <p class="card-text">{{$n->summary}}
                                         </p>
                                     </div>
-                                    <a title="{{$n->title}}" href="{{url('news/show/'.$n->id)}}" class="btn btn-outline-light">
+                                    <a title="{{$n->title}}" href="{{url('news/show/'.$n->id)}}"
+                                       class="btn btn-outline-light">
                                         اکثر من
                                     </a>
                                 </div>

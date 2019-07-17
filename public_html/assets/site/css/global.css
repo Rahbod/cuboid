@@ -250,15 +250,13 @@ ul li, ol li {
 
 .mainSlider .leftBox {
     position: absolute;
-
     left: 30px;
     bottom: 100px;
-
     width: 100%;
-    max-width: 480px;
+    overflow: hidden;
+    max-width: 450px;
     background: #f68b1f;
     opacity: 0.8;
-
     color: #fff;
     z-index: 0;
     -webkit-border-radius: 1rem;
@@ -266,14 +264,28 @@ ul li, ol li {
     border-radius: 1rem;
 }
 
+.mainSlider .leftBox:before {
+    content: "";
+    position: absolute;
+    top: -44px;
+    right: 15px;
+    height: 160%;
+    width: 100%;
+    background-color: #000;
+    z-index: -1;
+    border-radius: 0 85px 113px 0;
+}
+
 .mainSlider .leftBox p {
-    background: #000;
+    /* background: #000; */
     z-index: 14;
+    font-size: 1.2em;
     color: #fff;
+    line-height: 25px;
     margin-bottom: 0;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
     /* opacity: 0.6; */
-    padding: 35px 25px 35px 80px;
+    padding: 30px 50px 30px 30px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 30px;
     border-top-left-radius: 1rem;
@@ -954,6 +966,10 @@ ul li, ol li {
     filter: brightness(1.2);
 }
 
+.footer .social__item:hover, .footer .social__item:focus {
+    filter: brightness(1.7);
+}
+
 .footer .email {
     margin-top: 10px;
     display: block;
@@ -976,10 +992,26 @@ ul li, ol li {
     color: #282828;
 }
 
-.contactUsForm input::placeholder {
-    color: #b36e27;
-    opacity: 0.5;
+.contactUsForm select.form-control, .contactUsForm input.form-control,
+.contactUsForm textarea.form-control, .contactUsForm .custom-select {
+    border-radius: 0;
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px solid #c97825;
 }
+
+.form-control:focus {
+    color: inherit;
+    background-color: inherit;
+    border-color: inherit;
+    outline: 0;
+    box-shadow: none;
+}
+
+/*.contactUsForm input::placeholder {*/
+/*color: #b36e27;*/
+/*opacity: 0.5;*/
+/*}*/
 
 /*#endregion*/
 /*#region completed projects page*/
