@@ -203,6 +203,16 @@ class SettingsTableSeeder extends Seeder
             'order' => $order++
         ]);
 
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'linkedin',
+            'display_name' => 'linkedin',
+            'value' => 'https://linkedin.com/cuboid.ir',
+            'type' => 'text',
+            'direction' => 'ltr',
+            'order' => $order++
+        ]);
+
         $setting_group = SettingGroup::create([
             'name' => 'user',
             'display_name' => 'تنظیمات کاربران',

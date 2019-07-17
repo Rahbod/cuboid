@@ -92,25 +92,25 @@
 
                         </div>
                         {{--<div class="form-row">--}}
-                            {{--<div class="form-group col-md-6">--}}
-                                {{--<div class="d-flex" id="captcha_image">--}}
-                                    {{--<div class="captchaImageContainer">--}}
-                                        {{--<img src="{{asset('assets/site/media/images/footer/captcha.png')}}">--}}
-                                    {{--</div>--}}
-                                    {{--<a href="void:;" class="renewCaptchaImage btn">--}}
-                                        {{--<i class="far fa-redo"></i>--}}
-                                    {{--</a>--}}
-                                    {{--<input style="color: #f68e24;" type="text"--}}
-                                           {{--class="form-control securityCode flex-fill" id="5"--}}
-                                           {{--placeholder="تصویر امنیتی">--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
+                        {{--<div class="form-group col-md-6">--}}
+                        {{--<div class="d-flex" id="captcha_image">--}}
+                        {{--<div class="captchaImageContainer">--}}
+                        {{--<img src="{{asset('assets/site/media/images/footer/captcha.png')}}">--}}
+                        {{--</div>--}}
+                        {{--<a href="void:;" class="renewCaptchaImage btn">--}}
+                        {{--<i class="far fa-redo"></i>--}}
+                        {{--</a>--}}
+                        {{--<input style="color: #f68e24;" type="text"--}}
+                        {{--class="form-control securityCode flex-fill" id="5"--}}
+                        {{--placeholder="تصویر امنیتی">--}}
+                        {{--</div>--}}
+                        {{--</div>--}}
 
-                            {{--<div class="form-group col-md-6">--}}
-                                {{--<button tabindex="6" type="submit" class="btn submitBtn form-control">إرسال إلى القسم ذي--}}
-                                    {{--الصلة--}}
-                                {{--</button>--}}
-                            {{--</div>--}}
+                        {{--<div class="form-group col-md-6">--}}
+                        {{--<button tabindex="6" type="submit" class="btn submitBtn form-control">إرسال إلى القسم ذي--}}
+                        {{--الصلة--}}
+                        {{--</button>--}}
+                        {{--</div>--}}
                         {{--</div>--}}
                     </form>
                 </div>
@@ -147,17 +147,25 @@
                     <div class="social">
                         <div class="d-flex">
                             <div class="flex-fill">
-                                {{--<a href="void:;" class="social__item">--}}
-                                {{--<img src="{{asset('assets/site/media/images/footer/linkedin.png')}}" alt="">--}}
-                                {{--</a>--}}
-                                <a title="الفيسبوك" href="https://www.facebook.com/cuboid.ir" class="social__item">
-                                    <img src="{{asset('assets/site/media/images/footer/facebook.png')}}" alt="">
+                                <span class="social__item">
+                                    <i class="icon share-icon"></i>
+                                </span>
+                                @php
+                                    $social_networks=config('system.social_networks')
+                                @endphp
+
+                                <a title="ينكدين" href="{{$social_networks['linkedin']}}" class="social__item">
+                                    <img src="{{asset("assets/site/media/images/footer/linkedin.png")}}" alt="">
                                 </a>
-                                <a title="جوجل بلز" href="https://plus.google.com/+cuboid.ir" class="social__item">
-                                    <img src="{{asset('assets/site/media/images/footer/google-plus.png')}}" alt="">
+                                <a title="الفيسبوك" href="{{$social_networks['facebook']}}" class="social__item">
+                                    <img src="{{asset("assets/site/media/images/footer/facebook.png")}}" alt="">
                                 </a>
-                                <a title="تغريد" href="https://twitter.com/cuboid.ir" class="social__item">
-                                    <img src="{{asset('assets/site/media/images/footer/twitter.png')}}" alt="">
+                                <a title="جوجل بلز" href="{{$social_networks['google-plus']}}" class="social__item">
+                                    <img src="{{asset("assets/site/media/images/footer/google-plus.png")}}" alt="">
+                                </a>
+
+                                <a title="تغريد" href="{{$social_networks['twitter']}}" class="social__item">
+                                    <img src="{{asset("assets/site/media/images/footer/twitter.png")}}" alt="">
                                 </a>
 
                                 <a title="البريد الإلكتروني" href="void:;" class="email">
