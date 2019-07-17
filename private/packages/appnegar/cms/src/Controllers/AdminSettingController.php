@@ -2,6 +2,7 @@
 
 namespace Appnegar\Cms\Controllers;
 
+use App\Resource;
 use App\Setting;
 use App\SettingGroup;
 use Illuminate\Http\Request;
@@ -27,10 +28,11 @@ class AdminSettingController extends AdminController
      */
     public function updateAllSettings(Request $request)
     {
+        $resources=$this->getResources(true,true);
         if ($request->isMethod('get')) {
             $model_groups = SettingGroup::with(['settings' => function ($query) {
                 $query->orderBy('order', 'asc');
-            }])->get()->toArray();
+            }])->whereNotIn('name',$resources)->get()->toArray();
             foreach ($model_groups as $index => $model_group) {
                 foreach ($model_group['settings'] as $inner_index => $model) {
                     if ($model['details']) {
@@ -124,4 +126,6 @@ class AdminSettingController extends AdminController
 
         ];
     }
+
+
 }

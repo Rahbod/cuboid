@@ -5,6 +5,7 @@ namespace Appnegar\Cms\Controllers;
 
 use App\Department;
 use App\Http\Controllers\Controller;
+use App\Resource;
 use Appnegar\Cms\Traits\AdminCrudActions;
 use Appnegar\Cms\Traits\AdminFileEditor;
 use Appnegar\Cms\Traits\AdminFilterData;
@@ -247,5 +248,16 @@ class AdminController extends Controller
         $traverse($nodes, '- ', $array);
         return $array;
     }
-
+    protected function getResources($snake_case=true,$singular=false){
+        $resources=Resource::get(['name'])->pluck('name')->toArray();
+        $temp_resources=[];
+        if($snake_case){
+            foreach ($resources as $resource){
+                $temp_resources[]=$this->getResourceName($resource,$singular);
+            }
+        }else{
+            $temp_resources=$resources;
+        }
+        return $temp_resources;
+    }
 }

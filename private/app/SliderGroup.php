@@ -86,6 +86,16 @@ class SliderGroup extends Model
                     'show_in_form' => true
                 ],
                 [
+                    'name' => 'status',
+                    'type' => 'select',
+                    'input_type' => 'radio',
+                    'orderable' => true,
+                    'searchable' => true,
+                    'show_in_table' => true,
+                    'show_in_form' => true,
+                    'options' => [['id' => 0, 'text' => 'inactive'], ['id' => 1, 'text' => 'active']]
+                ],
+                [
                     'name' => 'created_at',
                     'type' => 'date',
                     'input_type' => 'date',
