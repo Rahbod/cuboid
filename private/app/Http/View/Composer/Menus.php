@@ -57,7 +57,7 @@ class Menus
             $menu_item['link']=url('/pages/show/'.$menu->page->id);
         }
         if($menu->type === 'action'){
-            $menu_item['link']=url('/'.$menu->link);
+            $menu_item['link']=url($menu->link);
         }
         if(count($menu->children)>0){
             foreach ($menu->children as $child){

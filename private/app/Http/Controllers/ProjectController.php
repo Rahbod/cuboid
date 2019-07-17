@@ -42,15 +42,4 @@ class ProjectController extends Controller
         return view('main_site.pages.projects.projects_show')->with(['categories' => $categories, 'project' => $project, 'faqs' => $faqs, 'sub_page' => 'subPage']);
     }
 
-
-
-    public function news()
-    {
-
-    }
-
-    public function newsShow($id)
-    {
-
-    }
 }

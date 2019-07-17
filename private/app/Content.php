@@ -52,6 +52,15 @@ class Content extends Model
                     'show_in_form' => true,
                 ],
                 [
+                    'name' => 'gallery_id',
+                    'type' => 'select',
+                    'input_type' => 'select',
+                    'orderable' => true,
+                    'searchable' => true,
+                    'show_in_table' => false,
+                    'show_in_form' => true,
+                ],
+                [
                     'name' => 'type',
                     'type' => 'select',
                     'input_type' => 'select',
@@ -242,5 +251,10 @@ class Content extends Model
     public function tags()
     {
         return $this->morphToMany('App\Tag', 'taggable');
+    }
+
+    public function gallery()
+    {
+        return $this->belongsTo('App\Gallery', 'gallery_id');
     }
 }
