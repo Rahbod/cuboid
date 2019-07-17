@@ -10,5 +10,4 @@ return [
     ['id'=>'articles','text'=>'مقاله ها'],
     ['id'=>'news','text'=>'الأخبار'],
     ['id'=>'products','text'=>' المنتجات'],
-    ['id'=>'translate-request','text'=>'درخواست ترجمه'],
 ];
