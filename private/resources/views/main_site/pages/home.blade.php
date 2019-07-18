@@ -88,8 +88,8 @@
                         </p>
 
                         <div class="text-left">
-                            <a title=" لماذا غیوبوید" href="{{url('about-us')}}" class="btn btn-outline-light">
-                                لماذا غیوبوید
+                            <a title=" لماذا غيوبويد" href="{{url('about-us')}}" class="btn btn-outline-light">
+                                لماذا غيوبويد
                             </a>
                         </div>
                     </div>
@@ -117,12 +117,12 @@
                         <li class="nav-item">
                             <a class="nav-link active"
                                id="pills-path-tab" data-toggle="pill" href="#pills-path" role="tab"
-                               aria-controls="pills-path" aria-selected="true">طریقه التنفیذ</a>
+                               aria-controls="pills-path" aria-selected="true">طريقه التنفيذ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"
                                id="pills-connections-tab" data-toggle="pill" href="#pills-connections" role="tab"
-                               aria-controls="pills-connections" aria-selected="false">المواصفات الفنیه الانشائیه</a>
+                               aria-controls="pills-connections" aria-selected="false">المواصفات الفنيه الانشائيه</a>
                         </li>
                     </ul>
                 </div>
@@ -174,7 +174,7 @@
                                                 <div class="d-flex justify-content-between">
                                                     <!--<span>سمك يعادل الخرسانة (cm)</span>-->
                                                     <a class="productsTooltip" data-toggle="tooltip"
-                                                       data-placement="top" title="سمک یعادل الخرسانه">
+                                                       data-placement="top" title="سمک يعادل الخرسانه">
                                                         <span><i class="fas fa-info-circle"></i></span>
                                                     </a>
                                                     <span>12</span>
@@ -198,7 +198,7 @@
                                                 <div class="d-flex justify-content-between">
                                                     <!--<span>سمك يعادل الخرسانة (cm)</span>-->
                                                     <a class="productsTooltip" data-toggle="tooltip"
-                                                       data-placement="top" title="سمک یعادل الخرسانه">
+                                                       data-placement="top" title="سمک يعادل الخرسانه">
                                                         <span><i class="fas fa-info-circle"></i></span>
                                                     </a>
                                                     <span>12</span>

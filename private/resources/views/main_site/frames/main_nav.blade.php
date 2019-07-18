@@ -20,8 +20,8 @@
                 <li class=""><a href="void:;">حول غيوبويد</a></li>
                 <li class=""><a href="void:;">الأخبار</a></li>
                 <li class=""><a href="void:;"> المنتجات</a></li>
-                <li class=""><a href="void:;">الخدمات مبیعات</a></li>
-                <li class=""><a href="void:;">المشاریع</a></li>
+                <li class=""><a href="void:;">الخدمات مبيعات</a></li>
+                <li class=""><a href="void:;">المشاريع</a></li>
                 <li class=""><a href="void:;">اتصل بنا</a></li>
 
             @endif

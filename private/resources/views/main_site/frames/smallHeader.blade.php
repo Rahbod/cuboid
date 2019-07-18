@@ -5,7 +5,7 @@
                 <div class="smallHeader__title">
                     <p class="upTitle">سقف الوفل</p>
                     <h1 class="title">غيوبويد</h1>
-                    <span class="subTitle">خيار طبيعی</span>
+                    <span class="subTitle">خيار طبيعي</span>
                 </div>
             </div>
             <div class="col-4">
