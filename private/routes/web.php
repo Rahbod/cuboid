@@ -11,9 +11,9 @@
 |
 */
 
-//Route::get('captcha-image', function () {
-//    return captcha_img('flat');
-//});
+Route::get('captcha-image', function () {
+    return captcha_img('flat');
+});
 
 Route::get('/', 'HomeController@index');
 Route::get('/projects', 'ProjectController@projects');

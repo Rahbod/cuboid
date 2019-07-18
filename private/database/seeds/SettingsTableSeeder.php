@@ -65,6 +65,104 @@ class SettingsTableSeeder extends Seeder
         ]);
 
         $setting_group = SettingGroup::create([
+            'name' => 'phone_numbers',
+            'display_name' => 'هواتف المكاتب المحلية',
+        ]);
+        $order = 1;
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'مكتب محافظة قم',
+            'display_name' => '',
+            'value' => '025-32941115',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'مكتب محافظة قزوين',
+            'display_name' => '',
+            'value' => '028-33689305',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'مكتب مقاطعة المركز',
+            'display_name' => '',
+            'value' => '086-32236753',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'مكتب مقاطعة مازندران',
+            'display_name' => '',
+            'value' => '011-32228159',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'مكتب جزيرة كيش',
+            'display_name' => '',
+            'value' => '076-44470409',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => ' مكتب مقاطعة يزد',
+            'display_name' => '',
+            'value' => '035-36293637',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'مكتب مقاطعة أذربيجان الغربية',
+            'display_name' => '',
+            'value' => '044-42246513',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'مكتب مقاطعة كوردستان',
+            'display_name' => '',
+            'value' => '087-33629376',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+        Setting::create([
+            'setting_group_id' => $setting_group->id,
+            'name' => 'مكتب مقاطعة خوزستان',
+            'display_name' => '',
+            'value' => '061-33335101',
+            'details' => '',
+            'type' => 'text',
+            'direction' => 'inherit',
+            'order' => $order++
+        ]);
+
+
+        $setting_group = SettingGroup::create([
             'name' => 'about_us',
             'display_name' => 'درباره ما',
         ]);
@@ -109,7 +207,9 @@ class SettingsTableSeeder extends Seeder
             'setting_group_id' => $setting_group->id,
             'name' => 'address',
             'display_name' => 'آدرس',
-            'value' => 'Iran - Tehran',
+            'value' => 'طهران ، الجادة أفريكا ، سابا الجادة ، رقم 42 ، الوحدة 21
+021-22020061 ، 021-22016991 ، 021-26207499
+021-26210871',
             'type' => 'textarea',
             'direction' => 'inherit',
             'order' => $order++

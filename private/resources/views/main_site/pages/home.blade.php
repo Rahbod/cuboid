@@ -5,75 +5,87 @@
 @endsection
 
 @section('main')
-    <section class="mainSlider owl-carousel position-relative" id="mainSlider">
+    <section class="mainSlider owl-carousel position-relative flex-co" id="mainSlider">
         <div class="mainSlider--item">
 
             <img src="{{asset('/assets/site/media/images/landing/landing-2.jpg')}}" alt="">
-            <div class="container leftBox">
-                <div class="d-flex">
-                    <a href="void:;">
-                        <span class="orangeRibbon"></span>
-                        <p>
-                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني
-                            تنفيذ 450،000 قدم مربع سقف السقف
-                            الكيوي ، تصميم وتنفيذ تجربة ناجحة
-                        </p>
-                    </a>
+            <div class="container position-relative d-flex flex-column align-items-end">
+                <div class="leftBox">
+                    <div class="d-flex">
+                        <a href="void:;">
+                            <span class="orangeRibbon"></span>
+                            <p>
+                                تشغيل أكثر من 40 مشروعا على الصعيد الوطني
+                                تنفيذ 450،000 قدم مربع سقف السقف
+                                الكيوي ، تصميم وتنفيذ تجربة ناجحة
+                            </p>
+                        </a>
+                    </div>
                 </div>
             </div>
+
         </div>
         <div class="mainSlider--item">
 
             <img src="{{asset('/assets/site/media/images/landing/landing-2.jpg')}}" alt="">
-            <div class="container leftBox">
-                <div class="d-flex">
-                    <a href="void:;">
-                        <span class="orangeRibbon"></span>
-                        <p>
-                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني
-                            تنفيذ 450،000 قدم مربع سقف السقف
-                            الكيوي ، تصميم وتنفيذ تجربة ناجحة
-                        </p>
-                    </a>
+            <div class="container position-relative d-flex flex-column align-items-end">
+                <div class="leftBox">
+                    <div class="d-flex">
+                        <a href="void:;">
+                            <span class="orangeRibbon"></span>
+                            <p>
+                                تشغيل أكثر من 40 مشروعا على الصعيد الوطني
+                                تنفيذ 450،000 قدم مربع سقف السقف
+                                الكيوي ، تصميم وتنفيذ تجربة ناجحة
+                            </p>
+                        </a>
+                    </div>
                 </div>
             </div>
+
         </div>
         <div class="mainSlider--item">
 
             <img src="{{asset('/assets/site/media/images/landing/landing-2.jpg')}}" alt="">
-            <div class="container leftBox">
-                <div class="d-flex">
-                    <a href="void:;">
-                        <span class="orangeRibbon"></span>
-                        <p>
-                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني
-                            تنفيذ 450،000 قدم مربع سقف السقف
-                            الكيوي ، تصميم وتنفيذ تجربة ناجحة
-                        </p>
-                    </a>
+            <div class="container position-relative d-flex flex-column align-items-end">
+                <div class="leftBox">
+                    <div class="d-flex">
+                        <a href="void:;">
+                            <span class="orangeRibbon"></span>
+                            <p>
+                                تشغيل أكثر من 40 مشروعا على الصعيد الوطني
+                                تنفيذ 450،000 قدم مربع سقف السقف
+                                الكيوي ، تصميم وتنفيذ تجربة ناجحة
+                            </p>
+                        </a>
+                    </div>
                 </div>
             </div>
+
         </div>
         <div class="mainSlider--item">
 
             <img src="{{asset('/assets/site/media/images/landing/landing-2.jpg')}}" alt="">
-            <div class="container leftBox">
-                <div class="d-flex">
-                    <a href="void:;">
-                        <span class="orangeRibbon"></span>
-                        <p>
-                            تشغيل أكثر من 40 مشروعا على الصعيد الوطني
-                            تنفيذ 450،000 قدم مربع سقف السقف
-                            الكيوي ، تصميم وتنفيذ تجربة ناجحة
-                        </p>
-                    </a>
+            <div class="container position-relative d-flex flex-column align-items-end">
+                <div class="leftBox">
+                    <div class="d-flex">
+                        <a href="void:;">
+                            <span class="orangeRibbon"></span>
+                            <p>
+                                تشغيل أكثر من 40 مشروعا على الصعيد الوطني
+                                تنفيذ 450،000 قدم مربع سقف السقف
+                                الكيوي ، تصميم وتنفيذ تجربة ناجحة
+                            </p>
+                        </a>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 
     <section class="aboutUs">
-        <img class="aboutUs--bgLogo" src="{{asset('/assets/site/media/images/about-us/about-us-logo.png')}}" alt="">
+        <img class="aboutUs--bgLogo" src="{{asset('/assets/site/media/images/about-us/about-us-logo-3.png')}}" alt="">
         <div class="container my-auto">
             <div class="row">
                 <div class="col-md-6">
@@ -404,8 +416,7 @@
                                             <img class=""
                                                  src="{{asset('/assets/site/media/images/downloads/icon-1.png')}}"
                                                  alt="">
-                                            <span> تشغيل السرعة</span>
-                                        </a>
+                                            <span>قائمة كاملة من المشاريع</span></a>
                                     </div>
                                     <div class="col-6">
                                         <a href="javascript:;"
@@ -413,7 +424,7 @@
                                             <img class=""
                                                  src="{{asset('/assets/site/media/images/downloads/icon-2.png')}}"
                                                  alt="">
-                                            <span>التحكم في الاهتزاز</span>
+                                            <span>كتالوج الشركة</span>
                                         </a>
                                     </div>
                                     <div class="col-6">
@@ -423,7 +434,7 @@
                                                  src="{{asset('/assets/site/media/images/downloads/icon-2.png')}}"
                                                  alt="">
                                             <span>
-                                    تشوه السيطرة
+                                                كتيب المنتج
                                     </span>
                                         </a>
                                     </div>
@@ -434,7 +445,7 @@
                                                  src="{{asset('/assets/site/media/images/downloads/icon-4.png')}}"
                                                  alt="">
                                             <span>
-                                    تشوه السيطرة
+                                   الأفلام التنفيذية
                                     </span>
                                         </a>
                                     </div>
@@ -461,7 +472,9 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="sectionTitle">اخبار</h2>
-                    <p>المشاريع المنجزة منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العد</p>
+                    <p>
+                        تعرف على الأخبار والإعلانات والعقود الجديدة وعملية تنفيذ المشاريع
+                    </p>
                 </div>
 
                 <div class="col-12">
@@ -502,7 +515,7 @@
             nav: true,
             items: 4,
             loop: true,
-            margin: 26,
+            margin: 20,
             dots: true,
             responsive: {
                 // breakpoint from 0 up
@@ -527,5 +540,87 @@
 
         @endforeach
         @endisset
+
+
+        $('[data-toggle="tooltip"]').tooltip();
+
+        $(document).ready(function () {
+
+            $('#newsCarousel,#productsCarousel,' +
+                '#completedProjects--commercialCarousel,' +
+                '#completedProjects--hotelCarousel,' +
+                '#completedProjects--all-projects').owlCarousel({
+                rtl: true,
+                nav: true,
+                items: 4,
+                loop: true,
+                margin: 20,
+                dots: true,
+                responsive: {
+                    // breakpoint from 0 up
+                    0: {
+                        items: 1
+                    },
+                    // breakpoint from 400 up
+                    400: {
+                        items: 2
+                    },
+                    // breakpoint from 576 up
+
+                    576: {
+                        items: 3
+                    },
+                    // breakpoint from 768 up
+                    768: {
+                        items: 4,
+                    },
+                }
+            });
+
+            $('#faqCarousel').owlCarousel({
+                rtl: true,
+                nav: true,
+                items: 1,
+                loop: true,
+//            margin: 26,
+                dots: true,
+            });
+
+            $('#mainSlider').owlCarousel({
+                rtl: true,
+                nav: true,
+                items: 1,
+                loop: true,
+            });
+
+            var player;
+
+            var controls =
+                [
+                    'play-large', // The large play button in the center
+                    'restart', // Restart playback
+                    'rewind', // Rewind by the seek time (default 10 seconds)
+                    'play', // Play/pause playback
+                    'fast-forward', // Fast forward by the seek time (default 10 seconds)
+                    'progress', // The progress bar and scrubber for playback and buffering
+                    'current-time', // The current time of playback
+                    'duration', // The full duration of the media
+                    'mute', // Toggle mute
+                    'volume', // Volume control
+                    'captions', // Toggle captions
+                    'settings', // Settings menu
+                    'pip', // Picture-in-picture (currently Safari only)
+                    'airplay', // Airplay (currently Safari only)
+                    'download', // Show a download button with a link to either the current source or a custom URL you specify in your options
+                    'fullscreen', // Toggle fullscreen
+
+                ];
+
+            player = new Plyr('#player', {
+                controls,
+//                loadSprite: false,
+                {{--iconUrl: "{{asset('/assets/site/js/vendors/plyr-master/src/sprite/play-icon.svg')}}"--}}
+            });
+        });
     </script>
 @endpush

@@ -70,14 +70,14 @@ $(document).ready(function () {
     };
 
     $('.renewCaptchaImage').on('click', function () {
-        var lang = $(this).attr('data-lang');
         $.ajax({
             type: 'get',
-            url: '/' + lang + '/captcha-image',
+            url: '/captcha-image',
             success: function (response) {
                 $('.captchaImageContainer').html(response);
             },
-            fail: function (error) {
+            error: function (error) {
+                console.log(error);
             }
         });
     });

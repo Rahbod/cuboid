@@ -14,16 +14,15 @@
                             </div>
                             <div class="col-12">
                                 <p class="" style="margin-bottom: 40px;">
-                                    إذا كنت مهتمًا بالاتصال بنا ، يمكنك الاختيار من النموذج التالي إذا كنت مهتمًا
-                                    بالاتصال بنا ،
-                                    يمكنك الاختيار من النموذج التالي
+                                    إذا كنت مهتمًا بالاتصال بنا ، يمكنك الاختيار من النموذج التالي وطرح أسئلتك.
+                                    يمكنك أيضا الاتصال بأرقام الاتصال المدرجة.
                                 </p>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-md-6 form-group">
                                 <label for="">القسم المطلوب</label>
-                                <select tabindex="1" name="relevant_section" class="custom-select" id="">
+                                <select tabindex="1" name="relevant_section" class="custom-select noBg" id="">
                                     @if(config('system.relevant_section'))
                                         <option selected>انتخب ...</option>
                                         @foreach(config('system.relevant_section') as$key=> $option)
@@ -39,22 +38,22 @@
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="">الاسم الأول واللقب</label>
-                                <input tabindex="2" name="name" type="text" class="form-control" id="2"
+                                <input tabindex="2" name="name" type="text" class="form-control noBg" id="2"
                                        placeholder="الاسم الأول واللقب">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="">البريد الإلكتروني</label>
-                                <input tabindex="3" name="email" type="email" class="form-control" id="3"
+                                <input tabindex="3" name="email" type="email" class="form-control noBg" id="3"
                                        placeholder="example@email.com">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="">رقم الهاتف المحمول</label>
-                                <input tabindex="4" name="phone" type="text" class="form-control" id="4"
+                                <input tabindex="4" name="phone" type="text" class="form-control noBg" id="4"
                                        placeholder="09xxxxxxxxx">
                             </div>
                             <div class="col-md-12 form-group">
                                 <label for="text">وصف</label>
-                                <textarea tabindex="5" name="content" class="form-control" id="content"
+                                <textarea tabindex="5" name="content" class="form-control noBg" id="content"
                                           placeholder="وصف"
                                           required cols="30" rows="5"></textarea>
                                 <div class="invalid-tooltip"></div>
@@ -70,11 +69,11 @@
                                        class="renewCaptchaImage btn border ml-2">
                                         <i class="far fa-redo"></i>
                                     </a>
-                                    <input type="text" class="form-control"
+                                    <input type="text" class="form-control securityCode"
                                            autocomplete="captcha"
                                            spellcheck="false"
-                                           tabindex="3"
-                                           name="captcha" required
+                                           tabindex="6"
+                                           name="captcha" required placeholder="تصوير امنيتی"
                                            id="captcha">
                                 </div>
 
@@ -85,7 +84,7 @@
                                 @endif
                             </div>
                             <div class="form-group col-md-6">
-                                <button tabindex="6" type="submit" class="btn submitBtn form-control">إرسال إلى القسم ذي
+                                <button tabindex="7" type="submit" class="btn submitBtn form-control">إرسال إلى القسم ذي
                                     الصلة
                                 </button>
                             </div>
@@ -130,16 +129,16 @@
                         <li class="phoneNumbers" style="margin-bottom: 25px;margin-right: 32px;">
                             <h4 class="text-white sectionTitle">هواتف المكاتب المحلية</h4>
                             <ul>
-                                {{--@if(isset(config('system.about_us.phone')))--}}
-                                    {{--@foreach(config('system.about_us.phone') as $name=>$number)--}}
-                                        {{--<li>--}}
-                                            {{--<div class="d-flex justify-content-between">--}}
-                                                {{--<span class="phoneText">{{$name}}</span>--}}
-                                                {{--<span class="phoneNumber">{{$number}}</span>--}}
-                                            {{--</div>--}}
-                                        {{--</li>--}}
-                                    {{--@endforeach--}}
-                                {{--@endif--}}
+                                @if(config('system.phone_numbers'))
+                                    @foreach(config('system.phone_numbers') as $name=>$number)
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <span class="phoneText">{{$name}}</span>
+                                                <span class="phoneNumber">{{$number}}</span>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                @endif
                             </ul>
                         </li>
                     </ul>

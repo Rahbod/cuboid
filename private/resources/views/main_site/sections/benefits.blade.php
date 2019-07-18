@@ -2,11 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>
+                <h2 class="sectionTitle">
                     مزايا سقف الغيوبويد
                 </h2>
             </div>
-            <div class="col-sm-6 col-md-7 col-lg-8">
+            <div class="col-sm-6 col-md-7">
                 <div class="d-flex justify-content-between">
                     <ul class="benefits--lists d-inline-block">
                         <li>
@@ -23,58 +23,58 @@
                         </li>
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-4.png')}}" alt="">
-                            تشغيل السرعة
+                            تشوه السيطرة
                         </li>
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-5.png')}}" alt="">
-                            تشغيل السرعة
+                            لا حاجة للخرسانة عالية الجودة
                         </li>
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-6.png')}}" alt="">
-                            السقف الثابت ل
+                            مكانية تشغيل فتحات طويلة
                         </li>
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-7.png')}}" alt="">
-                            تشغيل السرعة
+                            مقاومة للنار
                         </li>
                     </ul>
                     <ul class="benefits--lists d-inline-block">
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-8.png')}}" alt="">
-                            تشغيل السرعة
+                            فقدان الوزن الميت والكتلة الزلزالية
                         </li>
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-9.png')}}" alt="">
-                            التحكم في الاهتزاز
+                            القدرة على العمل على الهياكل الخرسانية والمعدنية
                         </li>
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-10.png')}}" alt="">
-                            تشوه السيطرة
+                            إمكانية استخدام مساحة السقف المجوفة
                         </li>
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-11.png')}}" alt="">
-                            تشغيل السرعة
+                            إمكانية السقوف الزائفة وحدات وبسيطة
                         </li>
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-12.png')}}" alt="">
-                            تشغيل السرعة
+                            الجمال المعماري للسقف تحت السقف
                         </li>
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-13.png')}}" alt="">
-                            السقف الثابت ل
+                            حرية العمل في تصميم المساحات وتصميم الأعمدة
                         </li>
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-14.png')}}" alt="">
-                            تشغيل السرعة
+                            سهولة التنفيذ قبل وبعد تنفيذ السقف
                         </li>
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-15.png')}}" alt="">
-                            تشغيل السرعة
+                            التحكم الأمثل في الضوضاء والسقف الصوتي
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-5 col-lg-4"></div>
+            <div class="col-sm-6 col-md-5"></div>
         </div>
     </div>
 </section>
