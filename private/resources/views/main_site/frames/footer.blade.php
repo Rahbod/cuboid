@@ -173,7 +173,7 @@
                                 </a>
                             </div>
                             <a href="{{url('/')}}" title="الصفحه الرئيسيه">
-                                <img src="{{asset('assets/site/media/images/footer/CUBOID.png')}}" alt="">
+                                <img width="70" height="50" src="{{asset('assets/site/media/images/cuboid-logo.png')}}" alt="">
                             </a>
                         </div>
 

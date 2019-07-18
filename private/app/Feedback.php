@@ -11,7 +11,7 @@ class Feedback extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['name','relevant_section','email','content'];
+    protected $fillable = ['name','relevant_section','email','content','archive'];
 
     public static function mainFields(){
         return [

@@ -892,6 +892,10 @@ ul li, ol li {
 
 }
 
+.faq .quotation {
+    font-size: 16px;
+}
+
 .faq .quotation::before {
     content: "”";
     clear: right;
@@ -918,6 +922,7 @@ ul li, ol li {
     background-color: transparent;
     background-image: none;
     border-color: #afafaf;
+    padding: 2px 23px;
 }
 
 .faq .btn-outline-light:hover, .faq .btn-outline-light:focus {
@@ -1047,7 +1052,11 @@ ul li, ol li {
     border-bottom: 1px solid #c97825;
 }
 
-.form-control:focus {
+.contactUsForm .noBg::selection {
+    background-color: transparent;
+}
+
+.contactUsForm .noBg:focus, .contactUsForm .noBg:hover {
     color: inherit;
     background-color: inherit;
     border-color: inherit;
