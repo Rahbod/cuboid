@@ -595,6 +595,76 @@ ul li, ol li {
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     border-radius: 1rem;
+    width: 18%;
+    margin-left: 1%;
+    display: inline-block;
+}
+
+.products .card:first-child {
+    background: transparent;
+    box-shadow: none;
+    padding: 20px 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: none;
+}
+
+.products .card:first-child .orangeTitle {
+    padding: 3.5px 15px !important;
+    font-size: 15px;
+    border-top-right-radius: 1rem;
+    width: 60%;
+    border-bottom-right-radius: 1rem;
+    margin-right: auto !important;
+}
+
+.products .card:first-child .greyTitle {
+    text-align: left;
+    width: 60%;
+    padding: 10px 15px;
+    margin-right: auto;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.products .card:first-child .card-body {
+    text-align: left;
+}
+
+.products .card:first-child ul li:nth-child(odd) {
+    padding: 8.5px 0 !important;
+    width: 60%;
+    margin-right: auto;
+}
+
+.products .card:first-child ul li .shortLineHeight {
+    line-height: 5px;
+    position: relative;
+}
+
+.products .card:first-child ul li .shortLineHeight::before, .products .card:first-child ul li .shortLineHeight::after {
+    position: absolute;
+
+}
+
+.products .card:first-child ul li .shortLineHeight::before {
+    content: '}';
+    right: calc(0px - 30%);
+    font-size: 61px;
+    top: -10px;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.products .card:first-child ul li .shortLineHeight::after {
+    content: 'دال متکي به تير';
+    right: -100%;
+    top: -10px;
+    white-space: pre-line;
 }
 
 .orangeTitle {
@@ -617,14 +687,14 @@ ul li, ol li {
     margin-left: -16px;
     margin-right: -16px;
     color: #fff;
-    margin-top: 70px;
+    margin-top: 79px;
     margin-bottom: 0;
     padding: 10px 46px;
 }
 
 .products .card-img-top {
     position: absolute;
-    top: 0;
+    top: -1px;
     width: 100%;
     height: auto;
     opacity: 0;
@@ -640,7 +710,7 @@ ul li, ol li {
     z-index: 1;
 }
 
-.products .card:hover {
+.products .card:not(:first-child):hover {
     background: #fff;
 }
 
