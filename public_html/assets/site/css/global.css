@@ -249,6 +249,21 @@ ul li, ol li {
 .header.subPage .smallHeader {
     position: static;
     background: #1f1f1f !important;
+    padding: 20px 0;
+}
+
+.header.subPage .smallHeader .upTitle {
+    font-size: 19px !important;
+    font-weight: bolder !important;
+}
+
+.header.subPage .smallHeader .title {
+    font-size: 61px !important;
+}
+
+.header.subPage .header .subTitle {
+    font-size: 16px !important;
+    margin-right: 125px !important;
 }
 
 .mainSlider .leftBox {
@@ -383,8 +398,8 @@ ul li, ol li {
 }
 
 .completedProjects .card-img-top {
-    height: 320px;
-    max-height: 100%;
+    /*height: 320px;*/
+    height: 460px;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
@@ -393,12 +408,11 @@ ul li, ol li {
 }
 
 .completedProjects .card-body {
+    position: absolute;
+    bottom: 0;
+    background: #fff;
     padding: 20px 20px 35px;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
+
 }
 
 .completedProjects .card-sub-title {
@@ -482,12 +496,64 @@ ul li, ol li {
 }
 
 .completedProjects .card:hover > .card-body, .completedProjects .card:focus > .card-body {
-    display: none;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+    animation: fadein 1s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {

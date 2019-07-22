@@ -346,8 +346,9 @@
 
                     <div class="card">
                         <div class="lastItem orangeTitle bg-orange d-flex justify-content-end">
-                            CU400
+                            <span>CU400</span>
                         </div>
+
                         <div class="btlr bblr card-title bg-grey-c greyTitle  d-flex justify-content-between">
                             <span>12</span>
                             <span>16</span>
@@ -396,247 +397,245 @@
                 </div>
                 <div class="tab-pane fade" id="pills-connections" role="tabpanel"
                      aria-labelledby="pills-commercial-tab">
-                    <div id="productsCarousel" class="owl-carousel">
-                        <div class="card">
-                            <div class="orangeTitle bg-orange">
-                                <span class="d-block">نوع القالب</span>
-                                <span>غيوبويد</span>
-                            </div>
-                            <div class="card-title bg-grey-c greyTitle">
-                                <span> (m)سبان </span>
-                            </div>
-
-                            <div class="card-body">
-                                <ul>
-                                    <li>
-                                        <span>سمك السقف (cm)</span>
-
-                                    </li>
-                                    <li></li>
-                                    <li>
-                                        <span class="d-block shortLineHeight">سمك يعادل</span>
-                                        <span>الخرسانة (cm)</span>
-
-                                    </li>
-                                    <li></li>
-                                    <li>
-
-                                        <span>سمك السقف (cm)</span>
-
-                                    </li>
-                                    <li></li>
-                                    <li>
-                                        <span class="d-block shortLineHeight">سمك يعادل</span>
-                                        <span>الخرسانة (cm)</span>
-                                    </li>
-                                </ul>
-                            </div>
-
+                    <div class="card">
+                        <div class="orangeTitle bg-orange">
+                            <span class="d-block">نوع القالب</span>
+                            <span>غيوبويد</span>
                         </div>
-                        <div class="card">
-                            <div class="orangeTitle bg-orange d-flex justify-content-end">
-                                <span>CU400</span>
-                            </div>
-                            <div class="card-title bg-grey-c greyTitle d-flex justify-content-between">
-
-                                <span>12</span>
-                                <span>16</span>
-                            </div>
-
-                            <img class="card-img-top"
-                                 src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
-                                 alt="Card image cap">
-
-                            <div class="card-body">
-                                <ul>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                    <li></li>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                    <li></li>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                    <li></li>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                        {{--</div>--}}
-                        {{--<div class="col-sm-6 col-md-3 mb-3">--}}
-                        <div class="card">
-                            <div class="orangeTitle bg-orange d-flex justify-content-end">
-                                <span>CU400</span>
-                            </div>
-                            <div class="card-title bg-grey-c greyTitle d-flex justify-content-between">
-
-                                <span>12</span>
-                                <span>16</span>
-                            </div>
-
-                            <img class="card-img-top"
-                                 src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
-                                 alt="Card image cap">
-
-                            <div class="card-body">
-                                <ul>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                    <li></li>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                    <li></li>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                    <li></li>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
+                        <div class="card-title bg-grey-c greyTitle">
+                            <span> (m)سبان </span>
                         </div>
 
-                        {{--</div>--}}
-                        {{--<div class="col-sm-6 col-md-3 mb-3">--}}
-                        {{--</div>--}}
-                        {{--<div class="col-sm-6 col-md-3 mb-3">--}}
-                        <div class="card">
-                            <div class="orangeTitle bg-orange d-flex justify-content-end">
-                                <span>CU400</span>
-                            </div>
-                            <div class="card-title bg-grey-c greyTitle d-flex justify-content-between">
+                        <div class="card-body">
+                            <ul>
+                                <li>
+                                    <span>سمك السقف (cm)</span>
 
-                                <span>12</span>
-                                <span>16</span>
-                            </div>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <span class="d-block shortLineHeight">سمك يعادل</span>
+                                    <span>الخرسانة (cm)</span>
 
-                            <img class="card-img-top"
-                                 src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
-                                 alt="Card image cap">
+                                </li>
+                                <li></li>
+                                <li>
 
-                            <div class="card-body">
-                                <ul>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
+                                    <span>سمك السقف (cm)</span>
 
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                    <li></li>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                    <li></li>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                    <li></li>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
+                                </li>
+                                <li></li>
+                                <li>
+                                    <span class="d-block shortLineHeight">سمك يعادل</span>
+                                    <span>الخرسانة (cm)</span>
+                                </li>
+                            </ul>
                         </div>
 
-                        <div class="card">
-                            <div class="lastItem orangeTitle bg-orange d-flex justify-content-end">
-                                CU400
-                            </div>
-                            <div class="btlr bblr card-title bg-grey-c greyTitle  d-flex justify-content-between">
-                                <span>12</span>
-                                <span>16</span>
-                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="orangeTitle bg-orange d-flex justify-content-end">
+                            <span>CU400</span>
+                        </div>
+                        <div class="card-title bg-grey-c greyTitle d-flex justify-content-between">
 
-                            <img class="card-img-top"
-                                 src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
-                                 alt="Card image cap">
-                            <div class="card-body">
-                                <ul>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                    <li></li>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                    <li></li>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                    <li></li>
-                                    <li>
-                                        <div class="d-flex justify-content-between">
-                                            <span>12</span>
-                                            <span>16</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                            <span>12</span>
+                            <span>16</span>
+                        </div>
+
+                        <img class="card-img-top"
+                             src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
+                             alt="Card image cap">
+
+                        <div class="card-body">
+                            <ul>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    {{--</div>--}}
+                    {{--<div class="col-sm-6 col-md-3 mb-3">--}}
+                    <div class="card">
+                        <div class="orangeTitle bg-orange d-flex justify-content-end">
+                            <span>CU400</span>
+                        </div>
+                        <div class="card-title bg-grey-c greyTitle d-flex justify-content-between">
+
+                            <span>12</span>
+                            <span>16</span>
+                        </div>
+
+                        <img class="card-img-top"
+                             src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
+                             alt="Card image cap">
+
+                        <div class="card-body">
+                            <ul>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    {{--</div>--}}
+                    {{--<div class="col-sm-6 col-md-3 mb-3">--}}
+                    {{--</div>--}}
+                    {{--<div class="col-sm-6 col-md-3 mb-3">--}}
+                    <div class="card">
+                        <div class="orangeTitle bg-orange d-flex justify-content-end">
+                            <span>CU400</span>
+                        </div>
+                        <div class="card-title bg-grey-c greyTitle d-flex justify-content-between">
+
+                            <span>12</span>
+                            <span>16</span>
+                        </div>
+
+                        <img class="card-img-top"
+                             src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
+                             alt="Card image cap">
+
+                        <div class="card-body">
+                            <ul>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="card">
+                        <div class="lastItem orangeTitle bg-orange d-flex justify-content-end">
+                            CU400
+                        </div>
+                        <div class="btlr bblr card-title bg-grey-c greyTitle  d-flex justify-content-between">
+                            <span>12</span>
+                            <span>16</span>
+                        </div>
+
+                        <img class="card-img-top"
+                             src="{{asset('/assets/site/media/images/products/products-item-bg.png')}}"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <ul>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <span>12</span>
+                                        <span>16</span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -797,7 +796,6 @@
 
         @endforeach
         @endisset
-
 
         $('[data-toggle="tooltip"]').tooltip();
 

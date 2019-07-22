@@ -57,7 +57,7 @@
             nav: true,
             items: 4,
             loop: true,
-            margin: 26,
+            margin: 20,
             dots: true,
             responsive: {
                 // breakpoint from 0 up
@@ -83,14 +83,50 @@
         @endforeach
         @endisset
 
-        $('#completedProjectsShowPage').owlCarousel({
-            rtl: true,
-            nav: true,
-            items: 1,
-            loop: true,
-            margin: 26,
-            dots: false,
-        });
 
+
+        $(document).ready(function () {
+
+            $('#newsCarousel,#productsCarousel,' +
+                '#completedProjects--commercialCarousel,' +
+                '#completedProjects--hotelCarousel,' +
+                '#completedProjects--all-projects').owlCarousel({
+                rtl: true,
+                nav: true,
+                items: 4,
+                loop: true,
+                margin: 20,
+                dots: true,
+                responsive: {
+                    // breakpoint from 0 up
+                    0: {
+                        items: 1
+                    },
+                    // breakpoint from 400 up
+                    400: {
+                        items: 2
+                    },
+                    // breakpoint from 576 up
+
+                    576: {
+                        items: 3
+                    },
+                    // breakpoint from 768 up
+                    768: {
+                        items: 4,
+                    },
+                }
+            });
+
+            $('#faqCarousel').owlCarousel({
+                rtl: true,
+                nav: true,
+                items: 1,
+                loop: true,
+//            margin: 26,
+                dots: true,
+            });
+
+        });
     </script>
 @endpush
