@@ -1,17 +1,12 @@
 @extends('main_site.layouts.master')
 
-@section('header')
-    @include('main_site.frames.smallHeader')
-@endsection
-
 @section('main')
-
     <section class="text">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h2 style="font-weight: bold; font-size: 45px;">
-                        الخدمات مبیعات
+                        الاخبار
                     </h2>
                     <p>
                         شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع شروط بيع المنتجات منذ إدخال
@@ -50,7 +45,6 @@
     @include('main_site.sections.faqs')
 @endsection
 
-
 @push('scripts')
     <script>
         @isset($categories)
@@ -85,5 +79,41 @@
 
         @endforeach
         @endisset
+
+        $('#newsCarousel,#productsCarousel,' +
+            '#completedProjects--commercialCarousel,' +
+            '#completedProjects--hotelCarousel,' +
+            '#completedProjects--all-projects').owlCarousel({
+            rtl: true,
+            nav: true,
+            items: 4,
+            loop: true,
+            margin: 20,
+            dots: true,
+            responsive: {
+                // breakpoint from 0 up
+                0: {
+                    items: 1
+                },
+                // breakpoint from 400 up
+                576: {
+                    items: 2
+                },
+                // breakpoint from 768 up
+                768: {
+                    items: 4,
+                },
+            }
+        });
+
+        $('#completedProjectsShowPage').owlCarousel({
+            rtl: true,
+            nav: true,
+            items: 1,
+            loop: true,
+            margin: 26,
+            dots: false,
+        });
+
     </script>
 @endpush

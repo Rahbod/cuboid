@@ -18,7 +18,14 @@ Route::get('captcha-image', function () {
 Route::get('/', 'HomeController@index');
 Route::get('/projects', 'ProjectController@projects');
 Route::get('/projects/category/{category_id}', 'ProjectController@projects');
-Route::get('/projects/show/{id}', 'ProjectController@show');
+Route::get('/projects/show/{id}', 'ProjectController@projectShow');
+
+Route::get('/products', 'ProjectController@products');
+Route::get('/products/category/{category_id}', 'ProjectController@products');
+Route::get('/products/show/{id}', 'ProjectController@productShow');
+
+Route::get('pages/show/{id}','StaticPageController@show');
+
 Route::get('/news', 'ContentController@news');
 Route::get('/news/category/{category_id}', 'ContentController@news');
 Route::get('/news/show/{id}', 'ContentController@newsShow');

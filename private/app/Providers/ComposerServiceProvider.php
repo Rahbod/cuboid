@@ -18,10 +18,17 @@ class ComposerServiceProvider extends ServiceProvider
             'main_site.pages.home',
             'main_site.pages.about_us',
             'main_site.pages.contact_us',
-            'main_site.pages.contents.contents',
-            'main_site.pages.contents.contents_show',
+
+            'main_site.pages.contents.contents',//wrong
+            'main_site.pages.contents.contents_show',//wrong
+
+            'main_site.pages.content.contents',
+            'main_site.pages.content.content_show',
+
             'main_site.pages.projects.projects',
             'main_site.pages.projects.projects_show',
+
+            'main_site.pages.static_pages',
         ];
         View::composer($views,'App\Http\View\Composer\Menus');
     }

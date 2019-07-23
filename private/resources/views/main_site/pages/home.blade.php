@@ -778,12 +778,7 @@
                 0: {
                     items: 1
                 },
-                // breakpoint from 400 up
-                400: {
-                    items: 2
-                },
                 // breakpoint from 576 up
-
                 576: {
                     items: 3
                 },
@@ -793,14 +788,12 @@
                 },
             }
         });
-
         @endforeach
         @endisset
 
         $('[data-toggle="tooltip"]').tooltip();
 
         $(document).ready(function () {
-
             $('#newsCarousel,#productsCarousel,' +
                 '#completedProjects--commercialCarousel,' +
                 '#completedProjects--hotelCarousel,' +
@@ -817,11 +810,6 @@
                         items: 1
                     },
                     // breakpoint from 400 up
-                    400: {
-                        items: 2
-                    },
-                    // breakpoint from 576 up
-
                     576: {
                         items: 3
                     },

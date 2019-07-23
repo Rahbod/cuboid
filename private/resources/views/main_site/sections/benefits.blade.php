@@ -7,7 +7,7 @@
                 </h2>
             </div>
             <div class="col-sm-6 col-md-7">
-                <div class="d-flex justify-content-between">
+                <div class="d-md-flex justify-content-between">
                     <ul class="benefits--lists d-inline-block">
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-1.png')}}" alt="">

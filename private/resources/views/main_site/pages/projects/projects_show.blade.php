@@ -75,10 +75,7 @@
                 0: {
                     items: 1
                 },
-                // breakpoint from 400 up
-                400: {
-                    items: 2
-                },
+
                 // breakpoint from 576 up
 
                 576: {
@@ -94,6 +91,32 @@
         @endforeach
         @endisset
 
+
+        $('#newsCarousel,#productsCarousel,' +
+            '#completedProjects--commercialCarousel,' +
+            '#completedProjects--hotelCarousel,' +
+            '#completedProjects--all-projects').owlCarousel({
+            rtl: true,
+            nav: true,
+            items: 4,
+            loop: true,
+            margin: 20,
+            dots: true,
+            responsive: {
+                // breakpoint from 0 up
+                0: {
+                    items: 1
+                },
+                // breakpoint from 400 up
+                576: {
+                    items: 2
+                },
+                // breakpoint from 768 up
+                768: {
+                    items: 4,
+                },
+            }
+        });
         $('#completedProjectsShowPage').owlCarousel({
             rtl: true,
             nav: true,
