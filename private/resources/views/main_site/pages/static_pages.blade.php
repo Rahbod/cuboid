@@ -9,10 +9,11 @@
     <section class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 mx-auto">
-
+                <div class="col-md-4">
+                    <img src="{{$page['image']}}" class="img-fluid" alt="{{$page['title']}}">
+                </div>
+                <div class="col-md-8">
                     <h2 style="font-weight: bold; font-size: 45px;">
-                        <img src="{{$page['image']}}" class="img-fluid" alt="{{$page['title']}}">
                         {{$page['title']}}
                     </h2>
                     <p>
@@ -87,6 +88,14 @@
                     items: 4,
                 },
             }
+        });
+        $('#faqCarousel').owlCarousel({
+            rtl: true,
+            nav: true,
+            items: 1,
+            loop: true,
+//            margin: 26,
+            dots: true,
         });
     </script>
 @endpush

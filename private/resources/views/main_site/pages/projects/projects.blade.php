@@ -71,3 +71,16 @@
     @include('main_site.sections.faqs')
 
 @endsection
+
+@push('scripts')
+    <script>
+        $('#faqCarousel').owlCarousel({
+            rtl: true,
+            nav: true,
+            items: 1,
+            loop: true,
+//            margin: 26,
+            dots: true,
+        });
+    </script>
+@endpush

@@ -91,6 +91,14 @@
         @endforeach
         @endisset
 
+        $('#faqCarousel').owlCarousel({
+            rtl: true,
+            nav: true,
+            items: 1,
+            loop: true,
+//            margin: 26,
+            dots: true,
+        });
 
         $('#newsCarousel,#productsCarousel,' +
             '#completedProjects--commercialCarousel,' +
