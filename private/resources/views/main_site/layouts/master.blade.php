@@ -22,7 +22,6 @@
           href="{{asset('/assets/site/js/vendors/owl-carousel/owl.theme.default.min.css')}}">
     <link rel="stylesheet" type="text/css" media="screen"
           href="{{asset('/assets/site/js/vendors/plyr-master/dist/plyr.css')}}">
-    <script type="text/javascript" src="{{asset('/assets/site/js/vendors/html5lightbox/html5lightbox.js')}}"></script>
 
     @stack('styles')
 
@@ -48,6 +47,7 @@
 <script type="text/javascript" src="{{asset('/assets/site/js/vendors/owl-carousel/owl.carousel.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/vendors/toastr/toastr.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('/assets/site/js/vendors/plyr-master/dist/plyr.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('/assets/site/js/vendors/html5lightbox/html5lightbox.js')}}"></script>
 
 @stack('scripts')
 </body>

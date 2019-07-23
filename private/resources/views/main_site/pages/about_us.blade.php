@@ -113,7 +113,7 @@
         });
         $('#faqCarousel').owlCarousel({
             rtl: true,
-            nav: true,
+            nav: false,
             items: 1,
             loop: true,
 //            margin: 26,

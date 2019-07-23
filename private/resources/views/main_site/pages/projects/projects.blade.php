@@ -5,23 +5,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>المشاريع المنجزة</h2>
+                    <h2>{{$page_title_description['title']}}</h2>
 
-                    <p>المشاريع المنجزة منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العد
-                        المشاريع المنجزة منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العد
-                    </p>
+                    <p>{{$page_title_description['descriptions']}}</p>
                 </div>
                 <div class="col-md-6 my-md-auto">
                     <ul class="nav nav-pills" id="pills-tab" role="tablist" style="justify-content: flex-end;">
                         <li class="nav-item ">
-                            <a class="nav-link {{ !isset(request()->category_id)?'active':''}}" aria-selected="{{ !isset(request()->category_id)?'true':'false'}}"
-                               href="{{url('projects')}}" role="tab" >جمیع المشاریع</a>
+                            <a class="nav-link {{ !isset(request()->category_id)?'active':''}}"
+                               aria-selected="{{ !isset(request()->category_id)?'true':'false'}}"
+                               href="{{url(str_plural($type))}}" role="tab">جميع {{$page_title_description['title']}}</a>
                         </li>
                         @foreach($categories as $category)
                             <li class="nav-item">
                                 <a class="nav-link {{$category->id == request()->category_id?'active':''}}"
-                                   id="pills-{{$category->id}}-tab" href="{{url('/projects/category/'.$category->id)}}" role="tab"
-                                   aria-controls="pills-{{$category->id}}" aria-selected="{{$category->id == request()->category_id?'true':'false'}}">{{$category->name}}</a>
+                                   id="pills-{{$category->id}}-tab"
+                                   href="{{url('/'.str_plural($type).'/category/'.$category->id)}}" role="tab"
+                                   aria-controls="pills-{{$category->id}}"
+                                   aria-selected="{{$category->id == request()->category_id?'true':'false'}}">{{$category->name}}</a>
                             </li>
                         @endforeach
 
@@ -51,7 +52,9 @@
                                             {!! $project->description !!}
                                         </p>
                                         <div class="text-right moreBtn">
-                                            <a href="{{url('/projects/show/'.$project->id)}}" class="btn btn-outline-light">
+                                            <a title="{{$project->title}}"
+                                               href="{{url('/'.str_plural($type).'/show/'.$project->id)}}"
+                                               class="btn btn-outline-light">
                                                 اکثر من
                                             </a>
                                         </div>
@@ -62,7 +65,7 @@
                         </div>
 
                     </div>
-                </div>
+                </div>$
             </div>
         </div>
     </section>
@@ -76,7 +79,7 @@
     <script>
         $('#faqCarousel').owlCarousel({
             rtl: true,
-            nav: true,
+            nav: false,
             items: 1,
             loop: true,
 //            margin: 26,

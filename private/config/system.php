@@ -62,8 +62,8 @@ return [
     ],
     'page' => [
         'image_size' => '500',
-        'image_width' => '200',
-        'image_height' => '278',
+        'image_width' => '400',
+        'image_height' => '300',
         'image_extension' => 'jpg, jpeg, png',
         'image_destination' => 'page/image/',
     ],
