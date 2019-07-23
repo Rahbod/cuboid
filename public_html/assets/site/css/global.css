@@ -112,6 +112,10 @@ ul {
 /*#endregion*/
 /*#region header*/
 
+.navbar-brand {
+    width: 40px;
+}
+
 .leftMenu {
     position: relative;
 }
@@ -210,6 +214,10 @@ ul li, ol li {
 
 /*#endregion*/
 /*#region landing*/
+.mainSlider {
+    margin-top: 40px;
+}
+
 .mainSlider--item {
     /*background-image: url('../media/images/landing/landing-2.jpg');*/
     /*height: 100vh;*/
@@ -221,17 +229,21 @@ ul li, ol li {
 .header .upTitle {
     font-size: 24px !important;
     font-weight: bolder !important;
+    color: #fff;
+    margin: 0;
 }
 
 .header .subTitle {
-    font-size: 29px !important;
-    margin-right: 125px !important;
+    font-size: 29px;
+    margin: 0;
+    margin-right: 125px;
+    color: #fff;
 }
 
-.smallHeader .title {
-    margin-top: -15px !important;
-    font-size: 81px !important;
-    color: #f68b1f !important;
+.header .smallHeader .title {
+    margin-top: -15px ;
+    font-size: 81px ;
+    color: #f68b1f ;
     margin-bottom: 2px;
     font-weight: bolder;
 
@@ -249,21 +261,42 @@ ul li, ol li {
 .header.subPage .smallHeader {
     position: static;
     background: #1f1f1f !important;
-    padding: 20px 0;
+    padding: 20px 0 30px 0;
+}
+
+.header.subPage .smallHeader .smallHeader__logo {
+    width: 100px;
+    height: 75px;
+    padding-left: 6px;
+    display: block !important;
 }
 
 .header.subPage .smallHeader .upTitle {
-    font-size: 19px !important;
+    font-size: 15px !important;
     font-weight: bolder !important;
 }
 
 .header.subPage .smallHeader .title {
-    font-size: 61px !important;
+    font-size: 50px ;
 }
 
-.header.subPage .header .subTitle {
-    font-size: 16px !important;
-    margin-right: 125px !important;
+.header.subPage .subTitle {
+    font-size: 16px ;
+    margin-right: 87px ;
+}
+
+.smallHeader .smallHeader__logo {
+    padding-left: 6px;
+    display: none;
+}
+
+.smallHeader .subTitle {
+    font-size: 20px;
+    margin-right: 83px;
+}
+
+.navbarSubPageColor {
+    background: #000 !important;
 }
 
 .mainSlider .leftBox {
@@ -428,7 +461,7 @@ ul li, ol li {
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #f68b1f !important;
-    border-bottom: 1px solid #f68b1f;
+    border-bottom: 1px solid #f68b1f !important;
     background-color: transparent;
     border-radius: 0;
     padding-bottom: 1px;
@@ -765,11 +798,15 @@ ul li, ol li {
     height: auto;
     opacity: 0;
     z-index: -1;
+    background: #fff;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
 }
 
 .products .card:hover .card-img-top {
     opacity: 1;
     z-index: 0;
+
 }
 
 .products .card:hover .orangeTitle span {
@@ -1237,42 +1274,6 @@ ul li, ol li {
     color: #fff;
     background-color: #cecece;
     /*border-color: #cecece;*/
-}
-
-/*#endregion*/
-/*#region small header*/
-
-.smallHeader {
-    padding: 33px 0;
-    background: #1f1f1f;
-}
-
-.smallHeader .smallHeader__title {
-    padding-right: 35px;
-}
-
-.smallHeader .smallHeader__logo {
-    padding-left: 6px;
-    display: none;
-}
-
-.header.subPage .smallHeader .smallHeader__logo {
-    padding-left: 6px;
-    display: block !important;
-}
-
-.smallHeader .upTitle, .smallHeader .subTitle {
-    color: #fff;
-    margin: 0;
-}
-
-.smallHeader .subTitle {
-    font-size: 20px;
-    margin-right: 83px;
-}
-
-.navbarSubPageColor {
-    background: #000 !important;
 }
 
 /*#endregion*/

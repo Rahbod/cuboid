@@ -123,15 +123,20 @@
 }
 
 @media screen and (max-width: 767.98px) {
+    .main-bar .container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
     .header .subTitle {
-        font-size: 20px !important;
-        margin-right: 90px !important;
+        font-size: 20px;
+        margin-right: 90px;
     }
 
     .smallHeader .title {
         margin-top: -15px !important;
         font-size: 57px !important;
-        color: #f68b1f !important;
+        color: #f68b1f;
     }
 
     .header .upTitle {

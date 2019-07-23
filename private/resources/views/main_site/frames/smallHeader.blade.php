@@ -10,7 +10,7 @@
             </div>
             <div class="col-3">
                 <div class="text-left h-100">
-                    <a href="{{url('/')}}" class="text-center smallHeader__logo">
+                    <a href="{{url('/')}}" class="mr-auto smallHeader__logo">
                         <img class="img-fluid" src="{{asset('/assets/site/media/images/cuboid-logo.png')}}" alt="">
                     </a>
                     {{--</div>--}}
@@ -18,3 +18,4 @@
             </div>
         </div>
     </div>
+</div>

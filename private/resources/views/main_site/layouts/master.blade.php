@@ -29,6 +29,7 @@
 </head>
 <body>
 @include('main_site.frames.header')
+@include('main_site.frames.sidebar_menu')
 
 {{--@yield('header')--}}
 <main>

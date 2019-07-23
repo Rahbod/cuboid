@@ -52,7 +52,7 @@
     line-height: 35px;
     text-align: center;
     border: 1px solid #fff;
-    background: #21ab64;
+    background: #f68b1f;
     position: absolute;
     top: 20px;
     right: 10px;
@@ -65,7 +65,7 @@
 
 #dismiss:hover {
     background: #fff;
-    color: #21ab64;
+    color: #eb801e;
 }
 
 .overlay {
@@ -89,7 +89,7 @@
 #sidebar .sidebar-header {
     color: #fff;
     padding: 20px;
-    background: #21ab64;
+    background: #f68b1f;
 }
 
 #sidebar ul.components {
@@ -104,14 +104,14 @@
 }
 
 #sidebar ul li a:hover {
-    color: #21ab64;
+    color: #f68b1f;
     background: #fff;
 }
 
 #sidebar ul li.active > a,
 #sidebar a[aria-expanded="true"] {
     color: #fff;
-    background: #21ab64;
+    background: #f68b1f;
 }
 
 #sidebar a[data-toggle="collapse"] {
@@ -129,7 +129,7 @@
 #sidebar ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #21ab64;
+    background: #eb801e;
     color: #fff !important;
 }
 
@@ -159,5 +159,5 @@
 }
 
 .menu-item.active {
-    color: #21ab64;
+    color: #eb801e;
 }
