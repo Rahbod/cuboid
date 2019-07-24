@@ -241,9 +241,9 @@ ul li, ol li {
 }
 
 .header .smallHeader .title {
-    margin-top: -15px ;
-    font-size: 81px ;
-    color: #f68b1f ;
+    margin-top: -15px;
+    font-size: 81px;
+    color: #f68b1f;
     margin-bottom: 2px;
     font-weight: bolder;
 
@@ -259,6 +259,7 @@ ul li, ol li {
 }
 
 .header.subPage .smallHeader {
+    margin-top: 52px;
     position: static;
     background: #1f1f1f !important;
     padding: 20px 0 30px 0;
@@ -277,12 +278,12 @@ ul li, ol li {
 }
 
 .header.subPage .smallHeader .title {
-    font-size: 50px ;
+    font-size: 50px;
 }
 
 .header.subPage .subTitle {
-    font-size: 16px ;
-    margin-right: 87px ;
+    font-size: 16px;
+    margin-right: 87px;
 }
 
 .smallHeader .smallHeader__logo {
@@ -1352,6 +1353,7 @@ ul li, ol li {
     margin-left: 5px;
 }
 
+
 /*#endregion*/
 /*#region text*/
 .text {
@@ -1376,6 +1378,42 @@ ul li, ol li {
 }
 
 /*#endregion*/
+
+.contactUsPage .formContainer {
+    margin-top: 25px;
+    margin-right: -1rem;
+    padding: 40px 135px 50px 80px;
+    background: #f68e24;
+}
+
+.contactUsPage .securityCode, .contactUsPage .submitBtn {
+    background: #282828;
+    color: #f68e24;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.contactUsPage .securityCode::placeholder {
+    color: #f68e24;
+}
+
+.contactUsPage .renewCaptchaImage {
+    background: #fff;
+    margin-right: -1px;
+    margin-left: 6px;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.contactUsPage .captchaImageContainer img {
+    max-width: 100%;
+    height: 100%;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
 
 button:focus, a:focus {
     outline: none !important;

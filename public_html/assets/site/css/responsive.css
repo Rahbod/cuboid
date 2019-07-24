@@ -187,6 +187,46 @@
 }
 
 @media screen and (max-width: 575.98px) {
+    .orangeTitle {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .products .greyTitle {
+        margin-left: -1px;
+        margin-right: -1px;
+        margin-top: 106px;
+    }
+
+    .benefits--lists {
+        padding: 0;
+    }
+
+    .benefits--lists:first-child {
+        padding-top: 1rem;
+    }
+
+    .benefits--lists:last-child {
+        padding-bottom: 1rem;
+    }
+
+    .aboutUs--bgLogo {
+        height: auto;
+        right: 0;
+        top: auto;
+    }
+
+    .products .card:first-child {
+        display: none;
+    }
+
+    .products .card {
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
     .sliderSection {
         padding-bottom: 2rem;
         height: auto;
