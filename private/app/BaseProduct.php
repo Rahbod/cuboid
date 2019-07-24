@@ -2,7 +2,7 @@
 
 namespace App;
 
-//use Appnegar\Cms\Traits\GetImageAttributesTrait;
+use Appnegar\Cms\Traits\GetImageAttributesTrait;
 use Appnegar\Cms\Traits\ModelTrait;
 use Appnegar\Cms\Traits\SetAndGetDateAttributesTrait;
 use Illuminate\Database\Eloquent\Model;
@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 class BaseProduct extends Model
 {
     use ModelTrait;
-//    use GetImageAttributesTrait;
+    use GetImageAttributesTrait;
     use SetAndGetDateAttributesTrait;
 
     protected $fillable = ['author_id', 'category_id','gallery_id','type', 'title','sub_title','summary', 'image', 'description', 'attributes',
