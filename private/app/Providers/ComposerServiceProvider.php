@@ -29,6 +29,7 @@ class ComposerServiceProvider extends ServiceProvider
             'main_site.pages.projects.projects_show',
 
             'main_site.pages.static_pages',
+            'main_site.pages.faqs_index',
         ];
         View::composer($views,'App\Http\View\Composer\Menus');
     }

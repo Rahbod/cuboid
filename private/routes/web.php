@@ -42,8 +42,8 @@ Route::get('/service-sales', 'ContactUsController@serviceSales');
 Route::get('/contact-us', 'ContactUsController@show');
 Route::post('/contact-us', 'ContactUsController@store');
 
-Route::get('/faqs}', 'FaqController@index');
-Route::get('/faq/show/{id}', 'FaqController@show');
+Route::get('/faqs', 'FaqController@index');
+//Route::get('/faq/show/{id}', 'FaqController@show');
 
 
 Route::get('/home_test', function () {

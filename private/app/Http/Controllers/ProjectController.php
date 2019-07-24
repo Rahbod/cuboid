@@ -15,7 +15,7 @@ class ProjectController extends Controller
 
     public function contents($type, $category_id = null)
     {
-        $model_name = '\\App\\' . strtoupper($type);
+        $model_name = '\\App\\' . ucfirst($type);
         $categories = Category::where('status', 1)->where('type', $type)->get();
 
         $query = $model_name::where('status', 1)->where('type', $type)->orderBy('order', 'asc');
