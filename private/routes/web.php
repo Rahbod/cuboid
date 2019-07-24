@@ -67,7 +67,7 @@ Route::get('/artisan-call', function () {
 //    Artisan::call('migrate:fresh');
     Artisan::call('db:seed');
 
-    makeRouteFile();
+//    makeRouteFile();
     makeSettingFile();
 
 });

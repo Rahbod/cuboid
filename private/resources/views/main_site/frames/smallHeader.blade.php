@@ -1,4 +1,4 @@
-<div class="smallHeader">
+<div class="smallHeader d-none d-md-block">
     <div class="container px-md-4">
         <div class="row">
             <div class="col-9 text-right">

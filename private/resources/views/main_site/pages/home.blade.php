@@ -831,7 +831,7 @@
 
             $('#mainSlider').owlCarousel({
                 rtl: true,
-                nav: true,
+                nav: false,
                 items: 1,
                 loop: true,
             });
