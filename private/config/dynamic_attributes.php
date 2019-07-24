@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'products'=>[
+    'products' => [
         [
             'name' => 'color',
             'input_type' => 'text'
@@ -18,8 +18,28 @@ return [
             'name' => 'class',
             'input_type' => 'text'
         ],
+        [
+            'name' => 'crater',
+            'input_type' => 'text'
+        ],
+        [
+            'name' => 'dale-relies-on-the-ball',
+            'input_type' => 'text'
+        ],
+        [
+            'name' => 'flat-slab-relies-on-the-pillar',
+            'input_type' => 'text'
+        ],
+        [
+            'name' => 'thickness-of-the-ceiling',
+            'input_type' => 'text'
+        ],
+        [
+            'name' => 'thickness-equivalent-to-concrete',
+            'input_type' => 'text'
+        ],
     ],
-    'projects'=>[
+    'projects' => [
         [
             'name' => 'address',
             'input_type' => 'text'

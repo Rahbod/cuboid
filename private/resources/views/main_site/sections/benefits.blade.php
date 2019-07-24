@@ -8,7 +8,7 @@
             </div>
             <div class="col-sm-6 col-md-7">
                 <div class="d-md-flex justify-content-between">
-                    <ul class="benefits--lists d-inline-block">
+                    <ul class="benefits--lists d-md-inline-block">
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-1.png')}}" alt="">
                             تشغيل السرعة
@@ -38,7 +38,7 @@
                             مقاومة للنار
                         </li>
                     </ul>
-                    <ul class="benefits--lists d-inline-block">
+                    <ul class="benefits--lists d-md-inline-block">
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-8.png')}}" alt="">
                             فقدان الوزن الميت والكتلة الزلزالية

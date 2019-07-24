@@ -1,4 +1,7 @@
-@extends('layouts.master')
+@extends('main_site.layouts.master')
+@section('header')
+    @include('main_site.frames.header')
+@endsection
 
 @push('styles')
     <style>
@@ -23,8 +26,7 @@
 @endpush
 
 @section('main')
-
-    <div class="container">
+    <div class="container my-5">
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <div class="faq__descriptions">
@@ -37,34 +39,30 @@
                 </div>
             </div>
             <div class="col-md-8 mx-auto">
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div id="accordion">
                     @foreach($faqs as $faq)
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading{{$faq->id}}">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#{{$faq->id}}"
-                                       aria-expanded="true" aria-controls="{{$faq->id}}">
+                        <div class="card">
+                            <div class="card-header" id="heading{{$faq->id}}">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link {{$loop->first ? '' : 'collapsed'}}"
+                                            data-toggle="collapse" data-target="#collapse{{$faq->id}}"
+                                            aria-expanded="{{$loop->first ? 'true' : 'false'}}"
+                                            aria-controls="collapse{{$faq->id}}">
                                         {{$faq->question}}
-                                    </a>
-                                </h4>
-
+                                    </button>
+                                </h5>
                             </div>
-                            <div id="{{$faq->id}}" class="panel-collapse collapse in" role="tabpanel"
-                                 aria-labelledby="heading{{$faq->id}}">
-                                <div class="panel-body">
+
+                            <div id="collapse{{$faq->id}}" class="collapse {{$loop->first ? 'show' : ''}}"
+                                 aria-labelledby="heading{{$faq->id}}" data-parent="#accordion">
+                                <div class="card-body">
                                     {!! $faq->answer !!}
                                 </div>
                             </div>
                         </div>
                     @endforeach
-
                 </div>
             </div>
         </div>
     </div>
 @endsection
-
-
-@push('scripts')
-
-@endpush

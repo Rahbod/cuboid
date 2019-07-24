@@ -1,11 +1,12 @@
-<div class="smallHeader d-none d-md-block">
+<div class="smallHeader">
     <div class="container px-md-4">
         <div class="row">
             <div class="col-9 text-right">
-                <div class="smallHeader__title">
+                <div class="smallHeader__title d-inline-block">
                     <p class="upTitle">سقف الوفل</p>
-                    <h1 class="title">غيوبويد</h1>
-                    <span class="subTitle">خيار طبيعي</span>
+                    <h1 class="title">كيوبويد</h1>
+
+                    <span class="subTitle float-left">خيار طبيعي</span>
                 </div>
             </div>
             <div class="col-3">

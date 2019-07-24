@@ -22,6 +22,13 @@ return [
         'published_at' => 'تاریخ انتشار',
         'created_at' => 'تاریخ ایجاد',
         'updated_at' => 'تاریخ بروزرسانی',
+
+        'crater'=>'دهانه',
+        'dale-relies-on-the-ball'=>'دال متکی به تیر',
+        'flat-slab-relies-on-the-pillar'=>'دال تخت متکی به ستون',
+
+        'thickness-of-the-ceiling'=>'ضخامت سقف',
+        'thickness-equivalent-to-concrete'=>'ضخامت معادل بتن مصرفی ',
     ],
     'relations'=>[
         'author'=>'نویسنده',

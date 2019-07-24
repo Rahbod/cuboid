@@ -63,25 +63,27 @@
             </div>
 
         </div>
-        <div class="mainSlider--item">
 
-            <img src="{{asset('/assets/site/media/images/landing/landing-2.jpg')}}" alt="">
-            <div class="container position-relative d-flex flex-column align-items-end">
-                <div class="leftBox">
-                    <div class="d-flex">
-                        <a href="void:;">
-                            <span class="orangeRibbon"></span>
-                            <p>
-                                تشغيل أكثر من 40 مشروعا على الصعيد الوطني
-                                تنفيذ 450،000 قدم مربع سقف السقف
-                                الكيوي ، تصميم وتنفيذ تجربة ناجحة
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        {{--@if(isset($slider_group) and count($slider_group) > 0)--}}
+        {{--@if(isset($slider_group->sliders) and count($slider_group->sliders) > 0)--}}
+        {{--@foreach($slider_group->sliders as $slider)--}}
+        {{--<div class="mainSlider--item">--}}
+        {{--<img src="{{asset($slider['image'])}}" alt="{{$slider['title']}}">--}}
+        {{--<div class="container position-relative d-flex flex-column align-items-end">--}}
+        {{--<div class="leftBox">--}}
+        {{--<div class="d-flex">--}}
+        {{--<a href="{{url($slider['link'])}}" title="{{$slider['title']}}">--}}
+        {{--<span class="orangeRibbon"></span>--}}
+        {{--<p>{!! $slider['text']!!}</p>--}}
+        {{--</a>--}}
+        {{--</div>--}}
+        {{--</div>--}}
+        {{--</div>--}}
 
-        </div>
+        {{--</div>--}}
+        {{--@endforeach--}}
+        {{--@endif--}}
+        {{--@endif--}}
     </section>
 
     <section class="aboutUs">
@@ -93,7 +95,7 @@
                 <div class="col-md-6">
                     <div class="content">
                         <h2 class="content--header sectionTitle">
-                            حول غيوبويد
+                            حول كيوبويد
                         </h2>
 
                         <p class="content--text">
@@ -102,8 +104,8 @@
                         </p>
 
                         <div class="text-left">
-                            <a title=" لماذا غيوبويد" href="{{url('about-us')}}" class="btn btn-outline-light">
-                                لماذا غيوبويد
+                            <a title=" لماذا كيوبويد" href="{{url('about-us')}}" class="btn btn-outline-light">
+                                لماذا كيوبويد
                             </a>
                         </div>
                     </div>
@@ -147,10 +149,10 @@
                     {{--<div class="container-fluid">--}}
                     {{--<div class="row">--}}
                     {{--<div class="col-sm-6 col-md-3 mb-3">--}}
-                    <div class="card">
+                    <div class="card d-none d-xl-inline-block">
                         <div class="orangeTitle bg-orange">
                             <span class="d-block">نوع القالب</span>
-                            <span>غيوبويد</span>
+                            <span>كيوبويد</span>
                         </div>
                         <div class="card-title bg-grey-c greyTitle">
                             <span> (m)سبان </span>
@@ -397,10 +399,10 @@
                 </div>
                 <div class="tab-pane fade" id="pills-connections" role="tabpanel"
                      aria-labelledby="pills-commercial-tab">
-                    <div class="card">
+                    <div class="card d-none d-md-block">
                         <div class="orangeTitle bg-orange">
                             <span class="d-block">نوع القالب</span>
-                            <span>غيوبويد</span>
+                            <span>كيوبويد</span>
                         </div>
                         <div class="card-title bg-grey-c greyTitle">
                             <span> (m)سبان </span>
@@ -654,7 +656,7 @@
                             تحميل
                         </h2>
                         <p class="downloads__descriptions">
-                            كتالوج وكتيبات شركة غيوبويد مقدمة
+                            كتالوج وكتيبات شركة كيوبويد مقدمة
                         </p>
                     </div>
                 </div>
@@ -687,7 +689,7 @@
                                         <a href="javascript:;"
                                            class="d-flex flex-column align-items-center downloads--lists__item p-3">
                                             <img class=""
-                                                 src="{{asset('/assets/site/media/images/downloads/icon-2.png')}}"
+                                                 src="{{asset('/assets/site/media/images/downloads/icon-3.png')}}"
                                                  alt="">
                                             <span>
                                                 كتيب المنتج
@@ -747,7 +749,7 @@
                                     </div>
                                     <a title="{{$n->title}}" href="{{url('news/show/'.$n->id)}}"
                                        class="btn btn-outline-light">
-                                        اکثر من
+                                        اكثر من
                                     </a>
                                 </div>
                             </div>
@@ -810,6 +812,7 @@
                         items: 1
                     },
                     // breakpoint from 400 up
+
                     576: {
                         items: 3
                     },
@@ -822,7 +825,7 @@
 
             $('#faqCarousel').owlCarousel({
                 rtl: true,
-                nav: false,
+//                nav: true,
                 items: 1,
                 loop: true,
 //            margin: 26,
@@ -831,7 +834,7 @@
 
             $('#mainSlider').owlCarousel({
                 rtl: true,
-                nav: false,
+                nav: true,
                 items: 1,
                 loop: true,
             });
@@ -841,23 +844,23 @@
             var controls =
                 [
                     'play-large', // The large play button in the center
-                    'restart', // Restart playback
-                    'rewind', // Rewind by the seek time (default 10 seconds)
-                    'play', // Play/pause playback
-                    'fast-forward', // Fast forward by the seek time (default 10 seconds)
-                    'progress', // The progress bar and scrubber for playback and buffering
-                    'current-time', // The current time of playback
-                    'duration', // The full duration of the media
-                    'mute', // Toggle mute
-                    'volume', // Volume control
-                    'captions', // Toggle captions
-                    'settings', // Settings menu
-                    'pip', // Picture-in-picture (currently Safari only)
-                    'airplay', // Airplay (currently Safari only)
-                    'download', // Show a download button with a link to either the current source or a custom URL you specify in your options
-                    'fullscreen', // Toggle fullscreen
+//                    'restart', // Restart playback
+//                    'rewind', // Rewind by the seek time (default 10 seconds)
+                'play', // Play/pause playback
+//                    'fast-forward', // Fast forward by the seek time (default 10 seconds)
+                'progress', // The progress bar and scrubber for playback and buffering
+//                    'current-time', // The current time of playback
+                'duration', // The full duration of the media
+//                    'mute', // Toggle mute
+                'volume', // Volume control
+//                    'captions', // Toggle captions
+                'settings', // Settings menu
+//                    'pip', // Picture-in-picture (currently Safari only)
+//                    'airplay', // Airplay (currently Safari only)
+                'download', // Show a download button with a link to either the current source or a custom URL you specify in your options
+                'fullscreen', // Toggle fullscreen
 
-                ];
+            ];
 
             player = new Plyr('#player', {
                 controls,

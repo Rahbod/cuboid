@@ -73,7 +73,7 @@
                                            autocomplete="captcha"
                                            spellcheck="false"
                                            tabindex="6"
-                                           name="captcha" required placeholder="تصوير امنيتی"
+                                           name="captcha" required placeholder="تصوير امنيتي"
                                            id="captcha">
                                 </div>
 
@@ -187,12 +187,12 @@
             <div class="col-md-7 pl-md-0">
                 <div class="d-flex justify-content-between">
                     <div>
-                        <span class="cuboid">© غيوبويد 1396</span> | جميع الحقوق محفوظة لشركة غيوبويد
+                        <span class="cuboid">© كيوبويد 1396</span> | جميع الحقوق محفوظة لشركة كيوبويد
                     </div>
                     <span class="designedBy"><span class="">Design by</span>  Tarsim.inc</span>
                 </div>
                 <div>
-                    جميع الحقوق محفوظة لشركة غيوبويد
+                    جميع الحقوق محفوظة لشركة كيوبويد
 
                 </div>
             </div>

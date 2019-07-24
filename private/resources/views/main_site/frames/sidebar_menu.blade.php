@@ -3,7 +3,7 @@
         {{--<h4 class="text-white">language</h4>--}}
         <h4 class="text-left">
             <a class="text-white" href="{{url('/')}}"
-               title="غيوبويد">غيوبويد</a>
+               title="كيوبويد">كيوبويد</a>
         </h4>
     </div>
 

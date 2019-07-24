@@ -7,7 +7,7 @@
         {{--<span class="navbar-toggler-lines"></span>--}}
         {{--<span class="navbar-toggler-lines"></span>--}}
     {{--</button>--}}
-    <a title="الصفحة الرئيسية" href="{{url('/')}}" class="navbar-brand d-md-none">
+    <a title="الصفحة الرئيسية" href="{{url('/')}}" class="navbar-brand d-lg-none">
         <img class="img-fluid" src="{{asset('/assets/site/media/images/cuboid-logo.png')}}" alt="الصفحة الرئيسية">
     </a>
 

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center mb-50">
                     <div class="questionMark ml-3">
                         <img src="{{asset('/assets/site/media/images/faq/question-mark.png')}}" class="img-fluid"
                              alt="">
@@ -23,7 +23,7 @@
                     @foreach($faqs as $faq)
                         <div class="faq--item">
                             <h5 class="sectionTitle">{{$faq->question}}</h5>
-                            <p class="quotation">{!! $faq->answer !!}</p>
+                            <p class="quotation">{!! $faq->answer !!} <span></span></p>
 
                             <div class="text-left">
                                 <a href="{{url('/faqs')}}" class="btn btn-outline-light">
