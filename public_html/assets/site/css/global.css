@@ -658,44 +658,6 @@ ul li, ol li {
     color: #fff;
 }
 
-.completedProjects .menu-trigger {
-    background: url(../media/images/completed-projects/more.svg) no-repeat right center;
-    background-size: 20px;
-    width: 40px;
-    height: 40px;
-    display: block;
-    position: absolute;
-    right: 35px;
-    top: 0;
-    z-index: 101;
-    -webkit-transition: all 0.1s linear;
-    -moz-transition: all 0.1s linear;
-    -ms-transition: all 0.1s linear;
-    -o-transition: all 0.1s linear;
-    transition: all 0.1s linear;
-}
-
-.navigation .nav li a {
-    background-color: transparent !important;
-    color: #7f7f7f;
-    white-space: nowrap;
-    font-family: "Open Sans";
-    font-size: 16px;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-}
-
-.navigation .nav.navbar {
-    position: absolute;
-    top: 0;
-    height: 40px;
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-}
 
 /*#endregion*/
 /*#region products*/
@@ -836,7 +798,7 @@ ul li, ol li {
     margin-left: -16px;
     margin-right: -16px;
     color: #fff;
-    margin-top: 79px;
+    margin-top: 40px;
     margin-bottom: 0;
     padding: 10px 46px;
 }

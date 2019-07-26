@@ -20,7 +20,7 @@
                         @endforeach
                     </ul>
                 </div>
-                <ul class="nav nav-pills d-none d-lg-block" id="pills-tab" role="tablist" style="justify-content: flex-end;">
+                <ul class="nav nav-pills d-none d-lg-flex" id="pills-tab" role="tablist" style="justify-content: flex-end;">
                     <li class="nav-item">
                         <a class="nav-link active"
                            id="pills-all-projects-tab" data-toggle="pill" href="#pills-all-projects" role="tab"

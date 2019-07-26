@@ -31,6 +31,6 @@ class HomeController extends Controller
 
 //        dd($slider_group);
 
-        return view('main_site.pages.home')->with(['about_us' => $about_us, 'categories' => $categories, 'news' => $news, 'faqs' => $faqs,'slider_groups'=>$slider_group]);
+        return view('main_site.pages.home')->with(['about_us' => $about_us, 'categories' => $categories, 'news' => $news, 'faqs' => $faqs,'slider_group'=>$slider_group]);
     }
 }

@@ -1,5 +1,45 @@
 /*#region max-width*/
 @media screen and (max-width: 1199.98px) {
+
+    .completedProjects .menu-trigger {
+        background: url(../media/images/completed-projects/more.svg) no-repeat right center;
+        background-size: 20px;
+        width: 40px;
+        height: 40px;
+        display: block;
+        position: absolute;
+        right: 35px;
+        top: 0;
+        z-index: 101;
+        -webkit-transition: all 0.1s linear;
+        -moz-transition: all 0.1s linear;
+        -ms-transition: all 0.1s linear;
+        -o-transition: all 0.1s linear;
+        transition: all 0.1s linear;
+    }
+
+    .navigation .nav li a {
+        background-color: transparent !important;
+        color: #fff;
+        white-space: nowrap;
+        font-family: "Open Sans";
+        font-size: 16px;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .navigation .nav.navbar {
+        position: absolute;
+        top: 0;
+        height: 40px;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+    }
+
     .products .card:hover .card-img-top {
         opacity: 0;
         z-index: -1;
@@ -154,7 +194,7 @@
         opacity: 0;
         border-radius: 10px;
         border: 1px solid #666;
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0, 0, 0, 0.7);
         padding: 15px;
         padding-top: 35px;
         z-index: 100;
@@ -174,9 +214,6 @@
         overflow: hidden;
         float: none;
     }
-
-
-
 
     .main-bar .container {
         padding-right: 0;
@@ -358,6 +395,9 @@
 /*#endregion*/
 /*#region min-width*/
 @media screen and (min-width: 1200px) {
+    .header .smallHeader .title {
+        line-height: 75px;
+    }
     .orangeTitle {
         margin-left: -16px !important;
         margin-right: -16px !important;
