@@ -72,7 +72,8 @@ $(document).ready(function () {
     $('.renewCaptchaImage').on('click', function () {
         $.ajax({
             type: 'get',
-            url: '/captcha-image',
+            url: '/captcha-image' +
+            '',
             success: function (response) {
                 $('.captchaImageContainer').html(response);
             },

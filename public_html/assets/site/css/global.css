@@ -191,13 +191,13 @@ ul {
     padding: 15px 6px;
 }
 
-.header-nav .leftMenu > li > a:hover, .header-nav .leftMenu > li > a:focus {
+.header-nav .leftMenu > li > a:hover i, .header-nav .leftMenu > li > a:focus i {
     filter: brightness(1.3);
-    -webkit-transform: translateY(-5px);
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -o-transform: translateY(-5px);
-    transform: translateY(-5px);
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transform: scale(1.4);
 }
 
 ul li, ol li {
@@ -241,10 +241,10 @@ ul li, ol li {
 }
 
 .header .smallHeader .title {
-    margin-top: -15px;
+    line-height: 50px;
     font-size: 81px;
     color: #f68b1f;
-    margin-bottom: 2px;
+    margin-bottom: 0;
     font-weight: bolder;
 
 }
@@ -407,6 +407,7 @@ ul li, ol li {
     background-repeat: no-repeat;
     padding-top: 60px;
     padding-bottom: 60px;
+    position: relative;
 }
 
 .completedProjects .card-title {
@@ -657,6 +658,45 @@ ul li, ol li {
     color: #fff;
 }
 
+.completedProjects .menu-trigger {
+    background: url(../media/images/completed-projects/more.svg) no-repeat right center;
+    background-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    right: 35px;
+    top: 0;
+    z-index: 101;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+
+.navigation .nav li a {
+    background-color: transparent !important;
+    color: #7f7f7f;
+    white-space: nowrap;
+    font-family: "Open Sans";
+    font-size: 16px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.navigation .nav.navbar {
+    position: absolute;
+    top: 0;
+    height: 40px;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+}
+
 /*#endregion*/
 /*#region products*/
 .products {
@@ -760,11 +800,20 @@ ul li, ol li {
     transform: rotateY(180deg);
 }
 
-.products .card:first-child ul li .shortLineHeight::after {
-    content: 'دال متکي به تير';
+.products .card:first-child ul li:nth-of-type(3) .shortLineHeight::after {
+    content: 'دال متکي \A به تير';
+    right: -73%;
+    top: -20px;
+    white-space: pre;
+    line-height: 14px;
+}
+
+.products .card:first-child ul li:last-of-type .shortLineHeight::after {
+    content: 'دال تخت متكی \A به ستون';
     right: -100%;
-    top: -10px;
-    white-space: pre-line;
+    top: -20px;
+    white-space: pre;
+    line-height: 14px;
 }
 
 .orangeTitle {
@@ -806,12 +855,12 @@ ul li, ol li {
 
 .products .card:hover .card-img-top {
     opacity: 1;
-    z-index: 0;
+    z-index: 1;
 
 }
 
 .products .card:hover .orangeTitle span {
-    z-index: 1;
+    z-index: 2;
 }
 
 .products .card:not(:first-child):hover {
@@ -931,6 +980,10 @@ ul li, ol li {
     -moz-border-radius: 1rem;
     border-radius: 1rem;
     color: #f2f2f2;
+}
+
+.downloads .downloads--lists__item:hover, .downloads .downloads--lists__item:focus {
+    background: #080808;
 }
 
 .downloads .downloads--lists__item span {
@@ -1067,27 +1120,39 @@ ul li, ol li {
 }
 
 .faq .quotation {
-    font-size: 16px;
+    padding-right: 35px;
+    padding-left: 35px;
+    position: relative;
+    line-height: 25px;
+    display: inline-block;
 }
 
 .faq .quotation::before {
     content: "”";
-    clear: right;
+    right: -5px;
+    clear: left;
     color: #f68b1f;
-    font-size: 20px;
-
+    font-size: 95px;
+    position: absolute;
+    /*top: 50%;*/
+    bottom: 0;
+    height: 1px;
 }
 
 .faq .quotation::after {
     content: "“";
-    clear: left;
+    clear: right;
     color: #f68b1f;
-    font-size: 20px;
+    font-size: 95px;
+    position: absolute;
+    bottom: -10px;
+    height: 1px;
+    left: -5px;
 }
 
 .faq--item h5 {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     color: #f68b1f;
 }
 
@@ -1103,6 +1168,10 @@ ul li, ol li {
     color: #fff;
     background-color: #6c757d;
     border-color: #6c757d;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
 }
 
 /*#endregion*/
@@ -1170,7 +1239,8 @@ ul li, ol li {
 }
 
 .footer .securityCode::placeholder {
-    color: #f68e24;
+    /*color: #f68e24;*/
+    color: #fff;
 }
 
 .footer .renewCaptchaImage {
@@ -1224,6 +1294,7 @@ ul li, ol li {
     background-color: transparent;
     border: transparent;
     border-bottom: 1px solid #c97825;
+    color: #fff;
 }
 
 .contactUsForm .noBg::selection {
@@ -1353,7 +1424,6 @@ ul li, ol li {
     margin-left: 5px;
 }
 
-
 /*#endregion*/
 /*#region text*/
 .text {
@@ -1413,7 +1483,6 @@ ul li, ol li {
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
 }
-
 
 button:focus, a:focus {
     outline: none !important;

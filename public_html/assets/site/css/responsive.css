@@ -1,5 +1,28 @@
 /*#region max-width*/
 @media screen and (max-width: 1199.98px) {
+    .products .card:hover .card-img-top {
+        opacity: 0;
+        z-index: -1;
+
+    }
+
+    .aboutUs {
+        margin-top: -130px;
+    }
+
+    .products .card {
+        width: 23.5%;
+        margin-left: 0;
+    }
+
+    .products .card:nth-of-type(2) {
+        margin-right: 1%;
+    }
+
+    .products .card:nth-of-type(2) .greyTitle, .products .card:nth-of-type(2) .orangeTitle {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
 
     .smallHeader .smallHeader__title {
         padding-right: 0;
@@ -12,8 +35,8 @@
     }
 
     .completedProjects {
-        -webkit-background-size: auto;
-        background-size: auto;
+        -webkit-background-size: cover;
+        background-size: cover;
     }
 
     .products .greyTitle {
@@ -22,8 +45,8 @@
     }
 
     .products {
-        -webkit-background-size: auto;
-        background-size: auto;
+        -webkit-background-size: cover;
+        background-size: cover;
     }
 
     .benefits--lists {
@@ -123,24 +146,56 @@
 }
 
 @media screen and (max-width: 767.98px) {
+    .navigation .nav {
+        right: 10px !important;
+        height: auto !important;
+        display: inline-block !important;
+        visibility: hidden;
+        opacity: 0;
+        border-radius: 10px;
+        border: 1px solid #666;
+        background-color: rgba(0,0,0,0.7);
+        padding: 15px;
+        padding-top: 35px;
+        z-index: 100;
+        max-height: 50vh;
+        overflow-y: auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        /*visibility: visible;*/
+        /*opacity: 1;*/
+    }
+
+    .navigation .nav li {
+        display: block;
+        overflow: hidden;
+        float: none;
+    }
+
+
+
+
     .main-bar .container {
         padding-right: 0;
         padding-left: 0;
     }
 
     .header .subTitle {
-        font-size: 20px;
+        font-size: 21px;
         margin-right: 90px;
     }
 
     .smallHeader .title {
-        margin-top: -15px !important;
+        /*margin-top: -15px !important;*/
         font-size: 57px !important;
         color: #f68b1f;
     }
 
     .header .upTitle {
-        font-size: 17px !important;
+        font-size: 18px !important;
         font-weight: bolder !important;
     }
 
@@ -153,11 +208,19 @@
     .completedProjects .nav.nav-pills,
     .products .nav.nav-pills {
         margin-bottom: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .products {
+    .products, .products {
         -webkit-background-size: cover;
         background-size: cover;
+    }
+
+    .products .card {
+        width: 24%;
+        margin-left: 0;
     }
 
     .downloads .downloads--lists__item {
@@ -187,15 +250,53 @@
 }
 
 @media screen and (max-width: 575.98px) {
+
+    .mb-50 {
+        margin-bottom: 50px;
+    }
+
+    .faq--item h5 {
+        margin-bottom: 20px;
+    }
+
+    .header .smallHeader {
+        top: 25px;
+    }
+
+    .mainSlider--item img {
+        min-height: 250px;
+    }
+
+    .aboutUs {
+        padding: 80px 0 50px;
+    }
+
+    .addressContainer .social {
+        position: static;
+    }
+
+    .benefits {
+        padding: 60px 0;
+    }
+
     .orangeTitle {
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: -1px;
+        margin-right: -1px;
+    }
+
+    .lastItem {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
     }
 
     .products .greyTitle {
         margin-left: -1px;
         margin-right: -1px;
         margin-top: 106px;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
     }
 
     .benefits--lists {
@@ -221,7 +322,7 @@
     }
 
     .products .card {
-        width: 100%;
+        width: 49%;
         margin-bottom: 1rem;
         margin-right: auto;
         margin-left: auto;
@@ -246,7 +347,12 @@
 }
 
 @media screen and (max-width: 399.98px) {
-
+    .products .card {
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 /*#endregion*/
