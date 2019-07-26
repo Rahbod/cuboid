@@ -95,6 +95,7 @@
                             <span>كيوبويد</span>
                         </div>
                         <div class="card-title bg-grey-c greyTitle">
+
                             <span> (m)سبان </span>
                         </div>
 
@@ -126,7 +127,7 @@
 
                     </div>
                     <div class="card">
-                        <div class="orangeTitle bg-orange d-flex justify-content-end">
+                        <div class="orangeTitle bg-orange d-flex justify-content-between  justify-content-lg-end ">
                             <span class="d-lg-none">نوع القالب</span>
 
                             <span>CU400</span>
@@ -185,7 +186,7 @@
                     </div>
 
                     <div class="card">
-                        <div class="orangeTitle bg-orange d-flex justify-content-end">
+                        <div class="orangeTitle bg-orange d-flex justify-content-between  justify-content-lg-end">
                             <span class="d-lg-none">نوع القالب</span>
 
                             <span>CU300</span>
@@ -244,7 +245,7 @@
                     </div>
 
                     <div class="card">
-                        <div class="orangeTitle bg-orange d-flex justify-content-end">
+                        <div class="orangeTitle bg-orange d-flex justify-content-between  justify-content-lg-end">
                             <span class="d-lg-none">نوع القالب</span>
 
                             <span>CU240</span>
@@ -303,7 +304,7 @@
                     </div>
 
                     <div class="card">
-                        <div class="lastItem orangeTitle bg-orange d-flex justify-content-end">
+                        <div class="lastItem orangeTitle bg-orange d-flex justify-content-between  justify-content-lg-end">
                             <span class="d-lg-none">نوع القالب</span>
                             <span>CU180</span>
                         </div>
@@ -514,7 +515,7 @@
         $('[data-toggle="tooltip"]').tooltip();
 
         $(document).ready(function () {
-            $('#newsCarousel,#productsCarousel,' +
+            $('#newsCarousel,' +
                 '#completedProjects--commercialCarousel,' +
                 '#completedProjects--hotelCarousel,' +
                 '#completedProjects--all-projects').owlCarousel({
@@ -543,26 +544,8 @@
 
             $('#productsCarousel').owlCarousel({
                 rtl: true,
-                nav: true,
-                items: 4,
-                loop: true,
                 margin: 20,
-                dots: true,
-                responsive: {
-                    // breakpoint from 0 up
-                    0: {
-                        items: 1
-                    },
-                    // breakpoint from 400 up
-
-                    576: {
-                        items: 2
-                    },
-                    // breakpoint from 768 up
-                    768: {
-                        items: 2,
-                    },
-                }
+                items: 2
             });
 
 

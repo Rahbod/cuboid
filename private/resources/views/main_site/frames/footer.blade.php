@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-md-7 px-0 px-lg-3">
                 <div class="formContainer">
                     <form action="{{url(session('lang').'/'.'contact-us')}}" class="contactUsForm"
                           method="post" enctype="multipart/form-data">

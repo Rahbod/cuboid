@@ -8,7 +8,7 @@
         height: 40px;
         display: block;
         position: absolute;
-        right: 35px;
+        left: 35px;
         top: 0;
         z-index: 101;
         -webkit-transition: all 0.1s linear;
@@ -38,6 +38,35 @@
         display: block;
         opacity: 0;
         visibility: hidden;
+    }
+
+    .navigation .nav {
+        left: 35px !important;
+        height: auto !important;
+        display: inline-block !important;
+        visibility: hidden;
+        opacity: 0;
+        border-radius: 10px;
+        border: 1px solid #666;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 15px;
+        padding-top: 35px;
+        z-index: 100;
+        max-height: 50vh;
+        overflow-y: auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        /*visibility: visible;*/
+        /*opacity: 1;*/
+    }
+
+    .navigation .nav li {
+        display: block;
+        overflow: hidden;
+        float: none;
     }
 
     .products .card:hover .card-img-top {
@@ -186,33 +215,10 @@
 }
 
 @media screen and (max-width: 767.98px) {
-    .navigation .nav {
-        right: 10px !important;
-        height: auto !important;
-        display: inline-block !important;
-        visibility: hidden;
-        opacity: 0;
-        border-radius: 10px;
-        border: 1px solid #666;
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 15px;
-        padding-top: 35px;
-        z-index: 100;
-        max-height: 50vh;
-        overflow-y: auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        /*visibility: visible;*/
-        /*opacity: 1;*/
-    }
 
-    .navigation .nav li {
-        display: block;
-        overflow: hidden;
-        float: none;
+    .products .card:nth-of-type(2) .greyTitle, .products .card:nth-of-type(2) .orangeTitle {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
     }
 
     .main-bar .container {
@@ -250,14 +256,15 @@
         align-items: center;
     }
 
-    .products, .products {
+    .products, .completedProjects {
         -webkit-background-size: cover;
         background-size: cover;
     }
 
     .products .card {
-        width: 24%;
-        margin-left: 0;
+        width: 48%;
+        margin-left: 1%;
+        margin-bottom: 2%;
     }
 
     .downloads .downloads--lists__item {
@@ -359,7 +366,7 @@
     }
 
     .products .card {
-        width: 49%;
+        width: 100%;
         margin-bottom: 1rem;
         margin-right: auto;
         margin-left: auto;
@@ -384,20 +391,13 @@
 }
 
 @media screen and (max-width: 399.98px) {
-    .products .card {
-        width: 100%;
-        margin-bottom: 1rem;
-        margin-right: auto;
-        margin-left: auto;
-    }
+
 }
 
 /*#endregion*/
 /*#region min-width*/
 @media screen and (min-width: 1200px) {
-    .header .smallHeader .title {
-        line-height: 75px;
-    }
+
     .orangeTitle {
         margin-left: -16px !important;
         margin-right: -16px !important;
@@ -406,13 +406,13 @@
 }
 
 @media screen and (min-width: 992px) {
-    .top-courses .site-button:not(:first-child) {
-        margin-left: 0.5rem;
-    }
+
 }
 
 @media screen and (min-width: 768px) {
-
+    .header .smallHeader .title {
+        line-height: 75px;
+    }
 }
 
 @media screen and (max-width: 576px) {
