@@ -37,12 +37,13 @@
                             <img src="{{asset('/assets/site/media/images/benefits/icon-7.png')}}" alt="">
                             مقاومة للنار
                         </li>
-                    </ul>
-                    <ul class="benefits--lists d-md-inline-block">
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-8.png')}}" alt="">
                             فقدان الوزن الميت والكتلة الزلزالية
                         </li>
+                    </ul>
+                    <ul class="benefits--lists d-md-inline-block">
+
                         <li>
                             <img src="{{asset('/assets/site/media/images/benefits/icon-9.png')}}" alt="">
                             القدرة على العمل على الهياكل الخرسانية والمعدنية

@@ -9,7 +9,18 @@
                 </p>
             </div>
             <div class="col-md-6 my-md-auto">
-                <ul class="nav nav-pills" id="pills-tab" role="tablist" style="justify-content: flex-end;">
+                <div class="menu d-lg-none navigation mb-5">
+                    <a class="menu-trigger"></a>
+                    <ul class="nav navbar nav-left">
+                        @foreach($categories as $category)
+                            <li class="nav-item active">
+                                <a class="nav-link" id="pills-{{$category->id}}-tab" data-toggle="pill" href="#pills-{{$category->id}}" role="tab"
+                                   aria-controls="pills-{{$category->id}}" aria-selected="false">{{$category->name}}</a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+                <ul class="nav nav-pills d-none d-lg-block" id="pills-tab" role="tablist" style="justify-content: flex-end;">
                     <li class="nav-item">
                         <a class="nav-link active"
                            id="pills-all-projects-tab" data-toggle="pill" href="#pills-all-projects" role="tab"

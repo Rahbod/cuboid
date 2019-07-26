@@ -120,7 +120,7 @@
     <section class="products">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <h2 class="content--header sectionTitle">المنتجات</h2>
 
                     <p class="content--text">
@@ -128,7 +128,7 @@
                         الصك ، ينطبق سقف الحش
                     </p>
                 </div>
-                <div class="col-md-6 my-md-auto">
+                <div class="col-md-6 my-md-auto d-none">
                     <ul class="nav nav-pills" id="pills-tab2" role="tablist" style="justify-content: flex-end;">
                         <li class="nav-item">
                             <a class="nav-link active"
@@ -868,5 +868,21 @@
                 {{--iconUrl: "{{asset('/assets/site/js/vendors/plyr-master/src/sprite/play-icon.svg')}}"--}}
             });
         });
+
+        $('.menu-trigger').on('click', function () {
+            if ($(this).hasClass('open')) {
+                $(this).removeClass('open').next().css({
+                    'visibility': 'hidden',
+                    'opacity': 0
+                })
+            }
+            else {
+                $(this).addClass('open').next().css({
+                    'visibility': 'visible',
+                    'opacity': 1
+                })
+            }
+        });
+
     </script>
 @endpush
