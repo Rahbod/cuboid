@@ -259,7 +259,7 @@ ul li, ol li {
 }
 
 .header.subPage .smallHeader {
-    margin-top: 52px;
+    margin-top: 40px;
     position: static;
     background: #1f1f1f !important;
     padding: 20px 0 30px 0;
@@ -269,7 +269,7 @@ ul li, ol li {
     width: 100px;
     height: 75px;
     padding-left: 6px;
-    display: block !important;
+    display: block;
 }
 
 .header.subPage .smallHeader .upTitle {
@@ -657,7 +657,6 @@ ul li, ol li {
 .completedProjects .moreDetails .card-text {
     color: #fff;
 }
-
 
 /*#endregion*/
 /*#region products*/
@@ -1136,6 +1135,19 @@ ul li, ol li {
     margin-bottom: 50px;
 }
 
+.faqPage .card-header {
+    background: #1f1f1f;
+}
+
+.faqPage .card-header:hover, .faqPage .card-header:focus {
+    background: #000;
+}
+
+.faqPage .card-header .btn {
+    color: #f68b1f;
+    text-decoration: none;
+}
+
 /*#endregion*/
 /*#region footer*/
 .footer {
@@ -1256,6 +1268,12 @@ ul li, ol li {
     color: #282828;
 }
 
+.contactUsForm .noBg::placeholder,
+.contactUsForm .noBg::-moz-placeholder,
+.contactUsForm .noBg::-webkit-input-placeholder {
+    color: #fff;
+}
+
 .contactUsForm .noBg {
     border-radius: 0;
     background-color: transparent;
@@ -1265,7 +1283,7 @@ ul li, ol li {
 }
 
 /*.contactUsForm .noBg::selection {*/
-    /*background-color: transparent;*/
+/*background-color: transparent;*/
 /*}*/
 
 .contactUsForm .noBg:focus, .contactUsForm .noBg:hover {
@@ -1433,7 +1451,8 @@ ul li, ol li {
 }
 
 .contactUsPage .securityCode::placeholder {
-    color: #f68e24;
+    /*color: #f68e24;*/
+    color: #fff;
 }
 
 .contactUsPage .renewCaptchaImage {

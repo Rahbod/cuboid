@@ -9,17 +9,19 @@
     <section class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <img src="{{$page['image']}}" class="img-fluid" alt="{{$page['title']}}">
-                </div>
-                <div class="col-md-8">
-                    <h2 style="font-weight: bold; font-size: 45px;">
-                        {{$page['title']}}
-                    </h2>
-                    <p>
-                        {!! $page['text'] !!}
-                    </p>
-                </div>
+                @if(isset($page))
+                    <div class="col-md-5">
+                        <img src="{{$page['image']}}" class="img-fluid" alt="{{$page['title']}}">
+                    </div>
+                    <div class="col-md-7">
+                        <h2 class="mt-3 mt-md-0 sectionTitle">
+                            {{$page['title']}}
+                        </h2>
+                        <p>
+                            {!! $page['text'] !!}
+                        </p>
+                    </div>
+                @endif
             </div>
         </div>
     </section>

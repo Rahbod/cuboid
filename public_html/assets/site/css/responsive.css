@@ -8,7 +8,7 @@
         height: 40px;
         display: block;
         position: absolute;
-        left: 35px;
+        left: 15px;
         top: 0;
         z-index: 101;
         -webkit-transition: all 0.1s linear;
@@ -41,7 +41,7 @@
     }
 
     .navigation .nav {
-        left: 35px !important;
+        left: 15px !important;
         height: auto !important;
         display: inline-block !important;
         visibility: hidden;
@@ -135,12 +135,29 @@
 }
 
 @media screen and (max-width: 991.98px) {
+    .contactUsPage .formContainer {
+        margin-top: 0;
+        margin-right: -16px;
+        margin-left: -16px;
+        padding: 1rem;
+        background: #f68e24;
+    }
+
     .text {
         -webkit-background-size: cover;
         background-size: cover;
         padding-top: 60px;
         padding-bottom: 60px;
         background-position: center;
+    }
+
+    .text ul li {
+        line-height: 21px;
+        margin-bottom: 10px;
+    }
+
+    .text ul li::before {
+        line-height: 0px;
     }
 
     .container {
@@ -291,6 +308,18 @@
     .footer .designedBy {
         text-align: left;
     }
+
+    .benefits--lists {
+        padding: 0;
+    }
+
+    .benefits--lists:first-child {
+        padding-top: 1rem;
+    }
+
+    .benefits--lists:last-child {
+        padding-bottom: 1rem;
+    }
 }
 
 @media screen and (max-width: 575.98px) {
@@ -343,18 +372,6 @@
         border-radius: 0;
     }
 
-    .benefits--lists {
-        padding: 0;
-    }
-
-    .benefits--lists:first-child {
-        padding-top: 1rem;
-    }
-
-    .benefits--lists:last-child {
-        padding-bottom: 1rem;
-    }
-
     .aboutUs--bgLogo {
         height: auto;
         right: 0;
@@ -391,7 +408,9 @@
 }
 
 @media screen and (max-width: 399.98px) {
-
+    .header.subPage .smallHeader__logo {
+        display: none !important;
+    }
 }
 
 /*#endregion*/

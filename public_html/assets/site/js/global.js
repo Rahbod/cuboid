@@ -82,6 +82,21 @@ $(document).ready(function () {
             }
         });
     });
+
+    $('.menu-trigger').on('click', function () {
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open').next().css({
+                'visibility': 'hidden',
+                'opacity': 0
+            })
+        }
+        else {
+            $(this).addClass('open').next().css({
+                'visibility': 'visible',
+                'opacity': 1
+            })
+        }
+    });
 });
 
 function toaster(type, title, message) {

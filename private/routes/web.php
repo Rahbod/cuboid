@@ -33,18 +33,11 @@ Route::get('/articles', 'ContentController@articles');
 Route::get('/articles/category/{ContentController}', 'ContentController@articles');
 Route::get('/articles/show/{id}', 'ContentController@articlShow');
 
-//Route::get('/news', 'ProjectController@news');
-//Route::get('/news/show/{id}', 'ProjectController@newsShow');
-
 Route::get('/about-us', 'ContactUsController@aboutUs');
-Route::get('/service-sales', 'ContactUsController@serviceSales');
-
 Route::get('/contact-us', 'ContactUsController@show');
 Route::post('/contact-us', 'ContactUsController@store');
 
 Route::get('/faqs', 'FaqController@index');
-//Route::get('/faq/show/{id}', 'FaqController@show');
-
 
 Route::get('/home_test', function () {
     return view('main_site.pages.home');

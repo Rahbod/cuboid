@@ -182,9 +182,7 @@
                                 </li>
                             </ul>
                         </div>
-
                     </div>
-
                     <div class="card">
                         <div class="orangeTitle bg-orange d-flex justify-content-between  justify-content-lg-end">
                             <span class="d-lg-none">نوع القالب</span>
@@ -359,6 +357,69 @@
                             </ul>
                         </div>
                     </div>
+
+                    @if(isset($rahimi_added_product_attrs))
+                        @foreach($products as $product)
+                            <div class="card">
+                                <div class="{{$loop->last ? 'lastItem' : ''}} orangeTitle bg-orange d-flex justify-content-between  justify-content-lg-end ">
+                                    <span class="d-lg-none">نوع القالب</span>
+
+                                    <span>{{$product['title']}}</span>
+                                </div>
+                                <div class="card-title bg-grey-c greyTitle d-flex justify-content-between">
+
+                                    <span class="d-lg-none">(m)سبان</span>
+                                    <span>{{$product['crater'][0]}}</span>
+                                    <span>{{$product['crater'][1]}}</span>
+                                </div>
+
+                                <img class="card-img-top"
+                                     src="{{asset($product['image'])}}"
+                                     alt="{{$product['title']}}">
+
+                                <div class="card-body">
+                                    <ul>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+
+                                                <span class="d-lg-none">سمك السقف (cm)</span>
+                                                <span>{{$product['thickness-of-the-ceiling'][0]}}</span>
+                                                <span>{{$product['thickness-of-the-ceiling'][1]}}</span>
+                                            </div>
+                                        </li>
+                                        <li></li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+
+                                                <span class="d-lg-none">سمك يعادل <br>الخرسانة (cm)</span>
+                                                <span>{{$product['thickness-equivalent-to-concrete'][0]}}</span>
+                                                <span>{{$product['thickness-equivalent-to-concrete'][1]}}</span>
+                                            </div>
+                                        </li>
+                                        <li></li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+
+                                                <span class="d-lg-none">سمك السقف (cm)</span>
+                                                <span>{{$product['thickness-of-the-ceiling'][0]}}</span>
+                                                <span>{{$product['thickness-of-the-ceiling'][1]}}</span>
+                                            </div>
+                                        </li>
+                                        <li></li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+
+                                                <span class="d-lg-none">سمك يعادل <br> الخرسانة (cm)</span>
+                                                <span>{{$product['thickness-equivalent-to-concrete'][0]}}</span>
+                                                <span>{{$product['thickness-equivalent-to-concrete'][1]}}</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
+
                 </div>
             </div>
         </div>
@@ -595,20 +656,6 @@
             });
         });
 
-        $('.menu-trigger').on('click', function () {
-            if ($(this).hasClass('open')) {
-                $(this).removeClass('open').next().css({
-                    'visibility': 'hidden',
-                    'opacity': 0
-                })
-            }
-            else {
-                $(this).addClass('open').next().css({
-                    'visibility': 'visible',
-                    'opacity': 1
-                })
-            }
-        });
 
     </script>
 @endpush

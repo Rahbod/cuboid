@@ -36,24 +36,26 @@
                     <p>{{$page_title_description['descriptions']}}</p>
                 </div>
                 <div class="col-md-6 my-md-auto">
-                    <ul class="nav nav-pills" id="pills-tab" role="tablist" style="justify-content: flex-end;">
-                        <li class="nav-item ">
-                            <a class="nav-link {{ !isset(request()->category_id)?'active':''}}"
-                               aria-selected="{{ !isset(request()->category_id)?'true':'false'}}"
-                               href="{{url(str_plural($type))}}"
-                               role="tab">جميع {{$page_title_description['title']}}</a>
-                        </li>
-                        @foreach($categories as $category)
-                            <li class="nav-item">
-                                <a class="nav-link {{$category->id == request()->category_id?'active':''}}"
-                                   id="pills-{{$category->id}}-tab"
-                                   href="{{url('/'.str_plural($type).'/category/'.$category->id)}}" role="tab"
-                                   aria-controls="pills-{{$category->id}}"
-                                   aria-selected="{{$category->id == request()->category_id?'true':'false'}}">{{$category->name}}</a>
+                    @if($type != 'product')
+                        <ul class="nav nav-pills" id="pills-tab" role="tablist" style="justify-content: flex-end;">
+                            <li class="nav-item ">
+                                <a class="nav-link {{ !isset(request()->category_id)?'active':''}}"
+                                   aria-selected="{{ !isset(request()->category_id)?'true':'false'}}"
+                                   href="{{url(str_plural($type))}}"
+                                   role="tab">جميع {{$page_title_description['title']}}</a>
                             </li>
-                        @endforeach
+                            @foreach($categories as $category)
+                                <li class="nav-item">
+                                    <a class="nav-link {{$category->id == request()->category_id?'active':''}}"
+                                       id="pills-{{$category->id}}-tab"
+                                       href="{{url('/'.str_plural($type).'/category/'.$category->id)}}" role="tab"
+                                       aria-controls="pills-{{$category->id}}"
+                                       aria-selected="{{$category->id == request()->category_id?'true':'false'}}">{{$category->name}}</a>
+                                </li>
+                            @endforeach
 
-                    </ul>
+                        </ul>
+                    @endif
                 </div>
             </div>
             <div class="tab-content" id="pills-tabContent">

@@ -6,7 +6,7 @@
 
 @section('main')
 
-    <section class="contactUsPage my-5">
+    <section class="contactUsPage my-md-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 offset-md-4 mx-auto">
@@ -125,70 +125,6 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="text d-none">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 style="font-weight: bold; font-size: 45px;">
-                        شروط بيع المنتجات
-                    </h2>
-                    <p>
-                        شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع شروط بيع المنتجات منذ إدخال
-                        وتسجيل سقف كيوبيد ، استفادت منه الع شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه
-                        الع شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع شروط بيع المنتجات منذ إدخال
-                        وتسجيل سقف كيوبيد ، استفادت منه الع
-                        شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع
-                    </p>
-
-                    <ul class="pr-3" style="padding-top:35px;padding-bottom: 35px;">
-                        <li>
-                            شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع
-                        </li>
-                        <li>
-                            شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع
-                        </li>
-                        <li>
-                            شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع
-                        </li>
-                        <li>
-                            شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع
-                        </li>
-                        <li>
-                            شروط بيع المنتجات منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه الع
-                        </li>
-                    </ul>
-
-                    <h4>
-                        منذ إدخال وتسجيل
-                    </h4>
-                    <ul style="padding-bottom: 65px;">
-                        <li>
-                            شروط بيع المنتجات منذ إدخال وتسجيل
-                        </li>
-                        <li>
-                            شروط بيع المنتجات منذ إدخال وتسجيل
-                        </li>
-                        <li>
-                            شروط بيع المنتجات منذ إدخال وتسجيل
-                        </li>
-                        <li>
-                            شروط بيع المنتجات منذ إدخال وتسجيل
-                        </li>
-                    </ul>
-
-                    <p>
-                        شروط بيع المنتجات منذ إدخال وتسجيل
-                        شروط بيع المنتجات منذ إدخال وتسجيل
-                        شروط بيع المنتجات منذ إدخال وتسجيل
-                        شروط بيع المنتجات منذ إدخال وتسجيل
-
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!--<img class="bg-image" src="./assets/media/images/completed-projects/completed-projects-showpage-bg.jpg" alt="">-->
     </section>
     @include('main_site.sections.completed_projects')
     @include('main_site.sections.benefits')
