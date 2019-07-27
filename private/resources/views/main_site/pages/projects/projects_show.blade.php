@@ -1,5 +1,35 @@
 @extends('main_site.layouts.master')
 
+@push('styles')
+    <style>
+        .completedProjects .card-body {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: #fff;
+            padding: 20px 20px 35px;
+        }
+
+        .moreDetails {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #000;
+            opacity: 0;
+            padding: 45px 20px 80px;
+            color: #fff;
+            z-index: -1;
+            bottom: 0;
+        }
+
+        .moreDetails p {
+            color: #fff;
+        }
+    </style>
+@endpush
+
 @section('main')
     <section class="completedProjectsShowPage">
         <div class="container">

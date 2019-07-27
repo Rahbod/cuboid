@@ -14,13 +14,15 @@
                     <ul class="nav navbar nav-left">
                         @foreach($categories as $category)
                             <li class="nav-item active">
-                                <a class="nav-link" id="pills-{{$category->id}}-tab" data-toggle="pill" href="#pills-{{$category->id}}" role="tab"
+                                <a class="nav-link" id="pills-{{$category->id}}-tab" data-toggle="pill"
+                                   href="#pills-{{$category->id}}" role="tab"
                                    aria-controls="pills-{{$category->id}}" aria-selected="false">{{$category->name}}</a>
                             </li>
                         @endforeach
                     </ul>
                 </div>
-                <ul class="nav nav-pills d-none d-lg-flex" id="pills-tab" role="tablist" style="justify-content: flex-end;">
+                <ul class="nav nav-pills d-none d-lg-flex" id="pills-tab" role="tablist"
+                    style="justify-content: flex-end;">
                     <li class="nav-item">
                         <a class="nav-link active"
                            id="pills-all-projects-tab" data-toggle="pill" href="#pills-all-projects" role="tab"
@@ -44,7 +46,7 @@
                  aria-labelledby="pills-all-projects-tab">
                 <div id="completedProjects--all-projects" class="owl-carousel">
                     @foreach($categories as $category)
-                        @foreach($category->projects as $project)
+                        @foreach($category[str_plural($type)] as $project)
                             <div class="card">
                                 <img class="card-img-top" src="{{asset($project->image)}}"
                                      alt="Card image cap">
@@ -62,7 +64,8 @@
                                         {{$project->description}}
                                     </p>
                                     <div class="text-right moreBtn">
-                                        <a href="{{url('/projects/show/'.$project->id)}}" class="btn btn-outline-light">
+                                        <a href="{{url('/'.str_plural($type).'/show/'.$project->id)}}"
+                                           class="btn btn-outline-light">
                                             اکثر من
                                         </a>
                                     </div>
@@ -96,7 +99,7 @@
                                         {{$project->description}}
                                     </p>
                                     <div class="text-right moreBtn">
-                                        <a href="{{url('/projects/show/'.$project->id)}}"
+                                        <a href="{{url('/'.str_plural($type).'/show/'.$project->id)}}"
                                            class="btn btn-outline-light">
                                             اکثر من
                                         </a>

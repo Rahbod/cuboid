@@ -23,6 +23,10 @@
             z-index: -1;
             bottom: 0;
         }
+
+        .moreDetails p {
+            color: #fff;
+        }
     </style>
 @endpush
 

@@ -36,7 +36,7 @@ class ProjectController extends Controller
 
     public function show($id, $type)
     {
-        $model_name = '\\App\\' . strtoupper($type);
+        $model_name = '\\App\\' . ucfirst($type);
 
         $project = $model_name::with('gallery.gallery_items')->where('type', $type)->where('status', 1)->findOrFail($id);
         $project->attributes = json_decode($project->attributes, true);
@@ -46,6 +46,7 @@ class ProjectController extends Controller
             $query->orderBy('order', 'asc');
             $query->take(8);
         }])->orderBy('order', 'asc')->take(4)->get();
+//        dd($categories);
         $faqs = Faq::where('status', 1)->orderBy('order', 'asc')->take(10)->get();
         return view('main_site.pages.projects.projects_show')
             ->with(['categories' => $categories,
