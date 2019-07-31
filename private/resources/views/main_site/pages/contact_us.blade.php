@@ -81,7 +81,7 @@
                                                autocomplete="captcha"
                                                spellcheck="false"
                                                tabindex="6"
-                                               name="captcha" required placeholder="تصوير امنيتی"
+                                               name="captcha" required placeholder="تصوير امنيتي"
                                                id="captcha">
                                     </div>
 

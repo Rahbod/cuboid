@@ -31,9 +31,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>{{$page_title_description['title']}}</h2>
+                    <h2 class="sectionTitle">{{$page_title_description['title']}}</h2>
 
-                    <p>{{$page_title_description['descriptions']}}</p>
+                    <p class="sectionDescription">{{$page_title_description['descriptions']}}</p>
                 </div>
                 <div class="col-md-6 my-md-auto">
                     <ul class="nav nav-pills" id="pills-tab" role="tablist" style="justify-content: flex-end;">
@@ -74,7 +74,7 @@
                                                     <a title="{{$content->title}}"
                                                        href="{{url('/'.str_plural($type).'/show/'.$content->id)}}"
                                                        class="btn btn-outline-light">
-                                                        اکثر من
+                                                        اكثر من
                                                     </a>
                                                 </div>
                                             </div>

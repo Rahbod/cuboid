@@ -34,9 +34,9 @@
     <section class="completedProjectsShowPage">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 order-2 order-lg-1">
+                <div class="col-md-5 order-2 order-lg-1 pl-md-4">
                     @if($project->gallery && $project->gallery->gallery_items)
-                        <div id="completedProjectsShowPage" class="owl-carousel gallery">
+                        <div id="completedProjectsShowPageGallery" class="owl-carousel gallery">
                             @foreach($project->gallery->gallery_items as $gallery_item)
                                 <a title="" class="html5lightbox galleryItem" data-group="mygroup"
                                    data-thumbnail="{{asset($gallery_item->logo)}}"
@@ -50,8 +50,8 @@
                             @endforeach
                         </div>
                     @else
-                        <a style="cursor: none;" title="" class="galleryItem" href="javascript:;">
-                            <img class="img-fluid p-5"
+                        <a style="cursor: no-drop;" title="" class="galleryItem" href="javascript:;">
+                            <img class="img-fluid"
                                  src="{{asset('/assets/site/media/images/completed-projects/gallery.svg')}}"
                                  alt="">
                             <div class="galleryItem__indicator">
@@ -60,14 +60,13 @@
                         </a>
                     @endif
                 </div>
-                <div class="col-md-5 order-1 order-lg-2">
+                <div class="col-md-5 order-1 order-lg-2 pr-md-4">
                     <h2 class="sectionTitle">المشاريع</h2>
                     <h3>{{$project->name}}</h3>
 
-                    {!! $project->description !!}
+                    <p class="mb-3"> {!! $project->description !!}</p>
 
-                    <h4>المواصفات الفنیه</h4>
-
+                    <h4 style="margin-top: 60px;margin-bottom: 0;">المواصفات الفنيه</h4>
                     <ul>
                         <li>العنوان : {{$project->sub_title}}</li>
                         @if($project->attributes)
@@ -80,25 +79,74 @@
 
             </div>
         </div>
+        @if(isset($next_project))
+          <div class="nextProject">
+              <a href="{{url('/'.str_plural($type).'/show/'.$next_project->id)}}"
+                 class="" title="{{$next_project->title}}">
+                  <img class="card-img-top" src="{{asset($next_project->image)}}"
+                       alt="{{$next_project->title}}">
+              </a>
+          </div>
+        @endif
 
         <img class="bg-image"
              src="{{asset('/assets/site/media/images/completed-projects/completed-projects-showpage-bg.jpg')}}" alt="">
     </section>
-    @include('main_site.sections.completed_projects')
+
+    <section class="completedProjects relatedProjects">
+        <div class="container" style="padding-right: 40px;">
+            <div class="row">
+                <div class="col-12">
+                    <h2 style="padding-right: 20px;" class="content--header">المشاريع ذات الصلة</h2>
+                    <div id="relatedProjects" class="owl-carousel">
+                        @if(!$related_projects->isEmpty())
+                            @foreach($related_projects as $project)
+                                <div class="card">
+                                    <img class="card-img-top" src="{{asset($project->image)}}"
+                                         alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{$project->title}}</h4>
+                                        <h5 class="card-sub-title">{{$project->sub_title}}</h5>
+                                        <p class="card-text">
+                                            {{$project->summary}}
+                                        </p>
+                                    </div>
+                                    <div class="moreDetails">
+                                        <h4 class="card-title text-white">{{$project->title}}</h4>
+                                        <h5 class="card-sub-title text-white">{{$project->sub_title}}</h5>
+                                        <p class="card-text">
+                                            {{$project->description}}
+                                        </p>
+                                        <div class="text-right moreBtn">
+                                            <a href="{{url('/'.str_plural($type).'/show/'.$project->id)}}"
+                                               class="btn btn-outline-light">
+                                                اکثر من
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     @include('main_site.sections.benefits')
     @include('main_site.sections.faqs')
 @endsection
 
 @push('scripts')
     <script>
-        @isset($categories)
-        @foreach($categories as $category)
-        $('#completedProjects--{{$category->id}}').owlCarousel({
-            rtl: true,
+        $('#relatedProjects').owlCarousel({
+//            loop: true,
+//            autoplay: true,
+//            autoplayTimeout: 9000,
+//            autoplayHoverPause: true,
+
             nav: true,
             items: 4,
-            loop: true,
-            margin: 26,
+            margin: 10,
             dots: true,
             responsive: {
                 // breakpoint from 0 up
@@ -118,49 +166,27 @@
             }
         });
 
-        @endforeach
-        @endisset
-
         $('#faqCarousel').owlCarousel({
-            rtl: true,
-            nav: false,
-            items: 1,
             loop: true,
-//            margin: 26,
+            autoplay: true,
+            autoplayTimeout: 9000,
+            autoplayHoverPause: true,
+            rtl: true,
+            items: 1,
             dots: true,
         });
 
-        $('#newsCarousel,#productsCarousel,' +
-            '#completedProjects--commercialCarousel,' +
-            '#completedProjects--hotelCarousel,' +
-            '#completedProjects--all-projects').owlCarousel({
-            rtl: true,
-            nav: true,
-            items: 4,
+
+        $('#completedProjectsShowPageGallery').owlCarousel({
             loop: true,
-            margin: 20,
-            dots: true,
-            responsive: {
-                // breakpoint from 0 up
-                0: {
-                    items: 1
-                },
-                // breakpoint from 400 up
-                576: {
-                    items: 2
-                },
-                // breakpoint from 768 up
-                768: {
-                    items: 4,
-                },
-            }
-        });
-        $('#completedProjectsShowPage').owlCarousel({
+            autoplay: true,
+            autoplayTimeout: 9000,
+            autoplayHoverPause: true,
+
             rtl: true,
             nav: true,
             items: 1,
-            loop: true,
-            margin: 26,
+//            margin: 26,
             dots: false,
         });
 

@@ -22,20 +22,29 @@ return [
             'name' => 'crater',
             'input_type' => 'text'
         ],
+//        [
+//            'name' => 'dale-relies-on-the-ball',
+//            'input_type' => 'text'
+//        ],
+//        [
+//            'name' => 'flat-slab-relies-on-the-pillar',
+//            'input_type' => 'text'
+//        ],
         [
-            'name' => 'dale-relies-on-the-ball',
+            'name' => 'thickness-of-the-ceiling-1',
             'input_type' => 'text'
         ],
         [
-            'name' => 'flat-slab-relies-on-the-pillar',
+            'name' => 'thickness-equivalent-to-concrete-1',
+            'input_type' => 'text'
+        ],
+
+        [
+            'name' => 'thickness-of-the-ceiling-2',
             'input_type' => 'text'
         ],
         [
-            'name' => 'thickness-of-the-ceiling',
-            'input_type' => 'text'
-        ],
-        [
-            'name' => 'thickness-equivalent-to-concrete',
+            'name' => 'thickness-equivalent-to-concrete-2',
             'input_type' => 'text'
         ],
     ],

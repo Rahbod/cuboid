@@ -35,9 +35,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>{{$page_title_description['title']}}</h2>
+                    <h2 class="sectionTitle">{{$page_title_description['title']}}</h2>
 
-                    <p>{{$page_title_description['descriptions']}}</p>
+                    <p class="sectionDescription">{{$page_title_description['descriptions']}}</p>
                 </div>
                 <div class="col-md-6 my-md-auto">
                     @if($type != 'product')
@@ -46,7 +46,7 @@
                                 <a class="nav-link {{ !isset(request()->category_id)?'active':''}}"
                                    aria-selected="{{ !isset(request()->category_id)?'true':'false'}}"
                                    href="{{url(str_plural($type))}}"
-                                   role="tab">جميع {{$page_title_description['title']}}</a>
+                                   role="tab">جميع المشاريع</a>
                             </li>
                             @foreach($categories as $category)
                                 <li class="nav-item">
@@ -67,7 +67,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             @foreach($projects as $project)
-                                <div class="col-3">
+                                <div class="col-12 col-md-3">
                                     <div class="card" style="margin-bottom: 20px;">
                                         <img class="card-img-top" src="{{$project->image}}"
                                              alt="Card image cap">
@@ -88,7 +88,7 @@
                                                 <a title="{{$project->title}}"
                                                    href="{{url('/'.str_plural($type).'/show/'.$project->id)}}"
                                                    class="btn btn-outline-light">
-                                                    اکثر من
+                                                    اكثر من
                                                 </a>
                                             </div>
                                         </div>
@@ -97,6 +97,14 @@
                             @endforeach
                         </div>
 
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <a title="اكثر من ..." href="javascript:;"
+                                   class="btn btn-outline-light moreProjects">
+                                    اكثر من ...
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,11 +119,12 @@
 @push('scripts')
     <script>
         $('#faqCarousel').owlCarousel({
-            rtl: true,
-            nav: false,
-            items: 1,
             loop: true,
-//            margin: 26,
+            autoplay: true,
+            autoplayTimeout: 9000,
+            autoplayHoverPause: true,
+            rtl: true,
+            items: 1,
             dots: true,
         });
     </script>

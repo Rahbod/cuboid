@@ -11,7 +11,7 @@
                         <h2 class="sectionTitle">
                             أسئلة مكررة
                         </h2>
-                        <p class="m-0">
+                        <p class="m-0 sectionDescription">
                             معظم الأسئلة التي طرحها عملاؤنا هي إجاباتنا
                         </p>
                     </div>
@@ -22,16 +22,17 @@
                 <div class="owl-carousel" id="faqCarousel">
                     @foreach($faqs as $faq)
                         <div class="faq--item">
-                            <h5 class="sectionTitle">{{$faq->question}}</h5>
-                            <p class="quotation">{!! $faq->answer !!} <span></span></p>
-
-                            <div class="text-left">
-                                <a href="{{url('/faqs')}}" class="btn btn-outline-light">
-                                    اکثر من
-                                </a>
-                            </div>
+                            <h5 class="faq--item__title">{{$faq->question}}</h5>
+                            <p class="faq--item__answer quotation">{!! $faq->answer !!} <span></span></p>
                         </div>
                     @endforeach
+                </div>
+            </div>
+            <div class="col-12 my-5">
+                <div class="text-left">
+                    <a href="{{url('/faqs')}}" class="btn btn-outline-light">
+                        كل الأسئلة
+                    </a>
                 </div>
             </div>
         </div>

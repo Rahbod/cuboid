@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Faq;
+use App\Project;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -39,22 +40,40 @@ class ProjectController extends Controller
         $model_name = '\\App\\' . ucfirst($type);
 
         $project = $model_name::with('gallery.gallery_items')->where('type', $type)->where('status', 1)->findOrFail($id);
+//        dd($project);
         $project->attributes = json_decode($project->attributes, true);
 
-        $categories = Category::where('status', 1)->where('type', $type)->with([str_plural($type) => function ($query) {
-            $query->where('status', 1);
-            $query->orderBy('order', 'asc');
-            $query->take(8);
-        }])->orderBy('order', 'asc')->take(4)->get();
-//        dd($categories);
+//        $categories = Category::where('status', 1)->where('type', 'project')->with(['projects' => function ($query) use ($project) {
+//            $query->where('status', 1);
+//            $query->orderBy('order', 'asc');
+//            $query->take(8);
+//        }])->orderBy('order', 'asc')->take(4)->get()->toArray();
+
+//        $random_number = array_rand($categories);
+//        $category = $categories[$random_number];
+////        dd($category);
+//        $project_random_number = array_rand($category['projects']);
+//        $next_project = $category['projects'][$project_random_number];
+
+
+        $ids = Project::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->get()->pluck('id')->toArray();
+        $counts = Project::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->get()->count();
+//        dd($ids, $counts);
+
+        $next_project = Project::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->findOrFail($ids[rand(0, $counts -1)]);
+        $related_projects = Project::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->where('category_id', $project->category_id)->get();
+
         $faqs = Faq::where('status', 1)->orderBy('order', 'asc')->take(10)->get();
         return view('main_site.pages.projects.projects_show')
-            ->with(['categories' => $categories,
-                'project' => $project, 'faqs' => $faqs,
-                'sub_page' => 'subPage',
-                'type' => $type,
-                'page_title_description' => $this->getText($type)
-            ]);
+            ->with(
+                [
+                    'related_projects' => $related_projects,
+                    'next_project' => $next_project,
+                    'project' => $project, 'faqs' => $faqs,
+                    'sub_page' => 'subPage',
+                    'type' => $type,
+                    'page_title_description' => $this->getText($type)
+                ]);
     }
 
     public function projects($category_id = null)
@@ -80,11 +99,11 @@ class ProjectController extends Controller
     public function getText($type)
     {
         $title = 'المنتجات';
-        $descriptions = 'المنتجات بما يتوافق مع طول فترة ونوع نظام الصك ، ينطبق سقف الحش بما يتوافق مع طول فترة ونوع نظام الصك ، ينطبق سقف الحش';
+        $descriptions = 'بما يتوافق مع طول فترة ونوع نظام الصك ، ينطبق سقف الحشيش بأربعة قوالب مع المواصفات المذكورة في الجدول أدناه. فيما يتعلق بالهندسة المعمارية ونظام كل مشروع ، يوفر قسم التصميم في تصميم Cybwhite الخيار الأفضل لأصحاب العمل المقولبين.';
 
         if ($type == 'project') {
-            $title = 'المشاریع';
-            $descriptions = 'المشاريع المنجزة منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العد المشاريع المنجزة منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العد';
+            $title = 'المشاريع المنجزة';
+            $descriptions = 'منذ إدخال وتسجيل سقف كيوبيد ، استفادت منه العديد من المباني الخرسانية والمعدنية مع المباني السكنية والتجارية والفنادق والمكتبات والمسجد والصناعي والمعارض ومواقف السيارات والمحطات.';
         }
         return ['title' => $title, 'descriptions' => $descriptions];
     }

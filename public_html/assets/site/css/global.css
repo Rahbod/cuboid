@@ -1,4 +1,22 @@
 /*#region public*/
+
+section {
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    /*justify-content: center;*/
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
 .bg-orange {
     background: #f68b1f;
 }
@@ -259,7 +277,8 @@ ul li, ol li {
 }
 
 .header.subPage .smallHeader {
-    margin-top: 40px;
+    /*margin-top: 40px;*/
+    margin-top: 50px;
     position: static;
     background: #1f1f1f !important;
     padding: 20px 0 30px 0;
@@ -273,21 +292,25 @@ ul li, ol li {
 }
 
 .header.subPage .smallHeader .upTitle {
+    display: none;
     font-size: 15px !important;
     font-weight: bolder !important;
 }
 
 .header.subPage .smallHeader .title {
     font-size: 50px;
+    padding-right: 40px;
 }
 
 .header.subPage .subTitle {
+    display: none;
+
     font-size: 16px;
     margin-right: 87px;
 }
 
 .smallHeader .smallHeader__logo {
-    padding-left: 6px;
+    padding-left: 10px;
     display: none;
 }
 
@@ -365,15 +388,36 @@ ul li, ol li {
 /*#region about us*/
 .aboutUs {
     /*display: flex;*/
-    margin-top: -105px;
+    margin-top: -120px;
     z-index: 1;
     background-image: url(../media/images/about-us/about-us-bg-high.png);
-    background-position: center;
+    /*background-image: url(../media/images/about-us/just-bee.png);*/
+    background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
     /*height: 420px;*/
     position: relative;
     padding: 60px 0;
+    /*background: #f68b1f;*/
+}
+
+/*.aboutUs::before {*/
+/*content: url('/assets/site/media/images/about-us/about-us-logo-3.png');*/
+/*position: absolute;*/
+/*right: 0;*/
+/*}*/
+
+/*.aboutUs::after {*/
+/*content: url('/assets/site/media/images/about-us/just-bee.png');*/
+/*position: absolute;*/
+/*left: 0;*/
+/*}*/
+
+.topTriangle {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
 }
 
 .aboutUs--bgLogo {
@@ -388,6 +432,11 @@ ul li, ol li {
 .sectionTitle {
     font-family: hacen-bd;
     font-weight: bolder;
+    font-size: 50px;
+}
+
+.sectionDescription {
+    font-size: 15px;
 }
 
 .aboutUs .content--text {
@@ -402,8 +451,8 @@ ul li, ol li {
 .completedProjects {
     background-image: url(../media/images/slider/slider-bg.jpg);
     /* height: 878px; */
-    -webkit-background-size: 100%;
-    background-size: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -471,6 +520,8 @@ ul li, ol li {
     padding-right: 0;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .completedProjects .nav.nav-pills .nav-link {
@@ -594,11 +645,11 @@ ul li, ol li {
 .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
     position: absolute;
     top: calc(50% - 140px);
-    font-size: 6rem !important;
+    font-size: 5rem !important;
     color: #2e2e2e !important;
     border-radius: 1rem !important;
     width: 60px !important;
-    font-weight: 600 !important;
+    font-weight: bolder !important;
 }
 
 .owl-carousel .owl-nav button.owl-prev {
@@ -621,7 +672,7 @@ ul li, ol li {
     background: #afafaf !important;
     height: 4px;
     border-radius: 1rem;
-    margin: 0 0.5rem;
+    margin-right: 4px;
 }
 
 .owl-carousel button.owl-dot.active {
@@ -663,8 +714,8 @@ ul li, ol li {
 .products {
     background-image: url('../media/images/products/products-bg.jpg');
     /*height: 878px;*/
-    -webkit-background-size: 100%;
-    background-size: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     padding-top: 80px;
     padding-bottom: 110px;
@@ -762,7 +813,7 @@ ul li, ol li {
 }
 
 .products .card:first-child ul li:nth-of-type(3) .shortLineHeight::after {
-    content: 'دال متکي \A به تير';
+    content: 'دال متكي \A به تير';
     right: -73%;
     top: -20px;
     white-space: pre;
@@ -770,7 +821,7 @@ ul li, ol li {
 }
 
 .products .card:first-child ul li:last-of-type .shortLineHeight::after {
-    content: 'دال تخت متكی \A به ستون';
+    content: 'دال تخت متكي \A به ستون';
     right: -100%;
     top: -20px;
     white-space: pre;
@@ -860,8 +911,8 @@ ul li, ol li {
 .benefits {
     background-image: url('../media/images/benefits/benefits-bg.jpg');
     /*height: 738px;*/
-    -webkit-background-size: 100%;
-    background-size: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     padding-top: 60px;
 }
@@ -874,11 +925,12 @@ ul li, ol li {
     padding-bottom: 15px;
     color: #2e2e2e;
     font-weight: 500;
+    font-size: 16px;
 }
 
 .benefits--lists li img {
     margin-left: 10px;
-    width: 20px;
+    width: 30px;
     max-width: 100%;
     height: auto
 }
@@ -888,8 +940,8 @@ ul li, ol li {
 .downloads {
     background-image: url('../media/images/downloads/downloads-bg.jpg');
     /*height: 738px;*/
-    -webkit-background-size: 100%;
-    background-size: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     padding: 73px 0;
 }
@@ -972,15 +1024,16 @@ ul li, ol li {
 .news {
     background-image: url('../media/images/news/news-bg.jpg');
     /*height: 738px;*/
-    -webkit-background-size: 100%;
-    background-size: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     padding: 70px 0;
 }
 
 .news .card-img-top {
     max-width: 100%;
-    height: auto;
+    min-height: 170px;
+    height: 100%;
 }
 
 .news .card-title {
@@ -1068,12 +1121,14 @@ ul li, ol li {
     display: block;
     position: absolute;
     background-image: url(../media/images/faq/faq-bg.png);
-    height: 495px;
+    /*height: 495px;*/
+    height: 100vh;
     -webkit-background-size: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center right;
-    top: -57px;
+    top: 0;
+    /*top: -57px;*/
     right: 0;
     /* height: 100%; */
     width: 100%;
@@ -1086,6 +1141,8 @@ ul li, ol li {
     position: relative;
     line-height: 25px;
     display: inline-block;
+    font-size: 17px;
+    margin-bottom: 30px;
 }
 
 .faq .quotation::before {
@@ -1095,7 +1152,7 @@ ul li, ol li {
     color: #f68b1f;
     font-size: 95px;
     position: absolute;
-    /*top: 50%;*/
+    top: calc(0px + 25px);
     bottom: 0;
     height: 1px;
 }
@@ -1111,10 +1168,15 @@ ul li, ol li {
     left: -5px;
 }
 
-.faq--item h5 {
+.faq--item {
     text-align: center;
-    margin-bottom: 25px;
+}
+
+.faq--item__title {
+    text-align: center;
+    margin-bottom: 50px;
     color: #f68b1f;
+    font-size: 24px;
 }
 
 .faq .btn-outline-light {
@@ -1153,16 +1215,17 @@ ul li, ol li {
 .footer {
     background-color: #242424;
     background-image: url(../media/images/footer/footer-bg-2.png);
-    -webkit-background-size: 100%;
-    background-size: 100%;
-    padding: 1rem 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 22px 0 30px 120px;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 .footer .formContainer {
-    margin-top: 25px;
+    /*margin-top: 25px;*/
     margin-right: -1rem;
-    padding: 40px 135px 50px 80px;
+    padding: 46px 140px 53px 83px;
     background: #f68e24;
 }
 
@@ -1177,6 +1240,9 @@ ul li, ol li {
 }
 
 .addressContainer .social {
+    margin-right: 32px;
+    padding-left: 32px;
+
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -1192,7 +1258,7 @@ ul li, ol li {
 
 }
 
-.footer .copyRight .cuboid {
+.footer .cuboid {
     color: #f68e24;
     font-weight: 500;
     font-size: 17px;
@@ -1210,11 +1276,11 @@ ul li, ol li {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    height: 45px;
 }
 
-.footer .securityCode::placeholder {
-    /*color: #f68e24;*/
-    color: #fff;
+.footer .securityCode {
+    font-size: 12px;
 }
 
 .footer .renewCaptchaImage {
@@ -1223,11 +1289,12 @@ ul li, ol li {
     margin-left: 6px;
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
+    padding: 5px 7px;
 }
 
 .footer .captchaImageContainer img {
     max-width: 100%;
-    height: 100%;
+    height: 45px;
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
 }
@@ -1237,29 +1304,38 @@ ul li, ol li {
     filter: brightness(1.2);
 }
 
-.footer .social__item:hover img, .footer .social__item:focus img {
-    filter: brightness(1.7);
-    -webkit-transform: scale(1.4);
-    -moz-transform: scale(1.4);
-    -ms-transform: scale(1.4);
-    -o-transform: scale(1.4);
-    transform: scale(1.4);
+.footer .social__item:not(:first-child):hover img, .footer .social__item:not(:first-child):focus img {
+    filter: brightness(1.5);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .footer .email {
     margin-top: 10px;
     display: block;
-    font-size: 12px;
-    color: #c2c2c255;
+    font-size: 13px;
+    color: #c2c2c2;
 
 }
 
 .footer .copyRight {
     margin-top: 20px;
+    padding-right: 140px;
+}
+
+.tarsiminc {
+    color: #696969;
+}
+
+.tarsiminc:hover, .tarsiminc:focus {
+    color: #4e4e4e;
 }
 
 .footer .form-group {
-    /*margin-bottom: 40px;*/
+    margin-bottom: 43px;
 }
 
 .contactUsForm label {
@@ -1268,18 +1344,21 @@ ul li, ol li {
     color: #282828;
 }
 
-.contactUsForm .noBg::placeholder,
-.contactUsForm .noBg::-moz-placeholder,
-.contactUsForm .noBg::-webkit-input-placeholder {
-    color: #fff;
-}
-
 .contactUsForm .noBg {
+    padding-right: 0;
     border-radius: 0;
     background-color: transparent;
     border: transparent;
     border-bottom: 1px solid #c97825;
     color: #fff;
+}
+
+.contactUsForm select {
+    color: #fff !important;
+}
+
+.contactUsForm select option {
+    color: #000 !important;
 }
 
 /*.contactUsForm .noBg::selection {*/
@@ -1294,24 +1373,45 @@ ul li, ol li {
     box-shadow: none;
 }
 
-/*.contactUsForm input::placeholder {*/
-/*color: #b36e27;*/
-/*opacity: 0.5;*/
-/*}*/
-
 /*#endregion*/
 /*#region completed projects page*/
 .completedProjectsPage {
     background-image: url(../media/images/completed-projects/completed-projects-bg.png);
-    -webkit-background-size: auto;
-    background-size: auto;
+    -webkit-background-size: 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
+    background-color: #f4f4f4;
     padding-top: 130px;
-    padding-bottom: 140px;
+    padding-bottom: 130px;
 }
 
-.completedProjectsPage .tab-pane .text-center {
-    margin-top: 80px;
+.completedProjectsPage > .container {
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+.completedProjectsPage .tab-content .row div[class^='col-'] {
+    padding-right: 9px;
+    padding-left: 9px;
+}
+
+.completedProjectsPage .sectionDescription {
+    margin-bottom: 60px;
+}
+
+.moreProjects.btn-outline-light {
+    margin-top: 65px;
+    color: #cecece;
+    background-color: transparent;
+    background-image: none;
+    border-color: #cecece;
+    border-width: 2px;
+    padding: 2px 22px;
+}
+
+.moreProjects.btn-outline-light:hover, .moreProjects.btn-outline-light:focus {
+    color: #fff;
+    background-color: #cecece;
 }
 
 .completedProjectsPage .btn-outline-secondary {
@@ -1399,7 +1499,8 @@ ul li, ol li {
 }
 
 .completedProjectsShowPage ul li {
-    line-height: 0.6;
+    line-height: 15px;
+    overflow: hidden;
 }
 
 .completedProjectsShowPage ul li::before {
@@ -1409,12 +1510,66 @@ ul li, ol li {
     margin-left: 5px;
 }
 
+.completedProjectsShowPage .sectionTitle {
+    margin-bottom: 60px;
+}
+
+.relatedProjects {
+    background: #f4f4f4;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.relatedProjects .content--header {
+    margin-bottom: 60px;
+}
+
+.relatedProjects .owl-dots {
+    margin-top: 50px;
+}
+
+.completedProjectsShowPage .nextProject {
+    width: 180px;
+    height: 100px;
+    position: absolute;
+    bottom: 65px;
+    left: 0;
+}
+
+.completedProjectsShowPage .nextProject a {
+    position: relative;
+}
+
+.completedProjectsShowPage .nextProject a::after {
+    content: '←';
+    position: absolute;
+    right: -62px;
+    top: 10px;
+    color: #808080;
+    font-size: 45px;
+}
+
+.completedProjectsShowPage .nextProject a::before {
+    position: absolute;
+    right: -115px;
+    bottom: 20px;
+    content: 'المشروع القادم';
+    color: #808080;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.completedProjectsShowPage .nextProject img {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
 /*#endregion*/
 /*#region text*/
 .text {
     background-image: url(../media/images/text/text-bg.jpg);
-    -webkit-background-size: auto;
-    background-size: auto;
+    -webkit-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     padding-top: 120px;
     padding-bottom: 220px;
@@ -1450,9 +1605,16 @@ ul li, ol li {
     box-shadow: none;
 }
 
-.contactUsPage .securityCode::placeholder {
-    /*color: #f68e24;*/
-    color: #fff;
+.securityCode::-webkit-input-placeholder { /* Edge */
+    color: #f68e24;
+}
+
+.securityCode:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #f68e24;
+}
+
+.securityCode::placeholder {
+    color: #f68e24;
 }
 
 .contactUsPage .renewCaptchaImage {
@@ -1475,4 +1637,16 @@ button:focus, a:focus {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+}
+
+.noBg::-webkit-input-placeholder { /* Edge */
+    color: white;
+}
+
+.noBg:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+
+.noBg::placeholder {
+    color: white;
 }

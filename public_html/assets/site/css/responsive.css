@@ -415,6 +415,17 @@
 
 /*#endregion*/
 /*#region min-width*/
+@media screen and (min-width: 1600px) {
+    .aboutUs {
+        margin-top: -200px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .aboutUs {
+        margin-top: -150px;
+    }
+}
 @media screen and (min-width: 1200px) {
 
     .orangeTitle {

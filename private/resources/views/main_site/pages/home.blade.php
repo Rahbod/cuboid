@@ -5,7 +5,8 @@
 @endsection
 
 @section('main')
-    <section class="mainSlider owl-carousel position-relative flex-co" id="mainSlider">
+    <section class="mainSlider">
+    <div class="owl-carousel position-relative flex-co" id="mainSlider">
         @if(isset($slider_group))
             @if(isset($slider_group->sliders) and count($slider_group->sliders) > 0)
                 @foreach($slider_group->sliders as $slider)
@@ -26,12 +27,12 @@
                 @endforeach
             @endif
         @endif
+        {{--<img class="topTriangle" src="{{asset('assets/site/media/images/about-us/about-us-traingle-2.png')}}" alt="">--}}
+    </div>
     </section>
 
     <section class="aboutUs">
-        {{--        <img src="{{asset('assets/site/media/images/about-us/topbar.png')}}" alt="">--}}
-
-        <img class="aboutUs--bgLogo" src="{{asset('/assets/site/media/images/about-us/about-us-logo-3.png')}}" alt="">
+{{--        <img class="aboutUs--bgLogo" src="{{asset('/assets/site/media/images/about-us/about-us-logo-3.png')}}" alt="">--}}
         <div class="container my-auto">
             <div class="row">
                 <div class="col-md-6">
@@ -96,7 +97,7 @@
                         </div>
                         <div class="card-title bg-grey-c greyTitle">
 
-                            <span> (m)سبان </span>
+                            <span>سبان(m)</span>
                         </div>
 
                         <div class="card-body">
@@ -432,10 +433,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="mb-4">
-                        <h2 class="downloads__title">
+                        <h2 class="downloads__title sectionTitle">
                             تحميل
                         </h2>
-                        <p class="downloads__descriptions">
+                        <p class="downloads__descriptions sectionDescription">
                             كتالوج وكتيبات شركة كيوبويد مقدمة
                         </p>
                     </div>
@@ -510,7 +511,7 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="sectionTitle">اخبار</h2>
-                    <p>
+                    <p class="sectionDescription">
                         تعرف على الأخبار والإعلانات والعقود الجديدة وعملية تنفيذ المشاريع
                     </p>
                 </div>
@@ -549,12 +550,15 @@
         @isset($categories)
         @foreach($categories as $category)
         $('#completedProjects--{{$category->id}}').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 9000,
+            autoplayHoverPause: true,
             rtl: true,
+            dots: true,
             nav: true,
             items: 4,
-            loop: true,
             margin: 20,
-            dots: true,
             responsive: {
                 // breakpoint from 0 up
                 0: {
@@ -580,12 +584,16 @@
                 '#completedProjects--commercialCarousel,' +
                 '#completedProjects--hotelCarousel,' +
                 '#completedProjects--all-projects').owlCarousel({
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 9000,
+                autoplayHoverPause: true,
                 rtl: true,
+                dots: true,
+
                 nav: true,
                 items: 4,
-                loop: true,
-                margin: 20,
-                dots: true,
+                margin: 9,
                 responsive: {
                     // breakpoint from 0 up
                     0: {
@@ -605,25 +613,30 @@
 
             $('#productsCarousel').owlCarousel({
                 rtl: true,
-                margin: 20,
+                margin: 9,
                 items: 2
             });
 
 
             $('#faqCarousel').owlCarousel({
-                rtl: true,
-//                nav: true,
-                items: 1,
                 loop: true,
-//            margin: 26,
+                autoplay: true,
+                autoplayTimeout: 9000,
+                autoplayHoverPause: true,
+                rtl: true,
+                items: 1,
                 dots: true,
             });
 
             $('#mainSlider').owlCarousel({
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 9000,
+//                autoplayHoverPause:true,
                 rtl: true,
                 nav: true,
                 items: 1,
-                loop: true,
+                dots: false
             });
 
             var player;
