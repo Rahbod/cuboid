@@ -59,7 +59,7 @@
                                 <div class="invalid-tooltip"></div>
                             </div>
 
-                            <div class="form-group col-md-6 pl-md-4 mb-0" tabindex="5">
+                            <div class="form-group col-md-6 pl-md-4 mb-md-0" tabindex="5">
                                 <div class="d-flex justify-content-between" id="captcha_image">
                                     <div style="height: 38px;" class="captchaImageContainer">
                                         {!! captcha_img('flat'); !!}
@@ -84,7 +84,7 @@
                                     </div>
                                 @endif
                             </div>
-                            <div class="form-group col-md-6 pr-md-4 mb-0">
+                            <div class="form-group col-md-6 pr-md-4 mb-md-0">
                                 <button tabindex="7" type="submit" class="btn submitBtn form-control">إرسال إلى القسم ذي
                                     الصلة
                                 </button>

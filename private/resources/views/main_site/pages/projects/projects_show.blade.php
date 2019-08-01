@@ -118,7 +118,7 @@
                                             {{$project->description}}
                                         </p>
                                         <div class="text-right moreBtn">
-                                            <a href="{{url('/'.str_plural($type).'/show/'.$project->id)}}"
+                                            <a href="{{url('//show/'.$project->id)}}"
                                                class="btn btn-outline-light">
                                                 اکثر من
                                             </a>

@@ -1,12 +1,5 @@
 /*#region public*/
 
-section {
-    min-height: 100vh;
-    align-items: center;
-    display: flex;
-    /*justify-content: center;*/
-}
-
 .full-height {
     height: 100vh;
 }
@@ -233,7 +226,8 @@ ul li, ol li {
 /*#endregion*/
 /*#region landing*/
 .mainSlider {
-    margin-top: 40px;
+    margin-top: 0;
+    padding-top: 50px;
 }
 
 .mainSlider--item {
@@ -271,8 +265,8 @@ ul li, ol li {
     position: absolute;
     right: 0;
     left: 0;
-    z-index: 2;
-    top: 53px;
+    z-index: 999;
+    top: 100px;
     background: transparent !important;
 }
 
@@ -281,11 +275,11 @@ ul li, ol li {
     margin-top: 50px;
     position: static;
     background: #1f1f1f !important;
-    padding: 20px 0 30px 0;
+    padding: 25px 0 25px 0;
 }
 
 .header.subPage .smallHeader .smallHeader__logo {
-    width: 100px;
+    width: 115px;
     height: 75px;
     padding-left: 6px;
     display: block;
@@ -311,7 +305,7 @@ ul li, ol li {
 
 .smallHeader .smallHeader__logo {
     padding-left: 10px;
-    display: none;
+    width: 120px;
 }
 
 .smallHeader .subTitle {
@@ -387,18 +381,15 @@ ul li, ol li {
 /*#endregion*/
 /*#region about us*/
 .aboutUs {
-    /*display: flex;*/
-    margin-top: -120px;
     z-index: 1;
     background-image: url(../media/images/about-us/about-us-bg-high.png);
     /*background-image: url(../media/images/about-us/just-bee.png);*/
-    background-position: 0 0;
+    background-position: left center;
     background-repeat: no-repeat;
-    background-size: cover;
-    /*height: 420px;*/
+    background-size: auto 100%;
     position: relative;
     padding: 60px 0;
-    /*background: #f68b1f;*/
+    background-color: #f68b1f;
 }
 
 /*.aboutUs::before {*/
@@ -451,12 +442,16 @@ ul li, ol li {
 .completedProjects {
     background-image: url(../media/images/slider/slider-bg.jpg);
     /* height: 878px; */
-    -webkit-background-size: cover;
-    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+
     background-repeat: no-repeat;
     padding-top: 60px;
     padding-bottom: 60px;
     position: relative;
+    background-color: #ededed;
+
 }
 
 .completedProjects .card-title {
@@ -714,11 +709,15 @@ ul li, ol li {
 .products {
     background-image: url('../media/images/products/products-bg.jpg');
     /*height: 878px;*/
-    -webkit-background-size: cover;
-    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+
     background-repeat: no-repeat;
     padding-top: 80px;
     padding-bottom: 110px;
+    background-color: #e8eae7;
+
 }
 
 .products .nav .nav-link {
@@ -911,10 +910,13 @@ ul li, ol li {
 .benefits {
     background-image: url('../media/images/benefits/benefits-bg.jpg');
     /*height: 738px;*/
-    -webkit-background-size: cover;
-    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     padding-top: 60px;
+    background-color: #f68b1f;
+
 }
 
 .benefits--lists {
@@ -940,10 +942,13 @@ ul li, ol li {
 .downloads {
     background-image: url('../media/images/downloads/downloads-bg.jpg');
     /*height: 738px;*/
-    -webkit-background-size: cover;
-    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     padding: 73px 0;
+    background-color: #282828;
+
 }
 
 .downloads .downloads__title {
@@ -1024,10 +1029,12 @@ ul li, ol li {
 .news {
     background-image: url('../media/images/news/news-bg.jpg');
     /*height: 738px;*/
-    -webkit-background-size: cover;
-    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     padding: 70px 0;
+    background-color: #e3e5e2;
 }
 
 .news .card-img-top {
@@ -1116,22 +1123,39 @@ ul li, ol li {
 }
 
 .faq::before {
+    /*content: '';*/
+    /*clear: both;*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*background-image: url(../media/images/faq/faq-bg.png);*/
+    /*!*height: 495px;*!*/
+    /*height: 100vh;*/
+    /*-webkit-background-size: 100%;*/
+    /*background-size: contain;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center right;*/
+    /*top: 0;*/
+    /*!*top: -57px;*!*/
+    /*right: 0;*/
+    /*!* height: 100%; *!*/
+    /*width: 100%;*/
+
     content: '';
     clear: both;
     display: block;
     position: absolute;
     background-image: url(../media/images/faq/faq-bg.png);
-    /*height: 495px;*/
+    /* height: 495px; */
     height: 100vh;
     -webkit-background-size: 100%;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center right;
-    top: 0;
-    /*top: -57px;*/
+    background-position: center;
+    /* top: 0; */
+    /* top: -57px; */
     right: 0;
-    /* height: 100%; */
-    width: 100%;
+    height: 100%;
+    width: 50%;
 
 }
 
@@ -1215,8 +1239,9 @@ ul li, ol li {
 .footer {
     background-color: #242424;
     background-image: url(../media/images/footer/footer-bg-2.png);
-    -webkit-background-size: cover;
-    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
     padding: 22px 0 30px 120px;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -1377,8 +1402,10 @@ ul li, ol li {
 /*#region completed projects page*/
 .completedProjectsPage {
     background-image: url(../media/images/completed-projects/completed-projects-bg.png);
-    -webkit-background-size: 100%;
-    background-size: 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+
     background-repeat: no-repeat;
     background-color: #f4f4f4;
     padding-top: 130px;
@@ -1538,6 +1565,7 @@ ul li, ol li {
 
 .completedProjectsShowPage .nextProject a {
     position: relative;
+    display: block;
 }
 
 .completedProjectsShowPage .nextProject a::after {
@@ -1568,8 +1596,10 @@ ul li, ol li {
 /*#region text*/
 .text {
     background-image: url(../media/images/text/text-bg.jpg);
-    -webkit-background-size: cover;
-    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+
     background-repeat: no-repeat;
     padding-top: 120px;
     padding-bottom: 220px;

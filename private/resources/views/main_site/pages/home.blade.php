@@ -6,31 +6,30 @@
 
 @section('main')
     <section class="mainSlider">
-    <div class="owl-carousel position-relative flex-co" id="mainSlider">
-        @if(isset($slider_group))
-            @if(isset($slider_group->sliders) and count($slider_group->sliders) > 0)
-                @foreach($slider_group->sliders as $slider)
-                    <div class="mainSlider--item">
-                        <img src="{{asset($slider['image'])}}" alt="{{$slider['title']}}">
-                        <div class="container position-relative d-flex flex-column align-items-end">
-                            <div class="leftBox">
-                                <div class="d-flex">
-                                    <a href="{{url($slider['link'])}}" title="{{$slider['title']}}">
-                                        <span class="orangeRibbon"></span>
-                                        <p>{!! $slider['text']!!}</p>
-                                    </a>
+        <div class="owl-carousel position-relative flex-co" id="mainSlider">
+            @if(isset($slider_group))
+                @if(isset($slider_group->sliders) and count($slider_group->sliders) > 0)
+                    @foreach($slider_group->sliders as $slider)
+                        <div class="mainSlider--item">
+                            <img src="{{asset($slider['image'])}}" alt="{{$slider['title']}}">
+                            <div class="container position-relative d-flex flex-column align-items-end">
+                                <div class="leftBox">
+                                    <div class="d-flex">
+                                        <a href="{{url($slider['link'])}}" title="{{$slider['title']}}">
+                                            <span class="orangeRibbon"></span>
+                                            <p>{!! $slider['text']!!}</p>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
-
-                    </div>
-                @endforeach
+                    @endforeach
+                @endif
             @endif
-        @endif
-        {{--<img class="topTriangle" src="{{asset('assets/site/media/images/about-us/about-us-traingle-2.png')}}" alt="">--}}
-    </div>
+            {{--<img class="topTriangle" src="{{asset('assets/site/media/images/about-us/about-us-traingle-2.png')}}" alt="">--}}
+        </div>
     </section>
-
     <section class="aboutUs">
 {{--        <img class="aboutUs--bgLogo" src="{{asset('/assets/site/media/images/about-us/about-us-logo-3.png')}}" alt="">--}}
         <div class="container my-auto">
@@ -63,7 +62,7 @@
     <section class="products">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <h2 class="content--header sectionTitle">المنتجات</h2>
 
                     <p class="content--text">
@@ -431,7 +430,7 @@
     <section class="downloads">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-md-6">
                     <div class="mb-4">
                         <h2 class="downloads__title sectionTitle">
                             تحميل
@@ -509,7 +508,7 @@
     <section class="news">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-md-6">
                     <h2 class="sectionTitle">اخبار</h2>
                     <p class="sectionDescription">
                         تعرف على الأخبار والإعلانات والعقود الجديدة وعملية تنفيذ المشاريع

@@ -135,6 +135,11 @@
 }
 
 @media screen and (max-width: 991.98px) {
+    .faq {
+        height: auto;
+        padding: 60px 0;
+    }
+
     .contactUsPage .formContainer {
         margin-top: 0;
         margin-right: -16px;
@@ -227,7 +232,19 @@
     }
 
     .footer {
-        padding-bottom: 1rem;
+        padding: 0;
+    }
+
+    .footer .copyRight {
+        margin-top: 20px;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .addressContainer .social {
+        margin-right: 1rem;
+        padding-left: 1rem;
+        position: absolute;
     }
 }
 
@@ -426,7 +443,14 @@
         margin-top: -150px;
     }
 }
+
 @media screen and (min-width: 1200px) {
+    section {
+        min-height: 100vh;
+        align-items: center;
+        display: flex;
+        /*justify-content: center;*/
+    }
 
     .orangeTitle {
         margin-left: -16px !important;

@@ -56,11 +56,10 @@ class ProjectController extends Controller
 //        $next_project = $category['projects'][$project_random_number];
 
 
-        $ids = Project::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->get()->pluck('id')->toArray();
-        $counts = Project::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->get()->count();
-//        dd($ids, $counts);
+        $ids = $model_name::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->get()->pluck('id')->toArray();
+        $counts = $model_name::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->get()->count();
 
-        $next_project = Project::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->findOrFail($ids[rand(0, $counts -1)]);
+        $next_project = $model_name::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->findOrFail($ids[rand(0, $counts -1)]);
         $related_projects = Project::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->where('category_id', $project->category_id)->get();
 
         $faqs = Faq::where('status', 1)->orderBy('order', 'asc')->take(10)->get();
