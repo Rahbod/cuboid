@@ -49,7 +49,7 @@ class ContentController extends Controller
 
     public function contents($type, $category_id = null)
     {
-        $categories = Category::where('status', 1)->where('type', $type)->get();
+        $categories = Category::where('status', 1)->where('type', $type)->whereHas('contents')->get();
 
         $query = Content::where('status', 1)->where('type', $type)->orderBy('order', 'asc');
         if ($category_id) {

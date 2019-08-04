@@ -20,9 +20,9 @@
                             @endforeach
                         </div>
                     @else
-                        <a style="cursor: none;" title="" class="galleryItem" href="javascript:;">
-                            <img class="img-fluid p-5"
-                                 src="{{asset('/assets/site/media/images/completed-projects/gallery.svg')}}"
+                        <a style="cursor: pointer;" title="" class="galleryItem hasNoGallery" href="javascript:;">
+                            <img class="img-fluid"
+                                 src="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}"
                                  alt="">
                             <div class="galleryItem__indicator">
                                 هذا المشروع لا يحتوي على معرض.
@@ -30,7 +30,7 @@
                         </a>
                     @endif
                 </div>
-                <div class="col-md-5 order-1 order-lg-2">
+                <div class="col-md-5 order-1 order-lg-2 pr-60">
                     <h2 class="sectionTitle">{{$content->title}}</h2>
                     <h5>{{$content->summary}}</h5>
 

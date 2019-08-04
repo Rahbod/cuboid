@@ -50,9 +50,9 @@
                             @endforeach
                         </div>
                     @else
-                        <a style="cursor: no-drop;" title="" class="galleryItem" href="javascript:;">
+                        <a style="cursor: pointer;" title="" class="galleryItem hasNoGallery" href="javascript:;">
                             <img class="img-fluid"
-                                 src="{{asset('/assets/site/media/images/completed-projects/gallery.svg')}}"
+                                 src="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}"
                                  alt="">
                             <div class="galleryItem__indicator">
                                 هذا المشروع لا يحتوي على معرض.
@@ -61,11 +61,10 @@
                     @endif
                 </div>
                 <div class="col-md-5 order-1 order-lg-2 pr-md-4">
-                    <h2 class="sectionTitle">المشاريع</h2>
-                    <h3>{{$project->name}}</h3>
-
+                    <img class="img-fluid" src="{{$project->image}}" alt="{{$project->title}}">
+                    <h2 class="sectionTitle">{{$project->title}}</h2>
+                    <h3 class="sectionTitle">{{$project->name}}</h3>
                     <p class="mb-3"> {!! $project->description !!}</p>
-
                     <h4 style="margin-top: 60px;margin-bottom: 0;">المواصفات الفنيه</h4>
                     <ul>
                         <li>العنوان : {{$project->sub_title}}</li>
@@ -80,13 +79,13 @@
             </div>
         </div>
         @if(isset($next_project))
-          <div class="nextProject">
-              <a href="{{url('/'.str_plural($type).'/show/'.$next_project->id)}}"
-                 class="" title="{{$next_project->title}}">
-                  <img class="card-img-top" src="{{asset($next_project->image)}}"
-                       alt="{{$next_project->title}}">
-              </a>
-          </div>
+            <div class="nextProject">
+                <a href="{{url('/'.str_plural($type).'/show/'.$next_project->id)}}"
+                   class="" title="{{$next_project->title}}">
+                    <img class="card-img-top" src="{{asset($next_project->image)}}"
+                         alt="{{$next_project->title}}">
+                </a>
+            </div>
         @endif
 
         <img class="bg-image"
@@ -97,7 +96,12 @@
         <div class="container" style="padding-right: 40px;">
             <div class="row">
                 <div class="col-12">
-                    <h2 style="padding-right: 20px;" class="content--header">المشاريع ذات الصلة</h2>
+                    @if($type == 'project')
+                        <h2 style="padding-right: 20px;" class="content--header">المشاريع ذات الصلة</h2>
+                    @else
+                        <h2 style="padding-right: 20px;" class="content--header">المشاريع</h2>
+                    @endif
+
                     <div id="relatedProjects" class="owl-carousel">
                         @if(!$related_projects->isEmpty())
                             @foreach($related_projects as $project)
@@ -118,9 +122,10 @@
                                             {{$project->description}}
                                         </p>
                                         <div class="text-right moreBtn">
-                                            <a href="{{url('//show/'.$project->id)}}"
+                                            <a title="{{$project->title}}"
+                                               href="{{url('/projects/show/'.$project->id)}}"
                                                class="btn btn-outline-light">
-                                                اکثر من
+                                                اكثر من
                                             </a>
                                         </div>
                                     </div>
@@ -139,22 +144,22 @@
 @push('scripts')
     <script>
         $('#relatedProjects').owlCarousel({
-//            loop: true,
-//            autoplay: true,
-//            autoplayTimeout: 9000,
-//            autoplayHoverPause: true,
-
             nav: true,
+            margin: 9,
+
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 9000,
+            autoplayHoverPause: true,
+            rtl: true,
             items: 4,
-            margin: 10,
             dots: true,
             responsive: {
                 // breakpoint from 0 up
                 0: {
                     items: 1
                 },
-
-                // breakpoint from 576 up
+                // breakpoint from 400 up
 
                 576: {
                     items: 3

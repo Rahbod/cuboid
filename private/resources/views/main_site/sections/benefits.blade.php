@@ -1,7 +1,7 @@
 <section class="benefits">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-md-6">
                 <h2 class="sectionTitle">
                     مزايا سقف الكيوبويد
                 </h2>

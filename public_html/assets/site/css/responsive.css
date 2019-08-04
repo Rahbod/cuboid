@@ -1,4 +1,5 @@
 /*#region max-width*/
+
 @media screen and (max-width: 1199.98px) {
 
     .completedProjects .menu-trigger {
@@ -75,10 +76,6 @@
 
     }
 
-    .aboutUs {
-        margin-top: -130px;
-    }
-
     .products .card {
         width: 23.5%;
         margin-left: 0;
@@ -135,6 +132,11 @@
 }
 
 @media screen and (max-width: 991.98px) {
+
+    .faq::before {
+        right: calc(50% - 30%);
+    }
+
     .faq {
         height: auto;
         padding: 60px 0;
@@ -433,14 +435,11 @@
 /*#endregion*/
 /*#region min-width*/
 @media screen and (min-width: 1600px) {
-    .aboutUs {
-        margin-top: -200px;
-    }
 }
 
 @media screen and (min-width: 1400px) {
-    .aboutUs {
-        margin-top: -150px;
+    .products .card:first-child .orangeTitle {
+        margin-bottom: 81px;
     }
 }
 
@@ -455,8 +454,20 @@
     .orangeTitle {
         margin-left: -16px !important;
         margin-right: -16px !important;
-        padding: 10px 46px !important;
+        padding: 25px 46px !important;
+        margin-bottom: 70px;
     }
+
+    .products .card:last-child .orangeTitle {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
+    .products .card:last-child .greyTitle {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
 }
 
 @media screen and (min-width: 992px) {
@@ -471,6 +482,12 @@
 
 @media screen and (max-width: 576px) {
 
+}
+
+@media screen and (max-width: 1024px) and (max-width: 1400px) {
+    .completedProjects, .completedProjectsPage {
+        background-position: top -400px !important;
+    }
 }
 
 /*#endregion*/

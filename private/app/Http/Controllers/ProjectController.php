@@ -17,13 +17,20 @@ class ProjectController extends Controller
     public function contents($type, $category_id = null)
     {
         $model_name = '\\App\\' . ucfirst($type);
-        $categories = Category::where('status', 1)->where('type', $type)->get();
+        $categories = Category::where('status', 1)->where('type', $type)->whereHas(str_plural($type))->get();
 
         $query = $model_name::where('status', 1)->where('type', $type)->orderBy('order', 'asc');
         if ($category_id) {
             $query->where('category_id', $category_id);
         }
         $contents = $query->paginate(16);
+
+//        dd($categories);
+        if (request()->ajax()) {
+            return view('main_site.pages.projects.projects_item_generator', ['projects'=>$contents,'type' => $type,]);
+        }
+
+//        dd($contents);
 
         $faqs = Faq::where('status', 1)->orderBy('order', 'asc')->take(10)->get();
 
@@ -59,8 +66,9 @@ class ProjectController extends Controller
         $ids = $model_name::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->get()->pluck('id')->toArray();
         $counts = $model_name::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->get()->count();
 
-        $next_project = $model_name::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->findOrFail($ids[rand(0, $counts -1)]);
-        $related_projects = Project::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->where('category_id', $project->category_id)->get();
+        $next_project = $model_name::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->findOrFail($ids[rand(0, $counts - 1)]);
+
+        $related_projects = Project::where('status', 1)->orderBy('order', 'asc')->where('type', 'project')->take(10)->get();
 
         $faqs = Faq::where('status', 1)->orderBy('order', 'asc')->take(10)->get();
         return view('main_site.pages.projects.projects_show')

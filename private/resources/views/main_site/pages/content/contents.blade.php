@@ -58,11 +58,11 @@
                 <div class="col-12 px-md-0">
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" role="tabpanel">
-                            <div class="container-fluid">
+                            <div class="container-fluid px-30">
                                 <div class="row">
                                     @foreach($contents as $content)
-                                        <div class="col-12 col-sm-4 col-md-3">
-                                            <div class="cardOuter" style="margin-bottom: 20px;">
+                                        <div class="col-12 col-sm-4 col-md-3 px-10">
+                                            <div class="cardOuter">
                                                 <div class="card">
                                                     <img class="card-img-top" src="{{$content->image}}"
                                                          alt="Card image cap">
@@ -81,6 +81,17 @@
                                         </div>
                                     @endforeach
                                 </div>
+
+                                @if((int)($contents->total() / $contents->perPage()) > 0 )
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            <a title="اكثر من ..." href="javascript:;"
+                                               class="btn btn-outline-light moreProjects">
+                                                اكثر من ...
+                                            </a>
+                                        </div>
+                                    </div>
+                                @endif
 
                             </div>
                         </div>

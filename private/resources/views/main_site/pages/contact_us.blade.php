@@ -6,10 +6,10 @@
 
 @section('main')
 
-    <section class="contactUsPage my-md-5">
-        <div class="container">
+    <section class="footer contactUsPage">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-8 offset-md-4 mx-auto">
+                <div class="col-12 col-md-7 px-0 px-lg-3">
                     <div class="formContainer">
                         <form action="{{url(session('lang').'/'.'contact-us')}}" class="contactUsForm"
                               method="post" enctype="multipart/form-data">
@@ -28,9 +28,9 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-6 form-group pl-md-4">
                                     <label for="">القسم المطلوب</label>
-                                    <select tabindex="1" name="relevant_section" class="custom-select noBg" id="">
+                                    <select tabindex="1" name="relevant_section" class="form-control noBg" id="">
                                         @if(config('system.relevant_section'))
                                             <option selected>انتخب ...</option>
                                             @foreach(config('system.relevant_section') as$key=> $option)
@@ -44,17 +44,17 @@
                                         @endif
                                     </select>
                                 </div>
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-6 form-group pr-md-4">
                                     <label for="">الاسم الأول واللقب</label>
                                     <input tabindex="2" name="name" type="text" class="form-control noBg" id="2"
                                            placeholder="الاسم الأول واللقب">
                                 </div>
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-6 form-group pl-md-4">
                                     <label for="">البريد الإلكتروني</label>
                                     <input tabindex="3" name="email" type="email" class="form-control noBg" id="3"
                                            placeholder="example@email.com">
                                 </div>
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-6 form-group pr-md-4">
                                     <label for="">رقم الهاتف المحمول</label>
                                     <input tabindex="4" name="phone" type="text" class="form-control noBg" id="4"
                                            placeholder="09xxxxxxxxx">
@@ -63,11 +63,11 @@
                                     <label for="text">وصف</label>
                                     <textarea tabindex="5" name="content" class="form-control noBg" id="content"
                                               placeholder="وصف"
-                                              required cols="30" rows="5"></textarea>
+                                              required cols="30" rows="4"></textarea>
                                     <div class="invalid-tooltip"></div>
                                 </div>
 
-                                <div class="form-group col-md-6" tabindex="5">
+                                <div class="form-group col-md-6 pl-md-4 mb-md-0" tabindex="5">
                                     <div class="d-flex justify-content-between" id="captcha_image">
                                         <div style="height: 38px;" class="captchaImageContainer">
                                             {!! captcha_img('flat'); !!}
@@ -75,7 +75,9 @@
                                         <a data-lang="{{session('lang')}}"
                                            href="javascript:;"
                                            class="renewCaptchaImage btn border ml-2">
-                                            <i class="far fa-redo"></i>
+                                            {{--<i class="far fa-redo"></i>--}}
+                                            <img class="" src="{{asset('/assets/site/media/images/footer/redo.png')}}"
+                                                 alt="">
                                         </a>
                                         <input type="text" class="form-control securityCode"
                                                autocomplete="captcha"
@@ -91,7 +93,7 @@
                                         </div>
                                     @endif
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-6 pr-md-4 mb-md-0">
                                     <button tabindex="7" type="submit" class="btn submitBtn form-control">إرسال إلى
                                         القسم ذي
                                         الصلة
@@ -99,28 +101,37 @@
                                 </div>
 
                             </div>
-                            {{--<div class="form-row">--}}
-                            {{--<div class="form-group col-md-6">--}}
-                            {{--<div class="d-flex" id="captcha_image">--}}
-                            {{--<div class="captchaImageContainer">--}}
-                            {{--<img src="{{asset('assets/site/media/images/footer/captcha.png')}}">--}}
-                            {{--</div>--}}
-                            {{--<a href="void:;" class="renewCaptchaImage btn">--}}
-                            {{--<i class="far fa-redo"></i>--}}
-                            {{--</a>--}}
-                            {{--<input style="color: #f68e24;" type="text"--}}
-                            {{--class="form-control securityCode flex-fill" id="5"--}}
-                            {{--placeholder=غتصوويرغامغويتوي">--}}
-                            {{--</div>--}}
-                            {{--</div>--}}
-
-                            {{--<div class="form-group col-md-6">--}}
-                            {{--<button tabindex="6" type="submit" class="btn submitBtn form-control">إرسال إلى القسم ذي--}}
-                            {{--الصلة--}}
-                            {{--</button>--}}
-                            {{--</div>--}}
-                            {{--</div>--}}
                         </form>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="addressContainer">
+                        <ul style="width: 380px;">
+                            <li class="mb-4">
+                                <div class="d-flex">
+                                    <img class="ml-2 h-100"
+                                         src="{{asset('assets/site/media/images/footer/location-contactUsPage.png')}}" alt="">
+                                    <span class="address flex-fill">
+                                    {{config('system.about_us.address')}}
+                            </span>
+                                </div>
+                            </li>
+                            <li class="phoneNumbers" style="margin-bottom: 25px;margin-right: 32px;">
+                                <h4 class="text-white sectionTitle">هواتف المكاتب المحلية</h4>
+                                <ul>
+                                    @if(config('system.phone_numbers'))
+                                        @foreach(config('system.phone_numbers') as $name=>$number)
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="phoneText">{{$name}}</span>
+                                                    <span class="phoneNumber">{{$number}}</span>
+                                                </div>
+                                            </li>
+                                        @endforeach
+                                    @endif
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

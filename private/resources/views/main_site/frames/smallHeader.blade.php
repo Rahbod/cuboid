@@ -2,9 +2,20 @@
     <div class="container px-md-4">
         <div class="row">
             <div class="col-9 text-right">
-                <div class="smallHeader__title d-inline-block">
+                <div class="smallHeader__title">
                     <p class="upTitle">سقف الوفل</p>
                     <h1 class="title">كيوبويد</h1>
+                    @if(isset($type))
+                        @if($type == 'project')
+                            <h2 class="sectionTitle">  / المشاريع</h2>
+                        @elseif($type == 'product')
+                            <h2 class="sectionTitle">  / المنتجات</h2>
+                        @elseif($type == 'news')
+                            <h2 class="sectionTitle">  / الاخبار</h2>
+                        @elseif($type == 'article')
+                            <h2 class="sectionTitle">  / مقالة</h2>
+                        @endif
+                    @endif
 
                     <span class="subTitle float-left">خيار طبيعي</span>
                 </div>

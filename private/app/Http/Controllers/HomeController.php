@@ -14,7 +14,7 @@ class HomeController extends Controller
     {
 //        dd('hi');
         $about_us = config('system.about_us.introduction');
-        $categories = Category::where('status', 1)->where('type', 'project')->with(['projects' => function ($query) {
+        $categories = Category::where('status', 1)->where('type', 'project')->whereHas('projects')->with(['projects' => function ($query) {
             $query->where('status', 1);
             $query->orderBy('order', 'asc');
             $query->take(8);

@@ -24,7 +24,7 @@
                     <li class="nav-item">
                         <a class="nav-link active"
                            id="pills-all-projects-tab" data-toggle="pill" href="#pills-all-projects" role="tab"
-                           aria-controls="pills-all-projects" aria-selected="true">جمیع المشاریع</a>
+                           aria-controls="pills-all-projects" aria-selected="true">جميع المشاريع</a>
                     </li>
 
                     @foreach($categories as $category)

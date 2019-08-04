@@ -65,10 +65,10 @@
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" role="tabpanel">
                     <div class="container-fluid">
-                        <div class="row">
+                        <div class="row" id="projectsContainer">
                             @foreach($projects as $project)
                                 <div class="col-12 col-md-3">
-                                    <div class="card" style="margin-bottom: 20px;">
+                                    <div class="card" style="margin-bottom: 10px;">
                                         <img class="card-img-top" src="{{$project->image}}"
                                              alt="Card image cap">
                                         <div class="card-body">
@@ -97,14 +97,19 @@
                             @endforeach
                         </div>
 
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <a title="اكثر من ..." href="javascript:;"
-                                   class="btn btn-outline-light moreProjects">
-                                    اكثر من ...
-                                </a>
+                        {{--                        {{dd($projects->total(),$projects->perPage(),(int)($projects->total() / $projects->perPage()) > 1 )}}--}}
+
+                        @if(!(($projects->total() / $projects->perPage()) == 1 &&  ($projects->total() % $projects->perPage()) == 0))
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <a style="display: inline-block;" title="اكثر من ..."
+                                       href="{{$projects->nextPageUrl()}}"
+                                       class="btn btn-outline-light moreProjects pagination">
+                                        اكثر من ...
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -127,5 +132,47 @@
             items: 1,
             dots: true,
         });
+
+        var tempPageNumber = 0;
+
+        $(document).on('click', '.pagination', function (event) {
+            event.preventDefault();
+            var This = $(this);
+            var url = This.attr('href').split('page=')[0];
+            var page = This.attr('href').split('page=')[1];
+            var myurl = This.attr('href');
+
+            var totalPages = {{ round($projects->total() / $projects->perPage()) }};
+
+//            if (tempPageNumber >= totalPages) {
+            $.ajax({
+                url: myurl,
+                type: "get",
+                datatype: "html",
+                success: function (data) {
+//                        if (tempPageNumber >= totalPages) {
+//                            This.hide();
+//                        }
+//                        else {
+                    $("#projectsContainer").append(data);
+                    var pageNumber = parseInt(page) + 1;
+                    tempPageNumber = pageNumber;
+                    This.attr('href', url + 'page=' + pageNumber);
+//                        }
+
+                },
+                error: function (error) {
+                    console.log(error);
+                },
+                fail: function (fail) {
+                    console.log(fail);
+                }
+
+            });
+//            }
+//            else
+//                This.hide();
+        });
+
     </script>
 @endpush
