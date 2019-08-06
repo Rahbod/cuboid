@@ -34,7 +34,7 @@
     <section class="completedProjectsShowPage">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 order-2 order-lg-1 pl-md-4">
+                <div class="col-md-5 pl-md-4 mb-5">
                     @if($project->gallery && $project->gallery->gallery_items)
                         <div id="completedProjectsShowPageGallery" class="owl-carousel gallery">
                             @foreach($project->gallery->gallery_items as $gallery_item)
@@ -50,18 +50,34 @@
                             @endforeach
                         </div>
                     @else
-                        <a style="cursor: pointer;" title="" class="galleryItem hasNoGallery" href="javascript:;">
-                            <img class="img-fluid"
-                                 src="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}"
-                                 alt="">
-                            <div class="galleryItem__indicator">
-                                هذا المشروع لا يحتوي على معرض.
-                            </div>
-                        </a>
+                        <div id="completedProjectsShowPageGallery" class="owl-carousel gallery">
+                            <a title="" class="html5lightbox galleryItem" data-group="mygroup"
+                               data-thumbnail="{{$project->image}}" data-width="436" data-height="700"
+                               href="{{$project->image}}">
+                                <img class="h-100" src="{{$project->image}}" alt="{{$project->title}}">
+
+                                <div class="galleryItem__indicator">
+                                    {{$project->title}}
+                                </div>
+                            </a>
+
+                            <a style="cursor: pointer;" title="" class="html5lightbox galleryItem hasNoGallery"
+                               data-width="436" data-height="700"
+                               href="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}"
+                               data-group="mygroup"
+                               data-thumbnail="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}">
+                                <img class="" src="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}" alt="">
+                                @if($type == 'project')
+                                    <div class="galleryItem__indicator">هذا المشروع لا يحتوي على معرض.</div>
+                                @else
+                                    <div class="galleryItem__indicator">هذا المنتچ لا يحتوي على معرض.</div>
+
+                                @endif
+                            </a>
+                        </div>
                     @endif
                 </div>
-                <div class="col-md-5 order-1 order-lg-2 pr-md-4">
-                    <img class="img-fluid" src="{{$project->image}}" alt="{{$project->title}}">
+                <div class="col-md-5 pr-md-4 pb-150">
                     <h2 class="sectionTitle">{{$project->title}}</h2>
                     <h3 class="sectionTitle">{{$project->name}}</h3>
                     <p class="mb-3"> {!! $project->description !!}</p>
@@ -93,7 +109,7 @@
     </section>
 
     <section class="completedProjects relatedProjects">
-        <div class="container" style="padding-right: 40px;">
+        <div class="container">
             <div class="row">
                 <div class="col-12">
                     @if($type == 'project')

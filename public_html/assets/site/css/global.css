@@ -125,6 +125,11 @@ ul {
 
 .navbar-brand {
     width: 40px;
+    min-height: 50px;
+}
+
+.navbar-brand img {
+    padding: 5px 0;
 }
 
 .leftMenu {
@@ -313,11 +318,6 @@ ul li, ol li {
     padding-left: 0;
 }
 
-.px-30 {
-    padding-right: 30px;
-    padding-left: 30px;
-}
-
 .smallHeader .subTitle {
     font-size: 20px;
     margin-right: 83px;
@@ -499,6 +499,8 @@ ul li, ol li {
 .completedProjects .card-body {
     position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
     background: #fff;
     padding: 20px 20px 35px;
 
@@ -772,7 +774,8 @@ ul li, ol li {
 }
 
 .products .card:first-child .orangeTitle {
-    padding: 17.5px 10px 19.5px 25px !important;
+    /*padding: 17.5px 10px 19.5px 25px !important;*/
+    padding: 20px 10px 19.8px 25px !important;
     font-size: 15px;
     border-top-right-radius: 1rem;
     width: 60%;
@@ -783,10 +786,11 @@ ul li, ol li {
 }
 
 .products .card:first-child .greyTitle {
+    margin-bottom: 2px;
     text-align: left;
     width: 60%;
-    /*padding: 10px 15px;*/
-    padding: 10px 15px 10px 30px;
+    padding: 10px 30px;
+    /*padding: 10px 15px 10px 30px;*/
     margin-right: auto;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
@@ -908,7 +912,8 @@ ul li, ol li {
     margin-right: -22px;
     margin-bottom: 0;
     /*padding: 10px 50px;*/
-    padding: 10px 40px;}
+    padding: 10px 40px;
+}
 
 .w-20 {
     width: 19%;
@@ -1132,6 +1137,10 @@ ul li, ol li {
 
 .news .owl-dots {
     margin-top: 100px !important;
+}
+
+.contentsPage .sectionTitle {
+    font-size: 24px!important;
 }
 
 /*#endregion*/
@@ -1430,16 +1439,16 @@ ul li, ol li {
 
 /*#endregion*/
 /*#region completed projects page*/
-.completedProjectsPage {
-    background-image: url(../media/images/completed-projects/completed-projects-bg.png);
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: #f4f4f4;
-    padding-top: 130px;
-    padding-bottom: 130px;
-}
+/*.completedProjectsPage {*/
+/*background-image: url(../media/images/completed-projects/completed-projects-bg.png);*/
+/*background-position: top left;*/
+/*background-repeat: no-repeat;*/
+/*background-size: contain;*/
+/*background-repeat: no-repeat;*/
+/*background-color: #f4f4f4;*/
+/*padding-top: 130px;*/
+/*padding-bottom: 130px;*/
+/*}*/
 
 .completedProjectsPage > .container {
     /*padding-right: 80px;*/
@@ -1481,6 +1490,7 @@ ul li, ol li {
     -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 
 .completedProjectsPage .btn-outline-secondary:hover, .completedProjectsPage .btn-outline-secondary:focus {
@@ -1546,7 +1556,8 @@ ul li, ol li {
 
 .completedProjectsShowPage .galleryItem {
     position: relative;
-    /*display: block;*/
+    display: block;
+    height: 790px;
 }
 
 .completedProjectsShowPage .galleryItem__indicator {
@@ -1554,7 +1565,7 @@ ul li, ol li {
     padding: 18px 0;
     position: absolute;
     bottom: 0;
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     right: 0;
     left: 0;
@@ -1594,7 +1605,7 @@ ul li, ol li {
     margin-top: 50px;
 }
 
-.completedProjectsShowPage .nextProject {
+.nextProject {
     width: 180px;
     height: 100px;
     position: absolute;
@@ -1607,7 +1618,7 @@ ul li, ol li {
     transition: all 0.5s;
 }
 
-.completedProjectsShowPage .nextProject:hover, .completedProjectsShowPage .nextProject:focus {
+.nextProject:hover, .nextProject:focus {
     -webkit-transform: translateX(-15px);
     -moz-transform: translateX(-15px);
     -ms-transform: translateX(-15px);
@@ -1616,12 +1627,13 @@ ul li, ol li {
 
 }
 
-.completedProjectsShowPage .nextProject a {
+.nextProject a {
     position: relative;
     display: block;
+    height: 100%;
 }
 
-.completedProjectsShowPage .nextProject a::after {
+.nextProject a::after {
     content: '←';
     position: absolute;
     right: -62px;
@@ -1630,7 +1642,7 @@ ul li, ol li {
     font-size: 45px;
 }
 
-.completedProjectsShowPage .nextProject a::before {
+.nextProject a::before {
     position: absolute;
     right: -115px;
     bottom: 20px;
@@ -1640,15 +1652,35 @@ ul li, ol li {
     font-weight: 600;
 }
 
-.completedProjectsShowPage .nextProject img {
+.contentsPage .nextProject a::after {
+    top: 0px;
+}
+
+.contentsPage .nextProject a::before {
+    right: -88px;
+}
+
+
+
+.newsPage.nextProject a::before {
+    content: 'الخبر القادم';
+}
+
+.articlePage.nextProject a::before {
+    content: 'المادة القادمة';
+}
+
+.nextProject img {
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    height: 100%;
+    width: 100%;
 }
 
 .hasNoGallery {
     cursor: pointer;
     height: 790px;
-    display: flex;
+    display: flex !important;
     align-items: center;
     background: #eee;
     justify-content: center;
@@ -1658,7 +1690,7 @@ ul li, ol li {
 }
 
 .hasNoGallery img {
-    width: 40%;
+    width: 40% !important;
     opacity: 0.7;
 }
 
@@ -1759,3 +1791,4 @@ button:focus, a:focus {
     margin-top: 50px !important;
     padding: 10px 15px !important;
 }
+

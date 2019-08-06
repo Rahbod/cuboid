@@ -6,7 +6,7 @@
                     مزايا سقف الكيوبويد
                 </h2>
             </div>
-            <div class="col-sm-6 col-md-8">
+            <div class="col-sm-6 col-md-12 col-lg-8">
                 <div class="d-md-flex justify-content-between">
                     <ul class="benefits--lists d-md-inline-block">
                         <li>

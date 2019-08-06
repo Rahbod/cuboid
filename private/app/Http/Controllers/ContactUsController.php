@@ -17,7 +17,7 @@ class ContactUsController extends Controller
 {
     public function show()
     {
-        $categories = Category::where('status', 1)->where('type', 'project')->with(['projects' => function ($query) {
+        $categories = Category::where('status', 1)->where('type', 'project')->whereHas('projects')->with(['projects' => function ($query) {
             $query->where('status', 1);
             $query->orderBy('order', 'asc');
             $query->take(8);
@@ -34,6 +34,7 @@ class ContactUsController extends Controller
             'relevant_section' => 'required',
             'email' => 'required',
             'content' => 'required',
+            'captcha' => 'required|captcha'
         ]);
 
 
@@ -47,7 +48,7 @@ class ContactUsController extends Controller
 
     public function aboutUs()
     {
-        $categories = Category::where('status', 1)->where('type', 'project')->with(['projects' => function ($query) {
+        $categories = Category::where('status', 1)->where('type', 'project')->whereHas('projects')->with(['projects' => function ($query) {
             $query->where('status', 1);
             $query->orderBy('order', 'asc');
             $query->take(8);

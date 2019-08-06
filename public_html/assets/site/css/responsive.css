@@ -2,7 +2,24 @@
 
 @media screen and (max-width: 1199.98px) {
 
-    .completedProjects .menu-trigger {
+    .products .card {
+        width: 24%;
+        margin-left: 5px;
+    }
+
+    .products .greyTitle {
+        margin-left: -13px;
+        margin-right: -13px;
+        margin-top: 40px;
+    }
+
+    .orangeTitle {
+        margin-left: -13px;
+        margin-right: -13px;
+        padding: 10px 46px;
+    }
+
+    .menu-trigger {
         background: url(../media/images/completed-projects/more.svg) no-repeat right center;
         background-size: 20px;
         width: 40px;
@@ -76,15 +93,9 @@
 
     }
 
-    .products .card {
-        width: 23.5%;
-        margin-left: 0;
-    }
-
-    .products .card:nth-of-type(2) {
-        margin-right: 1%;
-    }
-
+    /*.products .card:nth-of-type(2) {*/
+    /*margin-right: 1%;*/
+    /*}*/
     .products .card:nth-of-type(2) .greyTitle, .products .card:nth-of-type(2) .orangeTitle {
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem;
@@ -94,27 +105,14 @@
         padding-right: 0;
     }
 
-    .orangeTitle {
-        margin-left: -16px;
-        margin-right: -16px;
-        padding: 10px 46px;
-    }
-
-    .completedProjects {
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
-
-    .products .greyTitle {
-        margin-left: -16px;
-        margin-right: -16px;
-    }
-
-    .products {
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
-
+    /*.completedProjects {*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+    /*}*/
+    /*.products {*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+    /*}*/
     .benefits--lists {
         padding: 60px 0 60px 0;
     }
@@ -132,6 +130,74 @@
 }
 
 @media screen and (max-width: 991.98px) {
+
+    .news .menu-trigger {
+        opacity: 0.5;
+        background-color: rgba(0, 0, 0, 0.6);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .pb-150 {
+        padding-bottom: 150px;
+    }
+
+    .completedProjectsPage .sectionDescription, .completedProjectsPage .sectionTitle {
+        color: #fff;
+    }
+
+    .news .cardOuter {
+        margin-bottom: 10px;
+        margin-bottom: 0;
+    }
+
+    .products .card {
+        width: 24.7%;
+        margin-left: 0;
+    }
+
+    .completedProjects .content--text,
+    .products .content--text,
+    .products .content--header {
+        color: #fff;
+    }
+
+    .products .card-body ul li:nth-child(odd) > div {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .sectionTitle {
+        font-size: 30px;
+    }
+
+    .aboutUs {
+        background: #f68b1f !important;
+    }
+
+    .completedProjects {
+        background: #333333 !important;
+    }
+
+    .products {
+        background: #a2a29e !important;
+    }
+
+    .benefits {
+        background: #f68b1f !important;
+    }
+
+    .downloads {
+        background: #282828 !important;
+    }
+
+    .news {
+        background: #e3e5e2 !important;
+    }
 
     .faq::before {
         right: calc(50% - 30%);
@@ -151,11 +217,10 @@
     }
 
     .text {
-        -webkit-background-size: cover;
-        background-size: cover;
+        /*-webkit-background-size: cover;*/
+        /*background-size: cover;*/
         padding-top: 60px;
         padding-bottom: 60px;
-        background-position: center;
     }
 
     .text ul li {
@@ -218,23 +283,21 @@
         color: #d3d3d3 !important;
     }
 
-    .benefits {
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
-
-    .downloads {
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
-
-    .news {
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
-
+    /*.benefits {*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+    /*}*/
+    /*.downloads {*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+    /*}*/
+    /*.news {*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+    /*}*/
     .footer {
         padding: 0;
+        padding-bottom: 1rem;
     }
 
     .footer .copyRight {
@@ -243,14 +306,41 @@
         padding-left: 1rem;
     }
 
-    .addressContainer .social {
-        margin-right: 1rem;
-        padding-left: 1rem;
-        position: absolute;
+    .footer .social__item {
+        font-size: 23px;
     }
 }
 
 @media screen and (max-width: 767.98px) {
+
+    .addressContainer .social {
+        margin-right: 0;
+        padding-left: 0;
+        position: absolute;
+    }
+
+    .orangeTitle {
+        margin-left: -1px;
+        margin-right: -1px;
+        padding: 20px 46px;
+    }
+
+    .lastItem {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+
+    }
+
+    .products .greyTitle {
+        margin-left: -1px;
+        margin-right: -1px;
+        margin-top: 70px;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        padding: 10px 30px;
+    }
 
     .products .card:nth-of-type(2) .greyTitle, .products .card:nth-of-type(2) .orangeTitle {
         border-top-right-radius: 0;
@@ -269,19 +359,14 @@
 
     .smallHeader .title {
         /*margin-top: -15px !important;*/
-        font-size: 57px !important;
+        font-size: 45px !important;
         color: #f68b1f;
+        padding: 0 !important;
     }
 
     .header .upTitle {
         font-size: 18px !important;
         font-weight: bolder !important;
-    }
-
-    .completedProjects .content--text,
-    .products .content--text,
-    .products .content--header {
-        color: #fff;
     }
 
     .completedProjects .nav.nav-pills,
@@ -292,15 +377,18 @@
         align-items: center;
     }
 
-    .products, .completedProjects {
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
-
+    /*.products, .completedProjects {*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+    /*}*/
     .products .card {
-        width: 48%;
+        width: 49%;
         margin-left: 1%;
         margin-bottom: 2%;
+    }
+
+    .products .card:nth-child(odd) {
+        margin-left: 0;
     }
 
     .downloads .downloads--lists__item {
@@ -308,10 +396,6 @@
         height: auto;
         margin: auto;
         margin-bottom: 2rem;
-    }
-
-    .footer {
-        height: auto;
     }
 
     .footer .formContainer {
@@ -342,6 +426,13 @@
 }
 
 @media screen and (max-width: 575.98px) {
+    .smallHeader .smallHeader__logo {
+        display: none !important;
+    }
+
+    .header.subPage .smallHeader__logo {
+        display: none !important;
+    }
 
     .mb-50 {
         margin-bottom: 50px;
@@ -352,15 +443,11 @@
     }
 
     .header .smallHeader {
-        top: 25px;
+        top: 65px;
     }
 
     .mainSlider--item img {
         min-height: 250px;
-    }
-
-    .aboutUs {
-        padding: 80px 0 50px;
     }
 
     .addressContainer .social {
@@ -369,26 +456,6 @@
 
     .benefits {
         padding: 60px 0;
-    }
-
-    .orangeTitle {
-        margin-left: -1px;
-        margin-right: -1px;
-    }
-
-    .lastItem {
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
-    }
-
-    .products .greyTitle {
-        margin-left: -1px;
-        margin-right: -1px;
-        margin-top: 106px;
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
     }
 
     .aboutUs--bgLogo {
@@ -427,9 +494,7 @@
 }
 
 @media screen and (max-width: 399.98px) {
-    .header.subPage .smallHeader__logo {
-        display: none !important;
-    }
+
 }
 
 /*#endregion*/
@@ -439,8 +504,12 @@
 
 @media screen and (min-width: 1400px) {
     .products .card:first-child .orangeTitle {
-        margin-bottom: 81px;
+        margin-bottom: 70px;
     }
+
+    /*.products .card:first-child .greyTitle {*/
+    /*margin-bottom:1px;*/
+    /*}*/
 }
 
 @media screen and (min-width: 1200px) {
@@ -454,8 +523,7 @@
     .orangeTitle {
         margin-left: -16px !important;
         margin-right: -16px !important;
-        padding: 25px 46px !important;
-        margin-bottom: 70px;
+        padding: 15px 46px !important;
     }
 
     .products .card:last-child .orangeTitle {
@@ -468,26 +536,74 @@
         border-bottom-left-radius: 1rem;
     }
 
+    .products .greyTitle {
+        /*margin-top: 40px;*/
+        margin-top: 80px;
+    }
+
 }
 
 @media screen and (min-width: 992px) {
 
+    .relatedProjects .container {
+        padding-right: 40px;
+    }
 }
 
 @media screen and (min-width: 768px) {
+    .px-30 {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
     .header .smallHeader .title {
         line-height: 75px;
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 576px) {
 
 }
 
-@media screen and (max-width: 1024px) and (max-width: 1400px) {
+/*#endregion*/
+
+/*#region min-width and max-width*/
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
     .completedProjects, .completedProjectsPage {
-        background-position: top -400px !important;
+        background-position: -500px top !important;
+        /*background-position: center !important;*/
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .footer .formContainer {
+        padding: 46px 50px 53px 35px;
     }
 }
 
 /*#endregion*/
+
+.orangeRelativeTitles {
+    position: absolute;
+    top: 20px;
+    right: -100px;
+    font-size: 15px;
+    padding: 8.3px 15px !important;
+    height: 61px;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    width: 120px;
+}
+
+.greyRelativeTitles {
+    position: absolute;
+    text-align: left;
+    top: 0;
+    right: -80px;
+    padding: 10px 20px !important;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    width: 120px;
+    margin-top: 0 !important;
+}

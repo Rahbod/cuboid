@@ -41,7 +41,28 @@
                 </div>
                 <div class="col-md-6 my-md-auto">
                     @if($type != 'product')
-                        <ul class="nav nav-pills" id="pills-tab" role="tablist" style="justify-content: flex-end;">
+                        <div class="menu d-lg-none navigation mb-5">
+                            <a class="menu-trigger"></a>
+                            <ul class="nav navbar nav-left">
+                                <li class="nav-item active">
+                                    <a class="nav-link {{ !isset(request()->category_id)?'active':''}}"
+                                       aria-selected="{{ !isset(request()->category_id)?'true':'false'}}"
+                                       href="{{url(str_plural($type))}}"
+                                       role="tab">جميع المشاريع</a>
+                                </li>
+                                @foreach($categories as $category)
+                                    <li class="nav-item">
+                                        <a class="nav-link {{$category->id == request()->category_id?'active':''}}"
+                                           id="pills-{{$category->id}}-tab"
+                                           href="{{url('/'.str_plural($type).'/category/'.$category->id)}}" role="tab"
+                                           aria-controls="pills-{{$category->id}}"
+                                           aria-selected="{{$category->id == request()->category_id?'true':'false'}}">{{$category->name}}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <ul class="nav nav-pills  d-none d-lg-flex" id="pills-tab" role="tablist"
+                            style="justify-content: flex-end;">
                             <li class="nav-item ">
                                 <a class="nav-link {{ !isset(request()->category_id)?'active':''}}"
                                    aria-selected="{{ !isset(request()->category_id)?'true':'false'}}"
@@ -67,8 +88,8 @@
                     <div class="container-fluid">
                         <div class="row" id="projectsContainer">
                             @foreach($projects as $project)
-                                <div class="col-12 col-md-3">
-                                    <div class="card" style="margin-bottom: 10px;">
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card">
                                         <img class="card-img-top" src="{{$project->image}}"
                                              alt="Card image cap">
                                         <div class="card-body">
@@ -97,12 +118,11 @@
                             @endforeach
                         </div>
 
-                        {{--                        {{dd($projects->total(),$projects->perPage(),(int)($projects->total() / $projects->perPage()) > 1 )}}--}}
-
-                        @if(!(($projects->total() / $projects->perPage()) == 1 &&  ($projects->total() % $projects->perPage()) == 0))
+                        @if($projects->lastPage() > 1 )
                             <div class="row">
                                 <div class="col-12 text-center">
-                                    <a style="display: inline-block;" title="اكثر من ..."
+                                    <a data-lastPage="{{$projects->lastPage()}}" style="display: inline-block;"
+                                       title="اكثر من ..."
                                        href="{{$projects->nextPageUrl()}}"
                                        class="btn btn-outline-light moreProjects pagination">
                                         اكثر من ...
@@ -132,47 +152,5 @@
             items: 1,
             dots: true,
         });
-
-        var tempPageNumber = 0;
-
-        $(document).on('click', '.pagination', function (event) {
-            event.preventDefault();
-            var This = $(this);
-            var url = This.attr('href').split('page=')[0];
-            var page = This.attr('href').split('page=')[1];
-            var myurl = This.attr('href');
-
-            var totalPages = {{ round($projects->total() / $projects->perPage()) }};
-
-//            if (tempPageNumber >= totalPages) {
-            $.ajax({
-                url: myurl,
-                type: "get",
-                datatype: "html",
-                success: function (data) {
-//                        if (tempPageNumber >= totalPages) {
-//                            This.hide();
-//                        }
-//                        else {
-                    $("#projectsContainer").append(data);
-                    var pageNumber = parseInt(page) + 1;
-                    tempPageNumber = pageNumber;
-                    This.attr('href', url + 'page=' + pageNumber);
-//                        }
-
-                },
-                error: function (error) {
-                    console.log(error);
-                },
-                fail: function (fail) {
-                    console.log(fail);
-                }
-
-            });
-//            }
-//            else
-//                This.hide();
-        });
-
     </script>
 @endpush

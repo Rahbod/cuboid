@@ -23,9 +23,10 @@ class ProjectController extends Controller
         if ($category_id) {
             $query->where('category_id', $category_id);
         }
-        $contents = $query->paginate(16);
+        $contents = $query->paginate(4);
 
-//        dd($categories);
+//        dd($contents);
+
         if (request()->ajax()) {
             return view('main_site.pages.projects.projects_item_generator', ['projects'=>$contents,'type' => $type,]);
         }

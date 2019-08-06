@@ -97,6 +97,28 @@ $(document).ready(function () {
             })
         }
     });
+
+    $(document).on('click', '.pagination', function (event) {
+        event.preventDefault();
+        var This = $(this);
+        var url = This.attr('href').split('page=')[0];
+        var page = This.attr('href').split('page=')[1];
+        var myurl = This.attr('href');
+        var lastPage = This.attr('data-lastPage');
+
+        $.ajax({
+            url: myurl, type: "get", datatype: "html", success: function (data) {
+                $("#projectsContainer").append(data);
+                var pageNumber = parseInt(page) + 1;
+                This.attr('href', url + 'page=' + pageNumber);
+                if (pageNumber > lastPage) This.hide()
+            }, error: function (error) {
+                console.log(error);
+            }, fail: function (fail) {
+                console.log(fail);
+            }
+        });
+    });
 });
 
 function toaster(type, title, message) {

@@ -1,7 +1,7 @@
 <div class="smallHeader">
     <div class="container px-md-4">
         <div class="row">
-            <div class="col-9 text-right">
+            <div class="col-12 col-sm-9 text-right">
                 <div class="smallHeader__title">
                     <p class="upTitle">سقف الوفل</p>
                     <h1 class="title">كيوبويد</h1>
@@ -20,7 +20,7 @@
                     <span class="subTitle float-left">خيار طبيعي</span>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-sm-3">
                 <div class="text-left h-100 d-flex align-items-center">
                     <a href="{{url('/')}}" class="mr-auto smallHeader__logo">
                         <img class="img-fluid" src="{{asset('/assets/site/media/images/cuboid-logo.png')}}" alt="">

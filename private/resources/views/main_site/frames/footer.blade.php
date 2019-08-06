@@ -62,7 +62,7 @@
                             <div class="form-group col-md-6 pl-md-4 mb-md-0" tabindex="5">
                                 <div class="d-flex justify-content-between" id="captcha_image">
                                     <div style="height: 38px;" class="captchaImageContainer">
-                                        {!! captcha_img('flat'); !!}
+                                        {!! captcha_img('math'); !!}
                                     </div>
                                     <a data-lang="{{session('lang')}}"
                                        href="javascript:;"
@@ -141,17 +141,17 @@
                                 @endforeach
 
                                 {{--<a title="ينكدين" href="{{$social_networks['linkedin']}}" class="social__item">--}}
-                                    {{--<img src="{{asset("assets/site/media/images/footer/linkedin.png")}}" alt="">--}}
+                                {{--<img src="{{asset("assets/site/media/images/footer/linkedin.png")}}" alt="">--}}
                                 {{--</a>--}}
                                 {{--<a title="الفيسبوك" href="{{$social_networks['facebook']}}" class="social__item">--}}
-                                    {{--<img src="{{asset("assets/site/media/images/footer/facebook.png")}}" alt="">--}}
+                                {{--<img src="{{asset("assets/site/media/images/footer/facebook.png")}}" alt="">--}}
                                 {{--</a>--}}
                                 {{--<a title="جوجل بلز" href="{{$social_networks['google-plus']}}" class="social__item">--}}
-                                    {{--<img src="{{asset("assets/site/media/images/footer/google-plus.png")}}" alt="">--}}
+                                {{--<img src="{{asset("assets/site/media/images/footer/google-plus.png")}}" alt="">--}}
                                 {{--</a>--}}
 
                                 {{--<a title="تغريد" href="{{$social_networks['twitter']}}" class="social__item">--}}
-                                    {{--<img src="{{asset("assets/site/media/images/footer/twitter.png")}}" alt="">--}}
+                                {{--<img src="{{asset("assets/site/media/images/footer/twitter.png")}}" alt="">--}}
                                 {{--</a>--}}
 
                                 <a title="البريد الإلكتروني" href="void:;" class="email">
@@ -176,13 +176,11 @@
                         <div>
                             <span class="cuboid">© كيوبويد 1396</span> | جميع الحقوق محفوظة لشركة كيوبويد
                         </div>
-                        <span class="designedBy"><span class="">Design by</span><a title="Tarsim.inc" class="tarsiminc"
-                                                                                   href="https://tarsiminc.com">   Tarsim.inc</a></span>
+                        <span class="designedBy"><span class="">Design by</span>
+                            <a title="Tarsim.inc" class="tarsiminc"
+                               href="https://tarsiminc.com">   Tarsim.inc</a></span>
                     </div>
-                    <div>
-                        جميع الحقوق محفوظة لشركة كيوبويد
 
-                    </div>
                 </div>
             </div>
             <div class="col-md-5"></div>

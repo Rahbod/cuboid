@@ -17,7 +17,7 @@ class StaticPageController extends Controller
 
         $project = Project::with('gallery.gallery_items')->where('type', 'project')->where('status', 1)->findOrFail($id);
         $project->attributes = json_decode($project->attributes, true);
-        $categories = Category::where('status', 1)->where('type', 'project')->with(['projects' => function ($query) {
+        $categories = Category::where('status', 1)->where('type', 'project')->whereHas('projects')->with(['projects' => function ($query) {
             $query->where('status', 1);
             $query->orderBy('order', 'asc');
             $query->take(8);

@@ -35,7 +35,7 @@
         {{--        <img class="aboutUs--bgLogo" src="{{asset('/assets/site/media/images/about-us/about-us-logo-3.png')}}" alt="">--}}
         <div class="container my-auto">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6">
                     <div class="content">
                         <h2 class="content--header sectionTitle">
                             حول كيوبويد
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6"></div>
+                <div class="col-md-12 col-lg-6"></div>
             </div>
         </div>
     </section>
@@ -91,12 +91,12 @@
                      aria-labelledby="pills-path-tab">
 
                     <div class="card d-none d-xl-inline-block">
-                        <div class="orangeTitle bg-orange">
+                        <div class="orangeTitle bg-orange d-none">
                             <span class="d-block">نوع القالب</span>
                             <span>كيوبويد</span>
                         </div>
-                        <div class="card-title bg-grey-c greyTitle">
 
+                        <div class="card-title bg-grey-c greyTitle d-none">
                             <span>سبان(m)</span>
                         </div>
 
@@ -132,11 +132,21 @@
                             <span class="d-lg-none">نوع القالب</span>
 
                             <span>CU400</span>
+
+                            <div class="orangeRelativeTitles orangeTitle bg-orange d-flex justify-content-between  justify-content-lg-end flex-column">
+                                <span class="d-block">نوع القالب</span>
+                                <span>كيوبويد</span>
+                            </div>
+
+
                         </div>
 
-                        <div class="card-title bg-grey-c greyTitle d-flex justify-content-between">
+                        <div class="card-title bg-grey-c greyTitle d-flex justify-content-between position-relative">
+                            <div class="greyRelativeTitles card-title bg-grey-c greyTitle">
+                                <span >سبان(m)</span>
 
-                            <span class="d-lg-none">(m)سبان</span>
+                            </div>
+                            <span class="d-lg-none">سبان(m)</span>
                             <span>12</span>
                             <span>16</span>
                         </div>
@@ -192,7 +202,7 @@
                             <span>CU300</span>
                         </div>
                         <div class="card-title bg-grey-c greyTitle d-flex justify-content-between">
-                            <span class="d-lg-none">(m)سبان</span>
+                            <span class="d-lg-none">سبان(m)</span>
 
                             <span>10</span>
                             <span>12</span>
@@ -250,7 +260,7 @@
                             <span>CU240</span>
                         </div>
                         <div class="card-title bg-grey-c greyTitle d-flex justify-content-between">
-                            <span class="d-lg-none">(m)سبان</span>
+                            <span class="d-lg-none">سبان(m)</span>
 
                             <span>8</span>
                             <span>10</span>
@@ -308,7 +318,7 @@
                         </div>
 
                         <div class="btlr bblr card-title bg-grey-c greyTitle  d-flex justify-content-between">
-                            <span class="d-lg-none">(m)سبان</span>
+                            <span class="d-lg-none">سبان(m)</span>
 
                             <span>6</span>
                             <span>8</span>
@@ -576,13 +586,11 @@
         @endforeach
         @endisset
 
-        $('[data-toggle="tooltip"]').tooltip();
 
         $(document).ready(function () {
-            $('#newsCarousel,' +
-                '#completedProjects--commercialCarousel,' +
-                '#completedProjects--hotelCarousel,' +
-                '#completedProjects--all-projects').owlCarousel({
+            $('[data-toggle="tooltip"]').tooltip();
+
+            $('#completedProjects--all-projects').owlCarousel({
                 loop: true,
                 autoplay: true,
                 autoplayTimeout: 9000,
@@ -609,14 +617,38 @@
                     },
                 }
             });
+            $('#newsCarousel').owlCarousel({
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 9000,
+                autoplayHoverPause: true,
+                rtl: true,
+                dots: true,
 
+                nav: true,
+                items: 4,
+                margin: 0,
+                responsive: {
+                    // breakpoint from 0 up
+                    0: {
+                        items: 1
+                    },
+                    // breakpoint from 400 up
+
+                    576: {
+                        items: 3
+                    },
+                    // breakpoint from 768 up
+                    768: {
+                        items: 4,
+                    },
+                }
+            });
             $('#productsCarousel').owlCarousel({
                 rtl: true,
                 margin: 9,
                 items: 2
             });
-
-
             $('#faqCarousel').owlCarousel({
                 loop: true,
                 autoplay: true,
@@ -626,7 +658,6 @@
                 items: 1,
                 dots: true,
             });
-
             $('#mainSlider').owlCarousel({
                 loop: true,
                 autoplay: true,
@@ -639,7 +670,6 @@
             });
 
             var player;
-
             var controls =
                 [
                     'play-large', // The large play button in the center
@@ -669,12 +699,12 @@
 
             $('.productssss .card-body ul li:nth-child(odd)').on('mouseenter', function (event) {
                 var rowClass = $(event.target).attr('class');
-                $('#pills-path .card-body ul li div').removeClass('bg-grey-c greyTitle');
-                $("." + rowClass + " > div").addClass('bg-grey-c greyTitle');
+//                $('#pills-path .card-body ul li div').removeClass('bg-grey-c greyTitle');
+                $('#pills-path .card-body ul li div').removeClass('bg-grey-c');
+                $("." + rowClass + " > div").addClass('bg-grey-c');
             })
 
         });
-
 
     </script>
 @endpush

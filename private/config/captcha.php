@@ -5,14 +5,14 @@ return [
     'default' => [
         'length' => 9,
         'width' => 120,
-        'height' => 36,
+        'height' => 45,
         'quality' => 90,
         'math' => false,
     ],
     'math' => [
         'length' => 9,
-        'width' => 120,
-        'height' => 36,
+        'width' => 160,
+        'height' => 45,
         'quality' => 90,
         'math' => true,
     ],

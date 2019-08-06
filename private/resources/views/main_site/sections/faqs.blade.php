@@ -28,7 +28,7 @@
                     @endforeach
                 </div>
             </div>
-            <div class="col-12 my-5">
+            <div class="col-12 mb-5 mt-5 mb-md-0">
                 <div class="text-left">
                     <a href="{{url('/faqs')}}" class="btn btn-outline-light">
                         كل الأسئلة

@@ -27,9 +27,20 @@ class ContentController extends Controller
             $query->orderBy('order', 'asc');
             $query->take(8);
         }])->orderBy('order', 'asc')->take(4)->get();
+
+        $next_content_id = $content->id + 1;
+        $next_content = Content::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->find($next_content_id);
+
+        if (!$next_content) {
+            $ids = Content::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->get()->pluck('id')->toArray();
+            $counts = Content::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->get()->count();
+            $next_content = Content::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->findOrFail($ids[rand(0, $counts - 1)]);
+        }
+
         $faqs = Faq::where('status', 1)->orderBy('order', 'asc')->take(10)->get();
         return view('main_site.pages.content.content_show')
             ->with(['categories' => $categories,
+                'next_content' => $next_content,
                 'content' => $content, 'faqs' => $faqs,
                 'sub_page' => 'subPage',
                 'type' => $type,

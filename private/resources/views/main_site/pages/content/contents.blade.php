@@ -36,11 +36,33 @@
                     <p class="sectionDescription">{{$page_title_description['descriptions']}}</p>
                 </div>
                 <div class="col-md-6 my-md-auto">
-                    <ul class="nav nav-pills" id="pills-tab" role="tablist" style="justify-content: flex-end;">
-                        <li class="nav-item ">
+                    <div class="menu d-lg-none navigation mb-5">
+                        <a class="menu-trigger"></a>
+                        <ul class="nav navbar nav-left">
+                            <li class="nav-item active">
+                                <a class="nav-link {{ !isset(request()->category_id)?'active':''}}"
+                                   aria-selected="{{ !isset(request()->category_id)?'true':'false'}}"
+                                   href="{{url(str_plural($type))}}"
+                                   role="tab">جميع {{$page_title_description['title']}}</a>
+                            </li>
+                            @foreach($categories as $category)
+                                <li class="nav-item">
+                                    <a class="nav-link {{$category->id == request()->category_id?'active':''}}"
+                                       id="pills-{{$category->id}}-tab"
+                                       href="{{url('/'.str_plural($type).'/category/'.$category->id)}}" role="tab"
+                                       aria-controls="pills-{{$category->id}}"
+                                       aria-selected="{{$category->id == request()->category_id?'true':'false'}}">{{$category->name}}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <ul class="nav nav-pills d-none d-lg-flex" id="pills-tab" role="tablist"
+                        style="justify-content: flex-end;">
+                        <li class="nav-item active">
                             <a class="nav-link {{ !isset(request()->category_id)?'active':''}}"
                                aria-selected="{{ !isset(request()->category_id)?'true':'false'}}"
-                               href="{{url('projects')}}" role="tab">جميع {{$page_title_description['title']}}</a>
+                               href="{{url(str_plural($type))}}"
+                               role="tab">جميع {{$page_title_description['title']}}</a>
                         </li>
                         @foreach($categories as $category)
                             <li class="nav-item">
@@ -81,12 +103,13 @@
                                         </div>
                                     @endforeach
                                 </div>
-
-                                @if((int)($contents->total() / $contents->perPage()) > 0 )
+                                @if($contents->lastPage() > 1 )
                                     <div class="row">
                                         <div class="col-12 text-center">
-                                            <a title="اكثر من ..." href="javascript:;"
-                                               class="btn btn-outline-light moreProjects">
+                                            <a data-lastPage="{{$contents->lastPage()}}" style="display: inline-block;"
+                                               title="اكثر من ..."
+                                               href="{{$contents->nextPageUrl()}}"
+                                               class="btn btn-outline-light moreProjects pagination">
                                                 اكثر من ...
                                             </a>
                                         </div>
