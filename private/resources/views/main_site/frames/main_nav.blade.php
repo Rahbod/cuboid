@@ -1,14 +1,18 @@
 <nav class="header-nav navbar p-0">
     {{--<button class="navbar-toggler" type="button" data-toggle="collapse"--}}
-            {{--data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"--}}
-            {{--aria-expanded="false" aria-label="Toggle navigation">--}}
-        {{--<!--<span class="navbar-toggler-icon"></span>-->--}}
-        {{--<span class="navbar-toggler-lines"></span>--}}
-        {{--<span class="navbar-toggler-lines"></span>--}}
-        {{--<span class="navbar-toggler-lines"></span>--}}
+    {{--data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"--}}
+    {{--aria-expanded="false" aria-label="Toggle navigation">--}}
+    {{--<!--<span class="navbar-toggler-icon"></span>-->--}}
+    {{--<span class="navbar-toggler-lines"></span>--}}
+    {{--<span class="navbar-toggler-lines"></span>--}}
+    {{--<span class="navbar-toggler-lines"></span>--}}
     {{--</button>--}}
     <a title="الصفحة الرئيسية" href="{{url('/')}}" class="navbar-brand d-lg-none">
         <img class="img-fluid" src="{{asset('/assets/site/media/images/cuboid-logo.png')}}" alt="الصفحة الرئيسية">
+        <div class="d-inline-block">
+            <p class="navUpTitle">سقف الوفل</p>
+            <p class="navTitle">كيوبويد</p>
+        </div>
     </a>
 
     <button id="sidebarCollapse" class="navbar-toggler" type="button">
@@ -21,7 +25,8 @@
         <ul class="nav navbar-nav ml-auto rightMenu">
             @if(isset($menus) && count($menus) > 0)
                 @foreach($menus as $menu)
-                    <li class="{{$loop->first ? 'active' : ''}}"><a href="{{$menu['link']}}" title="{{$menu['name']}}">{{$menu['name']}}</a></li>
+                    <li class="{{$loop->first ? 'active' : ''}}"><a href="{{$menu['link']}}"
+                                                                    title="{{$menu['name']}}">{{$menu['name']}}</a></li>
                 @endforeach
             @endif
         </ul>

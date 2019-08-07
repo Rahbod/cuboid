@@ -59,7 +59,7 @@
                                 <div class="invalid-tooltip"></div>
                             </div>
 
-                            <div class="form-group col-md-6 pl-md-4 mb-md-0" tabindex="5">
+                            <div class="form-group col-md-6 pl-md-4 mb-md-0 mb-3" tabindex="5">
                                 <div class="d-flex justify-content-between" id="captcha_image">
                                     <div style="height: 38px;" class="captchaImageContainer">
                                         {!! captcha_img('math'); !!}
@@ -128,7 +128,7 @@
                         <div class="d-flex">
                             <div class="flex-fill">
                                 <span class="social__item">
-                                    <img src="{{asset("assets/site/media/images/footer/share-icon-2.png")}}" alt="">
+                                    <img src="{{asset("assets/site/media/images/footer/share.svg")}}" alt="">
                                 </span>
 
                                 @php
@@ -155,7 +155,7 @@
                                 {{--</a>--}}
 
                                 <a title="البريد الإلكتروني" href="void:;" class="email">
-                                    <img src="{{asset('assets/site/media/images/footer/email-icon.png')}}" alt="">&nbsp;&nbsp;&nbsp;INFO@CUBOID.COM</a>
+                                    <img src="{{asset('assets/site/media/images/footer/email.svg')}}" alt="">&nbsp;&nbsp;&nbsp;INFO@CUBOID.COM</a>
                             </div>
                             <a href="{{url('/')}}" title="الصفحه الرئيسيه">
                                 <img width="70" height="50" src="{{asset('assets/site/media/images/cuboid-logo.png')}}"

@@ -28,13 +28,15 @@ class ContentController extends Controller
             $query->take(8);
         }])->orderBy('order', 'asc')->take(4)->get();
 
-        $next_content_id = $content->id + 1;
-        $next_content = Content::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->find($next_content_id);
+        $next_content = Content::where('status', 1)->where('type', $type)
+            ->where('category_id',$content->category_id)->orderBy('id','asc')
+            ->where('id', '>', $content->id)->first();
 
         if (!$next_content) {
-            $ids = Content::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->get()->pluck('id')->toArray();
-            $counts = Content::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->get()->count();
-            $next_content = Content::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->findOrFail($ids[rand(0, $counts - 1)]);
+            $min_model = Content::where('status', 1)->where('type', $type)
+                ->where('category_id',$content->category_id)->orderBy('id','asc')
+                ->where('id', '>', 0)->min('id');
+            $next_content=Content::findOrFail($min_model);
         }
 
         $faqs = Faq::where('status', 1)->orderBy('order', 'asc')->take(10)->get();

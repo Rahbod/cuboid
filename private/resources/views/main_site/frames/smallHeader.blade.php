@@ -1,7 +1,7 @@
 <div class="smallHeader">
     <div class="container px-md-4">
         <div class="row">
-            <div class="col-12 col-sm-9 text-right">
+            <div class="col-12 col-sm-9 text-center text-sm-right">
                 <div class="smallHeader__title">
                     <p class="upTitle">سقف الوفل</p>
                     <h1 class="title">كيوبويد</h1>
@@ -17,7 +17,7 @@
                         @endif
                     @endif
 
-                    <span class="subTitle float-left">خيار طبيعي</span>
+                    <span class="subTitle  float-sm-left">خيار طبيعي</span>
                 </div>
             </div>
             <div class="col-12 col-sm-3">

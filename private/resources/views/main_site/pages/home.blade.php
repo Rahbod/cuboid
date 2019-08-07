@@ -46,7 +46,7 @@
 
                         </p>
 
-                        <div class="text-left">
+                        <div class="text-center text-md-left">
                             <a title=" لماذا كيوبويد" href="{{url('about-us')}}" class="btn btn-outline-light">
                                 لماذا كيوبويد
                             </a>
@@ -91,12 +91,12 @@
                      aria-labelledby="pills-path-tab">
 
                     <div class="card d-none d-xl-inline-block">
-                        <div class="orangeTitle bg-orange d-none">
+                        <div class="d-none orangeTitle bg-orange">
                             <span class="d-block">نوع القالب</span>
                             <span>كيوبويد</span>
                         </div>
 
-                        <div class="card-title bg-grey-c greyTitle d-none">
+                        <div class="d-none card-title bg-grey-c greyTitle">
                             <span>سبان(m)</span>
                         </div>
 
@@ -133,7 +133,7 @@
 
                             <span>CU400</span>
 
-                            <div class="orangeRelativeTitles orangeTitle bg-orange d-flex justify-content-between  justify-content-lg-end flex-column">
+                            <div class="d-none d-xl-flex orangeRelativeTitles orangeTitle bg-orange justify-content-between  justify-content-lg-end flex-column">
                                 <span class="d-block">نوع القالب</span>
                                 <span>كيوبويد</span>
                             </div>
@@ -142,7 +142,7 @@
                         </div>
 
                         <div class="card-title bg-grey-c greyTitle d-flex justify-content-between position-relative">
-                            <div class="greyRelativeTitles card-title bg-grey-c greyTitle">
+                            <div class="d-none d-xl-block greyRelativeTitles card-title bg-grey-c greyTitle">
                                 <span >سبان(m)</span>
 
                             </div>
@@ -503,7 +503,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-md-8 px-0 px-md-3">
                     <video class="player" id="player" controls
                            poster="{{asset('/assets/site/media/images/downloads/player-poster.jpg')}}">
                         <source src="{{asset('/assets/site/media/videos/downloads/intro-480p__47071.mp4')}}"
@@ -565,7 +565,6 @@
             autoplayHoverPause: true,
             rtl: true,
             dots: true,
-            nav: true,
             items: 4,
             margin: 20,
             responsive: {
@@ -580,6 +579,10 @@
                 // breakpoint from 768 up
                 768: {
                     items: 4,
+                },
+                // breakpoint from 992 up
+                992: {
+                    nav: true,
                 },
             }
         });
@@ -598,7 +601,6 @@
                 rtl: true,
                 dots: true,
 
-                nav: true,
                 items: 4,
                 margin: 9,
                 responsive: {
@@ -614,6 +616,10 @@
                     // breakpoint from 768 up
                     768: {
                         items: 4,
+                    },
+                    // breakpoint from 992 up
+                    992: {
+                        nav: true,
                     },
                 }
             });
@@ -642,6 +648,10 @@
                     768: {
                         items: 4,
                     },
+                    // breakpoint from 992 up
+                    992: {
+                        nav: true,
+                    },
                 }
             });
             $('#productsCarousel').owlCarousel({
@@ -664,9 +674,13 @@
                 autoplayTimeout: 9000,
 //                autoplayHoverPause:true,
                 rtl: true,
-                nav: true,
                 items: 1,
-                dots: false
+                dots: false,
+                responsive: {
+                    992: {
+                        nav: true,
+                    },
+                }
             });
 
             var player;

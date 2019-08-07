@@ -12,7 +12,7 @@
 */
 
 Route::get('captcha-image', function () {
-    return captcha_img('flat');
+    return captcha_img('math');
 });
 
 Route::get('/', 'HomeController@index');

@@ -52,7 +52,8 @@
 
 p {
     color: #282828;
-    line-height: 21px;
+    /*line-height: 21px;*/
+    line-height: 18px;
     margin-bottom: 24px;
     /*font-weight: 200;*/
 }
@@ -960,7 +961,7 @@ ul li, ol li {
 
 .benefits--lists li img {
     margin-left: 10px;
-    width: 30px;
+    width: 25px;
     max-width: 100%;
     height: auto
 }
@@ -1136,7 +1137,7 @@ ul li, ol li {
 }
 
 .news .owl-dots {
-    margin-top: 100px !important;
+    /*margin-top: 100px !important;*/
 }
 
 .contentsPage .sectionTitle {

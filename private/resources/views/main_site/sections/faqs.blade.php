@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="col-12 mb-5 mt-5 mb-md-0">
-                <div class="text-left">
+                <div class="text-center text-md-left">
                     <a href="{{url('/faqs')}}" class="btn btn-outline-light">
                         كل الأسئلة
                     </a>

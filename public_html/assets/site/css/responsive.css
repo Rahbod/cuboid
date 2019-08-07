@@ -130,6 +130,33 @@
 }
 
 @media screen and (max-width: 991.98px) {
+    .downloads {
+        padding: 60px 0 0;
+    }
+
+    /*margin: 0;*/
+    /*font-size: 21px;*/
+    /*line-height: 15px;*/
+    /*color: #fff;*/
+    .header .header-nav .navUpTitle {
+        margin: 0;
+        color: #fff;
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    .header .header-nav .navTitle {
+        margin: 0;
+        font-size: 21px;
+        line-height: 15px;
+        color: #f68b1f;
+    }
+
+    .header .smallHeader {
+        /*top: 65px;*/
+        top: 125px;
+        display: block;
+    }
 
     .news .menu-trigger {
         opacity: 0.5;
@@ -148,13 +175,26 @@
     }
 
     .news .cardOuter {
-        margin-bottom: 10px;
+        background: #f68b1f;
         margin-bottom: 0;
     }
 
+    .news .card a, .news .card a {
+        opacity: 1;
+        z-index: 1;
+    }
+
     .products .card {
+        border: none;
+        padding-top: 0;
+        overflow: hidden;
+
         width: 24.7%;
         margin-left: 0;
+    }
+
+    .bg-grey-c {
+        background: transparent;
     }
 
     .completedProjects .content--text,
@@ -393,13 +433,12 @@
 
     .downloads .downloads--lists__item {
         width: auto;
-        height: auto;
         margin: auto;
-        margin-bottom: 2rem;
+        margin-bottom: 30px;
     }
 
     .footer .formContainer {
-        margin-top: 50px;
+        margin-top: 0;
         margin-right: auto;
     }
 
@@ -434,16 +473,16 @@
         display: none !important;
     }
 
+    .header .subTitle {
+        margin: auto;
+    }
+
     .mb-50 {
         margin-bottom: 50px;
     }
 
     .faq--item h5 {
         margin-bottom: 20px;
-    }
-
-    .header .smallHeader {
-        top: 65px;
     }
 
     .mainSlider--item img {
@@ -607,3 +646,5 @@
     width: 120px;
     margin-top: 0 !important;
 }
+
+

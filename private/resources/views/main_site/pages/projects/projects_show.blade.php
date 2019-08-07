@@ -35,11 +35,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5 pl-md-4 mb-5">
+                    {{--{{dd($project)}}--}}
                     @if($project->gallery && $project->gallery->gallery_items)
                         <div id="completedProjectsShowPageGallery" class="owl-carousel gallery">
+                            <a title="{{$project->title}}" class="html5lightbox galleryItem" data-group="mygroup"
+                               data-thumbnail="{{$project->image}}" data-width="436" data-height="700"
+                               href="{{$project->image}}">
+                                <img class="h-100" src="{{$project->image}}" alt="{{$project->title}}">
+
+                                <div class="galleryItem__indicator">
+                                    {{$project->title}}
+                                </div>
+                            </a>
+
                             @foreach($project->gallery->gallery_items as $gallery_item)
-                                <a title="" class="html5lightbox galleryItem" data-group="mygroup"
-                                   data-thumbnail="{{asset($gallery_item->logo)}}"
+                                <a title="{{$project->title}}" class="html5lightbox galleryItem" data-group="mygroup"
+                                   data-thumbnail="{{asset($gallery_item->logo)}}" data-width="436" data-height="700"
                                    href="{{asset($gallery_item->image)}}">
                                     <img class="img-fluid" src="{{asset($gallery_item->image)}}"
                                          alt="">
