@@ -141,14 +141,13 @@
 
                         </div>
 
-                        <div class="card-title bg-grey-c greyTitle d-flex justify-content-between position-relative">
+                        <div class="card-title bg-grey-c greyTitle d-flex justify-content-lg-between position-relative">
                             <div class="d-none d-xl-block greyRelativeTitles card-title bg-grey-c greyTitle">
                                 <span >سبان(m)</span>
-
                             </div>
-                            <span class="d-lg-none">سبان(m)</span>
-                            <span>12</span>
-                            <span>16</span>
+                            <span class="d-lg-none w-50">سبان(m)</span>
+                            <span class="w-25 text-left w-lg-50 text-lg-right">12</span>
+                            <span class="w-25 text-left w-lg-50 ">16</span>
                         </div>
 
                         <img class="card-img-top"
@@ -158,38 +157,34 @@
                         <div class="card-body">
                             <ul>
                                 <li class="products--thirdRow">
-                                    <div class="d-flex justify-content-between">
-
-                                        <span class="d-lg-none">سمك السقف (cm)</span>
-                                        <span>46</span>
-                                        <span>47</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none w-50">سمك السقف (cm)</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">46</span>
+                                        <span class="w-25 text-left w-lg-50 ">47</span>
                                     </div>
                                 </li>
                                 <li></li>
                                 <li class="products-fifthRow">
-                                    <div class="d-flex justify-content-between">
-
-                                        <span class="d-lg-none">سمك يعادل <br>الخرسانة (cm)</span>
-                                        <span>18.9</span>
-                                        <span>19.9</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none w-50">سمك يعادل <br>الخرسانة (cm)</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">18.9</span>
+                                        <span class="w-25 text-left w-lg-50 ">19.9</span>
                                     </div>
                                 </li>
                                 <li></li>
                                 <li class="products--seventhRow">
-                                    <div class="d-flex justify-content-between">
-
-                                        <span class="d-lg-none">سمك السقف (cm)</span>
-                                        <span>48</span>
-                                        <span>48</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none w-50">سمك السقف (cm)</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">48</span>
+                                        <span class="w-25 text-left w-lg-50 ">48</span>
                                     </div>
                                 </li>
                                 <li></li>
                                 <li class="products--ninthRow">
-                                    <div class="d-flex justify-content-between">
-
-                                        <span class="d-lg-none">سمك يعادل <br> الخرسانة (cm)</span>
-                                        <span>20.9</span>
-                                        <span>20.9</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none  w-50">سمك يعادل <br> الخرسانة (cm)</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">20.9</span>
+                                        <span class="w-25 text-left w-lg-50 ">20.9</span>
                                     </div>
                                 </li>
                             </ul>
@@ -201,11 +196,11 @@
 
                             <span>CU300</span>
                         </div>
-                        <div class="card-title bg-grey-c greyTitle d-flex justify-content-between">
-                            <span class="d-lg-none">سبان(m)</span>
+                        <div class="card-title bg-grey-c greyTitle d-flex justify-content-lg-between">
+                            <span class="d-lg-none w-50">سبان(m)</span>
 
-                            <span>10</span>
-                            <span>12</span>
+                            <span class="w-25 text-left w-lg-50 text-lg-right">10</span>
+                            <span class="w-25 text-left w-lg-50 ">12</span>
                         </div>
 
                         <img class="card-img-top"
@@ -215,38 +210,38 @@
                         <div class="card-body">
                             <ul>
                                 <li class="products--firstRow">
-                                    <div class="d-flex justify-content-between">
-                                        <span class="d-lg-none">سمك السقف (cm)</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none w-50">سمك السقف (cm)</span>
 
-                                        <span>35</span>
-                                        <span>36</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">35</span>
+                                        <span class="w-25 text-left w-lg-50 ">36</span>
                                     </div>
                                 </li>
                                 <li></li>
                                 <li class="products-thirdRow">
-                                    <div class="d-flex justify-content-between">
-                                        <span class="d-lg-none">سمك يعادل <br>الخرسانة (cm)</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none w-50">سمك يعادل <br>الخرسانة (cm)</span>
 
-                                        <span>15.5</span>
-                                        <span>16.5</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">15.5</span>
+                                        <span class="w-25 text-left w-lg-50 ">16.5</span>
                                     </div>
                                 </li>
                                 <li></li>
                                 <li class="products--fifthRow">
-                                    <div class="d-flex justify-content-between">
-                                        <span class="d-lg-none">سمك السقف (cm)</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none w-50 w-lg-50 text-lg-right">سمك السقف (cm)</span>
 
-                                        <span>38</span>
-                                        <span>38</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">38</span>
+                                        <span class="w-25 text-left w-lg-50 ">38</span>
                                     </div>
                                 </li>
                                 <li></li>
                                 <li class="products--seventhRow">
-                                    <div class="d-flex justify-content-between">
-                                        <span class="d-lg-none">سمك يعادل <br> الخرسانة (cm)</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none w-50 w-lg-50 text-lg-right">سمك يعادل <br> الخرسانة (cm)</span>
 
-                                        <span>18.5</span>
-                                        <span>8.5</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">18.5</span>
+                                        <span class="w-25 text-left w-lg-50 ">8.5</span>
                                     </div>
                                 </li>
                             </ul>
@@ -259,11 +254,11 @@
 
                             <span>CU240</span>
                         </div>
-                        <div class="card-title bg-grey-c greyTitle d-flex justify-content-between">
-                            <span class="d-lg-none">سبان(m)</span>
+                        <div class="card-title bg-grey-c greyTitle d-flex justify-content-lg-between">
+                            <span class="d-lg-none w-50">سبان(m)</span>
 
-                            <span>8</span>
-                            <span>10</span>
+                            <span class="w-25 text-left w-lg-50 text-lg-right">8</span>
+                            <span class="w-25 text-left w-lg-50 ">10</span>
                         </div>
 
                         <img class="card-img-top"
@@ -274,37 +269,37 @@
                             <ul>
                                 <li class="products--firstRow">
                                     <div class="d-flex justify-content-between">
-                                        <span class="d-lg-none">سمك السقف (cm)</span>
+                                        <span class="d-lg-none  w-50">سمك السقف (cm)</span>
 
-                                        <span>29</span>
-                                        <span>30</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">29</span>
+                                        <span class="w-25 text-left w-lg-50 ">30</span>
                                     </div>
                                 </li>
                                 <li></li>
                                 <li class="products-thirdRow">
-                                    <div class="d-flex justify-content-between">
-                                        <span class="d-lg-none">سمك يعادل <br>الخرسانة (cm)</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none  w-50">سمك يعادل <br>الخرسانة (cm)</span>
 
-                                        <span>12.3</span>
-                                        <span>13.3</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">12.3</span>
+                                        <span class="w-25 text-left w-lg-50 ">13.3</span>
                                     </div>
                                 </li>
                                 <li></li>
                                 <li class="products--fifthRow">
-                                    <div class="d-flex justify-content-between">
-                                        <span class="d-lg-none">سمك السقف (cm)</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none  w-50">سمك السقف (cm)</span>
 
-                                        <span>29</span>
-                                        <span>31</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">29</span>
+                                        <span class="w-25 text-left w-lg-50 ">31</span>
                                     </div>
                                 </li>
                                 <li></li>
                                 <li class="products--seventhRow">
-                                    <div class="d-flex justify-content-between">
-                                        <span class="d-lg-none">سمك يعادل <br> الخرسانة (cm)</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none w-50">سمك يعادل <br> الخرسانة (cm)</span>
 
-                                        <span>12.3</span>
-                                        <span>14.3</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">12.3</span>
+                                        <span class="w-25 text-left w-lg-50 ">14.3</span>
                                     </div>
                                 </li>
                             </ul>
@@ -317,11 +312,11 @@
                             <span>CU180</span>
                         </div>
 
-                        <div class="btlr bblr card-title bg-grey-c greyTitle  d-flex justify-content-between">
-                            <span class="d-lg-none">سبان(m)</span>
+                        <div class="btlr bblr card-title bg-grey-c greyTitle  d-flex justify-content-lg-between">
+                            <span class="d-lg-none w-50">سبان(m)</span>
 
-                            <span>6</span>
-                            <span>8</span>
+                            <span class="w-25 text-left w-lg-50 text-lg-right">6</span>
+                            <span class="w-25 text-left w-lg-50 ">8</span>
                         </div>
 
                         <img class="card-img-top"
@@ -330,43 +325,44 @@
                         <div class="card-body">
                             <ul>
                                 <li class="products--firstRow">
-                                    <div class="d-flex justify-content-between">
-                                        <span class="d-lg-none">سمك السقف (cm)</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none w-50">سمك السقف (cm)</span>
 
-                                        <span>23</span>
-                                        <span>24</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">23</span>
+                                        <span class="w-25 text-left w-lg-50 ">24</span>
                                     </div>
                                 </li>
                                 <li></li>
                                 <li class="products-thirdRow">
-                                    <div class="d-flex justify-content-between">
-                                        <span class="d-lg-none">سمك يعادل <br>الخرسانة (cm)</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none w-50">سمك يعادل <br>الخرسانة (cm)</span>
 
-                                        <span>10.5</span>
-                                        <span>11.5</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">10.5</span>
+                                        <span class="w-25 text-left w-lg-50 ">11.5</span>
                                     </div>
                                 </li>
                                 <li></li>
                                 <li class="products--fifthRow">
-                                    <div class="d-flex justify-content-between">
-                                        <span class="d-lg-none">سمك السقف (cm)</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none w-50">سمك السقف (cm)</span>
 
-                                        <span>23</span>
-                                        <span>25</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">23</span>
+                                        <span class="w-25 text-left w-lg-50 ">25</span>
                                     </div>
                                 </li>
                                 <li></li>
                                 <li class="products--seventhRow">
-                                    <div class="d-flex justify-content-between">
-                                        <span class="d-lg-none">سمك يعادل <br> الخرسانة (cm)</span>
+                                    <div class="d-flex justify-content-lg-between">
+                                        <span class="d-lg-none w-50">سمك يعادل <br> الخرسانة (cm)</span>
 
-                                        <span>10.5</span>
-                                        <span>12.5</span>
+                                        <span class="w-25 text-left w-lg-50 text-lg-right">10.5</span>
+                                        <span class="w-25 text-left w-lg-50 ">12.5</span>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
+
                     @if(isset($rahimi_added_product_attrs))
                         @foreach($products as $product)
                             <div class="card">
@@ -630,10 +626,8 @@
                 autoplayHoverPause: true,
                 rtl: true,
                 dots: true,
-
-                nav: true,
                 items: 4,
-                margin: 0,
+                margin: 5,
                 responsive: {
                     // breakpoint from 0 up
                     0: {

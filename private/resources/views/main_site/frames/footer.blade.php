@@ -126,9 +126,9 @@
 
                     <div class="social">
                         <div class="d-flex">
-                            <div class="flex-fill">
+                            <div class="flex-fill" style="padding-right: 30px;">
                                 <span class="social__item">
-                                    <img src="{{asset("assets/site/media/images/footer/share.svg")}}" alt="">
+                                    <img width="25" src="{{asset("assets/site/media/images/footer/share.svg")}}" alt="">
                                 </span>
 
                                 @php
@@ -155,7 +155,7 @@
                                 {{--</a>--}}
 
                                 <a title="البريد الإلكتروني" href="void:;" class="email">
-                                    <img src="{{asset('assets/site/media/images/footer/email.svg')}}" alt="">&nbsp;&nbsp;&nbsp;INFO@CUBOID.COM</a>
+                                    <img width="25" src="{{asset('assets/site/media/images/footer/email.svg')}}" alt="">&nbsp;&nbsp;&nbsp;INFO@CUBOID.COM</a>
                             </div>
                             <a href="{{url('/')}}" title="الصفحه الرئيسيه">
                                 <img width="70" height="50" src="{{asset('assets/site/media/images/cuboid-logo.png')}}"
@@ -176,7 +176,7 @@
                         <div>
                             <span class="cuboid">© كيوبويد 1396</span> | جميع الحقوق محفوظة لشركة كيوبويد
                         </div>
-                        <span class="designedBy"><span class="">Design by</span>
+                        <span class="designedBy text-left"><span class="">Design by</span>
                             <a title="Tarsim.inc" class="tarsiminc"
                                href="https://tarsiminc.com">   Tarsim.inc</a></span>
                     </div>

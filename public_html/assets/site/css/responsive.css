@@ -130,9 +130,21 @@
 }
 
 @media screen and (max-width: 991.98px) {
-    .downloads {
-        padding: 60px 0 0;
+
+    .pt-md-50 {
+        padding-top: 50px;
     }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-brand img {
+        margin-left: 8px;
+    }
+
+
 
     /*margin: 0;*/
     /*font-size: 21px;*/
@@ -155,7 +167,7 @@
     .header .smallHeader {
         /*top: 65px;*/
         top: 125px;
-        display: block;
+        display: none;
     }
 
     .news .menu-trigger {
@@ -176,7 +188,7 @@
 
     .news .cardOuter {
         background: #f68b1f;
-        margin-bottom: 0;
+        margin-bottom: 15px;
     }
 
     .news .card a, .news .card a {
@@ -349,9 +361,25 @@
     .footer .social__item {
         font-size: 23px;
     }
+
+    .products .greyTitle {
+        margin-left: -1px;
+        margin-right: -1px;
+        margin-top: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        padding: 30px 30px 10px;
+        color: #6f6f6f;
+    }
+
 }
 
 @media screen and (max-width: 767.98px) {
+
+    .downloads {
+        padding: 60px 0 0;
+    }
 
     .addressContainer .social {
         margin-right: 0;
@@ -370,16 +398,6 @@
         -moz-border-radius: 0;
         border-radius: 0;
 
-    }
-
-    .products .greyTitle {
-        margin-left: -1px;
-        margin-right: -1px;
-        margin-top: 70px;
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
-        padding: 10px 30px;
     }
 
     .products .card:nth-of-type(2) .greyTitle, .products .card:nth-of-type(2) .orangeTitle {
@@ -525,6 +543,7 @@
 
     .footer .formContainer {
         padding: 15px;
+        padding-top: 60px;
     }
 
     .footer .phoneNumbers {

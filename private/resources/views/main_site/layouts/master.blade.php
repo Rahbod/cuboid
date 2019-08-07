@@ -31,7 +31,7 @@
 @include('main_site.frames.sidebar_menu')
 
 {{--@yield('header')--}}
-<main>
+<main class="{{isset($sub_page) ? 'pt-md-50' :'' }}">
     @yield('main')
 </main>
 
