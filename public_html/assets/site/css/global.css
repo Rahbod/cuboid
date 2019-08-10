@@ -314,7 +314,7 @@ ul li, ol li {
     width: 175px;
 }
 
-.px-5 {
+.-px-5 {
     padding-right: 5px;
     padding-left: 5px;
 }
@@ -957,13 +957,15 @@ ul li, ol li {
     color: #2e2e2e;
     font-weight: 500;
     font-size: 16px;
+    overflow: hidden;
 }
 
 .benefits--lists li img {
     margin-left: 10px;
     width: 25px;
     max-width: 100%;
-    height: auto
+    height: auto;
+    float: right;
 }
 
 /*#endregion*/
@@ -1379,7 +1381,7 @@ ul li, ol li {
 
 .footer .social__item:first-child {
     margin-right: -30px;
-    margin-left: 0;
+    margin-left: 4px;
 }
 
 .footer .copyRight {
@@ -1493,9 +1495,9 @@ ul li, ol li {
 }
 
 .completedProjectsPage .card {
-    -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+    /*-webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);*/
+    /*-moz-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);*/
+    /*box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);*/
     margin-bottom: 10px;
 }
 
@@ -1536,6 +1538,7 @@ ul li, ol li {
     -webkit-border-radius: 1rem !important;
     -moz-border-radius: 1rem !important;
     border-radius: 1rem !important;
+    height:100%;
 }
 
 .completedProjectsShowPage .owl-carousel .owl-nav button.owl-prev {
@@ -1563,7 +1566,7 @@ ul li, ol li {
 .completedProjectsShowPage .galleryItem {
     position: relative;
     display: block;
-    height: 790px;
+    height: 600px;
 }
 
 .completedProjectsShowPage .galleryItem__indicator {
@@ -1696,6 +1699,7 @@ ul li, ol li {
 .hasNoGallery img {
     width: 40% !important;
     opacity: 0.7;
+    height:auto!important;
 }
 
 .pr-60 {

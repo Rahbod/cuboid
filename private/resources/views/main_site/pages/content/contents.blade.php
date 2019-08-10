@@ -83,7 +83,7 @@
                             <div class="container-fluid px-30">
                                 <div class="row">
                                     @foreach($contents as $content)
-                                        <div class="col-12 col-sm-4 col-md-3 px-5">
+                                        <div class="col-12 col-sm-4 col-md-3 -px-5">
                                             <div class="cardOuter">
                                                 <div class="card">
                                                     <img class="card-img-top" src="{{$content->image}}"

@@ -9,6 +9,16 @@
                 <div class="col-md-5 pl-md-4 mb-5">
                     @if($content->gallery && $content->gallery->gallery_items)
                         <div id="completedProjectsShowPage" class="owl-carousel gallery">
+                            <a title="{{$content->name}}" class="html5lightbox galleryItem" data-group="mygroup"
+                               data-thumbnail="{{$content->image}}" data-width="436" data-height="700"
+                               href="{{$content->image}}">
+                                <img class="h-100" src="{{$content->image}}" alt="{{$content->name}}">
+
+                                <div class="galleryItem__indicator">
+                                    {{$content->name}}
+                                </div>
+                            </a>
+
                             @foreach($content->gallery->gallery_items as $gallery_item)
                                 <a title="" class="html5lightbox galleryItem" data-group="mygroup"
                                    data-thumbnail="{{asset($gallery_item->logo)}}"
@@ -33,19 +43,19 @@
                                 </div>
                             </a>
 
-                            <a style="cursor: pointer;" title="" class="html5lightbox galleryItem hasNoGallery"
-                               data-width="436" data-height="700"
-                               href="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}"
-                               data-group="mygroup"
-                               data-thumbnail="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}">
-                                <img class="" src="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}" alt="">
-                                @if($type == 'news')
-                                    <div class="galleryItem__indicator">هذا الخبر لا يحتوي على معرض.</div>
-                                @else
-                                    <div class="galleryItem__indicator">هذا المقالة لا يحتوي على معرض.</div>
+                            {{--<a style="cursor: pointer;" title="" class="html5lightbox galleryItem hasNoGallery"--}}
+                               {{--data-width="436" data-height="700"--}}
+                               {{--href="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}"--}}
+                               {{--data-group="mygroup"--}}
+                               {{--data-thumbnail="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}">--}}
+                                {{--<img class="" src="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}" alt="">--}}
+                                {{--@if($type == 'news')--}}
+                                    {{--<div class="galleryItem__indicator">هذا الخبر لا يحتوي على معرض.</div>--}}
+                                {{--@else--}}
+                                    {{--<div class="galleryItem__indicator">هذا المقالة لا يحتوي على معرض.</div>--}}
 
-                                @endif
-                            </a>
+                                {{--@endif--}}
+                            {{--</a>--}}
                         </div>
                     @endif
                 </div>

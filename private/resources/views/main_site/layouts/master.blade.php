@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
-    <title>Cuboid</title>
+    <title>كيوبويد</title>
 
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/bootstrap.min.css')}}">
-    <!--<link rel="icon" href="/assets/site/media/images/public/fav_icon.png">-->
+    <link rel="icon" href="{{asset('/assets/site/media/images/fav-icon.ico')}}">
 
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/fonts/fontawesome-5-pro/css/all.min.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('/assets/site/css/hacen-maghreb.css')}}">

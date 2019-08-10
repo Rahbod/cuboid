@@ -72,19 +72,19 @@
                                 </div>
                             </a>
 
-                            <a style="cursor: pointer;" title="" class="html5lightbox galleryItem hasNoGallery"
-                               data-width="436" data-height="700"
-                               href="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}"
-                               data-group="mygroup"
-                               data-thumbnail="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}">
-                                <img class="" src="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}" alt="">
-                                @if($type == 'project')
-                                    <div class="galleryItem__indicator">هذا المشروع لا يحتوي على معرض.</div>
-                                @else
-                                    <div class="galleryItem__indicator">هذا المنتچ لا يحتوي على معرض.</div>
+                            {{--<a style="cursor: pointer;" title="" class="html5lightbox galleryItem hasNoGallery"--}}
+                               {{--data-width="436" data-height="700"--}}
+                               {{--href="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}"--}}
+                               {{--data-group="mygroup"--}}
+                               {{--data-thumbnail="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}">--}}
+                                {{--<img class="" src="{{asset('/assets/site/media/images/cuboid-logo-gray.png')}}" alt="">--}}
+                                {{--@if($type == 'project')--}}
+                                    {{--<div class="galleryItem__indicator">هذا المشروع لا يحتوي على معرض.</div>--}}
+                                {{--@else--}}
+                                    {{--<div class="galleryItem__indicator">هذا المنتچ لا يحتوي على معرض.</div>--}}
 
-                                @endif
-                            </a>
+                                {{--@endif--}}
+                            {{--</a>--}}
                         </div>
                     @endif
                 </div>
