@@ -49,6 +49,7 @@
                                                 data-toggle="collapse" data-target="#collapse{{$faq->id}}"
                                                 aria-expanded="{{$loop->first ? 'true' : 'false'}}"
                                                 aria-controls="collapse{{$faq->id}}">
+                                            <i class="fas fa-question ml-2"></i>
                                             {{$faq->question}}
                                         </button>
                                     </h5>

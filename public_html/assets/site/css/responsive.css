@@ -615,6 +615,10 @@
     .relatedProjects .container {
         padding-right: 40px;
     }
+
+    .contactUsPage .addressContainer {
+        padding: 50px 0 10px 0;
+    }
 }
 
 @media screen and (min-width: 768px) {

@@ -12,6 +12,11 @@
     outline: none !important;
     border: none;
 }
+#sidebar ul {
+    padding-right: 1rem;
+    padding-left: 0;
+    list-style: none;
+}
 
 #sidebar p {
     font-size: 13px !important;
@@ -51,11 +56,11 @@
     height: 35px;
     line-height: 35px;
     text-align: center;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     background: #f68b1f;
     position: absolute;
     top: 20px;
-    right: 10px;
+    left: 15px;
     cursor: pointer;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;

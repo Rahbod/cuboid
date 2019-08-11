@@ -35,7 +35,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5 pl-md-4 mb-5">
-                    {{--{{dd($project)}}--}}
+                    <h2 class="sectionTitle d-md-none">{{$project->title}}</h2>
+                    <h3 class="sectionTitle d-md-none mb-5">{{$project->name}}</h3>
+
                     @if($project->gallery && $project->gallery->gallery_items)
                         <div id="completedProjectsShowPageGallery" class="owl-carousel gallery">
                             <a title="{{$project->title}}" class="html5lightbox galleryItem" data-group="mygroup"
@@ -89,8 +91,8 @@
                     @endif
                 </div>
                 <div class="col-md-5 pr-md-4 pb-150">
-                    <h2 class="sectionTitle">{{$project->title}}</h2>
-                    <h3 class="sectionTitle">{{$project->name}}</h3>
+                    <h2 class="sectionTitle d-none d-md-block">{{$project->title}}</h2>
+                    <h3 class="sectionTitle d-none d-md-block">{{$project->name}}</h3>
                     <p class="mb-3"> {!! $project->description !!}</p>
                     <h4 style="margin-top: 60px;margin-bottom: 0;">المواصفات الفنيه</h4>
                     <ul>
@@ -221,6 +223,8 @@
 //            margin: 26,
             dots: false,
         });
+
+
 
     </script>
 @endpush

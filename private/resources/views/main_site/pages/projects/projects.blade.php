@@ -43,7 +43,7 @@
                     @if($type != 'product')
                         <div class="menu d-lg-none navigation mb-5">
                             <a class="menu-trigger"></a>
-                            <ul class="nav navbar nav-left">
+                            <ul class="nav navbar nav-left" id="category-mobile-menu">
                                 <li class="nav-item active">
                                     <a class="nav-link {{ !isset(request()->category_id)?'active':''}}"
                                        aria-selected="{{ !isset(request()->category_id)?'true':'false'}}"
@@ -151,6 +151,20 @@
             rtl: true,
             items: 1,
             dots: true,
+        });
+
+        $('html').click(function(e) {
+            console.log($('#category-mobile-menu'));
+            console.log($('#faqCarousel'));
+            console.log($(e.target));
+            //if clicked element is not your element and parents aren't your div
+//            if(!$(e.target).closest("#category-mobile-menu").length){
+////            if (e.target.id != 'category-mobile-menu' && $(e.target).parents('#category-mobile-menu').length == 0) {
+//                $('#category-mobile-menu').css({
+//                    'opacity':1,
+//                    'visibility':'visible'
+//                })
+//            }
         });
     </script>
 @endpush
