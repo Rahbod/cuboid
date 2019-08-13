@@ -38,7 +38,7 @@
                 <div class="col-md-12 col-lg-6">
                     <div class="content">
                         <h2 class="content--header sectionTitle">
-                            حول كيوبويد
+                            حول الكيوبويد
                         </h2>
 
                         <p class="content--text">
@@ -438,10 +438,10 @@
                 <div class="col-md-6">
                     <div class="mb-4">
                         <h2 class="downloads__title sectionTitle">
-                            تحميل
+                            التحميل
                         </h2>
                         <p class="downloads__descriptions sectionDescription">
-                            كتالوج وكتيبات شركة كيوبويد مقدمة
+                            يشمل البروشور و كتيبات شركة كيوبويد
                         </p>
                     </div>
                 </div>
@@ -455,7 +455,7 @@
                             <div class="container-fluid pr-md-0">
                                 <div class="row">
                                     <div class="col-6">
-                                        <a href="javascript:;"
+                                        <a target="_blank" href="{{asset(config('system.downloads.list-of-projects'))}}"
                                            class="d-flex flex-column p-3 align-items-center downloads--lists__item">
                                             <img class=""
                                                  src="{{asset('/assets/site/media/images/downloads/icon-1.png')}}"
@@ -463,7 +463,7 @@
                                             <span>قائمة كاملة من المشاريع</span></a>
                                     </div>
                                     <div class="col-6">
-                                        <a href="javascript:;"
+                                        <a target="_blank" href="{{asset(config('system.downloads.cuboid-catalogue'))}}"
                                            class="d-flex flex-column align-items-center downloads--lists__item p-3">
                                             <img class=""
                                                  src="{{asset('/assets/site/media/images/downloads/icon-2.png')}}"
@@ -472,7 +472,8 @@
                                         </a>
                                     </div>
                                     <div class="col-6">
-                                        <a href="javascript:;"
+                                        <a target="_blank" href="{{asset(config('system.downloads.cuboid-brochure'))}}"
+
                                            class="d-flex flex-column align-items-center downloads--lists__item p-3">
                                             <img class=""
                                                  src="{{asset('/assets/site/media/images/downloads/icon-3.png')}}"
@@ -483,7 +484,7 @@
                                         </a>
                                     </div>
                                     <div class="col-6">
-                                        <a href="javascript:;"
+                                        <a target="_blank" href="{{asset(config('system.downloads.cuboid-introduction'))}}"
                                            class="d-flex flex-column align-items-center downloads--lists__item p-3">
                                             <img class=""
                                                  src="{{asset('/assets/site/media/images/downloads/icon-4.png')}}"
@@ -515,9 +516,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2 class="sectionTitle">اخبار</h2>
+                    <h2 class="sectionTitle">الأخبار</h2>
                     <p class="sectionDescription">
-                        تعرف على الأخبار والإعلانات والعقود الجديدة وعملية تنفيذ المشاريع
+                        تعرف على الأخبار والإعلانات والعقود الجديدة
                     </p>
                 </div>
 

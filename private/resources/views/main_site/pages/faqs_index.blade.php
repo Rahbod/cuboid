@@ -32,10 +32,10 @@
                 <div class="col-md-8 mx-auto">
                     <div class="faq__descriptions">
                         <h2 class="sectionTitle">
-                            أسئلة مكررة
+                            الأسئلة مكررة
                         </h2>
                         <p class="">
-                            معظم الأسئلة التي طرحها عملاؤنا هي إجاباتنا
+                            معظم الأسئلة التي يطرح ها العملاءِ و الزبائن
                         </p>
                     </div>
                 </div>

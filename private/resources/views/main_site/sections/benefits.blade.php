@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-6">
                 <h2 class="sectionTitle">
-                    مزايا سقف الكيوبويد
+                    محاسن سقف الكيوبويد
                 </h2>
             </div>
             <div class="col-sm-6 col-md-12 col-lg-8">

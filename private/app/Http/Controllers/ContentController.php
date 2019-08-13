@@ -82,10 +82,10 @@ class ContentController extends Controller
     public function getText($type)
     {
         $title = 'مقالات';
-        $descriptions = 'تعرف على الأخبار والإعلانات والعقود الجديدة وعملية تنفيذ المشاريع';
+        $descriptions = 'تعرف على مقالة والإعلانات والعقود الجديدة';
         if ($type == 'news') {
-            $title = 'الاخبار';
-            $descriptions = 'تعرف على الأخبار والإعلانات والعقود الجديدة وعملية تنفيذ المشاريع';
+            $title = 'الأخبار';
+            $descriptions = 'تعرف على الأخبار والإعلانات والعقود الجديدة';
         }
         return ['title' => $title, 'descriptions' => $descriptions];
     }

@@ -7,6 +7,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5 pl-md-4 mb-5">
+                    <h2 class="sectionTitle d-md-none mb-5">{{$content->title}}</h2>
+
                     @if($content->gallery && $content->gallery->gallery_items)
                         <div id="completedProjectsShowPage" class="owl-carousel gallery">
                             <a title="{{$content->name}}" class="html5lightbox galleryItem" data-group="mygroup"
@@ -60,7 +62,7 @@
                     @endif
                 </div>
                 <div class="col-md-5 pr-md-4 pb-150">
-                    <h2 class="sectionTitle">{{$content->title}}</h2>
+                    <h2 class="sectionTitle d-none d-md-block">{{$content->title}}</h2>
                     <h5>{{$content->summary}}</h5>
 
                     {!! $content->content !!}

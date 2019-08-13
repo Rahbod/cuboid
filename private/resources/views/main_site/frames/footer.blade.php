@@ -9,7 +9,7 @@
                         <div class="form-row">
                             <div class="col-12">
                                 <h2 class="sectionTitle">
-                                    اتصل بنا
+                                    إتصل بنا
                                 </h2>
                             </div>
                             <div class="col-12">
@@ -32,7 +32,9 @@
                                         <option selected>انتخب ...</option>
                                         <option value="1">مدويغ</option>
                                         <option value="2">المنتجات</option>
-                                        <option value="3">متنوع</option>
+                                        <option value="3">بيع</option>
+                                        <option value="4">دعم</option>
+                                        <option value="5">متنوع</option>
                                     @endif
                                 </select>
                             </div>

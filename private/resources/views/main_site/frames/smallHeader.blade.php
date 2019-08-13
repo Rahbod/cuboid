@@ -11,13 +11,13 @@
                         @elseif($type == 'product')
                             <h2 class="sectionTitle">  / المنتجات</h2>
                         @elseif($type == 'news')
-                            <h2 class="sectionTitle">  / الاخبار</h2>
+                            <h2 class="sectionTitle">  / الأخبار</h2>
                         @elseif($type == 'article')
                             <h2 class="sectionTitle">  / مقالة</h2>
                         @endif
                     @endif
 
-                    <span class="subTitle  float-sm-left">خيار طبيعي</span>
+                    <span class="subTitle  float-sm-left">الإختيار الطبيعي</span>
                 </div>
             </div>
             <div class="col-12 col-sm-3">

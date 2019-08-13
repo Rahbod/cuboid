@@ -114,4 +114,11 @@ return [
     ],
 
     'available_langs' => ['fa', 'en', 'ar'],
+
+    'downloads' => [
+        'list-of-projects' => '/assets/site/media/files/ListofProjects-Website.pdf',
+        'cuboid-catalogue' => '/assets/site/media/files/CuboidCatalogue.pdf',
+        'cuboid-brochure' => '/assets/site/media/files/CuboidBrochure.pdf',
+        'cuboid-introduction' => '/assets/site/media/files/CuboidCatalogue.pdf',
+    ]
 ];

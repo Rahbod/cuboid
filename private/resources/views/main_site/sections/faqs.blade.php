@@ -9,10 +9,10 @@
                     </div>
                     <div class="faq__descriptions flex-fill">
                         <h2 class="sectionTitle">
-                            أسئلة مكررة
+                            الأسئلة مكررة
                         </h2>
                         <p class="m-0 sectionDescription">
-                            معظم الأسئلة التي طرحها عملاؤنا هي إجاباتنا
+                            معظم الأسئلة التي يطرح ها العملاءِ و الزبائن
                         </p>
                     </div>
                 </div>
