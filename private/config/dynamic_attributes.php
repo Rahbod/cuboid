@@ -50,6 +50,14 @@ return [
     ],
     'projects' => [
         [
+            'name' => 'body_type',
+            'input_type' => 'text'
+        ],
+        [
+            'name' => 'area_size',
+            'input_type' => 'text'
+        ],
+        [
             'name' => 'address',
             'input_type' => 'text'
         ],

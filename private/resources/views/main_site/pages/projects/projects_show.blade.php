@@ -96,7 +96,6 @@
                     <p class="mb-3"> {!! $project->description !!}</p>
                     <h4 style="margin-top: 60px;margin-bottom: 0;">المواصفات الفنيه</h4>
                     <ul>
-                        <li>العنوان : {{$project->sub_title}}</li>
                         @if($project->attributes)
                             @foreach($project->attributes as $key=>$value)
                                 <li>{{__('projects.items.'.$key)}} : {{$value}}</li>

@@ -36,7 +36,9 @@ class ContentController extends Controller
             $min_model = Content::where('status', 1)->where('type', $type)
                 ->where('category_id',$content->category_id)->orderBy('id','asc')
                 ->where('id', '>', 0)->min('id');
-            $next_content=Content::findOrFail($min_model);
+            $next_content=Content::find($min_model);
+            if (!$next_content)
+                $next_content = null;
         }
 
         $faqs = Faq::where('status', 1)->orderBy('order', 'asc')->take(10)->get();

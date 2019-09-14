@@ -23,11 +23,14 @@ return [
         'created_at' => 'تاریخ ایجاد',
         'updated_at' => 'تاریخ بروزرسانی',
 
-        'address'=>'عنوان',
-        'skeleton'=>'الهیکل العظمی',
-        'opening'=>'اطول حفره',
-        'ceiling_thickness'=>' قاعدة سقف الكيوبيد',
-        'operating_time'=>'وقت التشغیل ',
+        'address'=>'موقع المشروع',
+        'body_type'=>'نوع القالب',
+        'area_size'=>'مساحة البناء',
+
+        'skeleton'=>'نوع الهيكل',
+        'opening'=>'اكبر فتحة',
+        'ceiling_thickness'=>'سماكة سقف الوافل',
+        'operating_time'=>'تاريخ التنفيذ',
     ],
     'relations'=>[
         'author'=>'نویسنده',

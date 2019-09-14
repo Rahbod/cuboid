@@ -28,7 +28,7 @@ class ProjectController extends Controller
 //        dd($contents);
 
         if (request()->ajax()) {
-            return view('main_site.pages.projects.projects_item_generator', ['projects'=>$contents,'type' => $type,]);
+            return view('main_site.pages.projects.projects_item_generator', ['projects' => $contents, 'type' => $type,]);
         }
 
 //        dd($contents);
@@ -50,26 +50,18 @@ class ProjectController extends Controller
         $project = $model_name::with('gallery.gallery_items')->where('type', $type)->where('status', 1)->findOrFail($id);
         $project->attributes = json_decode($project->attributes, true);
 
-//        $categories = Category::where('status', 1)->where('type', 'project')->with(['projects' => function ($query) use ($project) {
-//            $query->where('status', 1);
-//            $query->orderBy('order', 'asc');
-//            $query->take(8);
-//        }])->orderBy('order', 'asc')->take(4)->get()->toArray();
-
-//        $ids = $model_name::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->get()->pluck('id')->toArray();
-//        $counts = $model_name::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->get()->count();
-//        $next_project = $model_name::where('status', 1)->orderBy('order', 'asc')->where('type', $type)->findOrFail($ids[rand(0, $counts - 1)]);
-
         $next_project = $model_name::where('status', 1)->where('type', $type)
-            ->where('category_id',$project->category_id)->orderBy('id','asc')
-            ->where('id', '>', $project->id)->firstOrFail();
+            ->where('category_id', $project->category_id)->orderBy('id', 'asc')
+            ->where('id', '>', $project->id)->first();
 
         if (!$next_project) {
             $min_model = $model_name::where('status', 1)->where('type', $type)
-                ->where('category_id',$project->category_id)->orderBy('id','asc')
+                ->where('category_id', $project->category_id)->orderBy('id', 'asc')
                 ->where('id', '>', 0)->min('id');
 
-            $next_project=$model_name::findOrFail($min_model);
+            $next_project = $model_name::find($min_model);
+            if (!$next_project)
+                $next_project = null;
         }
 
         $related_projects = Project::where('status', 1)->orderBy('order', 'asc')->where('type', 'project')->take(10)->get();

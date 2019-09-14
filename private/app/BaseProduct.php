@@ -13,7 +13,7 @@ class BaseProduct extends Model
     use GetImageAttributesTrait;
     use SetAndGetDateAttributesTrait;
 
-    protected $fillable = ['author_id', 'category_id','gallery_id','type', 'title','sub_title','summary', 'image', 'description', 'attributes',
+    protected $fillable = ['author_id', 'category_id','gallery_id','type', 'title','sub_title','summary', 'image', 'description',
         'attributes','order','status',];
 
 

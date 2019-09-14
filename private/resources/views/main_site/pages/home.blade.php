@@ -96,7 +96,7 @@
                             <span>كيوبويد</span>
                         </div>
 
-                        <div class="d-none card-title bg-grey-c greyTitle">
+                        <div class="d-none bg-grey-c greyTitle">
                             <span>سبان(m)</span>
                         </div>
 
@@ -141,9 +141,9 @@
 
                         </div>
 
-                        <div class="card-title bg-grey-c greyTitle d-flex justify-content-lg-between position-relative">
-                            <div class="d-none d-xl-block greyRelativeTitles card-title bg-grey-c greyTitle">
-                                <span >سبان(m)</span>
+                        <div class="card-title bg-grey-c greyTitle d-flex justify-content-lg-between position-relative btrr bbrr">
+                            <div style="color: #6f6f6f;" class="d-none d-xl-block greyRelativeTitles greyTitle">
+                                <span>سبان(m)</span>
                             </div>
                             <span class="d-lg-none w-50">سبان(m)</span>
                             <span class="w-25 text-left w-lg-50 text-lg-right">12</span>
@@ -156,32 +156,32 @@
 
                         <div class="card-body">
                             <ul>
-                                <li class="products--thirdRow">
-                                    <div class="d-flex justify-content-lg-between">
+                                <li class="products--firstRow ">
+                                    <div class="d-flex justify-content-lg-between btrr bbrr">
                                         <span class="d-lg-none w-50">سمك السقف (cm)</span>
                                         <span class="w-25 text-left w-lg-50 text-lg-right">46</span>
                                         <span class="w-25 text-left w-lg-50 ">47</span>
                                     </div>
                                 </li>
                                 <li></li>
-                                <li class="products-fifthRow">
-                                    <div class="d-flex justify-content-lg-between">
+                                <li class="products-thirdRow ">
+                                    <div class="d-flex justify-content-lg-between btrr bbrr">
                                         <span class="d-lg-none w-50">سمك يعادل <br>الخرسانة (cm)</span>
                                         <span class="w-25 text-left w-lg-50 text-lg-right">18.9</span>
                                         <span class="w-25 text-left w-lg-50 ">19.9</span>
                                     </div>
                                 </li>
                                 <li></li>
-                                <li class="products--seventhRow">
-                                    <div class="d-flex justify-content-lg-between">
+                                <li class="products--fifthRow ">
+                                    <div class="d-flex justify-content-lg-between btrr bbrr">
                                         <span class="d-lg-none w-50">سمك السقف (cm)</span>
                                         <span class="w-25 text-left w-lg-50 text-lg-right">48</span>
                                         <span class="w-25 text-left w-lg-50 ">48</span>
                                     </div>
                                 </li>
                                 <li></li>
-                                <li class="products--ninthRow">
-                                    <div class="d-flex justify-content-lg-between">
+                                <li class="products--seventhRow ">
+                                    <div class="d-flex justify-content-lg-between btrr bbrr">
                                         <span class="d-lg-none  w-50">سمك يعادل <br> الخرسانة (cm)</span>
                                         <span class="w-25 text-left w-lg-50 text-lg-right">20.9</span>
                                         <span class="w-25 text-left w-lg-50 ">20.9</span>
@@ -325,7 +325,7 @@
                         <div class="card-body">
                             <ul>
                                 <li class="products--firstRow">
-                                    <div class="d-flex justify-content-lg-between">
+                                    <div class="d-flex justify-content-lg-between btlr bblr ">
                                         <span class="d-lg-none w-50">سمك السقف (cm)</span>
 
                                         <span class="w-25 text-left w-lg-50 text-lg-right">23</span>
@@ -334,7 +334,7 @@
                                 </li>
                                 <li></li>
                                 <li class="products-thirdRow">
-                                    <div class="d-flex justify-content-lg-between">
+                                    <div class="d-flex justify-content-lg-between btlr bblr ">
                                         <span class="d-lg-none w-50">سمك يعادل <br>الخرسانة (cm)</span>
 
                                         <span class="w-25 text-left w-lg-50 text-lg-right">10.5</span>
@@ -343,7 +343,7 @@
                                 </li>
                                 <li></li>
                                 <li class="products--fifthRow">
-                                    <div class="d-flex justify-content-lg-between">
+                                    <div class="d-flex justify-content-lg-between btlr bblr ">
                                         <span class="d-lg-none w-50">سمك السقف (cm)</span>
 
                                         <span class="w-25 text-left w-lg-50 text-lg-right">23</span>
@@ -352,7 +352,7 @@
                                 </li>
                                 <li></li>
                                 <li class="products--seventhRow">
-                                    <div class="d-flex justify-content-lg-between">
+                                    <div class="d-flex justify-content-lg-between btlr bblr ">
                                         <span class="d-lg-none w-50">سمك يعادل <br> الخرسانة (cm)</span>
 
                                         <span class="w-25 text-left w-lg-50 text-lg-right">10.5</span>
@@ -362,69 +362,6 @@
                             </ul>
                         </div>
                     </div>
-
-                    @if(isset($rahimi_added_product_attrs))
-                        @foreach($products as $product)
-                            <div class="card">
-                                <div class="{{$loop->last ? 'lastItem' : ''}} orangeTitle bg-orange d-flex justify-content-between  justify-content-lg-end ">
-                                    <span class="d-lg-none">نوع القالب</span>
-
-                                    <span>{{$product['title']}}</span>
-                                </div>
-                                <div class="card-title bg-grey-c greyTitle d-flex justify-content-between">
-
-                                    <span class="d-lg-none">(m)سبان</span>
-                                    <span>{{$product['crater'][0]}}</span>
-                                    <span>{{$product['crater'][1]}}</span>
-                                </div>
-
-                                <img class="card-img-top"
-                                     src="{{asset($product['image'])}}"
-                                     alt="{{$product['title']}}">
-
-                                <div class="card-body">
-                                    <ul>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-
-                                                <span class="d-lg-none">سمك السقف (cm)</span>
-                                                <span>{{$product['thickness-of-the-ceiling'][0]}}</span>
-                                                <span>{{$product['thickness-of-the-ceiling'][1]}}</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-
-                                                <span class="d-lg-none">سمك يعادل <br>الخرسانة (cm)</span>
-                                                <span>{{$product['thickness-equivalent-to-concrete'][0]}}</span>
-                                                <span>{{$product['thickness-equivalent-to-concrete'][1]}}</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-
-                                                <span class="d-lg-none">سمك السقف (cm)</span>
-                                                <span>{{$product['thickness-of-the-ceiling'][0]}}</span>
-                                                <span>{{$product['thickness-of-the-ceiling'][1]}}</span>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                        <li>
-                                            <div class="d-flex justify-content-between">
-
-                                                <span class="d-lg-none">سمك يعادل <br> الخرسانة (cm)</span>
-                                                <span>{{$product['thickness-equivalent-to-concrete'][0]}}</span>
-                                                <span>{{$product['thickness-equivalent-to-concrete'][1]}}</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        @endforeach
-                    @endif
-
                 </div>
             </div>
         </div>
@@ -484,7 +421,8 @@
                                         </a>
                                     </div>
                                     <div class="col-6">
-                                        <a target="_blank" href="{{asset(config('system.downloads.cuboid-introduction'))}}"
+                                        <a target="_blank"
+                                           href="{{asset(config('system.downloads.cuboid-introduction'))}}"
                                            class="d-flex flex-column align-items-center downloads--lists__item p-3">
                                             <img class=""
                                                  src="{{asset('/assets/site/media/images/downloads/icon-4.png')}}"
@@ -671,7 +609,7 @@
                 rtl: true,
                 items: 1,
                 dots: false,
-                autoHeight:true,
+                autoHeight: true,
                 responsive: {
                     992: {
                         nav: true,
@@ -706,13 +644,23 @@
 //                loadSprite: false,
                 {{--iconUrl: "{{asset('/assets/site/js/vendors/plyr-master/src/sprite/play-icon.svg')}}"--}}
             });
+            var rowClass = '';
 
+            var rowClass = '';
+            var activeRow = $('#pills-path .card-title');
             $('.products .card-body ul li:nth-child(odd)').on('mouseenter', function (event) {
-                var rowClass = $(event.target).attr('class');
+                rowClass = $(event.target).parents('li').attr('class');
 //                $('#pills-path .card-body ul li div').removeClass('bg-grey-c greyTitle');
-                $('#pills-path .card-body ul li div').removeClass('bg-grey-c');
+                activeRow.removeClass('bg-grey-c');
                 $("." + rowClass + " > div").addClass('bg-grey-c');
-            })
+            }).on('mouseleave', function () {
+                $("." + rowClass + " > div").removeClass('bg-grey-c');
+            });
+
+            $("#pills-path .card-title, #pills-path .card-title span").on('mouseenter', function (event) {
+                activeRow.addClass('bg-grey-c');
+                $("." + rowClass + " > div").removeClass('bg-grey-c');
+            });
 
         });
 
