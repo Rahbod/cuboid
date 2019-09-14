@@ -671,6 +671,7 @@
                 rtl: true,
                 items: 1,
                 dots: false,
+                autoHeight:true,
                 responsive: {
                     992: {
                         nav: true,
@@ -706,7 +707,7 @@
                 {{--iconUrl: "{{asset('/assets/site/js/vendors/plyr-master/src/sprite/play-icon.svg')}}"--}}
             });
 
-            $('.productssss .card-body ul li:nth-child(odd)').on('mouseenter', function (event) {
+            $('.products .card-body ul li:nth-child(odd)').on('mouseenter', function (event) {
                 var rowClass = $(event.target).attr('class');
 //                $('#pills-path .card-body ul li div').removeClass('bg-grey-c greyTitle');
                 $('#pills-path .card-body ul li div').removeClass('bg-grey-c');

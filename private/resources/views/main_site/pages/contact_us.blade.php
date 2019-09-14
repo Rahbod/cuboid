@@ -112,10 +112,16 @@
                             <li class="mb-4">
                                 <div class="d-flex">
                                     <img class="ml-2 h-100"
-                                         src="{{asset('assets/site/media/images/footer/location-contactUsPage.png')}}" alt="">
-                                    <span class="address flex-fill">
-                                    {{config('system.about_us.address')}}
-                            </span>
+                                         src="{{asset('assets/site/media/images/footer/location-contactUsPage.png')}}"
+                                         alt="">
+                                    <a target="_blank"
+                                       href="http://maps.google.com/?q={{urlencode(config('system.about_us.address'))}}"
+                                       class="address flex-fill">
+                                        {{config('system.about_us.address')}}
+                                    </a>
+                                    {{--<span class="address flex-fill">--}}
+                                    {{--{{config('system.about_us.address')}}--}}
+                                    {{--</span>--}}
                                 </div>
                             </li>
                             <li class="phoneNumbers" style="margin-bottom: 25px;margin-right: 32px;">
@@ -126,7 +132,11 @@
                                             <li>
                                                 <div class="d-flex justify-content-between">
                                                     <span class="phoneText">{{$name}}</span>
-                                                    <span class="phoneNumber">{{$number}}</span>
+                                                    {{--<span class="phoneNumber">{{$number}}</span>--}}
+
+                                                    <a dir="ltr"
+                                                       href="tel:{{ str_replace('-','',str_replace(' ','',$number)) }}"
+                                                       class="phoneNumber">{{$number}}</a>
                                                 </div>
                                             </li>
                                         @endforeach

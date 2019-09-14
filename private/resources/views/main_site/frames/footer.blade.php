@@ -104,9 +104,11 @@
                             <div class="d-flex">
                                 <img class="ml-2 h-100"
                                      src="{{asset('assets/site/media/images/footer/location-icon.png')}}" alt="">
-                                <span class="address flex-fill">
+                                <a target="_blank"
+                                   href="http://maps.google.com/?q={{urlencode(config('system.about_us.address'))}}"
+                                   class="address flex-fill">
                                     {{config('system.about_us.address')}}
-                            </span>
+                                </a>
                             </div>
                         </li>
                         <li class="phoneNumbers" style="margin-bottom: 25px;margin-right: 32px;">
@@ -117,7 +119,9 @@
                                         <li>
                                             <div class="d-flex justify-content-between">
                                                 <span class="phoneText">{{$name}}</span>
-                                                <span class="phoneNumber">{{$number}}</span>
+                                                <a dir="ltr"
+                                                   href="tel:{{ str_replace('-','',str_replace(' ','',$number)) }}"
+                                                   class="phoneNumber">{{$number}}</a>
                                             </div>
                                         </li>
                                     @endforeach
@@ -156,8 +160,10 @@
                                 {{--<img src="{{asset("assets/site/media/images/footer/twitter.png")}}" alt="">--}}
                                 {{--</a>--}}
 
-                                <a title="البريد الإلكتروني" href="void:;" class="email">
-                                    <img width="25" src="{{asset('assets/site/media/images/footer/email.svg')}}" alt="">&nbsp;&nbsp;&nbsp;INFO@CUBOID.COM</a>
+                                <a title="البريد الإلكتروني" href="mailto:{{config('system.about_us.email')}}"
+                                   class="email">
+                                    <img width="25" src="{{asset('assets/site/media/images/footer/email.svg')}}" alt="">&nbsp;&nbsp;&nbsp;{{strtoupper(config('system.about_us.email'))}}
+                                </a>
                             </div>
                             <a href="{{url('/')}}" title="الصفحه الرئيسيه">
                                 <img width="70" height="50" src="{{asset('assets/site/media/images/cuboid-logo.png')}}"
@@ -176,7 +182,7 @@
                 <div class="copyRight">
                     <div class="d-flex justify-content-between">
                         <div>
-                            <span class="cuboid">© كيوبويد 1396</span> | جميع الحقوق محفوظة لشركة كيوبويد
+                            <span class="cuboid">© كيوبويد {{date('Y')}}</span> | جميع الحقوق محفوظة لشركة كيوبويد
                         </div>
                         <span class="designedBy text-left"><span class="">Design by</span>
                             <a title="Tarsim.inc" class="tarsiminc"

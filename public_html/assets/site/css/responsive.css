@@ -587,6 +587,14 @@
         /*justify-content: center;*/
     }
 
+    section:first-of-type {
+        min-height: 100%;
+    }
+
+    .footer {
+        min-height: 100%;
+    }
+
     .orangeTitle {
         margin-left: -16px !important;
         margin-right: -16px !important;
